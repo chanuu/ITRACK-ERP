@@ -1,0 +1,13 @@
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\bin\Debug\EFTesting.exe.config
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\bin\Debug\EFTesting.exe
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\bin\Debug\EFTesting.pdb
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\bin\Debug\EntityFramework.dll
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\bin\Debug\EntityFramework.xml
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\obj\Debug\EFTesting.csproj.GenerateResource.Cache
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\obj\Debug\EFTesting.exe
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\obj\Debug\EFTesting.pdb
+c:\users\hp\documents\visual studio 2013\Projects\EFTesting\EFTesting\obj\Debug\EFTesting.Form1.resources
+C:\Users\HP\Documents\Visual Studio 2013\Projects\EFTesting\EFTesting\obj\Debug\EFTesting.csprojResolveAssemblyReference.cache
