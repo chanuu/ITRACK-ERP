@@ -26,7 +26,7 @@ namespace ITRACK.models
         public virtual ICollection<User> User { get; set; }
 
         public virtual ICollection<Style> Style { get; set; }
-        public Int32 GroupID { get; set; }
+        public string GroupID { get; set; }
 
         
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,8 @@ using System.Threading.Tasks;
 namespace ITRACK.models
 {
     public class Group {
-        public Int32 GroupID { get; set; }
+        [Key]
+        public string GroupID { get; set; }
         public string  GroupName { get; set; }
         public string  Address { get; set; }
 

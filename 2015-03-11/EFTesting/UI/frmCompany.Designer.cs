@@ -30,29 +30,34 @@
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.grdGroup = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new System.Windows.Forms.Label();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFaxNo = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTeleNo = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtGroupName = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtGroupID = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeleNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -74,83 +79,103 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.grdGroup);
             this.xtraTabPage1.Controls.Add(this.label5);
-            this.xtraTabPage1.Controls.Add(this.textEdit5);
+            this.xtraTabPage1.Controls.Add(this.txtAddress);
             this.xtraTabPage1.Controls.Add(this.label4);
-            this.xtraTabPage1.Controls.Add(this.textEdit4);
+            this.xtraTabPage1.Controls.Add(this.txtFaxNo);
             this.xtraTabPage1.Controls.Add(this.label3);
-            this.xtraTabPage1.Controls.Add(this.textEdit3);
+            this.xtraTabPage1.Controls.Add(this.txtTeleNo);
             this.xtraTabPage1.Controls.Add(this.label2);
-            this.xtraTabPage1.Controls.Add(this.textEdit2);
+            this.xtraTabPage1.Controls.Add(this.txtGroupName);
             this.xtraTabPage1.Controls.Add(this.label1);
-            this.xtraTabPage1.Controls.Add(this.textEdit1);
+            this.xtraTabPage1.Controls.Add(this.txtGroupID);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(779, 412);
             this.xtraTabPage1.Text = "Group";
             // 
+            // grdGroup
+            // 
+            this.grdGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdGroup.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdGroup.Location = new System.Drawing.Point(22, 161);
+            this.grdGroup.MainView = this.gridView1;
+            this.grdGroup.Name = "grdGroup";
+            this.grdGroup.Size = new System.Drawing.Size(715, 200);
+            this.grdGroup.TabIndex = 10;
+            this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.grdGroup;
+            this.gridView1.Name = "gridView1";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 190);
+            this.label5.Location = new System.Drawing.Point(19, 109);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Address";
             // 
-            // textEdit5
+            // txtAddress
             // 
-            this.textEdit5.Location = new System.Drawing.Point(111, 187);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(226, 20);
-            this.textEdit5.TabIndex = 8;
+            this.txtAddress.Location = new System.Drawing.Point(111, 106);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(226, 20);
+            this.txtAddress.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 152);
+            this.label4.Location = new System.Drawing.Point(364, 74);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Fax No";
             // 
-            // textEdit4
+            // txtFaxNo
             // 
-            this.textEdit4.Location = new System.Drawing.Point(111, 149);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(226, 20);
-            this.textEdit4.TabIndex = 6;
+            this.txtFaxNo.Location = new System.Drawing.Point(456, 71);
+            this.txtFaxNo.Name = "txtFaxNo";
+            this.txtFaxNo.Size = new System.Drawing.Size(226, 20);
+            this.txtFaxNo.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 112);
+            this.label3.Location = new System.Drawing.Point(19, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Tele No";
             // 
-            // textEdit3
+            // txtTeleNo
             // 
-            this.textEdit3.Location = new System.Drawing.Point(111, 109);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(226, 20);
-            this.textEdit3.TabIndex = 4;
+            this.txtTeleNo.Location = new System.Drawing.Point(111, 71);
+            this.txtTeleNo.Name = "txtTeleNo";
+            this.txtTeleNo.Size = new System.Drawing.Size(226, 20);
+            this.txtTeleNo.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 73);
+            this.label2.Location = new System.Drawing.Point(364, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Group Name";
             // 
-            // textEdit2
+            // txtGroupName
             // 
-            this.textEdit2.Location = new System.Drawing.Point(111, 70);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(226, 20);
-            this.textEdit2.TabIndex = 2;
+            this.txtGroupName.Location = new System.Drawing.Point(456, 35);
+            this.txtGroupName.Name = "txtGroupName";
+            this.txtGroupName.Size = new System.Drawing.Size(226, 20);
+            this.txtGroupName.TabIndex = 2;
             // 
             // label1
             // 
@@ -161,14 +186,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Group ID";
             // 
-            // textEdit1
+            // txtGroupID
             // 
-            this.textEdit1.Location = new System.Drawing.Point(111, 35);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AccessibleDescription = "";
-            this.textEdit1.Properties.NullText = "Please Enter Group ID";
-            this.textEdit1.Size = new System.Drawing.Size(226, 20);
-            this.textEdit1.TabIndex = 0;
+            this.txtGroupID.Location = new System.Drawing.Point(111, 35);
+            this.txtGroupID.Name = "txtGroupID";
+            this.txtGroupID.Properties.AccessibleDescription = "";
+            this.txtGroupID.Properties.NullText = "Please Enter Group ID";
+            this.txtGroupID.Size = new System.Drawing.Size(226, 20);
+            this.txtGroupID.TabIndex = 0;
             // 
             // xtraTabPage2
             // 
@@ -191,46 +216,61 @@
             this.btnNew.TabIndex = 1;
             this.btnNew.Text = "New";
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Image = global::EFTesting.Properties.Resources.save1;
+            this.btnAdd.Location = new System.Drawing.Point(103, 12);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(85, 39);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = global::EFTesting.Properties.Resources.update;
+            this.btnEdit.Location = new System.Drawing.Point(195, 12);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(85, 39);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // simpleButton1
             // 
-            this.simpleButton1.Image = global::EFTesting.Properties.Resources.save1;
-            this.simpleButton1.Location = new System.Drawing.Point(103, 12);
+            this.simpleButton1.Image = global::EFTesting.Properties.Resources.update;
+            this.simpleButton1.Location = new System.Drawing.Point(286, 12);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton1.TabIndex = 2;
-            this.simpleButton1.Text = "Add";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton2.Location = new System.Drawing.Point(195, 12);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton2.TabIndex = 3;
-            this.simpleButton2.Text = "Edit";
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Text = "Search";
             // 
             // frmCompany
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 487);
-            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "frmCompany";
             this.Text = "Company";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCompany_FormClosing);
+            this.Load += new System.EventHandler(this.frmCompany_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTeleNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroupID.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,21 +279,24 @@
 
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtGroupID;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
         private DevExpress.XtraEditors.SimpleButton btnNew;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnAdd;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtTeleNo;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtGroupName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtAddress;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.TextEdit txtFaxNo;
+        private DevExpress.XtraEditors.SimpleButton btnEdit;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraGrid.GridControl grdGroup;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 
     }
 }

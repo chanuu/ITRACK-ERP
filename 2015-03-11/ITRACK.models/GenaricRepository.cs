@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ITRACK.models
 {
@@ -45,8 +46,18 @@ namespace ITRACK.models
         {
             return await DbSet.FindAsync(Id); 
         }
-       
 
+        public async Task<TEntity> GetkeyByAsync(string Id)
+        {
+            return await DbSet.FindAsync(Id); 
+        }
+
+       
+        public async Task<TEntity> GetIdByAsync(string Id)
+        {
+            return await DbSet.FindAsync(Id);
+        }
+       
        /// <summary>
        /// 
        /// </summary>
@@ -67,6 +78,8 @@ namespace ITRACK.models
             return DbSet;
         }
 
+      
+
 
        /// <summary>
        /// 
@@ -86,10 +99,21 @@ namespace ITRACK.models
        /// <returns></returns>
         public async Task AddAsync(TEntity entity)
         {
-             DbSet.Add(entity);
-             await _dbContext.SaveChangesAsync();
+            _dbContext.Entry(entity).State = EntityState.Added;
+            if (await _dbContext.SaveChangesAsync() > 0)
+            {
+
+                MessageBox.Show("Save Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else {
+                MessageBox.Show("Item Already Exist !", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        
+  
 
         }
+
+
 
        /// <summary>
        /// 
@@ -100,6 +124,45 @@ namespace ITRACK.models
         {
             DbSet.Remove(entity);
             await _dbContext.SaveChangesAsync();
+
+        }
+
+
+        public bool Edit(TEntity entity)
+        {
+            _dbContext.Entry(entity).State = EntityState.Modified;
+            if (_dbContext.SaveChanges() > 0)
+            {
+                MessageBox.Show("Update Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+
+            }
+            else
+            {
+                MessageBox.Show("Item Already Exist !", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+
+            }
+        }
+
+
+        public bool Add(TEntity entity)
+        {
+            DbSet.Add(entity);
+           
+            if (_dbContext.SaveChanges() > 0)
+            {
+                MessageBox.Show("Save Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+
+            }
+            else
+            {
+                MessageBox.Show("Item Already Exist !", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+
+            }
+
         }
     }
 }

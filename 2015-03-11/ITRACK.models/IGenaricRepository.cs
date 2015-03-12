@@ -13,13 +13,22 @@ namespace ITRACK.models
 
         Task<TEntity> GetIdByAsync(int Id);
 
+        Task<TEntity> GetkeyByAsync(string Id);
+
         IQueryable<TEntity> SearchFor(Expression<Func<TEntity,bool>> predicate  );
 
         IQueryable<TEntity> GetAll();
 
+    
+
         Task EditAsync(TEntity entity);
 
         Task AddAsync(TEntity entity);
+
+        bool Add(TEntity entity);
+
+
+        bool Edit(TEntity entity);
 
         Task DeleteAsync(TEntity entity);
 

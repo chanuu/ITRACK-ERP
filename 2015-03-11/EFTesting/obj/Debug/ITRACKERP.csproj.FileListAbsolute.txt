@@ -50,5 +50,20 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-03-11\EFTesting\obj\D
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-11\EFTesting\obj\Debug\EFTesting.exe.licenses
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-11\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EFTesting.exe.config
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EFTesting.exe
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EFTesting.pdb
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EntityFramework.dll
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\ITRACK.models.dll
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\ITRACK.models.pdb
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EntityFramework.xml
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.Form1.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.exe.licenses
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.exe
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.pdb
