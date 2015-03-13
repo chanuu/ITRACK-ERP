@@ -20,6 +20,8 @@ namespace ITRACK.models
         public string  TeleNo { get; set; }
         public string  FaxNo { get; set; }
 
+        public bool isDefaultCompany { get; set; } 
+
         public virtual Group Group { get; set; }
         public virtual ICollection<Buyer> Buyer { get; set; }
 

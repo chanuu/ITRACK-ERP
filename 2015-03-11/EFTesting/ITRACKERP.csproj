@@ -78,6 +78,12 @@
     <Compile Include="UI\frmCompany.Designer.cs">
       <DependentUpon>frmCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmcompanyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmcompanyDialog.Designer.cs">
+      <DependentUpon>frmcompanyDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="UI\frmCompany.resx">
       <DependentUpon>frmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmcompanyDialog.resx">
+      <DependentUpon>frmcompanyDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

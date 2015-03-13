@@ -18,6 +18,8 @@ namespace EFTesting.UI
             InitializeComponent();
         }
         GenaricRepository<Group> _genaricrepository = new GenaricRepository<Group>(new ItrackContext());
+    
+        
       #region GROUP CRUD
 
 
@@ -48,12 +50,14 @@ namespace EFTesting.UI
 
 
         // edit existing group 
-      private void EditGroup()
+      private  void EditGroup()
       {
 
           try
           {
-              _genaricrepository.Edit(AssignGroup());
+           
+              GenaricRepository<Group> _repository = new GenaricRepository<Group>(new ItrackContext());
+              _repository.Edit(AssignGroup());
 
           }
           catch (Exception ex)
@@ -63,12 +67,13 @@ namespace EFTesting.UI
 
       }
         // get all group 
-      private  void GetGroup()
+      private async void GetGroup()
       {
           try {
 
-            var datasource =   from item in _genaricrepository.GetAll().ToList() select new { item.GroupID, item.GroupName, item.TeleNo, item.FaxNo, item.Address };
-            grdGroup.DataSource = datasource;
+        //    var datasource =   from item in _genaricrepository.GetAll().ToList() select new { item.GroupID, item.GroupName, item.TeleNo, item.FaxNo, item.Address };
+              var datasource = from item in await _genaricrepository.GetAllData() select new { item.GroupID, item.GroupName, item.TeleNo, item.FaxNo, item.Address };
+              grdGroup.DataSource = datasource;
           }
           catch(Exception ex){
               MessageBox.Show(ex.Message, "Error - C-0003", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -114,7 +119,7 @@ namespace EFTesting.UI
 
       #region Evets 
         
-      void maximixedRibbon() { }
+
 
 
       private void frmCompany_FormClosing(object sender, FormClosingEventArgs e)
@@ -152,6 +157,12 @@ namespace EFTesting.UI
       }
 
       #endregion
+
+      private void simpleButton4_Click(object sender, EventArgs e)
+      {
+          frmcompanyDialog companydialog = new frmcompanyDialog();
+          companydialog.ShowDialog();
+      }
 
 
     }

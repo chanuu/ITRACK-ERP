@@ -67,3 +67,4 @@ C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\ITRACKERP.csp
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.exe.licenses
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.exe
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.pdb
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources

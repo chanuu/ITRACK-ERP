@@ -19,7 +19,7 @@ namespace ITRACK.models
 
         IQueryable<TEntity> GetAll();
 
-    
+        Task<List<TEntity>> GetAllData();
 
         Task EditAsync(TEntity entity);
 

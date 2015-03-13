@@ -78,8 +78,11 @@ namespace ITRACK.models
             return DbSet;
         }
 
-      
 
+        public async Task<List<TEntity>> GetAllData()
+        {
+            return await DbSet.ToListAsync();
+        }
 
        /// <summary>
        /// 
@@ -88,8 +91,9 @@ namespace ITRACK.models
        /// <returns></returns>
         public async Task EditAsync(TEntity entity)
         {
-            _dbContext.Entry(entity).State = EntityState.Modified;
-            await _dbContext.SaveChangesAsync();
+           _dbContext.Entry(entity).State = EntityState.Modified;
+           
+            await  _dbContext.SaveChangesAsync();
         }
 
        /// <summary>
@@ -130,7 +134,10 @@ namespace ITRACK.models
 
         public bool Edit(TEntity entity)
         {
+       
+
             _dbContext.Entry(entity).State = EntityState.Modified;
+
             if (_dbContext.SaveChanges() > 0)
             {
                 MessageBox.Show("Update Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -143,12 +150,14 @@ namespace ITRACK.models
                 return false;
 
             }
+           
         }
 
 
         public bool Add(TEntity entity)
         {
             DbSet.Add(entity);
+           
            
             if (_dbContext.SaveChanges() > 0)
             {
@@ -164,5 +173,8 @@ namespace ITRACK.models
             }
 
         }
+
+
+
     }
 }

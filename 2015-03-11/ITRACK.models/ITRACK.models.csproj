@@ -50,6 +50,7 @@
     <Compile Include="AppDBContext.cs" />
     <Compile Include="Buyer.cs" />
     <Compile Include="company.cs" />
+    <Compile Include="ExpressionBuilder.cs" />
     <Compile Include="GenaricRepository.cs" />
     <Compile Include="group.cs" />
     <Compile Include="IGenaricRepository.cs" />
