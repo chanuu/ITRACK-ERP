@@ -18,6 +18,8 @@ namespace ITRACK.models
 
         public string  FaxNo { get; set; }
 
+        public string EmailAddress { get; set; }
+
         public Int32 CompanyID { get; set; }
 
         public virtual Company Company { get; set; }

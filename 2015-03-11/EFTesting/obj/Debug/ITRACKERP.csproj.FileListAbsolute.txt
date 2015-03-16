@@ -68,3 +68,23 @@ C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.exe
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.exe
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.pdb
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-05-15\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources

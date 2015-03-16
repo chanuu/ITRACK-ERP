@@ -94,6 +94,7 @@ namespace ITRACK.models
            _dbContext.Entry(entity).State = EntityState.Modified;
            
             await  _dbContext.SaveChangesAsync();
+            MessageBox.Show("Update Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
        /// <summary>
@@ -126,8 +127,10 @@ namespace ITRACK.models
        /// <returns></returns>
         public async Task DeleteAsync(TEntity entity)
         {
-            DbSet.Remove(entity);
+           // DbSet.Remove(entity);
+            _dbContext.Entry(entity).State = EntityState.Deleted;
             await _dbContext.SaveChangesAsync();
+            MessageBox.Show("Delete Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

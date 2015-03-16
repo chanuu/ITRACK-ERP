@@ -98,8 +98,9 @@
             this.xtraTabPage1.Controls.Add(this.txtGroupName);
             this.xtraTabPage1.Controls.Add(this.label1);
             this.xtraTabPage1.Controls.Add(this.txtGroupID);
+            this.xtraTabPage1.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(779, 412);
+            this.xtraTabPage1.Size = new System.Drawing.Size(752, 412);
             this.xtraTabPage1.Text = "Group";
             // 
             // grdGroup
@@ -111,7 +112,7 @@
             this.grdGroup.Location = new System.Drawing.Point(22, 161);
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
-            this.grdGroup.Size = new System.Drawing.Size(715, 227);
+            this.grdGroup.Size = new System.Drawing.Size(688, 227);
             this.grdGroup.TabIndex = 10;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -209,6 +210,7 @@
             this.xtraTabPage2.Controls.Add(this.simpleButton3);
             this.xtraTabPage2.Controls.Add(this.simpleButton4);
             this.xtraTabPage2.Controls.Add(this.grdCompany);
+            this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(779, 412);
             this.xtraTabPage2.Text = "Company";
@@ -266,6 +268,7 @@
             // 
             // xtraTabPage3
             // 
+            this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(779, 412);
             this.xtraTabPage3.Text = "Department";

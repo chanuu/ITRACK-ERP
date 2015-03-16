@@ -58,7 +58,7 @@ namespace EFTesting.UI
                     btnAdd.Enabled = false;
             }
             catch(Exception ex){
-            
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         
         }
@@ -114,7 +114,7 @@ namespace EFTesting.UI
          Company AssignCompany() {
             try {
                 Company _company = new Company();
-                _company.GroupID = txtGroupID.Text;
+               _company.GroupID = txtGroupID.Text;
                _company.CompanyName=txtCompanyName.Text;
                _company.LocationCode = txtLocationCode.Text;
                _company.CompanyAddress = txtAddress.Text;
@@ -144,7 +144,7 @@ namespace EFTesting.UI
                 _genaricrepositorycompany.Add(AssignCompany());
             }
             catch(Exception ex){
-            
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
       async  void  editCompany()
@@ -157,7 +157,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -172,7 +172,7 @@ namespace EFTesting.UI
             
             }
             catch(Exception ex){
-            
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

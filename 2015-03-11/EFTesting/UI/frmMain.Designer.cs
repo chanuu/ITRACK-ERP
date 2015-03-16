@@ -54,6 +54,7 @@
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.masters = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.config = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -215,9 +216,10 @@
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
-            this.barButtonItem10});
+            this.barButtonItem10,
+            this.barButtonItem11});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 7;
+            this.ribbonControl1.MaxItemId = 8;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.masters,
@@ -274,6 +276,15 @@
             this.barButtonItem10.Name = "barButtonItem10";
             this.barButtonItem10.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // barButtonItem11
+            // 
+            this.barButtonItem11.Caption = "Buyer Setup";
+            this.barButtonItem11.Glyph = global::EFTesting.Properties.Resources.add_contact_folded_icon;
+            this.barButtonItem11.Id = 7;
+            this.barButtonItem11.Name = "barButtonItem11";
+            this.barButtonItem11.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem11.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem11_ItemClick);
+            // 
             // masters
             // 
             this.masters.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -300,6 +311,7 @@
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem11);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // reports
@@ -360,5 +372,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem11;
     }
 }

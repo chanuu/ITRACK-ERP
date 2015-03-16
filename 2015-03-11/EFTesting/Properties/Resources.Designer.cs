@@ -83,6 +83,16 @@ namespace EFTesting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_contact_folded_icon {
+            get {
+                object obj = ResourceManager.GetObject("add-contact-folded-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap barcode_folded_icon {
             get {
                 object obj = ResourceManager.GetObject("barcode-folded-icon", resourceCulture);
@@ -116,6 +126,16 @@ namespace EFTesting.Properties {
         internal static System.Drawing.Bitmap Clipboard_Plan_icon {
             get {
                 object obj = ResourceManager.GetObject("Clipboard-Plan-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Folder_Accept_icon {
+            get {
+                object obj = ResourceManager.GetObject("Folder-Accept-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
