@@ -44,4 +44,3 @@ C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\EntityFra
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\ITRACK.models\obj\Debug\ITRACK.models.dll
 C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\ITRACK.models\obj\Debug\ITRACK.models.pdb
-C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache

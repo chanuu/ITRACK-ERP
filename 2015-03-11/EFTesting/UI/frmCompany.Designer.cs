@@ -46,7 +46,7 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.grdCompany = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
@@ -64,7 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupID.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +111,7 @@
             this.grdGroup.Location = new System.Drawing.Point(22, 161);
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
-            this.grdGroup.Size = new System.Drawing.Size(715, 200);
+            this.grdGroup.Size = new System.Drawing.Size(715, 227);
             this.grdGroup.TabIndex = 10;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -208,7 +208,7 @@
             this.xtraTabPage2.Controls.Add(this.simpleButton2);
             this.xtraTabPage2.Controls.Add(this.simpleButton3);
             this.xtraTabPage2.Controls.Add(this.simpleButton4);
-            this.xtraTabPage2.Controls.Add(this.gridControl1);
+            this.xtraTabPage2.Controls.Add(this.grdCompany);
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(779, 412);
             this.xtraTabPage2.Text = "Company";
@@ -222,6 +222,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(85, 39);
             this.simpleButton2.TabIndex = 14;
             this.simpleButton2.Text = "Edit";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton3
             // 
@@ -244,23 +245,23 @@
             this.simpleButton4.Text = "New";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // gridControl1
+            // grdCompany
             // 
-            this.gridControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.grdCompany.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl1.Location = new System.Drawing.Point(19, 32);
-            this.gridControl1.MainView = this.gridView2;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(715, 272);
-            this.gridControl1.TabIndex = 11;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdCompany.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdCompany.Location = new System.Drawing.Point(19, 32);
+            this.grdCompany.MainView = this.gridView2;
+            this.grdCompany.Name = "grdCompany";
+            this.grdCompany.Size = new System.Drawing.Size(715, 272);
+            this.grdCompany.TabIndex = 11;
+            this.grdCompany.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
-            this.gridView2.GridControl = this.gridControl1;
+            this.gridView2.GridControl = this.grdCompany;
             this.gridView2.Name = "gridView2";
             // 
             // xtraTabPage3
@@ -306,6 +307,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
             this.simpleButton1.TabIndex = 4;
             this.simpleButton1.Text = "Search";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // frmCompany
             // 
@@ -334,7 +336,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupID.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCompany)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -365,7 +367,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.GridControl grdCompany;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
 
     }

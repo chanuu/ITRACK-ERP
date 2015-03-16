@@ -20,9 +20,6 @@ namespace EFTesting
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-
-
-
             using (var ctx = new ItrackContext())
             {
                 new ItrackContextInitializer().InitializeDatabase(ctx);

@@ -40,7 +40,7 @@
             this.txtGroupID = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.txtFaxNo = new DevExpress.XtraEditors.TextEdit();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
+            this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEdit = new DevExpress.XtraEditors.SimpleButton();
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
@@ -53,7 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.isDefualtCompany.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdGroup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -141,6 +141,7 @@
             this.txtGroupID.Size = new System.Drawing.Size(226, 20);
             this.txtGroupID.TabIndex = 10;
             this.txtGroupID.EditValueChanged += new System.EventHandler(this.txtGroupID_EditValueChanged);
+            this.txtGroupID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGroupID_KeyDown);
             // 
             // label6
             // 
@@ -158,13 +159,13 @@
             this.txtFaxNo.Size = new System.Drawing.Size(226, 20);
             this.txtFaxNo.TabIndex = 20;
             // 
-            // memoEdit1
+            // txtAddress
             // 
-            this.memoEdit1.Location = new System.Drawing.Point(123, 160);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(226, 96);
-            this.memoEdit1.TabIndex = 22;
-            this.memoEdit1.UseOptimizedRendering = true;
+            this.txtAddress.Location = new System.Drawing.Point(123, 160);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(226, 96);
+            this.txtAddress.TabIndex = 22;
+            this.txtAddress.UseOptimizedRendering = true;
             // 
             // label7
             // 
@@ -183,6 +184,7 @@
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
             this.btnEdit.TabIndex = 25;
             this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -192,6 +194,7 @@
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // isDefualtCompany
             // 
@@ -210,10 +213,11 @@
             this.grdGroup.Location = new System.Drawing.Point(123, 80);
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
-            this.grdGroup.Size = new System.Drawing.Size(610, 232);
+            this.grdGroup.Size = new System.Drawing.Size(610, 187);
             this.grdGroup.TabIndex = 27;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grdGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdGroup_KeyDown);
             // 
             // gridView1
             // 
@@ -230,7 +234,7 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.memoEdit1);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtFaxNo);
             this.Controls.Add(this.label5);
@@ -246,6 +250,7 @@
             this.Name = "frmcompanyDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add \\ Edit Company";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmcompanyDialog_FormClosing);
             this.Load += new System.EventHandler(this.frmcompanyDialog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTeleNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyName.Properties)).EndInit();
@@ -253,7 +258,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCompanyID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFaxNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.isDefualtCompany.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdGroup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -276,7 +281,7 @@
         private DevExpress.XtraEditors.TextEdit txtGroupID;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.TextEdit txtFaxNo;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
+        private DevExpress.XtraEditors.MemoEdit txtAddress;
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnAdd;

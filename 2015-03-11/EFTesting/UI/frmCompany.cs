@@ -18,7 +18,7 @@ namespace EFTesting.UI
             InitializeComponent();
         }
         GenaricRepository<Group> _genaricrepository = new GenaricRepository<Group>(new ItrackContext());
-    
+        GenaricRepository<Company> _genaricrepositorycompany = new GenaricRepository<Company>(new ItrackContext());
         
       #region GROUP CRUD
 
@@ -66,8 +66,26 @@ namespace EFTesting.UI
           }
 
       }
+
+      private async void DeleteGroup()
+      {
+
+          try
+          {
+
+              GenaricRepository<Group> _repository = new GenaricRepository<Group>(new ItrackContext());
+              await  _repository.DeleteAsync(AssignGroup());
+
+          }
+          catch (Exception ex)
+          {
+              MessageBox.Show(ex.Message, "Error - C-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          }
+
+      }
+
         // get all group 
-      private async void GetGroup()
+      public async void GetGroup()
       {
           try {
 
@@ -79,6 +97,23 @@ namespace EFTesting.UI
               MessageBox.Show(ex.Message, "Error - C-0003", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
       
+      }
+
+
+      public async void GetCompany()
+      {
+
+          try
+          {
+
+              var datasource = from item in await _genaricrepositorycompany.GetAllData() select new { item.CompanyID,item.Group.GroupName, item.CompanyName, item.LocationCode, item.TeleNo, item.FaxNo, item.CompanyAddress,item.isDefaultCompany };
+              grdCompany.DataSource = datasource;
+
+          }
+          catch (Exception ex)
+          {
+
+          }
       }
 
       private List<Group> GetGroupByID(string ID)
@@ -94,6 +129,23 @@ namespace EFTesting.UI
               MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
               return null;
              
+          }
+
+      }
+
+      private List<Company> GetCompanyByID(int ID)
+      {
+          try
+          {
+              return _genaricrepositorycompany.GetAll().Where(u => u.CompanyID == ID).ToList();
+
+
+          }
+          catch (Exception ex)
+          {
+              MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              return null;
+
           }
 
       }
@@ -114,6 +166,32 @@ namespace EFTesting.UI
               MessageBox.Show(ex.Message, "Error - C-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
       }
+
+      Company _company = new Company();
+      // get selected object values to form controls 
+      void getCompanyFeild(int ID)
+      {
+          try
+          {
+
+              foreach (var company in GetCompanyByID(ID))
+              {
+                  _company.CompanyID = company.CompanyID;
+                  _company.CompanyName = company.CompanyName;
+                  _company.CompanyAddress = company.CompanyAddress;
+                  _company.TeleNo = company.TeleNo;
+                  _company.FaxNo = company.FaxNo;
+                  _company.GroupID = company.GroupID;
+                  _company.LocationCode = company.LocationCode;
+                  _company.isDefaultCompany = company.isDefaultCompany;
+              }
+          }
+          catch (Exception ex)
+          {
+              MessageBox.Show(ex.Message, "Error - C-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          }
+      }
+
         #endregion
 
 
@@ -136,6 +214,7 @@ namespace EFTesting.UI
       private void frmCompany_Load(object sender, EventArgs e)
       {
           GetGroup();
+          GetCompany();
 
       }
 
@@ -162,6 +241,21 @@ namespace EFTesting.UI
       {
           frmcompanyDialog companydialog = new frmcompanyDialog();
           companydialog.ShowDialog();
+      }
+
+      private void simpleButton2_Click(object sender, EventArgs e)
+      {
+          
+          
+          int ID =Convert.ToInt16( gridView2.GetFocusedRowCellValue("CompanyID").ToString());
+          getCompanyFeild(ID);
+          frmcompanyDialog companydialog = new frmcompanyDialog(_company,this);
+          companydialog.ShowDialog();
+      }
+
+      private void simpleButton1_Click(object sender, EventArgs e)
+      {
+          DeleteGroup();
       }
 
 
