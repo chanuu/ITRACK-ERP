@@ -102,6 +102,7 @@
             this.btnNew.Size = new System.Drawing.Size(85, 39);
             this.btnNew.TabIndex = 5;
             this.btnNew.Text = "New";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // xtraTabControl1
             // 
@@ -273,7 +274,7 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 49);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(873, 323);
+            this.grdSearch.Size = new System.Drawing.Size(960, 323);
             this.grdSearch.TabIndex = 14;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -319,6 +320,7 @@
             this.Controls.Add(this.btnNew);
             this.Name = "frmBuyer";
             this.Text = "Buyer Master Files ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmBuyer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);

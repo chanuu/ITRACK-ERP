@@ -22,6 +22,15 @@ namespace EFTesting.UI
         
       #region GROUP CRUD
 
+        void Clear() {
+            try {
+            
+            }
+            catch(Exception ex){
+            
+            }
+        }
+
 
         //assign group properties and return new group object 
         private Group AssignGroup() {
@@ -256,6 +265,11 @@ namespace EFTesting.UI
       private void simpleButton1_Click(object sender, EventArgs e)
       {
           DeleteGroup();
+      }
+
+      private void btnNew_Click(object sender, EventArgs e)
+      {
+
       }
 
 

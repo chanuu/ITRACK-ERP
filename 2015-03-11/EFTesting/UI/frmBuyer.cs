@@ -31,6 +31,23 @@ namespace EFTesting.UI
         #endregion
 
         #region CRUD
+
+        void Clear()
+        {
+            try
+            {
+                txtBuyerName.Text = "";
+                txtAddress.Text = "";
+                txtTeleNo.Text = "";
+                txtFaxNo.Text = "";
+                txtEmail.Text = "";
+                txtBuyerName.Focus();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         Buyer AssignBuyer() {
             try {
 
@@ -76,7 +93,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -88,6 +105,7 @@ namespace EFTesting.UI
             {
                 GenaricRepository<Buyer> _genaricrepositorybuyernew = new GenaricRepository<Buyer>(new ItrackContext());
                 await _BuyerRepositoryNew.DeleteAsync(AssignBuyer());
+                Clear();
             }
             catch (Exception ex)
             {
@@ -183,9 +201,9 @@ namespace EFTesting.UI
         
         #endregion
 
+        #region Events 
 
-
-
+        
 
         private void frmBuyer_Load(object sender, EventArgs e)
         {
@@ -211,7 +229,7 @@ namespace EFTesting.UI
             grdSearch.Hide();
             btnClose.Hide();
             txtSearchBox.Hide();
-                
+
         }
 
         private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -252,5 +270,14 @@ namespace EFTesting.UI
         {
             DeleteBuyer();
         }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        #endregion
+
+
     }
 }

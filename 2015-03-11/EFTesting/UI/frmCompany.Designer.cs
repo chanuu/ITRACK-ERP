@@ -212,7 +212,7 @@
             this.xtraTabPage2.Controls.Add(this.grdCompany);
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(779, 412);
+            this.xtraTabPage2.Size = new System.Drawing.Size(752, 412);
             this.xtraTabPage2.Text = "Company";
             // 
             // simpleButton2
@@ -270,7 +270,7 @@
             // 
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(779, 412);
+            this.xtraTabPage3.Size = new System.Drawing.Size(752, 412);
             this.xtraTabPage3.Text = "Department";
             // 
             // btnNew
@@ -281,6 +281,7 @@
             this.btnNew.Size = new System.Drawing.Size(85, 39);
             this.btnNew.TabIndex = 1;
             this.btnNew.Text = "New";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnAdd
             // 

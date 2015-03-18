@@ -55,6 +55,7 @@
     <Compile Include="group.cs" />
     <Compile Include="IGenaricRepository.cs" />
     <Compile Include="ItrackContextInitializer.cs" />
+    <Compile Include="NestedExpression.cs" />
     <Compile Include="PartDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SketchDefinition.cs" />

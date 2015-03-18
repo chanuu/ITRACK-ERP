@@ -15,18 +15,24 @@ namespace ITRACK.models
 
         public string Article { get; set; }
 
-        public int Season { get; set; }
+        public string Season { get; set; }
 
         public string GarmantType { get; set; }
 
 
         public string Status { get; set; }
 
-
+        public string Remark { get; set; }
         public Int32 CompanyID { get; set; }
 
         public virtual Company Company { get; set; }
 
+        public virtual Buyer Buyer { get; set; }
+
+        public Int32 BuyerID { get; set; }
+
         public virtual ICollection<SketchDefinition> SketchDefinition { get; set; }
+
+        
     }
 }

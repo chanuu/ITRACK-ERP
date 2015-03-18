@@ -24,6 +24,8 @@ namespace ITRACK.models
 
         public virtual Company Company { get; set; }
 
+        public virtual ICollection<Style> Style { get; set; }
+
 
     }
 }
