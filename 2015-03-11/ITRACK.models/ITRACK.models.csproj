@@ -58,6 +58,7 @@
     <Compile Include="NestedExpression.cs" />
     <Compile Include="PartDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrder.cs" />
     <Compile Include="SketchDefinition.cs" />
     <Compile Include="Style.cs" />
     <Compile Include="User.cs" />

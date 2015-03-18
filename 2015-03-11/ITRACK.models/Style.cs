@@ -33,6 +33,8 @@ namespace ITRACK.models
 
         public virtual ICollection<SketchDefinition> SketchDefinition { get; set; }
 
+        public virtual ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; set; }
+
         
     }
 }
