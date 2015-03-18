@@ -111,7 +111,7 @@
             this.txtSearchBox.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtSearchBox.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSearchBox.Size = new System.Drawing.Size(285, 20);
-            this.txtSearchBox.TabIndex = 21;
+            this.txtSearchBox.TabIndex = 22;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
