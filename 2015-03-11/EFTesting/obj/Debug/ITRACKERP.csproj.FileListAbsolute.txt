@@ -173,3 +173,5 @@ E:\ITrack Backups (2015)\18.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmMain.res
 E:\ITrack Backups (2015)\18.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
 E:\ITrack Backups (2015)\18.03.2015\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
 E:\ITrack Backups (2015)\18.03.2015\EFTesting\obj\Debug\EFTesting.exe.licenses
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
