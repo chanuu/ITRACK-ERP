@@ -121,7 +121,7 @@
             this.txtCompanyID.Location = new System.Drawing.Point(468, 54);
             this.txtCompanyID.Name = "txtCompanyID";
             this.txtCompanyID.Size = new System.Drawing.Size(226, 20);
-            this.txtCompanyID.TabIndex = 12;
+            this.txtCompanyID.TabIndex = 2;
             // 
             // label1
             // 
@@ -139,7 +139,7 @@
             this.txtGroupID.Properties.AccessibleDescription = "";
             this.txtGroupID.Properties.NullText = "Please Enter Group ID";
             this.txtGroupID.Size = new System.Drawing.Size(226, 20);
-            this.txtGroupID.TabIndex = 10;
+            this.txtGroupID.TabIndex = 1;
             this.txtGroupID.EditValueChanged += new System.EventHandler(this.txtGroupID_EditValueChanged);
             this.txtGroupID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGroupID_KeyDown);
             // 
@@ -214,7 +214,7 @@
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
             this.grdGroup.Size = new System.Drawing.Size(610, 187);
-            this.grdGroup.TabIndex = 27;
+            this.grdGroup.TabIndex = 3;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             this.grdGroup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdGroup_KeyDown);

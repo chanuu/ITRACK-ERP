@@ -113,7 +113,7 @@
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
             this.grdGroup.Size = new System.Drawing.Size(688, 227);
-            this.grdGroup.TabIndex = 10;
+            this.grdGroup.TabIndex = 6;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -136,7 +136,7 @@
             this.txtAddress.Location = new System.Drawing.Point(111, 106);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(226, 20);
-            this.txtAddress.TabIndex = 8;
+            this.txtAddress.TabIndex = 5;
             // 
             // label4
             // 
@@ -152,7 +152,7 @@
             this.txtFaxNo.Location = new System.Drawing.Point(456, 71);
             this.txtFaxNo.Name = "txtFaxNo";
             this.txtFaxNo.Size = new System.Drawing.Size(226, 20);
-            this.txtFaxNo.TabIndex = 6;
+            this.txtFaxNo.TabIndex = 4;
             // 
             // label3
             // 
@@ -168,7 +168,7 @@
             this.txtTeleNo.Location = new System.Drawing.Point(111, 71);
             this.txtTeleNo.Name = "txtTeleNo";
             this.txtTeleNo.Size = new System.Drawing.Size(226, 20);
-            this.txtTeleNo.TabIndex = 4;
+            this.txtTeleNo.TabIndex = 3;
             // 
             // label2
             // 
@@ -202,7 +202,7 @@
             this.txtGroupID.Properties.AccessibleDescription = "";
             this.txtGroupID.Properties.NullText = "Please Enter Group ID";
             this.txtGroupID.Size = new System.Drawing.Size(226, 20);
-            this.txtGroupID.TabIndex = 0;
+            this.txtGroupID.TabIndex = 1;
             // 
             // xtraTabPage2
             // 

@@ -106,7 +106,7 @@ namespace EFTesting.UI
 
             }
             catch(Exception ex){
-                MessageBox.Show(ex.Message, "Error - CD-0001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - C-0009", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -133,7 +133,7 @@ namespace EFTesting.UI
             
             }
             catch(Exception ex){
-                MessageBox.Show(ex.Message, "Error - CD-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - C-0009", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }
@@ -144,7 +144,7 @@ namespace EFTesting.UI
                 _genaricrepositorycompany.Add(AssignCompany());
             }
             catch(Exception ex){
-                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - C-0010", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
       async  void  editCompany()
@@ -157,7 +157,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - C-0011", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -172,7 +172,7 @@ namespace EFTesting.UI
             
             }
             catch(Exception ex){
-                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - C-0012", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

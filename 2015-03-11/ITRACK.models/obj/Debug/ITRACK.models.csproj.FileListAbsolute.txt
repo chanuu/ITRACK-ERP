@@ -90,3 +90,4 @@ E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\EntityFramework.xml
 E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
 E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\obj\Debug\ITRACK.models.dll
 E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\obj\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
