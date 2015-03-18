@@ -45,7 +45,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0001", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         Buyer AssignBuyer() {
@@ -65,7 +65,7 @@ namespace EFTesting.UI
 
             }
             catch(Exception ex){
-                MessageBox.Show(ex.Message, "Error - B-0001", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         
@@ -78,7 +78,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error - B-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0003", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,7 +93,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -109,7 +109,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private List<Buyer> GetBuyerByID(int ID)
@@ -122,7 +122,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0006", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
 
             }
@@ -170,7 +170,7 @@ namespace EFTesting.UI
             }
             catch(Exception ex){
 
-                MessageBox.Show(ex.Message, "Error - B-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0007", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         
         }
@@ -194,7 +194,7 @@ namespace EFTesting.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error - C-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error - B-0008", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -277,6 +277,16 @@ namespace EFTesting.UI
         }
 
         #endregion
+
+        private void grdSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBuyerName_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
 
 
     }

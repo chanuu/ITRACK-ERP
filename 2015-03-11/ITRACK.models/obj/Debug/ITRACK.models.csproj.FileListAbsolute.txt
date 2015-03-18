@@ -72,3 +72,21 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-03-17\ITRACK.models\b
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-17\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-17\ITRACK.models\obj\Debug\ITRACK.models.dll
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-17\ITRACK.models\obj\Debug\ITRACK.models.pdb
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\ITRACK.models.dll
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\ITRACK.models.pdb
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\EntityFramework.dll
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\EntityFramework.xml
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\obj\Debug\ITRACK.models.dll
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\obj\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\EntityFramework.dll
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\EntityFramework.xml
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\obj\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\18.03.2015\ITRACK.models\obj\Debug\ITRACK.models.pdb

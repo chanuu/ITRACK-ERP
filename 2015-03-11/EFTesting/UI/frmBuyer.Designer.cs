@@ -156,7 +156,7 @@
             this.txtEmail.Properties.NullText = "Please Enter Fax No";
             this.txtEmail.Properties.NullValuePrompt = "Please Enter Fax No";
             this.txtEmail.Size = new System.Drawing.Size(251, 20);
-            this.txtEmail.TabIndex = 24;
+            this.txtEmail.TabIndex = 4;
             // 
             // txtAddress
             // 
@@ -166,7 +166,7 @@
             this.txtAddress.Properties.NullText = "Shipping Address";
             this.txtAddress.Properties.NullValuePrompt = "Shipping Address";
             this.txtAddress.Size = new System.Drawing.Size(289, 96);
-            this.txtAddress.TabIndex = 23;
+            this.txtAddress.TabIndex = 5;
             this.txtAddress.UseOptimizedRendering = true;
             // 
             // label4
@@ -196,7 +196,7 @@
             this.txtFaxNo.Properties.NullText = "Please Enter Fax No";
             this.txtFaxNo.Properties.NullValuePrompt = "Please Enter Fax No";
             this.txtFaxNo.Size = new System.Drawing.Size(251, 20);
-            this.txtFaxNo.TabIndex = 16;
+            this.txtFaxNo.TabIndex = 3;
             // 
             // label2
             // 
@@ -217,7 +217,7 @@
             this.txtTeleNo.Properties.NullValuePrompt = "Please Enter Tele No";
             this.txtTeleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtTeleNo.Size = new System.Drawing.Size(251, 20);
-            this.txtTeleNo.TabIndex = 14;
+            this.txtTeleNo.TabIndex = 2;
             // 
             // label1
             // 
@@ -238,7 +238,8 @@
             this.txtBuyerName.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtBuyerName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBuyerName.Size = new System.Drawing.Size(251, 20);
-            this.txtBuyerName.TabIndex = 12;
+            this.txtBuyerName.TabIndex = 1;
+            this.txtBuyerName.EditValueChanged += new System.EventHandler(this.txtBuyerName_EditValueChanged);
             // 
             // xtraTabPage2
             // 
@@ -264,7 +265,7 @@
             this.txtSearchBox.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtSearchBox.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSearchBox.Size = new System.Drawing.Size(285, 20);
-            this.txtSearchBox.TabIndex = 13;
+            this.txtSearchBox.TabIndex = 9;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
@@ -274,10 +275,11 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 49);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(960, 323);
+            this.grdSearch.Size = new System.Drawing.Size(960, 34);
             this.grdSearch.TabIndex = 14;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.grdSearch.Click += new System.EventHandler(this.grdSearch_Click);
             this.grdSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.grdSearch_KeyPress);
             // 
             // gridView1
@@ -291,7 +293,7 @@
             this.btnClose.Location = new System.Drawing.Point(770, 8);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
@@ -300,7 +302,7 @@
             this.btnDelete.Location = new System.Drawing.Point(289, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
-            this.btnDelete.TabIndex = 16;
+            this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "Delete";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 

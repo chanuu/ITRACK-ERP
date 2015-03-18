@@ -88,7 +88,7 @@ namespace EFTesting.UI
           }
           catch (Exception ex)
           {
-              MessageBox.Show(ex.Message, "Error - C-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              MessageBox.Show(ex.Message, "Error - C-0003", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
 
       }
@@ -103,7 +103,7 @@ namespace EFTesting.UI
               grdGroup.DataSource = datasource;
           }
           catch(Exception ex){
-              MessageBox.Show(ex.Message, "Error - C-0003", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
       
       }
@@ -135,7 +135,7 @@ namespace EFTesting.UI
           }
           catch (Exception ex)
           {
-              MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              MessageBox.Show(ex.Message, "Error - C-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
               return null;
              
           }
@@ -152,7 +152,7 @@ namespace EFTesting.UI
           }
           catch (Exception ex)
           {
-              MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              MessageBox.Show(ex.Message, "Error - C-0006", MessageBoxButtons.OK, MessageBoxIcon.Error);
               return null;
 
           }
@@ -172,7 +172,7 @@ namespace EFTesting.UI
               }
           }
           catch(Exception ex){
-              MessageBox.Show(ex.Message, "Error - C-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              MessageBox.Show(ex.Message, "Error - C-0007", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
       }
 
@@ -197,7 +197,7 @@ namespace EFTesting.UI
           }
           catch (Exception ex)
           {
-              MessageBox.Show(ex.Message, "Error - C-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              MessageBox.Show(ex.Message, "Error - C-0008", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
       }
 
