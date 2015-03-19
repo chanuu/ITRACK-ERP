@@ -100,3 +100,12 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-03-19\ITRACK.models\b
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-19\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-19\ITRACK.models\bin\Debug\EntityFramework.xml
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-19\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\bin\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\bin\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\bin\Debug\EntityFramework.dll
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\bin\Debug\EntityFramework.xml
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\obj\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\19.03.2015\ITRACK.models\obj\Debug\ITRACK.models.pdb

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Linq.Expressions;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -28,6 +29,7 @@ namespace EFTesting.UI
             Company _Company = new Company();
             Style _Style = new Style();
             StyleVM _StyleVM = new StyleVM();
+            Validator Validator = new Validator();
         #endregion
 
 
@@ -213,10 +215,10 @@ namespace EFTesting.UI
         }
         #endregion
 
-
-
+        #region events
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (isValidStyleMaster() == true)
             AddStyle();
         }
 
@@ -240,15 +242,15 @@ namespace EFTesting.UI
 
         private void grdSearchBuyer_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter )
+            if (e.KeyData == Keys.Enter)
             {
                 _Buyer.BuyerID = Convert.ToInt16(gridView1.GetFocusedRowCellValue("BuyerID").ToString());
                 _Buyer.BuyerName = gridView1.GetFocusedRowCellValue("BuyerName").ToString();
                 txtBuyerName.Text = _Buyer.BuyerName;
                 grdSearchBuyer.Hide();
             }
-            
-        
+
+
 
         }
 
@@ -289,8 +291,8 @@ namespace EFTesting.UI
                 txtSearchBox.Hide();
                 grdSearchBuyer.Hide();
             }
-            
-        
+
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -315,5 +317,47 @@ namespace EFTesting.UI
         {
             editStyle();
         }
+        #endregion
+
+        #region validation
+        public bool isValidStyleMaster()
+        {
+
+
+            if (!Validator.isPresent(txtStyleNo, "Style No"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtBuyerName, "Buyer Name"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtArticle, "Article"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtSeason, "Season"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(cmbGarmentType, "Garment Type"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(cmbStatus, "Status"))
+            {
+                return false;
+            }
+
+            return true;
+        }
+        #endregion
+
+
     }
 }

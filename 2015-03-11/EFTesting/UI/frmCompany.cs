@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
+using ITRACK.Validator;
 namespace EFTesting.UI
 {
     public partial class frmCompany : DevExpress.XtraEditors.XtraForm
@@ -17,10 +18,14 @@ namespace EFTesting.UI
         {
             InitializeComponent();
         }
+       
+        #region Declarations
         GenaricRepository<Group> _genaricrepository = new GenaricRepository<Group>(new ItrackContext());
         GenaricRepository<Company> _genaricrepositorycompany = new GenaricRepository<Company>(new ItrackContext());
-        
-      #region GROUP CRUD
+        Validator Validator = new Validator();
+        #endregion
+
+        #region GROUP CRUD
 
         void Clear() {
             try {
@@ -221,8 +226,18 @@ namespace EFTesting.UI
 
       private void btnAdd_Click(object sender, EventArgs e)
       {
-          addGroup();
-          GetGroup();
+          if (isValidGroup() == true)
+          {
+              addGroup();
+              GetGroup();
+          }
+          
+         
+      }
+
+      private bool isvalidcompany()
+      {
+          throw new NotImplementedException();
       }
 
       private void frmCompany_Load(object sender, EventArgs e)
@@ -248,9 +263,6 @@ namespace EFTesting.UI
 
 
       }
-
-      #endregion
-
       private void simpleButton4_Click(object sender, EventArgs e)
       {
           frmcompanyDialog companydialog = new frmcompanyDialog();
@@ -259,11 +271,11 @@ namespace EFTesting.UI
 
       private void simpleButton2_Click(object sender, EventArgs e)
       {
-          
-          
-          int ID =Convert.ToInt16( gridView2.GetFocusedRowCellValue("CompanyID").ToString());
+
+
+          int ID = Convert.ToInt16(gridView2.GetFocusedRowCellValue("CompanyID").ToString());
           getCompanyFeild(ID);
-          frmcompanyDialog companydialog = new frmcompanyDialog(_company,this);
+          frmcompanyDialog companydialog = new frmcompanyDialog(_company, this);
           companydialog.ShowDialog();
       }
 
@@ -276,6 +288,42 @@ namespace EFTesting.UI
       {
 
       }
+      #endregion
+
+        #region validation
+      public bool isValidGroup()
+      {
+
+
+          if (!Validator.isPresent(txtGroupID, "Group ID"))
+          {
+              return false;
+          }
+
+          if (!Validator.isPresent(txtGroupName, "Group Name"))
+          {
+              return false;
+          }
+
+          if (!Validator.isPresent(txtTeleNo, "Telephone No"))
+          {
+              return false;
+          }
+
+          if (!Validator.isPresent(txtFaxNo, "Fax No"))
+          {
+              return false;
+          }
+
+          if (!Validator.isPresent(txtAddress, "Address"))
+          {
+              return false;
+          }
+
+          return true;
+      }
+
+        #endregion
 
 
     }
