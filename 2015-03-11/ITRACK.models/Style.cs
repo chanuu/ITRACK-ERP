@@ -31,10 +31,13 @@ namespace ITRACK.models
 
         public Int32 BuyerID { get; set; }
 
+       
         public virtual ICollection<SketchDefinition> SketchDefinition { get; set; }
 
         public virtual ICollection<PurchaseOrderHeader> PurchaseOrderHeader { get; set; }
 
-        
+        public virtual Workflow Workflow { get; set; }
+
+        public int WorkflowID { get; set; }
     }
 }

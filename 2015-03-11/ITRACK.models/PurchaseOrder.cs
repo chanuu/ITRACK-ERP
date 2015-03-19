@@ -24,12 +24,13 @@ namespace ITRACK.models
         public DateTime EndDate { get; set; }
 
 
-
         public string Remark { get; set; }
         public virtual Style Company { get; set; }
 
 
         public string StyleID { get; set; }
+
+        public virtual ICollection<PurchaseOrderItems> PurchaseOrderItems { get; set; }
 
     }
 }
