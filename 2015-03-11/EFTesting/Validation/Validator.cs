@@ -54,6 +54,7 @@ public class  Validator
 		} catch (Exception ex) {
 			MessageBox.Show(name + "must be a numeric value.", "Entry Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			textbox.Select(0, textbox.Text.Length);
+            Debug.WriteLine(ex.Message);
 			return false;
 		}
 	}
@@ -136,6 +137,7 @@ public class  Validator
 
 		} catch (Exception ex) {
 			textbox.Select(0, textbox.Text.Length);
+            Debug.WriteLine(ex.Message);
 			return true;
 		}
 	}

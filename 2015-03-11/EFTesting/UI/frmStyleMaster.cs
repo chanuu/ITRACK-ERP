@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Linq.Expressions;
+using System.Diagnostics;
 
 namespace EFTesting.UI
 {
@@ -28,6 +29,9 @@ namespace EFTesting.UI
             Company _Company = new Company();
             Style _Style = new Style();
             StyleVM _StyleVM = new StyleVM();
+
+           
+        
         #endregion
 
 
@@ -47,10 +51,11 @@ namespace EFTesting.UI
                     txtStyleNo.Focus();
                     grdSearchBuyer.Hide();
                     btnClose.Hide();
+                 
 
                 }
                 catch(Exception ex){
-                
+                    Debug.WriteLine(ex.Message);
                 }
             
             }
@@ -213,7 +218,7 @@ namespace EFTesting.UI
         }
         #endregion
 
-
+        #region Events
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -240,15 +245,15 @@ namespace EFTesting.UI
 
         private void grdSearchBuyer_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter )
+            if (e.KeyData == Keys.Enter)
             {
                 _Buyer.BuyerID = Convert.ToInt16(gridView1.GetFocusedRowCellValue("BuyerID").ToString());
                 _Buyer.BuyerName = gridView1.GetFocusedRowCellValue("BuyerName").ToString();
                 txtBuyerName.Text = _Buyer.BuyerName;
                 grdSearchBuyer.Hide();
             }
-            
-        
+
+
 
         }
 
@@ -289,8 +294,8 @@ namespace EFTesting.UI
                 txtSearchBox.Hide();
                 grdSearchBuyer.Hide();
             }
-            
-        
+
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -315,5 +320,8 @@ namespace EFTesting.UI
         {
             editStyle();
         }
+
+        #endregion
+
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
+using System.Diagnostics;
 namespace EFTesting.UI
 {
     public partial class frmCompany : DevExpress.XtraEditors.XtraForm
@@ -27,7 +28,7 @@ namespace EFTesting.UI
             
             }
             catch(Exception ex){
-            
+                Debug.WriteLine(ex.Message);
             }
         }
 
@@ -121,7 +122,7 @@ namespace EFTesting.UI
           }
           catch (Exception ex)
           {
-
+              Debug.WriteLine(ex.Message);
           }
       }
 

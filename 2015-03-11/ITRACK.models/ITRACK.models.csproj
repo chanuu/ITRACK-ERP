@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDBContext.cs" />
+    <Compile Include="Award.cs" />
     <Compile Include="Buyer.cs" />
     <Compile Include="company.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="ExpressionBuilder.cs" />
     <Compile Include="GenaricRepository.cs" />
     <Compile Include="group.cs" />
@@ -57,11 +59,16 @@
     <Compile Include="ItrackContextInitializer.cs" />
     <Compile Include="NestedExpression.cs" />
     <Compile Include="PartDefinition.cs" />
+    <Compile Include="PastEmployeement.cs" />
+    <Compile Include="Promotion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseOrder.cs" />
+    <Compile Include="PurchaseOrderItems.cs" />
     <Compile Include="SketchDefinition.cs" />
     <Compile Include="Style.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Workflow.cs" />
+    <Compile Include="Workstation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

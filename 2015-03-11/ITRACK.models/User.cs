@@ -9,24 +9,22 @@ namespace ITRACK.models
 {
   public  class User
     {
-        [Key] 
-        public string UserID { get; set; }
 
-        public string FirstName  { get; set; }
+        public int UserID { get; set; }
 
-        public string  LastName { get; set; }
+        public string UserName { get; set; }
 
-        public string  EmailAddress { get; set; }
+        public string Password { get; set; }
 
-        public string TeleNo { get; set; }
+        public string Role { get; set; }
 
-        public string Department { get; set; }
+        public string UserStatus { get; set; }
 
-        public string Designation { get; set; }
+        public virtual Employee Employee { get; set; }
 
-        public Int32 CompanyID { get; set; }
+       
 
-        public virtual Company Company { get; set; }
+        
 
 
 
