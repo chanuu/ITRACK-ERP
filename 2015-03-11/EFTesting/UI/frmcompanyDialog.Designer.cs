@@ -134,10 +134,12 @@
             // 
             // txtGroupID
             // 
+            this.txtGroupID.EditValue = "";
             this.txtGroupID.Location = new System.Drawing.Point(123, 54);
             this.txtGroupID.Name = "txtGroupID";
             this.txtGroupID.Properties.AccessibleDescription = "";
-            this.txtGroupID.Properties.NullText = "Please Enter Group ID";
+            this.txtGroupID.Properties.NullValuePrompt = "Please Enter Group ID";
+            this.txtGroupID.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtGroupID.Size = new System.Drawing.Size(226, 20);
             this.txtGroupID.TabIndex = 1;
             this.txtGroupID.EditValueChanged += new System.EventHandler(this.txtGroupID_EditValueChanged);
@@ -213,7 +215,7 @@
             this.grdGroup.Location = new System.Drawing.Point(123, 80);
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
-            this.grdGroup.Size = new System.Drawing.Size(610, 187);
+            this.grdGroup.Size = new System.Drawing.Size(610, 176);
             this.grdGroup.TabIndex = 3;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

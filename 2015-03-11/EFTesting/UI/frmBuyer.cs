@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Linq.Expressions;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -27,7 +28,8 @@ namespace EFTesting.UI
         GenaricRepository<Buyer> _BuyerRepositoryNew = new GenaricRepository<Buyer>(new ItrackContext());
         Buyer _Buyer = new Buyer();
         Company _Company = new Company();
-        
+
+        Validator Validator = new Validator();
         #endregion
 
         #region CRUD
@@ -216,7 +218,11 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddBuyer();
+            if (isValidBuyer() == true) {
+
+                AddBuyer();
+            }
+            
         }
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
@@ -276,6 +282,45 @@ namespace EFTesting.UI
             Clear();
         }
 
+        #endregion
+
+        #region valitation
+        public bool isValidBuyer()
+        {
+
+
+            if (!Validator.isPresent(txtBuyerName, "Buyer Name"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtTeleNo, "Telephone No"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtFaxNo, "Fax No"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtEmail, "Email Address"))
+            {
+                return false;
+            }
+
+            if (!Validator.IsValidEmail(txtEmail.Text, "Email Address"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtAddress, "Address"))
+            {
+                return false;
+            }
+
+            return true;
+        }
         #endregion
 
         private void grdSearch_Click(object sender, EventArgs e)

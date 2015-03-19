@@ -103,6 +103,7 @@
     <Compile Include="UI\frmStyleMaster.Designer.cs">
       <DependentUpon>frmStyleMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validation\Validator.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

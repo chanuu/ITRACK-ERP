@@ -183,17 +183,22 @@ namespace EFTesting.UI
           try
           {
 
-              foreach (var company in GetCompanyByID(ID))
+              if (GetCompanyByID(ID).Count > 0)
               {
-                  _company.CompanyID = company.CompanyID;
-                  _company.CompanyName = company.CompanyName;
-                  _company.CompanyAddress = company.CompanyAddress;
-                  _company.TeleNo = company.TeleNo;
-                  _company.FaxNo = company.FaxNo;
-                  _company.GroupID = company.GroupID;
-                  _company.LocationCode = company.LocationCode;
-                  _company.isDefaultCompany = company.isDefaultCompany;
+                  foreach (var company in GetCompanyByID(ID))
+                  {
+                      _company.CompanyID = company.CompanyID;
+                      _company.CompanyName = company.CompanyName;
+                      _company.CompanyAddress = company.CompanyAddress;
+                      _company.TeleNo = company.TeleNo;
+                      _company.FaxNo = company.FaxNo;
+                      _company.GroupID = company.GroupID;
+                      _company.LocationCode = company.LocationCode;
+                      _company.isDefaultCompany = company.isDefaultCompany;
+                  }
               }
+
+             
           }
           catch (Exception ex)
           {

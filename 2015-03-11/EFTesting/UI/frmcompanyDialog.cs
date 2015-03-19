@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Linq.Expressions;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -26,6 +27,7 @@ namespace EFTesting.UI
             this.Company = _company;
             this._CompanyUi = _comUi;
             InitializeComponent();
+            initlizedControlValues();
         }
 
 // each insiliztion goes here 
@@ -36,10 +38,13 @@ namespace EFTesting.UI
         
         Group _group = new Group();
 
+        Validator Validator = new Validator();
+
 
         void initlizedControlValues() {
             try {
-                    txtCompanyID.Text =Convert.ToString(Company.CompanyID);
+                if (Company.CompanyName != "") {
+                    txtCompanyID.Text = Convert.ToString(Company.CompanyID);
                     txtCompanyName.Text = Company.CompanyName;
                     txtAddress.Text = Company.CompanyAddress;
                     txtFaxNo.Text = Company.FaxNo;
@@ -51,9 +56,13 @@ namespace EFTesting.UI
                     {
                         isDefualtCompany.Checked = true;
                     }
-                    else {
+                    else
+                    {
                         isDefualtCompany.Checked = false;
                     }
+                }
+                
+                   
                     grdGroup.Hide();
                     btnAdd.Enabled = false;
             }
@@ -184,7 +193,7 @@ namespace EFTesting.UI
 
         private void frmcompanyDialog_Load(object sender, EventArgs e)
         {
-            initlizedControlValues();
+            //initlizedControlValues();
            
         }
 
@@ -221,12 +230,14 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            addCompany();
+
+            if (isValidCompany() == true) {
+                addCompany();
+            }
+              
+       
+            
         }
-  
-
- #endregion
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             editCompany();
@@ -234,9 +245,59 @@ namespace EFTesting.UI
 
         private void frmcompanyDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _CompanyUi.GetGroup();
-            _CompanyUi.GetCompany();
+            //_CompanyUi.GetGroup();
+            //_CompanyUi.GetCompany();
         }
+
+ #endregion
+
+#region Validation
+        public bool isValidCompany()
+        {
+           
+
+            if (!Validator.isPresent(txtGroupID, "Group ID"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtCompanyID, "Company ID"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtLocationCode, "Location Code"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtCompanyName, "Company Name"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtTeleNo, "Telephone No"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtFaxNo, "Fax No"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtAddress, "Address"))
+            {
+                return false;
+            }
+          return true;
+        }
+
+
+
+#endregion
+
+
 
     }
 }
