@@ -18,5 +18,7 @@ namespace ITRACK.models
 
 
         public virtual ICollection<Style> Style { get; set; }
+
+        public virtual ICollection<WorkflowSetup> WorkflowSetup { get; set; }
     }
 }

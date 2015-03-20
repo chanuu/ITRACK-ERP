@@ -18,7 +18,7 @@ namespace EFTesting
             InitializeComponent();
         }
 
-        List<Course> lstCourse = new List<Course>();
+     
 
 
        
