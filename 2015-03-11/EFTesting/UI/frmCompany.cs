@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
 using ITRACK.Validator;
+using System.Diagnostics;
 namespace EFTesting.UI
 {
     public partial class frmCompany : DevExpress.XtraEditors.XtraForm
@@ -19,20 +20,20 @@ namespace EFTesting.UI
             InitializeComponent();
         }
        
-        #region Declarations
+ #region Declarations
         GenaricRepository<Group> _genaricrepository = new GenaricRepository<Group>(new ItrackContext());
         GenaricRepository<Company> _genaricrepositorycompany = new GenaricRepository<Company>(new ItrackContext());
         Validator Validator = new Validator();
         #endregion
 
-        #region GROUP CRUD
+ #region GROUP CRUD
 
         void Clear() {
             try {
             
             }
             catch(Exception ex){
-            
+                Debug.WriteLine(ex.Message);
             }
         }
 
@@ -57,6 +58,7 @@ namespace EFTesting.UI
               
           }
           catch(Exception ex){
+              Debug.WriteLine(ex.Message);
               MessageBox.Show( ex.Message, "Error - C-0001", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
 
@@ -76,6 +78,7 @@ namespace EFTesting.UI
           }
           catch (Exception ex)
           {
+              Debug.WriteLine(ex.Message);
               MessageBox.Show(ex.Message, "Error - C-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
           }
 
@@ -126,7 +129,7 @@ namespace EFTesting.UI
           }
           catch (Exception ex)
           {
-
+              Debug.WriteLine(ex.Message);
           }
       }
 
@@ -214,7 +217,7 @@ namespace EFTesting.UI
         #endregion
 
 
-      #region Evets 
+ #region Evets 
         
 
 
@@ -290,7 +293,7 @@ namespace EFTesting.UI
       }
       #endregion
 
-        #region validation
+ #region validation
       public bool isValidGroup()
       {
 

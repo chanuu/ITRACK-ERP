@@ -29,6 +29,7 @@ namespace ITRACK.models
 
         public virtual ICollection<Style> Style { get; set; }
 
+        public virtual ICollection<Werehouse> Werehouse { get; set; }
         public virtual ICollection<Employee> Employee { get; set; }
         public string GroupID { get; set; }
 

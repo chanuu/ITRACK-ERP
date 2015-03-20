@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AppDBContext.cs" />
     <Compile Include="Award.cs" />
+    <Compile Include="Bin.cs" />
     <Compile Include="Buyer.cs" />
     <Compile Include="company.cs" />
     <Compile Include="Employee.cs" />
@@ -64,10 +65,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseOrder.cs" />
     <Compile Include="PurchaseOrderItems.cs" />
+    <Compile Include="Rack.cs" />
     <Compile Include="SketchDefinition.cs" />
     <Compile Include="Style.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="Werehouse.cs" />
     <Compile Include="Workflow.cs" />
+    <Compile Include="WorkflowSetup.cs" />
     <Compile Include="Workstation.cs" />
   </ItemGroup>
   <ItemGroup>

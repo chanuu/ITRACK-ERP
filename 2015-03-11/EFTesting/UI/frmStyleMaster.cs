@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Linq.Expressions;
 using ITRACK.Validator;
+using System.Diagnostics;
 
 namespace EFTesting.UI
 {
@@ -52,7 +53,7 @@ namespace EFTesting.UI
 
                 }
                 catch(Exception ex){
-                
+                    Debug.WriteLine(ex.Message);
                 }
             
             }

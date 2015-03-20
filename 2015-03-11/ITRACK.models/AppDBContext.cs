@@ -48,6 +48,18 @@ namespace ITRACK.models
         public DbSet<PastEmployeement> PastEmployeement { get; set; }
 
 
+        public DbSet<Workflow> Workflow { get; set; }
+
+        public DbSet<WorkflowSetup> WorkflowSetup { get; set; }
+
+        public DbSet<Workstation> Workstation { get; set; }
+
+        public DbSet<Werehouse> Werehouse { get; set; }
+
+        public DbSet<Rack> Rack { get; set; }
+
+        public DbSet<Bin> Bin { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
@@ -61,6 +73,15 @@ namespace ITRACK.models
                 .HasRequired(t => t.User)
                 .WithRequiredPrincipal(t => t.Employee);
 
+            // one to one relationship between workstation - worklow rule
+            modelBuilder.Entity<WorkflowSetup>()
+                           .HasKey(t => t.WorkflowSetupID);
+
+            modelBuilder.Entity<Workstation>()
+                .HasRequired(t => t.WorkflowSetup)
+                .WithRequiredPrincipal(t => t.Workstation);
+
+
 
             //create one to one or one to zero replationsip in Employee - Workstation Entity
             modelBuilder.Entity<Workstation>()
@@ -69,6 +90,9 @@ namespace ITRACK.models
             modelBuilder.Entity<Employee>()
                 .HasRequired(t => t.Workstation)
                 .WithRequiredPrincipal(t => t.Employee);
+
+
+          
 
         }
 

@@ -16,6 +16,8 @@ namespace ITRACK.models
 
         public virtual Employee Employee { get; set; }
 
+        public virtual WorkflowSetup WorkflowSetup { get; set; }
+
 
        
     }
