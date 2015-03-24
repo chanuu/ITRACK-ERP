@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+    <Compile Include="CompanyVM.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,13 +96,26 @@
     <Compile Include="UI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPurchaseOrder.Designer.cs">
+      <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmStyleMaster.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmStyleMaster.Designer.cs">
       <DependentUpon>frmStyleMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\PoItemsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PoItemsDialog.Designer.cs">
+      <DependentUpon>PoItemsDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validation\Validator.cs" />
+    <Compile Include="ViewModel\PurchaseHeaderVM.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,8 +142,14 @@
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmPurchaseOrder.resx">
+      <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmStyleMaster.resx">
       <DependentUpon>frmStyleMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PoItemsDialog.resx">
+      <DependentUpon>PoItemsDialog.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
