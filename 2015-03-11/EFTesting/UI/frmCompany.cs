@@ -203,6 +203,8 @@ namespace EFTesting.UI
                       _company.GroupID = company.GroupID;
                       _company.LocationCode = company.LocationCode;
                       _company.isDefaultCompany = company.isDefaultCompany;
+
+
                   }
               }
 

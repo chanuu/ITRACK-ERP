@@ -238,3 +238,51 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\EFTesting\obj\D
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\EFTesting\obj\Debug\EFTesting.exe.licenses
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\EFTesting\obj\Debug\EFTesting.exe
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\EFTesting\obj\Debug\EFTesting.pdb
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\EFTesting.exe.config
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.exe
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.pdb
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\EFTesting.exe
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\EFTesting.pdb
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\EntityFramework.dll
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\EntityFramework.xml
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.Form1.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.exe.licenses
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\EFTesting.exe.config
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.exe
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.pdb
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\EFTesting.exe
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\EFTesting.pdb
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\EntityFramework.dll
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\EntityFramework.xml
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.Form1.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+E:\ITrack Backups (2015)\23.03.2015\EFTesting\obj\Debug\EFTesting.exe.licenses
