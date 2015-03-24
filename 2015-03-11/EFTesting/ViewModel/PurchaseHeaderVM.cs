@@ -2,22 +2,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using DevExpress;
-using System.Linq.Expressions;
 using System.Windows.Forms;
 
-namespace EFTesting
+namespace EFTesting.ViewModel
 {
-    class StyleVM
+    class PurchaseHeaderVM
     {
-        Style _Style = new Style();
-        NestedExpression nested = new NestedExpression();
         
-        GenaricRepository<Style> _StyleRepository = new GenaricRepository<Style>(new ItrackContext());
+        NestedExpression nested = new NestedExpression();
 
-        public void SearchStyle(DevExpress.XtraGrid.GridControl _Grid,DevExpress.XtraEditors.TextEdit _TextBox,DevExpress.XtraEditors.SimpleButton _Btn )
+        GenaricRepository<PurchaseOrderHeader> _PoRepository = new GenaricRepository<PurchaseOrderHeader>(new ItrackContext());
+
+        public void SearchPo(DevExpress.XtraGrid.GridControl _Grid, DevExpress.XtraEditors.TextEdit _TextBox, DevExpress.XtraEditors.SimpleButton _Btn)
         {
 
             try
@@ -25,12 +24,12 @@ namespace EFTesting
 
 
                 //create expression 
-                ParameterExpression argParam = Expression.Parameter(typeof(Style), "s");
-                Expression nameProperty = Expression.Property(argParam, "StyleID");
+                ParameterExpression argParam = Expression.Parameter(typeof(PurchaseOrderHeader), "s");
+                Expression nameProperty = Expression.Property(argParam, "PurchaseOrderHeaderID");
                 Expression nameProperty2 = Expression.Property(argParam, "StyleID");
 
 
-              
+
 
                 var val1 = Expression.Constant(_TextBox.Text);
                 var val2 = Expression.Constant(_TextBox.Text);
@@ -42,9 +41,9 @@ namespace EFTesting
 
 
                 // get expresttion to labda objet 
-                var lambda1 = Expression.Lambda<Func<Style, bool>>(andExp, argParam);
+                var lambda1 = Expression.Lambda<Func<PurchaseOrderHeader, bool>>(andExp, argParam);
                 // pass object to query 
-                var selected = from item in _StyleRepository.SearchFor(lambda1).ToList() select new { item.StyleID, item.Buyer.BuyerName, item.GarmantType, item.Article };
+                var selected = from item in _PoRepository.SearchFor(lambda1).ToList() select new { item.StyleID,item.Style.Buyer.BuyerName, item.PurchaseOrderHeaderID, item.StartDate, item.EndDate };
 
                 //check is record exist in selected item
                 if (selected.Count() > 0)
@@ -75,7 +74,7 @@ namespace EFTesting
 
 
 
-        public void SearchStyle2(DevExpress.XtraGrid.GridControl _Grid, DevExpress.XtraEditors.TextEdit _TextBox)
+        public void SearchPoWithoutClose(DevExpress.XtraGrid.GridControl _Grid, DevExpress.XtraEditors.TextEdit _TextBox)
         {
 
             try
@@ -83,8 +82,8 @@ namespace EFTesting
 
 
                 //create expression 
-                ParameterExpression argParam = Expression.Parameter(typeof(Style), "s");
-                Expression nameProperty = Expression.Property(argParam, "StyleID");
+                ParameterExpression argParam = Expression.Parameter(typeof(PurchaseOrderHeader), "s");
+                Expression nameProperty = Expression.Property(argParam, "PurchaseOrderHeaderID");
                 Expression nameProperty2 = Expression.Property(argParam, "StyleID");
 
 
@@ -100,15 +99,15 @@ namespace EFTesting
 
 
                 // get expresttion to labda objet 
-                var lambda1 = Expression.Lambda<Func<Style, bool>>(andExp, argParam);
+                var lambda1 = Expression.Lambda<Func<PurchaseOrderHeader, bool>>(andExp, argParam);
                 // pass object to query 
-                var selected = from item in _StyleRepository.SearchFor(lambda1).ToList() select new { item.StyleID, item.Buyer.BuyerName, item.GarmantType, item.Article };
+                var selected = from item in _PoRepository.SearchFor(lambda1).ToList() select new { item.StyleID, item.Style.Buyer.BuyerName, item.PurchaseOrderHeaderID, item.StartDate, item.EndDate };
 
                 //check is record exist in selected item
                 if (selected.Count() > 0)
                 {
                     _Grid.Show();
-                   
+               
 
                     _Grid.DataSource = selected;
                 }
@@ -130,10 +129,6 @@ namespace EFTesting
 
 
         }
-
-
-
-
 
     }
 }
