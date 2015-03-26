@@ -179,6 +179,11 @@ public class  Validator
             return false;
         }
     }
+
+    internal static bool isPresent(DevExpress.XtraEditors.RadioGroup rdoMeritalStatus, string p)
+    {
+        throw new NotImplementedException();
+    }
 }
 }
     

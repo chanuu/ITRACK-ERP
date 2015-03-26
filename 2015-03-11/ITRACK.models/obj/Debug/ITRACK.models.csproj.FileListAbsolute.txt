@@ -118,22 +118,12 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\ITRACK.models\b
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\ITRACK.models\obj\Debug\ITRACK.models.dll
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-20\ITRACK.models\obj\Debug\ITRACK.models.pdb
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\bin\Debug\ITRACK.models.dll.config
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\bin\Debug\ITRACK.models.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\bin\Debug\ITRACK.models.pdb
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\bin\Debug\EntityFramework.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\bin\Debug\EntityFramework.xml
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\obj\Debug\ITRACK.models.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-21\ITRACK.models\obj\Debug\ITRACK.models.pdb
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\bin\Debug\ITRACK.models.dll.config
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\bin\Debug\ITRACK.models.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\bin\Debug\ITRACK.models.pdb
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\bin\Debug\EntityFramework.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\bin\Debug\EntityFramework.xml
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\obj\Debug\ITRACK.models.dll
-D:\softwere development\Development\ITRACK ERP\Source\2015-03-24\ITRACK.models\obj\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\bin\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\bin\Debug\ITRACK.models.pdb
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\bin\Debug\EntityFramework.dll
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\bin\Debug\EntityFramework.xml
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\obj\Debug\ITRACK.models.dll
+E:\ITrack Backups (2015)\20.09.2015  (Modify)\ITRACK.models\obj\Debug\ITRACK.models.pdb

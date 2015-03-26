@@ -290,8 +290,8 @@
             // 
             // barButtonItem12
             // 
-            this.barButtonItem12.Caption = "Purchase Order";
-            this.barButtonItem12.Glyph = global::EFTesting.Properties.Resources.Checklist_icon;
+            this.barButtonItem12.Caption = "Employee Master";
+            this.barButtonItem12.Glyph = global::EFTesting.Properties.Resources.check_contact_folded_icon;
             this.barButtonItem12.Id = 8;
             this.barButtonItem12.Name = "barButtonItem12";
             this.barButtonItem12.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
@@ -307,10 +307,10 @@
             // ribbonPageGroup2
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem5);
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem8);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem12);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // config

@@ -64,7 +64,7 @@ namespace EFTesting.UI
 
         private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
         {
-            UI.frmPurchaseOrder objfrmMChild = new UI.frmPurchaseOrder();
+            UI.EmployeeMaster objfrmMChild = new UI.EmployeeMaster();
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
         }

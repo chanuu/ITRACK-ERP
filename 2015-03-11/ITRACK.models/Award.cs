@@ -21,5 +21,10 @@ namespace ITRACK.models
         public virtual Employee Employee { get; set; }
 
         public string EmployeeID { get; set; }
+
+        public static void ShowDialog()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
