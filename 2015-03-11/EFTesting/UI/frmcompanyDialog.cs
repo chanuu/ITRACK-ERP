@@ -37,7 +37,7 @@ namespace EFTesting.UI
         GenaricRepository<Company> _genaricrepositorycompany = new GenaricRepository<Company>(new ItrackContext());
         
         Group _group = new Group();
-        CompanyVM Cvm = new CompanyVM();
+
         Validator Validator = new Validator();
 
 
@@ -230,43 +230,17 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (isDefualtCompany.Checked == true)
-            {
-                if (isValidCompany() == true && Cvm.isExistingDefualtCompany() == false)
-                {
-                    addCompany();
-                }
+
+            if (isValidCompany() == true) {
+                addCompany();
             }
-            else {
-                if (isValidCompany() == true )
-                {
-                    addCompany();
-                }
-            
-            }
-          
+              
+       
             
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-          
-
-            if (isDefualtCompany.Checked == true)
-            {
-                if (isValidCompany() == true && Cvm.isExistingDefualtCompany() == false)
-                {
-                    editCompany();
-                }
-            }
-            else
-            {
-                if (isValidCompany() == true)
-                {
-                    editCompany();
-                }
-
-            }
-           
+            editCompany();
         }
 
         private void frmcompanyDialog_FormClosing(object sender, FormClosingEventArgs e)

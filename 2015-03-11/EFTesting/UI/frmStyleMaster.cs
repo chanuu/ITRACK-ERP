@@ -72,7 +72,6 @@ namespace EFTesting.UI
                 _Style.Status = cmbStatus.Text; 
                 _Style.BuyerID = _Buyer.BuyerID;
                 _Style.GarmantType = cmbGarmentType.Text;
-                _Style.WorkflowID= 1 ;
                
 
                 return _Style;
@@ -137,7 +136,7 @@ namespace EFTesting.UI
 
         private void SearchStyle() {
             try {
-                _StyleVM.SearchStyle(grdSearchStyle, txtSearchBox, btnClose);
+                _StyleVM.SearchBuyer(grdSearchStyle, txtSearchBox, btnClose);
             }
             catch(Exception ex){
                 MessageBox.Show(ex.Message, "Error - B-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);

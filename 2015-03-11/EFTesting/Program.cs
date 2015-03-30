@@ -17,8 +17,7 @@ namespace EFTesting
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-
+            Application.SetCompatibleTextRenderingDefault(false)
 
             using (var ctx = new ItrackContext())
             {

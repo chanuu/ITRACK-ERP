@@ -67,7 +67,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton1.Location = new System.Drawing.Point(376, 7);
+            this.simpleButton1.Location = new System.Drawing.Point(379, 7);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
             this.simpleButton1.TabIndex = 8;
@@ -77,7 +77,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = global::EFTesting.Properties.Resources.update;
-            this.btnEdit.Location = new System.Drawing.Point(195, 7);
+            this.btnEdit.Location = new System.Drawing.Point(198, 7);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
             this.btnEdit.TabIndex = 7;
@@ -87,7 +87,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnAdd.Location = new System.Drawing.Point(103, 7);
+            this.btnAdd.Location = new System.Drawing.Point(106, 7);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 6;
@@ -97,7 +97,7 @@
             // btnNew
             // 
             this.btnNew.Image = global::EFTesting.Properties.Resources.save;
-            this.btnNew.Location = new System.Drawing.Point(12, 7);
+            this.btnNew.Location = new System.Drawing.Point(15, 7);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(85, 39);
             this.btnNew.TabIndex = 5;
@@ -258,7 +258,7 @@
             // txtSearchBox
             // 
             this.txtSearchBox.EditValue = "";
-            this.txtSearchBox.Location = new System.Drawing.Point(476, 22);
+            this.txtSearchBox.Location = new System.Drawing.Point(479, 22);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Properties.AccessibleDescription = "";
             this.txtSearchBox.Properties.NullText = "Please Enter Buyer Name";
@@ -275,7 +275,7 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 49);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(960, 323);
+            this.grdSearch.Size = new System.Drawing.Size(960, 34);
             this.grdSearch.TabIndex = 14;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -290,7 +290,7 @@
             // btnClose
             // 
             this.btnClose.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnClose.Location = new System.Drawing.Point(767, 8);
+            this.btnClose.Location = new System.Drawing.Point(770, 8);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
             this.btnClose.TabIndex = 10;
@@ -299,7 +299,7 @@
             // btnDelete
             // 
             this.btnDelete.Image = global::EFTesting.Properties.Resources.update;
-            this.btnDelete.Location = new System.Drawing.Point(286, 7);
+            this.btnDelete.Location = new System.Drawing.Point(289, 7);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
             this.btnDelete.TabIndex = 20;
