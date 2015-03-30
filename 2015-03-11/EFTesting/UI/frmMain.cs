@@ -68,12 +68,5 @@ namespace EFTesting.UI
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
         }
-
-        private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            UI.frmPurchaseOrder objfrmMChild = new UI.frmPurchaseOrder();
-            objfrmMChild.MdiParent = this;
-            objfrmMChild.Show();
-        }
     }
 }

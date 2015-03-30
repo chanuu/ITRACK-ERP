@@ -15,7 +15,7 @@ namespace ITRACK.models
         public string PurchaseOrderID { get; set; }
         [Key]
         [Column(Order = 2)] 
-        public string Color { get; set; }
+        public Single Color { get; set; }
         [Key]
         [Column(Order = 3)] 
         public string Size { get; set; }
