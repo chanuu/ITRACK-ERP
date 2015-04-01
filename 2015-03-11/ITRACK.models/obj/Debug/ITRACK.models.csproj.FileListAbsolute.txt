@@ -136,3 +136,4 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\ITRACK.models\b
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\ITRACK.models\obj\Debug\ITRACK.models.dll
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\ITRACK.models\obj\Debug\ITRACK.models.pdb
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache

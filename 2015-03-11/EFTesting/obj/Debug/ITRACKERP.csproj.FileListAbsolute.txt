@@ -312,3 +312,8 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\EFTesting\bin\D
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
 D:\softwere development\Development\ITRACK ERP\Source\2015-03-26\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+C:\Users\Nuwan.p\Desktop\GitHub\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
