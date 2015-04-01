@@ -8,7 +8,7 @@ namespace ITRACK.models
 {
   public  class PurchaseOrderHeader
     {
-      public string PurchaseOrderHeaderID { get; set; }
+        public string PurchaseOrderHeaderID { get; set; }
         public string Article { get; set; }
 
         public string Season { get; set; }
@@ -25,7 +25,7 @@ namespace ITRACK.models
 
 
         public string Remark { get; set; }
-        public virtual Style Company { get; set; }
+        public virtual Style Style { get; set; }
 
 
         public string StyleID { get; set; }
