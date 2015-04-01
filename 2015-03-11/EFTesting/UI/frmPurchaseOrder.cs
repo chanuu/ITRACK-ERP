@@ -24,6 +24,7 @@ namespace EFTesting.UI
 
         GenaricRepository<Company> _CompanyRepository = new GenaricRepository<Company>(new ItrackContext());
         GenaricRepository<PurchaseOrderHeader> _PORepository = new GenaricRepository<PurchaseOrderHeader>(new ItrackContext());
+        GenaricRepository<PurchaseOrderItems> _POItemRepository = new GenaricRepository<PurchaseOrderItems>(new ItrackContext());
         GenaricRepository<PurchaseOrderHeader> _PORepositoryNew = new GenaricRepository<PurchaseOrderHeader>(new ItrackContext());
         Buyer _Buyer = new Buyer();
         Company _Company = new Company();
@@ -228,6 +229,41 @@ namespace EFTesting.UI
 
         }
 
+
+        private List<PurchaseOrderItems> GetPoItemsByID(string ID)
+        {
+            try
+            {
+                return _POItemRepository.GetAll().Where(u => u.PurchaseOrderHeaderID == ID).ToList();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+
+            }
+
+        }
+
+        public  void GetPoItems(string ID)
+        {
+
+            try
+            {
+
+                var datasource = from item in GetPoItemsByID(ID) select new { item.PurchaseOrderHeaderID, item.Color, item.Size, item.Length, item.Quantity };
+                grdPoItems.DataSource = datasource;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+
         #endregion
 
 
@@ -314,6 +350,7 @@ namespace EFTesting.UI
             {
                 PoHeader.PurchaseOrderHeaderID = gridView2.GetFocusedRowCellValue("PurchaseOrderHeaderID").ToString();
                 getPoFeild(PoHeader.PurchaseOrderHeaderID);
+                GetPoItems(PoHeader.PurchaseOrderHeaderID);
                 grdSearchPo.Hide();
                 btnClose.Hide();
                 txtSearchBox.Hide();
