@@ -60,6 +60,16 @@ namespace ITRACK.models
 
         public DbSet<Bin> Bin { get; set; }
 
+        public DbSet<OperationPool> Operation { get; set; }
+
+        public DbSet<CuttingHeader> CuttingHeader { get; set; }
+
+        public DbSet<CuttingItem> CuttingItem { get; set; }
+
+        public DbSet<StyleOperation> StyleOperation { get; set; }
+
+        public DbSet<PartDefinition> PartDefinition { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
@@ -70,16 +80,16 @@ namespace ITRACK.models
                             .HasKey(t => t.UserID);
 
             modelBuilder.Entity<Employee>()
-                .HasRequired(t => t.User)
-                .WithRequiredPrincipal(t => t.Employee);
+                .HasOptional(t => t.User)
+                .WithOptionalPrincipal(t => t.Employee);
 
             // one to one relationship between workstation - worklow rule
             modelBuilder.Entity<WorkflowSetup>()
                            .HasKey(t => t.WorkflowSetupID);
 
             modelBuilder.Entity<Workstation>()
-                .HasRequired(t => t.WorkflowSetup)
-                .WithRequiredPrincipal(t => t.Workstation);
+                .HasOptional(t => t.WorkflowSetup)
+                .WithOptionalPrincipal(t => t.Workstation);
 
 
 
@@ -88,8 +98,8 @@ namespace ITRACK.models
                             .HasKey(t => t.WorkstationID);
 
             modelBuilder.Entity<Employee>()
-                .HasRequired(t => t.Workstation)
-                .WithRequiredPrincipal(t => t.Employee);
+                .HasOptional(t => t.Workstation)
+                .WithOptionalPrincipal(t => t.Employee);
 
 
           

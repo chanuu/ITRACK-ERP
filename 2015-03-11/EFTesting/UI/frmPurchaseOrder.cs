@@ -25,6 +25,7 @@ namespace EFTesting.UI
         GenaricRepository<Company> _CompanyRepository = new GenaricRepository<Company>(new ItrackContext());
         GenaricRepository<PurchaseOrderHeader> _PORepository = new GenaricRepository<PurchaseOrderHeader>(new ItrackContext());
         GenaricRepository<PurchaseOrderItems> _POItemRepository = new GenaricRepository<PurchaseOrderItems>(new ItrackContext());
+        
         GenaricRepository<PurchaseOrderHeader> _PORepositoryNew = new GenaricRepository<PurchaseOrderHeader>(new ItrackContext());
         Buyer _Buyer = new Buyer();
         Company _Company = new Company();
@@ -32,6 +33,8 @@ namespace EFTesting.UI
         StyleVM SVM = new StyleVM();
         PurchaseHeaderVM Pvm = new PurchaseHeaderVM();
         PurchaseOrderHeader PoHeader = new PurchaseOrderHeader();
+        PurchaseOrderItems poItems = new PurchaseOrderItems();
+        
 
 
         #endregion
@@ -234,7 +237,27 @@ namespace EFTesting.UI
         {
             try
             {
+              
                 return _POItemRepository.GetAll().Where(u => u.PurchaseOrderHeaderID == ID).ToList();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+
+            }
+
+        }
+
+        private List<PurchaseOrderItems> GetPoItemsByIDRefesh(string ID)
+        {
+            try
+            {
+
+                GenaricRepository<PurchaseOrderItems> _POItemRepositorynew = new GenaricRepository<PurchaseOrderItems>(new ItrackContext());
+                return _POItemRepositorynew.GetAll().Where(u => u.PurchaseOrderHeaderID == ID).ToList();
 
 
             }
@@ -256,11 +279,43 @@ namespace EFTesting.UI
                 var datasource = from item in GetPoItemsByID(ID) select new { item.PurchaseOrderHeaderID, item.Color, item.Size, item.Length, item.Quantity };
                 grdPoItems.DataSource = datasource;
 
+              
+
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
             }
+        }
+
+        void InitilizedPOItems() {
+            try {
+                
+               
+                
+                    poItems.PurchaseOrderHeaderID = gridView3.GetFocusedRowCellValue("PurchaseOrderHeaderID").ToString();
+                    poItems.PurchaseOrderID = gridView3.GetFocusedRowCellValue("PurchaseOrderHeaderID").ToString();
+                    poItems.Color = gridView3.GetFocusedRowCellValue("Color").ToString();
+                    poItems.Size = gridView3.GetFocusedRowCellValue("Size").ToString();
+                    poItems.Length = gridView3.GetFocusedRowCellValue("Length").ToString();
+                    poItems.Quantity =Convert.ToInt16( gridView3.GetFocusedRowCellValue("Quantity").ToString());
+
+                
+               
+            }
+            catch(Exception ex){
+            
+            }
+        
+        }
+
+
+      public void RefreshGrid() {
+
+
+          var datasource = from item in GetPoItemsByIDRefesh(txtPoNo.Text) select new { item.PurchaseOrderHeaderID, item.Color, item.Size, item.Length, item.Quantity };
+            grdPoItems.DataSource = datasource;
+        
         }
 
 
@@ -374,6 +429,13 @@ namespace EFTesting.UI
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             PoItemsDialog PoItems = new PoItemsDialog();
+            PoItems.ShowDialog();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            InitilizedPOItems();
+            PoItemsDialog PoItems = new PoItemsDialog(poItems,this);
             PoItems.ShowDialog();
         }
     }

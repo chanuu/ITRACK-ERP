@@ -151,7 +151,7 @@
             // grdSearchStyle
             // 
             this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearchStyle.Location = new System.Drawing.Point(250, 80);
+            this.grdSearchStyle.Location = new System.Drawing.Point(175, 80);
             this.grdSearchStyle.MainView = this.gridView1;
             this.grdSearchStyle.Name = "grdSearchStyle";
             this.grdSearchStyle.Size = new System.Drawing.Size(738, 227);
@@ -382,6 +382,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(85, 39);
             this.simpleButton2.TabIndex = 39;
             this.simpleButton2.Text = "Edit";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton4
             // 
@@ -560,7 +561,7 @@
             // 
             this.marqueeProgressBarControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.marqueeProgressBarControl1.EditValue = 0;
-            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(888, 478);
+            this.marqueeProgressBarControl1.Location = new System.Drawing.Point(888, 477);
             this.marqueeProgressBarControl1.Name = "marqueeProgressBarControl1";
             this.marqueeProgressBarControl1.Size = new System.Drawing.Size(335, 18);
             this.marqueeProgressBarControl1.TabIndex = 44;
@@ -582,7 +583,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(8, 68);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(1172, 388);
+            this.grdSearchPo.Size = new System.Drawing.Size(1172, 75);
             this.grdSearchPo.TabIndex = 45;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

@@ -81,6 +81,7 @@ namespace ITRACK.models
 
         public async Task<List<TEntity>> GetAllData()
         {
+           
             return await DbSet.ToListAsync();
         }
 

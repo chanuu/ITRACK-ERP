@@ -16,6 +16,12 @@ namespace ITRACK.models
 
          public string Remark { get; set; }
 
+         public Int32 SketchDefinitionID { get; set; }
+
+         public virtual SketchDefinition SketchDefinition { get; set; }
+
+         public virtual ICollection<StyleOperation> StyleOperation { get; set; }
+
 
 
     }

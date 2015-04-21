@@ -52,6 +52,8 @@
     <Compile Include="Bin.cs" />
     <Compile Include="Buyer.cs" />
     <Compile Include="company.cs" />
+    <Compile Include="CuttingHeader.cs" />
+    <Compile Include="CuttingItem.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="ExpressionBuilder.cs" />
     <Compile Include="GenaricRepository.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="IGenaricRepository.cs" />
     <Compile Include="ItrackContextInitializer.cs" />
     <Compile Include="NestedExpression.cs" />
+    <Compile Include="OperationPool.cs" />
     <Compile Include="PartDefinition.cs" />
     <Compile Include="PastEmployeement.cs" />
     <Compile Include="Promotion.cs" />
@@ -68,6 +71,7 @@
     <Compile Include="Rack.cs" />
     <Compile Include="SketchDefinition.cs" />
     <Compile Include="Style.cs" />
+    <Compile Include="StyleOperation.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Werehouse.cs" />
     <Compile Include="Workflow.cs" />

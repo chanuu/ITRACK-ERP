@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ITRACK.models
 {
-  public  class SketchDefinition
+  public class SketchDefinition
     {
         public Int32 SketchDefinitionID { get; set; }
 
@@ -14,9 +14,11 @@ namespace ITRACK.models
 
         public string Remark { get; set; }
 
-
+        
         public string StyleID { get; set; }
 
         public virtual Style Company { get; set; }
+
+        public virtual ICollection<PartDefinition> PartDefinition { get; set; }
     }
 }

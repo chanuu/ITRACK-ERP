@@ -31,6 +31,8 @@ namespace ITRACK.models
 
         public virtual ICollection<Werehouse> Werehouse { get; set; }
         public virtual ICollection<Employee> Employee { get; set; }
+
+        public virtual ICollection<OperationPool> OperationPool { get; set; }
         public string GroupID { get; set; }
 
         
