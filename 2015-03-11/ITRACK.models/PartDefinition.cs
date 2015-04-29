@@ -10,17 +10,15 @@ namespace ITRACK.models
     public class PartDefinition
     {
          [Key]
-        public string PartDefinitionID { get; set; }
+        public int PartDefinitionID { get; set; }
 
          public string PartName { get; set; }
 
+         public string ItemType { get; set; }
+
          public string Remark { get; set; }
 
-         public Int32 SketchDefinitionID { get; set; }
-
-         public virtual SketchDefinition SketchDefinition { get; set; }
-
-         public virtual ICollection<StyleOperation> StyleOperation { get; set; }
+       public virtual ICollection<StyleOperation> StyleOperation { get; set; }
 
 
 

@@ -108,11 +108,29 @@
     <Compile Include="UI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmOperation.Designer.cs">
+      <DependentUpon>frmOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmParts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmParts.Designer.cs">
+      <DependentUpon>frmParts.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmPurchaseOrder.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmPurchaseOrder.Designer.cs">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmSketchMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmSketchMaster.Designer.cs">
+      <DependentUpon>frmSketchMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmStyleMaster.cs">
       <SubType>Form</SubType>
@@ -166,8 +184,17 @@
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmOperation.resx">
+      <DependentUpon>frmOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmParts.resx">
+      <DependentUpon>frmParts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPurchaseOrder.resx">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmSketchMaster.resx">
+      <DependentUpon>frmSketchMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmStyleMaster.resx">
       <DependentUpon>frmStyleMaster.cs</DependentUpon>

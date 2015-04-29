@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace ITRACK.models
 {
     public class OperationPool
     {
+
+          [Key] 
         public string OperationPoolID { get; set; }
 
         public string OpationName { get; set; }
