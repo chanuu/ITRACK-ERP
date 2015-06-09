@@ -48,6 +48,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Excel">
+      <HintPath>C:\Users\HP\Desktop\Excel\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -72,6 +78,18 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StyleVM.cs" />
+    <Compile Include="UI\dlgdividingplan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\dlgdividingplan.Designer.cs">
+      <DependentUpon>dlgdividingplan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\dlgSizelist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\dlgSizelist.Designer.cs">
+      <DependentUpon>dlgSizelist.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\EmployeeMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +101,12 @@
     </Compile>
     <Compile Include="UI\frmAward.Designer.cs">
       <DependentUpon>frmAward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmBundlingMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmBundlingMaster.Designer.cs">
+      <DependentUpon>frmBundlingMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmBuyer.cs">
       <SubType>Form</SubType>
@@ -101,6 +125,24 @@
     </Compile>
     <Compile Include="UI\frmcompanyDialog.Designer.cs">
       <DependentUpon>frmcompanyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmCuttingMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmCuttingMaster.Designer.cs">
+      <DependentUpon>frmCuttingMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmDividingPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDividingPlan.Designer.cs">
+      <DependentUpon>frmDividingPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmDividingPlanItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDividingPlanItem.Designer.cs">
+      <DependentUpon>frmDividingPlanItem.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmMain.cs">
       <SubType>Form</SubType>
@@ -151,6 +193,9 @@
       <DependentUpon>PoItemsDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation\Validator.cs" />
+    <Compile Include="ViewModel\GenarateTags.cs" />
+    <Compile Include="ViewModel\ImportExcelHelper.cs" />
+    <Compile Include="ViewModel\MyExcel.cs" />
     <Compile Include="ViewModel\PurchaseHeaderVM.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -166,11 +211,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\dlgdividingplan.resx">
+      <DependentUpon>dlgdividingplan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\dlgSizelist.resx">
+      <DependentUpon>dlgSizelist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\EmployeeMaster.resx">
       <DependentUpon>EmployeeMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmAward.resx">
       <DependentUpon>frmAward.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmBundlingMaster.resx">
+      <DependentUpon>frmBundlingMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmBuyer.resx">
       <DependentUpon>frmBuyer.cs</DependentUpon>
@@ -180,6 +234,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmcompanyDialog.resx">
       <DependentUpon>frmcompanyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmCuttingMaster.resx">
+      <DependentUpon>frmCuttingMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDividingPlan.resx">
+      <DependentUpon>frmDividingPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDividingPlanItem.resx">
+      <DependentUpon>frmDividingPlanItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

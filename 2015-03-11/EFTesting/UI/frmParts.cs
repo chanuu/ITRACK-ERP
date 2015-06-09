@@ -30,6 +30,7 @@ namespace EFTesting.UI
         GenaricRepository<OperationPool> _OperationRepository = new GenaricRepository<OperationPool>(new ItrackContext());
         GenaricRepository<StyleOperation> _StyleOperationRepository = new GenaricRepository<StyleOperation>(new ItrackContext());
         GenaricRepository<StyleOperation> _EditStyleOperationRepository = new GenaricRepository<StyleOperation>(new ItrackContext());
+        GenaricRepository<SketchDefinition> _SketchRepository = new GenaricRepository<SketchDefinition>(new ItrackContext());
         OperationPool _Operation =new OperationPool();
         StyleOperation _StyleOperation = new StyleOperation();
         
@@ -63,7 +64,7 @@ namespace EFTesting.UI
             try {
                 _StyleOperation.SMV = Convert.ToDouble(txtSMV.Text);
                 _StyleOperation.OperationPoolID = _Operation.OperationPoolID;
-                _StyleOperation.PartDefinitionID = "1";
+                _StyleOperation.PartDefinitionID =Convert.ToString(_Part.PartDefinitionID);
                 return _StyleOperation;
             }
             catch(Exception ex){
@@ -117,8 +118,15 @@ namespace EFTesting.UI
         {
             try
             {
-                _StyleOperationRepository.Add(AssignStyleoperation());
-                GetStyleOperationByID(Convert.ToString(_Part.PartDefinitionID));
+                if (isOprationAlreadyExist(_Operation.OperationPoolID ,Convert.ToString( _Part.PartDefinitionID)) == true)
+                {
+                    MessageBox.Show("Opration Already Exist !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else {
+                    _StyleOperationRepository.Add(AssignStyleoperation());
+                }
+               
+               // GetStyleOperationByID(Convert.ToString(_Part.PartDefinitionID));
             }
             catch (Exception ex)
             {
@@ -257,7 +265,7 @@ namespace EFTesting.UI
         {
             try
             {
-
+                
                 foreach (var part in GetPartByID(ID))
                 {
 
@@ -265,7 +273,8 @@ namespace EFTesting.UI
                     txtRemark.Text = part.Remark;
                     cmbItemType.Text = part.ItemType;
                     _Part.PartDefinitionID = part.PartDefinitionID;
-
+                    txtSketchName.Text = part.SketchDefinition.SketchName;
+                    _Part.SketchDefinitionID = part.SketchDefinitionID;
 
                 }
             }
@@ -335,6 +344,94 @@ namespace EFTesting.UI
 
         }
 
+
+
+
+        private void SearchSketch()
+        {
+
+            try
+            {
+
+
+                //create expression 
+                ParameterExpression argParam = Expression.Parameter(typeof(SketchDefinition), "s");
+                Expression nameProperty = Expression.Property(argParam, "SketchName");
+                Expression namespaceProperty = Expression.Property(argParam, "SketchName");
+
+                var val1 = Expression.Constant(txtSketchName.Text);
+                var val2 = Expression.Constant(txtSketchName.Text);
+                //expresttion 1 
+                Expression e1 = Expression.Call(nameProperty, "Contains", null, val1);
+                // expresstion 2
+                Expression e2 = Expression.Call(namespaceProperty, "Contains", null, val2);
+                var andExp = Expression.Or(e1, e2);
+
+
+                // get expresttion to labda objet 
+                var lambda1 = Expression.Lambda<Func<SketchDefinition, bool>>(andExp, argParam);
+                // pass object to query 
+                var selected = from item in _SketchRepository.SearchFor(lambda1).ToList() select new { item.SketchDefinitionID, item.SketchName, item.StyleID };
+
+                //check is record exist in selected item
+                if (selected.Count() > 0)
+                {
+                    grdSearchSketch.Show();
+                    
+
+                    grdSearchSketch.DataSource = selected;
+                }
+                else
+                {
+                    grdSearchSketch.DataSource = null;
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error - B-0007", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+
+
+
+
+        public bool isOprationAlreadyExist(string ID,string partID) {
+
+            try {
+                //var oprationList = from item in _StyleOperationRepository.GetAll().Where(u => u.OperationPoolID == ID && u => u.OperationPoolID == ID ).ToList() select new { item.OperationPoolID, item.SMV, item.OperationPool.OpationName, item.OperationPool.SMVType };
+
+                var oprationList = from item in _StyleOperationRepository.GetAll().AsEnumerable()
+                                   where
+                                       item.OperationPoolID == ID && item.PartDefinitionID == partID
+                                   select item;
+
+                
+                if (oprationList.Count() > 0) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+                return false;
+              
+            }
+        }
+
+
+
+
+
+
         #endregion
 
         #region Validation 
@@ -344,6 +441,7 @@ namespace EFTesting.UI
         private void frmParts_Load(object sender, EventArgs e)
         {
             grdSearchOperation.Hide();
+            grdSearchSketch.Hide();
             grdSearch.Hide();
             btnClose.Hide();
             txtSearchBox.Hide();
@@ -417,6 +515,7 @@ namespace EFTesting.UI
                 _Part.PartDefinitionID = Convert.ToInt16( gridView3.GetFocusedRowCellValue("PartDefinitionID").ToString());
                // getOperationFeild(_Operation.OperationPoolID);
                 getPartFeild(_Part.PartDefinitionID);
+                GetStyleOperationByID(Convert.ToString(_Part.PartDefinitionID));
                 grdSearch.Hide();
                 txtSearchBox.Hide();
                 btnClose.Hide();
@@ -427,11 +526,38 @@ namespace EFTesting.UI
         {
             txtSearchBox.Show();
             btnClose.Show();
+            txtSearchBox.Focus();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             AddSyleOperation();
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+            SearchSketch();
+        }
+
+        private void txtSketchName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Up || e.KeyData == Keys.Down)
+            {
+                grdSearchSketch.Select();
+            }
+            else if (e.KeyData == Keys.Escape)
+            {
+                grdSearchSketch.Hide();
+             
+                
+            }
+        }
+
+        private void grdSearchSketch_KeyDown(object sender, KeyEventArgs e)
+        {
+            _Part.SketchDefinitionID = Convert.ToInt16(gridView4.GetFocusedRowCellValue("SketchDefinitionID").ToString());
+            txtSketchName.Text= gridView4.GetFocusedRowCellValue("SketchName").ToString();
+            grdSearchSketch.Hide();
         }
     }
 }

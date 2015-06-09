@@ -12,6 +12,15 @@ namespace ITRACK.models
 
         public string MarkerNo { get; set; }
 
+        public string  FabricType { get; set; }
+
+        public DateTime Date { get; set; }
+        public double MarkerLenth { get; set; }
+
+        public double MarkerWidth { get; set; }
+        
+        public string  LineNo { get; set; }
+
         public string Color{ get; set; }
 
         public string Size { get; set; }
@@ -32,7 +41,9 @@ namespace ITRACK.models
         public string CuttingHeaderID { get; set; }
 
 
+        public virtual ICollection<BundleHeader> BundleHeader  { get; set; }
 
+       
 
     }
 }

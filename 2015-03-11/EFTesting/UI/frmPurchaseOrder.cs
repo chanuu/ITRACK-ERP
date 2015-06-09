@@ -438,5 +438,10 @@ namespace EFTesting.UI
             PoItemsDialog PoItems = new PoItemsDialog(poItems,this);
             PoItems.ShowDialog();
         }
+
+        private void xtraTabControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

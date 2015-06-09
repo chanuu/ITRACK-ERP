@@ -38,6 +38,9 @@ namespace ITRACK.models
 
         public virtual ICollection<CuttingHeader> CuttingHeader { get; set; }
 
+
+        public virtual ICollection<DividingPlanHeader> DividingPlanHeader { get; set; }
+
         public virtual Workflow Workflow { get; set; }
 
         public int WorkflowID { get; set; }

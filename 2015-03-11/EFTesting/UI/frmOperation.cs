@@ -11,6 +11,8 @@ using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using MyTeamApp;
+using EFTesting.ViewModel;
 
 namespace EFTesting.UI
 {
@@ -26,10 +28,13 @@ namespace EFTesting.UI
         #region Initilization
 
         OperationPool _Operation = new OperationPool();
+        TempOpration _TempOpration =new TempOpration();
         GenaricRepository<Company> _CompanyRepository = new GenaricRepository<Company>(new ItrackContext());
-        GenaricRepository<OperationPool> _OperationRepository = new GenaricRepository<OperationPool>(new ItrackContext());
+      
         GenaricRepository<Style> _StyleRepository = new GenaricRepository<Style>(new ItrackContext());
         GenaricRepository<OperationPool> _EditOperationRepository = new GenaricRepository<OperationPool>(new ItrackContext());
+        GenaricRepository<TempOpration> _TempOperationRepository = new GenaricRepository<TempOpration>(new ItrackContext());
+      
         Company _Company = new Company();
 
         #endregion
@@ -49,6 +54,9 @@ namespace EFTesting.UI
                 _Operation.SMV =Convert.ToDouble( txtSMV.Text);
                 _Operation.SMVType = cmbSMVType.Text;
                 _Operation.Remark = txtRemark.Text;
+                _Operation.PartName = txtPartName.Text;
+                _Operation.OprationGrade = cmbOprationGrade.Text;
+                _Operation.OprationRole = cmboprationRole.Text;
                 return _Operation;
             }
             catch(Exception ex){
@@ -59,12 +67,28 @@ namespace EFTesting.UI
             }
         }
 
+        TempOpration AssignTempOperation()
+        {
+            try
+            {
 
+
+                return _TempOpration;
+            }
+            catch (Exception ex)
+            {
+
+                Debug.WriteLine(ex.Message);
+                return null;
+
+            }
+        }
 
         private void AddOpration()
         {
             try
             {
+                GenaricRepository<OperationPool> _OperationRepository = new GenaricRepository<OperationPool>(new ItrackContext());
                 _OperationRepository.Add(AssignOperation());
             }
             catch (Exception ex)
@@ -88,6 +112,7 @@ namespace EFTesting.UI
             }
         }
 
+       
 
 
         private void SearchSketch()
@@ -96,7 +121,7 @@ namespace EFTesting.UI
             try
             {
 
-
+                GenaricRepository<OperationPool> _OperationRepository = new GenaricRepository<OperationPool>(new ItrackContext());
                 //create expression 
                 ParameterExpression argParam = Expression.Parameter(typeof(OperationPool), "s");
                 Expression nameProperty = Expression.Property(argParam, "OperationPoolID");
@@ -155,7 +180,9 @@ namespace EFTesting.UI
                     txtSMV.Text =Convert.ToString( operation.SMV);
                     cmbSMVType.Text = operation.SMVType;
                     txtRemark.Text = operation.Remark;
-                    
+                    cmboprationRole.Text = operation.OprationRole;
+                    cmbOprationGrade.Text = operation.OprationGrade;
+                    txtPartName.Text = operation.PartName;
 
 
                 }
@@ -170,6 +197,7 @@ namespace EFTesting.UI
         {
             try
             {
+                GenaricRepository<OperationPool> _OperationRepository = new GenaricRepository<OperationPool>(new ItrackContext());
                 return _OperationRepository.GetAll().Where(u => u.OperationPoolID == ID).ToList();
 
 
@@ -203,6 +231,7 @@ namespace EFTesting.UI
 
 
         #region Validation
+
         #endregion
 
 
@@ -212,6 +241,10 @@ namespace EFTesting.UI
             grdSearch.Hide();
             txtSearchBox.Hide();
             btnClose.Hide();
+            progressBar.Hide();
+            btnProcess.Enabled = false;
+            
+          
         }
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
@@ -251,11 +284,13 @@ namespace EFTesting.UI
         {
             txtSearchBox.Show();
             btnClose.Show();
+            txtSearchBox.Focus();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddOpration();
+            clear();
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -266,6 +301,166 @@ namespace EFTesting.UI
         private void btnEdit_Click(object sender, EventArgs e)
         {
             EditOperation();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        OpenFileDialog ExcelDialog = new OpenFileDialog();
+        ExcelHelpers E = new ExcelHelpers();
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+
+
+            
+            ExcelDialog.Filter = "Excel Files (*.xlsx) | *.xlsx";
+            ExcelDialog.InitialDirectory = @"C:\";
+            ExcelDialog.Title = "Select your team excel";
+            if (ExcelDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+           
+               
+                E.DB_PATH = ExcelDialog.FileName;
+                txtFileName.Text = ExcelDialog.FileName;
+                txtFileName.ReadOnly = true;
+                btnProcess.Enabled = true;
+                
+              
+                
+
+            }
+
+            //ImportExcelHelper helper = new ImportExcelHelper();
+
+            //grdOperationList.DataSource = helper.UploadExcelSheet("D:\\test.xlsx");
+
+
+        }
+
+
+
+
+        #region Analyse
+        List<TempOpration> lstTempOpration = new List<TempOpration>();
+        private void SelectOpration() { 
+         
+
+             foreach (var _opration in _TempOperationRepository.GetAll().ToList())
+             {
+                 if (_opration.OprationID != "" && GetoprationByID(_opration.OprationID).Count==0)
+                 {
+
+                     lstTempOpration.Add(new TempOpration(
+
+                         _opration.OprationID, 
+                         _opration.OparationName,
+                         _opration.MachineType,
+                         _opration.SMV,
+                         _opration.SMVType,
+                         _opration.Remark,
+                         _opration.TempOprationID,
+                         _opration.OprationGrade,
+                         _opration.PartName,
+                         _opration.OprationRole
+
+
+                    ));
+
+                     
+
+                 }
+                 
+                
+             }
+
+
+             grdOperationList.DataSource = lstTempOpration;
+            
+
+        }
+
+        void SaveOpration() {
+            try {
+                
+                foreach (var _opration in lstTempOpration) 
+                {
+                    GenaricRepository<OperationPool> _ORepository = new GenaricRepository<OperationPool>(new ItrackContext());
+                    foreach (var item in _CompanyRepository.GetAll().Where(x => x.isDefaultCompany == true))
+                    {
+                        _Company.CompanyID = item.CompanyID;
+
+                    }
+                    _Operation.CompanyID = _Company.CompanyID;
+                    _Operation.OperationPoolID = _opration.OprationID;
+                    _Operation.OpationName = _opration.OparationName;
+                    _Operation.SMV = _opration.SMV;
+                    _Operation.SMVType = _opration.SMVType;
+                    _Operation.MachineType = _opration.MachineType;
+                    _Operation.Remark = _opration.Remark;
+                    _Operation.OprationRole = _opration.OprationRole;
+                    _Operation.OprationGrade = _opration.OprationGrade;
+                    _Operation.PartName = _opration.PartName;
+
+                    _ORepository.Insert(_Operation);
+
+                    GenaricRepository<TempOpration> _tOpration = new GenaricRepository<TempOpration>(new ItrackContext());
+                    TempOpration t = new TempOpration();
+                    t.TempOprationID = _opration.TempOprationID;
+                   _tOpration.Delete(t);
+
+                }
+            }
+            catch(Exception ex){
+            
+            }
+        }
+
+        void removeOpration(int _index) {
+            try {
+                lstTempOpration.RemoveAt(_index);
+                grdOperationList.DataSource = lstTempOpration;
+                grdOperationList.RefreshDataSource();
+                Debug.Write(lstTempOpration.Count);
+            }
+            catch(Exception ex){
+            
+            }
+         
+        }
+
+        #endregion
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btnProcess_Click(object sender, EventArgs e)
+        {
+            E.InitializeExcel();
+            E.ReadMyExcel(progressBar);
+            Cursor.Current = Cursors.WaitCursor;
+            SelectOpration();
+            Cursor.Current = Cursors.Default;
+           
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            SaveOpration();
+        }
+      
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+
+            int i = gridView3.FocusedRowHandle;
+            removeOpration(gridView3.FocusedRowHandle);
+            
+        }
+
+        private void grdOperationList_MouseEnter(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -14,6 +14,7 @@ namespace ITRACK.models
 
         public int PlanQuantity  { get; set; }
 
+        public int BundleSize { get; set; }
         public string ItemType { get; set; }
 
         public DateTime Date { get; set; }

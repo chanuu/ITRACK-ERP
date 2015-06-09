@@ -47,12 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSketchName = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
+            this.grdParts = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDescription = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtPartName = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
@@ -72,10 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSketchName.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
@@ -279,72 +273,28 @@
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.grdSearchStyle);
-            this.xtraTabPage2.Controls.Add(this.label5);
-            this.xtraTabPage2.Controls.Add(this.txtDescription);
-            this.xtraTabPage2.Controls.Add(this.label3);
-            this.xtraTabPage2.Controls.Add(this.txtPartName);
+            this.xtraTabPage2.Controls.Add(this.grdParts);
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1124, 404);
             this.xtraTabPage2.Text = "Parts";
             this.xtraTabPage2.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage2_Paint);
             // 
-            // grdSearchStyle
+            // grdParts
             // 
-            this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearchStyle.Location = new System.Drawing.Point(79, 86);
-            this.grdSearchStyle.MainView = this.gridView2;
-            this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(906, 259);
-            this.grdSearchStyle.TabIndex = 39;
-            this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdParts.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdParts.Location = new System.Drawing.Point(79, 35);
+            this.grdParts.MainView = this.gridView2;
+            this.grdParts.Name = "grdParts";
+            this.grdParts.Size = new System.Drawing.Size(1010, 310);
+            this.grdParts.TabIndex = 39;
+            this.grdParts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
-            this.gridView2.GridControl = this.grdSearchStyle;
+            this.gridView2.GridControl = this.grdParts;
             this.gridView2.Name = "gridView2";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "Description";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.EditValue = "";
-            this.txtDescription.Location = new System.Drawing.Point(337, 59);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Properties.AccessibleDescription = "";
-            this.txtDescription.Properties.NullValuePrompt = "Please Enter Style No";
-            this.txtDescription.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtDescription.Size = new System.Drawing.Size(365, 20);
-            this.txtDescription.TabIndex = 16;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Part Name ";
-            // 
-            // txtPartName
-            // 
-            this.txtPartName.EditValue = "";
-            this.txtPartName.Location = new System.Drawing.Point(78, 60);
-            this.txtPartName.Name = "txtPartName";
-            this.txtPartName.Properties.AccessibleDescription = "";
-            this.txtPartName.Properties.NullValuePrompt = "Please Enter Style No";
-            this.txtPartName.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtPartName.Size = new System.Drawing.Size(251, 20);
-            this.txtPartName.TabIndex = 14;
             // 
             // xtraTabPage3
             // 
@@ -428,7 +378,7 @@
             this.grdSearch.Location = new System.Drawing.Point(19, 59);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(935, 213);
+            this.grdSearch.Size = new System.Drawing.Size(1048, 340);
             this.grdSearch.TabIndex = 44;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -474,11 +424,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSketchName.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
-            this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdParts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
@@ -512,11 +459,7 @@
         private DevExpress.XtraEditors.TextEdit textEdit6;
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit textEdit5;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit txtPartName;
-        private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit txtDescription;
-        private DevExpress.XtraGrid.GridControl grdSearchStyle;
+        private DevExpress.XtraGrid.GridControl grdParts;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.ComboBoxEdit cmbItemType;

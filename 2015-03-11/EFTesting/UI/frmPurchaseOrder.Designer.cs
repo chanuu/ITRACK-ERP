@@ -109,7 +109,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
             this.xtraTabControl1.Location = new System.Drawing.Point(8, 88);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
@@ -119,6 +119,7 @@
             this.xtraTabPage1,
             this.xtraTabPage2,
             this.xtraTabPage3});
+            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             // 
             // xtraTabPage1
             // 
@@ -144,7 +145,7 @@
             this.xtraTabPage1.Controls.Add(this.txtPoNo);
             this.xtraTabPage1.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1123, 370);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1181, 370);
             this.xtraTabPage1.Text = "Po Header";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
             // 
@@ -154,7 +155,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(175, 80);
             this.grdSearchStyle.MainView = this.gridView1;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(738, 227);
+            this.grdSearchStyle.Size = new System.Drawing.Size(950, 227);
             this.grdSearchStyle.TabIndex = 35;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -370,7 +371,7 @@
             this.xtraTabPage2.Controls.Add(this.grdPoItems);
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1123, 370);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1181, 370);
             this.xtraTabPage2.Text = "Ratio";
             // 
             // simpleButton2
@@ -583,7 +584,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(8, 68);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(1172, 75);
+            this.grdSearchPo.Size = new System.Drawing.Size(1172, 375);
             this.grdSearchPo.TabIndex = 45;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

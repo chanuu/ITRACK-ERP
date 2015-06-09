@@ -30,6 +30,10 @@
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.grdSearchSketch = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtSketchName = new DevExpress.XtraEditors.TextEdit();
             this.cmbItemType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.txtRemark = new DevExpress.XtraEditors.MemoEdit();
@@ -67,6 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchSketch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSketchName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbItemType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).BeginInit();
@@ -105,6 +112,9 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.grdSearchSketch);
+            this.xtraTabPage1.Controls.Add(this.label10);
+            this.xtraTabPage1.Controls.Add(this.txtSketchName);
             this.xtraTabPage1.Controls.Add(this.cmbItemType);
             this.xtraTabPage1.Controls.Add(this.label6);
             this.xtraTabPage1.Controls.Add(this.txtRemark);
@@ -116,9 +126,48 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(1124, 353);
             this.xtraTabPage1.Text = "Header";
             // 
+            // grdSearchSketch
+            // 
+            this.grdSearchSketch.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdSearchSketch.Location = new System.Drawing.Point(198, 115);
+            this.grdSearchSketch.MainView = this.gridView4;
+            this.grdSearchSketch.Name = "grdSearchSketch";
+            this.grdSearchSketch.Size = new System.Drawing.Size(831, 196);
+            this.grdSearchSketch.TabIndex = 45;
+            this.grdSearchSketch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            this.grdSearchSketch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearchSketch_KeyDown);
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.grdSearchSketch;
+            this.gridView4.Name = "gridView4";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(80, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(87, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Sketch Definition";
+            // 
+            // txtSketchName
+            // 
+            this.txtSketchName.EditValue = "";
+            this.txtSketchName.Location = new System.Drawing.Point(198, 89);
+            this.txtSketchName.Name = "txtSketchName";
+            this.txtSketchName.Properties.AccessibleDescription = "";
+            this.txtSketchName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtSketchName.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtSketchName.Size = new System.Drawing.Size(251, 20);
+            this.txtSketchName.TabIndex = 39;
+            this.txtSketchName.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            this.txtSketchName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSketchName_KeyDown);
+            // 
             // cmbItemType
             // 
-            this.cmbItemType.Location = new System.Drawing.Point(198, 94);
+            this.cmbItemType.Location = new System.Drawing.Point(198, 129);
             this.cmbItemType.Name = "cmbItemType";
             this.cmbItemType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -134,7 +183,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 99);
+            this.label6.Location = new System.Drawing.Point(80, 134);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 37;
@@ -143,7 +192,7 @@
             // txtRemark
             // 
             this.txtRemark.EditValue = "";
-            this.txtRemark.Location = new System.Drawing.Point(198, 140);
+            this.txtRemark.Location = new System.Drawing.Point(198, 175);
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Properties.NullText = "Shipping Address";
             this.txtRemark.Properties.NullValuePrompt = "Shipping Address";
@@ -154,7 +203,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 143);
+            this.label4.Location = new System.Drawing.Point(80, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 36;
@@ -450,7 +499,7 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 57);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1098, 72);
+            this.grdSearch.Size = new System.Drawing.Size(1098, 35);
             this.grdSearch.TabIndex = 50;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -489,6 +538,9 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchSketch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSketchName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbItemType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).EndInit();
@@ -550,5 +602,9 @@
         private DevExpress.XtraEditors.ComboBoxEdit SMVType;
         private DevExpress.XtraGrid.GridControl grdSearch;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private System.Windows.Forms.Label label10;
+        private DevExpress.XtraEditors.TextEdit txtSketchName;
+        private DevExpress.XtraGrid.GridControl grdSearchSketch;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
     }
 }

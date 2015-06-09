@@ -135,7 +135,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
             this.xtraTabControl1.Location = new System.Drawing.Point(26, 65);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
@@ -177,7 +177,7 @@
             this.xtraTabPage1.Controls.Add(this.txtEmployeeID);
             this.xtraTabPage1.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(990, 436);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1071, 436);
             this.xtraTabPage1.Text = "Basic Details";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
             // 

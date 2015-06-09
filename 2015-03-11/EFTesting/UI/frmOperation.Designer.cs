@@ -43,34 +43,57 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.txtOperationName = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRemark = new DevExpress.XtraEditors.MemoEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbSMVType = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.txtSMV = new DevExpress.XtraEditors.TextEdit();
-            this.label10 = new System.Windows.Forms.Label();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.grdSearch = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cmbOprationGrade = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label12 = new System.Windows.Forms.Label();
+            this.cmboprationRole = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtPartName = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.txtOperationCode = new DevExpress.XtraEditors.TextEdit();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtSMV = new DevExpress.XtraEditors.TextEdit();
+            this.cmbSMVType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtRemark = new DevExpress.XtraEditors.MemoEdit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtOperationName = new DevExpress.XtraEditors.TextEdit();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.btnProcess = new DevExpress.XtraEditors.SimpleButton();
+            this.progressBar = new DevExpress.XtraEditors.ProgressBarControl();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.grdOperationList = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.grdSearch = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOperationName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSMVType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbOprationGrade.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmboprationRole.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOperationCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSMVType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOperationName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBar.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOperationList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOperationCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -219,6 +242,12 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.cmbOprationGrade);
+            this.xtraTabPage1.Controls.Add(this.label12);
+            this.xtraTabPage1.Controls.Add(this.cmboprationRole);
+            this.xtraTabPage1.Controls.Add(this.label11);
+            this.xtraTabPage1.Controls.Add(this.label5);
+            this.xtraTabPage1.Controls.Add(this.txtPartName);
             this.xtraTabPage1.Controls.Add(this.label1);
             this.xtraTabPage1.Controls.Add(this.txtOperationCode);
             this.xtraTabPage1.Controls.Add(this.label10);
@@ -231,124 +260,78 @@
             this.xtraTabPage1.Controls.Add(this.txtOperationName);
             this.xtraTabPage1.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(950, 395);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1115, 395);
             this.xtraTabPage1.Text = "Header";
             // 
-            // txtOperationName
+            // cmbOprationGrade
             // 
-            this.txtOperationName.EditValue = "";
-            this.txtOperationName.Location = new System.Drawing.Point(198, 87);
-            this.txtOperationName.Name = "txtOperationName";
-            this.txtOperationName.Properties.AccessibleDescription = "";
-            this.txtOperationName.Properties.NullValuePrompt = "Please Enter Style No";
-            this.txtOperationName.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtOperationName.Size = new System.Drawing.Size(251, 20);
-            this.txtOperationName.TabIndex = 33;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
-            this.label2.TabIndex = 34;
-            this.label2.Text = "Operation Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "Remark";
-            // 
-            // txtRemark
-            // 
-            this.txtRemark.EditValue = "";
-            this.txtRemark.Location = new System.Drawing.Point(198, 202);
-            this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Properties.NullText = "Shipping Address";
-            this.txtRemark.Properties.NullValuePrompt = "Shipping Address";
-            this.txtRemark.Size = new System.Drawing.Size(289, 96);
-            this.txtRemark.TabIndex = 35;
-            this.txtRemark.UseOptimizedRendering = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 167);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "SMV Type";
-            // 
-            // cmbSMVType
-            // 
-            this.cmbSMVType.Location = new System.Drawing.Point(198, 162);
-            this.cmbSMVType.Name = "cmbSMVType";
-            this.cmbSMVType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbOprationGrade.Location = new System.Drawing.Point(730, 157);
+            this.cmbOprationGrade.Name = "cmbOprationGrade";
+            this.cmbOprationGrade.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbSMVType.Properties.Items.AddRange(new object[] {
-            "Pant",
-            "Blouse",
-            "Skirt"});
-            this.cmbSMVType.Properties.NullValuePrompt = "Select Status";
-            this.cmbSMVType.Properties.NullValuePromptShowForEmptyValue = true;
-            this.cmbSMVType.Size = new System.Drawing.Size(212, 20);
-            this.cmbSMVType.TabIndex = 38;
+            this.cmbOprationGrade.Properties.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.cmbOprationGrade.Properties.NullValuePrompt = "Select Status";
+            this.cmbOprationGrade.Properties.NullValuePromptShowForEmptyValue = true;
+            this.cmbOprationGrade.Size = new System.Drawing.Size(272, 20);
+            this.cmbOprationGrade.TabIndex = 48;
             // 
-            // txtSMV
+            // label12
             // 
-            this.txtSMV.EditValue = "";
-            this.txtSMV.Location = new System.Drawing.Point(198, 122);
-            this.txtSMV.Name = "txtSMV";
-            this.txtSMV.Properties.AccessibleDescription = "";
-            this.txtSMV.Properties.NullValuePrompt = "Please Enter Style No";
-            this.txtSMV.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtSMV.Size = new System.Drawing.Size(251, 20);
-            this.txtSMV.TabIndex = 39;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(612, 162);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(87, 13);
+            this.label12.TabIndex = 47;
+            this.label12.Text = "Oparation Grade";
             // 
-            // label10
+            // cmboprationRole
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(80, 125);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 13);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "SMV";
+            this.cmboprationRole.Location = new System.Drawing.Point(730, 122);
+            this.cmboprationRole.Name = "cmboprationRole";
+            this.cmboprationRole.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmboprationRole.Properties.Items.AddRange(new object[] {
+            "In",
+            "Out",
+            "Sub In",
+            "Sub Out"});
+            this.cmboprationRole.Properties.NullValuePrompt = "Select Status";
+            this.cmboprationRole.Properties.NullValuePromptShowForEmptyValue = true;
+            this.cmboprationRole.Size = new System.Drawing.Size(272, 20);
+            this.cmboprationRole.TabIndex = 46;
             // 
-            // xtraTabControl1
+            // label11
             // 
-            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
-            this.xtraTabControl1.Location = new System.Drawing.Point(22, 70);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1032, 401);
-            this.xtraTabControl1.TabIndex = 27;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1});
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(612, 127);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 13);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Oparation Role ";
             // 
-            // grdSearch
+            // label5
             // 
-            this.grdSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearch.Location = new System.Drawing.Point(22, 57);
-            this.grdSearch.MainView = this.gridView2;
-            this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(971, 341);
-            this.grdSearch.TabIndex = 56;
-            this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            this.grdSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearch_KeyDown);
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(612, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 13);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Part Name";
             // 
-            // gridView2
+            // txtPartName
             // 
-            this.gridView2.GridControl = this.grdSearch;
-            this.gridView2.Name = "gridView2";
+            this.txtPartName.EditValue = "";
+            this.txtPartName.Location = new System.Drawing.Point(730, 53);
+            this.txtPartName.Name = "txtPartName";
+            this.txtPartName.Properties.AccessibleDescription = "";
+            this.txtPartName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtPartName.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtPartName.Size = new System.Drawing.Size(311, 20);
+            this.txtPartName.TabIndex = 43;
             // 
             // label1
             // 
@@ -367,14 +350,222 @@
             this.txtOperationCode.Properties.AccessibleDescription = "";
             this.txtOperationCode.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtOperationCode.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtOperationCode.Size = new System.Drawing.Size(251, 20);
+            this.txtOperationCode.Size = new System.Drawing.Size(322, 20);
             this.txtOperationCode.TabIndex = 41;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(80, 125);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 13);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "SMV";
+            // 
+            // txtSMV
+            // 
+            this.txtSMV.EditValue = "";
+            this.txtSMV.Location = new System.Drawing.Point(198, 122);
+            this.txtSMV.Name = "txtSMV";
+            this.txtSMV.Properties.AccessibleDescription = "";
+            this.txtSMV.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtSMV.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtSMV.Size = new System.Drawing.Size(322, 20);
+            this.txtSMV.TabIndex = 39;
+            // 
+            // cmbSMVType
+            // 
+            this.cmbSMVType.Location = new System.Drawing.Point(730, 83);
+            this.cmbSMVType.Name = "cmbSMVType";
+            this.cmbSMVType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbSMVType.Properties.Items.AddRange(new object[] {
+            "M/C",
+            "M/A"});
+            this.cmbSMVType.Properties.NullValuePrompt = "Select Status";
+            this.cmbSMVType.Properties.NullValuePromptShowForEmptyValue = true;
+            this.cmbSMVType.Size = new System.Drawing.Size(272, 20);
+            this.cmbSMVType.TabIndex = 38;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(617, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "SMV Type";
+            // 
+            // txtRemark
+            // 
+            this.txtRemark.EditValue = "";
+            this.txtRemark.Location = new System.Drawing.Point(198, 163);
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Properties.NullText = "Shipping Address";
+            this.txtRemark.Properties.NullValuePrompt = "Shipping Address";
+            this.txtRemark.Size = new System.Drawing.Size(289, 96);
+            this.txtRemark.TabIndex = 35;
+            this.txtRemark.UseOptimizedRendering = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(80, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Remark";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(80, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Operation Name";
+            // 
+            // txtOperationName
+            // 
+            this.txtOperationName.EditValue = "";
+            this.txtOperationName.Location = new System.Drawing.Point(198, 87);
+            this.txtOperationName.Name = "txtOperationName";
+            this.txtOperationName.Properties.AccessibleDescription = "";
+            this.txtOperationName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtOperationName.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtOperationName.Size = new System.Drawing.Size(322, 20);
+            this.txtOperationName.TabIndex = 33;
+            // 
+            // xtraTabControl1
+            // 
+            this.xtraTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
+            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabControl1.Location = new System.Drawing.Point(22, 70);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(1197, 401);
+            this.xtraTabControl1.TabIndex = 27;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.btnProcess);
+            this.xtraTabPage2.Controls.Add(this.progressBar);
+            this.xtraTabPage2.Controls.Add(this.simpleButton3);
+            this.xtraTabPage2.Controls.Add(this.simpleButton2);
+            this.xtraTabPage2.Controls.Add(this.grdOperationList);
+            this.xtraTabPage2.Controls.Add(this.label3);
+            this.xtraTabPage2.Controls.Add(this.txtFileName);
+            this.xtraTabPage2.Controls.Add(this.simpleButton5);
+            this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1115, 395);
+            this.xtraTabPage2.Text = "Import ";
+            // 
+            // btnProcess
+            // 
+            this.btnProcess.Location = new System.Drawing.Point(499, 37);
+            this.btnProcess.Name = "btnProcess";
+            this.btnProcess.Size = new System.Drawing.Size(75, 23);
+            this.btnProcess.TabIndex = 67;
+            this.btnProcess.Text = "Process";
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(236, 363);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(669, 18);
+            this.progressBar.TabIndex = 57;
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(134, 358);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton3.TabIndex = 66;
+            this.simpleButton3.Text = "Remove";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(53, 358);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton2.TabIndex = 65;
+            this.simpleButton2.Text = "Save";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // grdOperationList
+            // 
+            this.grdOperationList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdOperationList.Location = new System.Drawing.Point(53, 66);
+            this.grdOperationList.MainView = this.gridView3;
+            this.grdOperationList.Name = "grdOperationList";
+            this.grdOperationList.Size = new System.Drawing.Size(852, 286);
+            this.grdOperationList.TabIndex = 64;
+            this.grdOperationList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            this.grdOperationList.MouseEnter += new System.EventHandler(this.grdOperationList_MouseEnter);
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.grdOperationList;
+            this.gridView3.Name = "gridView3";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(54, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 13);
+            this.label3.TabIndex = 63;
+            this.label3.Text = "Select Excel File ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Location = new System.Drawing.Point(173, 37);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(222, 21);
+            this.txtFileName.TabIndex = 62;
+            // 
+            // simpleButton5
+            // 
+            this.simpleButton5.Location = new System.Drawing.Point(413, 37);
+            this.simpleButton5.Name = "simpleButton5";
+            this.simpleButton5.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton5.TabIndex = 61;
+            this.simpleButton5.Text = "Upload";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            // 
+            // grdSearch
+            // 
+            this.grdSearch.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdSearch.Location = new System.Drawing.Point(22, 57);
+            this.grdSearch.MainView = this.gridView2;
+            this.grdSearch.Name = "grdSearch";
+            this.grdSearch.Size = new System.Drawing.Size(1118, 436);
+            this.grdSearch.TabIndex = 56;
+            this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            this.grdSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearch_KeyDown);
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.grdSearch;
+            this.gridView2.Name = "gridView2";
             // 
             // frmOperation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1066, 525);
+            this.ClientSize = new System.Drawing.Size(1231, 525);
             this.Controls.Add(this.grdSearch);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textEdit7);
@@ -401,15 +592,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOperationName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmbSMVType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbOprationGrade.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmboprationRole.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOperationCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSMVType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOperationName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage2.ResumeLayout(false);
+            this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.progressBar.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOperationList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOperationCode.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,5 +644,21 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtOperationCode;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private System.Windows.Forms.TextBox txtFileName;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraGrid.GridControl grdOperationList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraEditors.ProgressBarControl progressBar;
+        private DevExpress.XtraEditors.SimpleButton btnProcess;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbOprationGrade;
+        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.ComboBoxEdit cmboprationRole;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.TextEdit txtPartName;
     }
 }

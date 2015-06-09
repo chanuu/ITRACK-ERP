@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -136,6 +137,20 @@ namespace ITRACK.models
         }
 
 
+        public bool Delete(TEntity entity)
+        {
+            // DbSet.Remove(entity);
+            _dbContext.Entry(entity).State = EntityState.Deleted;
+            if (_dbContext.SaveChanges() > 0) {
+                return true;
+            }else{
+                return false;
+            }
+     
+           
+        }
+
+
         public bool Edit(TEntity entity)
         {
        
@@ -156,25 +171,67 @@ namespace ITRACK.models
             }
            
         }
+  
+       
+       
+       
+       public bool Insert(TEntity entity)
+        {
 
+            try
+            {
+                DbSet.Add(entity);
+
+
+                if (_dbContext.SaveChanges() > 0)
+                {
+                   
+                    return true;
+
+                }
+                else
+                {
+         
+                    return false;
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+
+
+        }
 
         public bool Add(TEntity entity)
         {
-            DbSet.Add(entity);
-           
-           
-            if (_dbContext.SaveChanges() > 0)
-            {
-                MessageBox.Show("Save Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return true;
 
+            try {
+                DbSet.Add(entity);
+
+
+                if (_dbContext.SaveChanges() > 0)
+                {
+                    MessageBox.Show("Save Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+
+                }
+                else
+                {
+                    MessageBox.Show("Item Already Exist !", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+
+                }
             }
-            else
-            {
-                MessageBox.Show("Item Already Exist !", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            catch(Exception ex){
+                
+                Debug.WriteLine(ex.Message);
                 return false;
-
             }
+                 
 
         }
 

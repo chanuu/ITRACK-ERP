@@ -50,10 +50,16 @@
     <Compile Include="AppDBContext.cs" />
     <Compile Include="Award.cs" />
     <Compile Include="Bin.cs" />
+    <Compile Include="BundleDetails.cs" />
+    <Compile Include="BundleHeader.cs" />
     <Compile Include="Buyer.cs" />
+    <Compile Include="clsTempOpration.cs" />
     <Compile Include="company.cs" />
     <Compile Include="CuttingHeader.cs" />
     <Compile Include="CuttingItem.cs" />
+    <Compile Include="DividingPlan.cs" />
+    <Compile Include="DividingPlanItem.cs" />
+    <Compile Include="DividingPlanTemp.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="ExpressionBuilder.cs" />
     <Compile Include="GenaricRepository.cs" />

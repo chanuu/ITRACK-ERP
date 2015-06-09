@@ -96,5 +96,26 @@ namespace EFTesting.UI
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
         }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UI.frmCuttingMaster objfrmMChild = new UI.frmCuttingMaster();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+        }
+
+        private void barButtonItem16_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UI.frmDividingPlan objfrmMChild = new UI.frmDividingPlan();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+        }
+
+        private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UI.frmBundlingMaster objfrmMChild = new UI.frmBundlingMaster();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+        }
     }
 }

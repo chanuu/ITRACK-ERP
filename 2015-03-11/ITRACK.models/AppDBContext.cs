@@ -70,6 +70,21 @@ namespace ITRACK.models
 
         public DbSet<PartDefinition> PartDefinition { get; set; }
 
+        public DbSet<TempOpration> TempOpration { get; set; }
+
+        public DbSet<DividingPlanHeader> DividingPlanHeader { get; set; }
+
+
+        public DbSet<DividingPlanItem> DividingPlanItem { get; set; }
+
+
+        public DbSet<BundleHeader> BundleHeader { get; set; }
+
+
+        public DbSet<BundleDetails> BundleDetails { get; set; }
+
+
+        public DbSet<DividingPlanTemp> DividingPlanTemp { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
@@ -102,7 +117,7 @@ namespace ITRACK.models
                 .WithOptionalPrincipal(t => t.Employee);
 
 
-          
+      
 
         }
 

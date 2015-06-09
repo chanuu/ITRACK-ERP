@@ -161,7 +161,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 80);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
@@ -191,7 +191,7 @@
             this.xtraTabPage1.Controls.Add(this.txtStyleNo);
             this.xtraTabPage1.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1091, 401);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1134, 401);
             this.xtraTabPage1.Text = "Header";
             // 
             // grdSearchBuyer
@@ -448,7 +448,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(12, 57);
             this.grdSearchStyle.MainView = this.gridView2;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(1108, 422);
+            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 396);
             this.grdSearchStyle.TabIndex = 38;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

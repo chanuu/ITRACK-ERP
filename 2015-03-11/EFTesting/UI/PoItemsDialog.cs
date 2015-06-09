@@ -39,6 +39,7 @@ namespace EFTesting.UI
 
         private PurchaseOrderItems AssignPoItems() {
             try {
+               
                 PurchaseOrderItems _PoItems = new PurchaseOrderItems();
                 _PoItems.PurchaseOrderID = txtPoNo.Text;
                 _PoItems.Color = txtColorCode.Text;

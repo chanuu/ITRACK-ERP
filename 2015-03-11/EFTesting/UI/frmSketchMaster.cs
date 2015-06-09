@@ -25,6 +25,7 @@ namespace EFTesting.UI
         #region Declaration 
         SketchDefinition _Sketch = new SketchDefinition();
         GenaricRepository<SketchDefinition> _SketchRepository = new GenaricRepository<SketchDefinition>(new ItrackContext());
+        GenaricRepository<PartDefinition> _PartRepository = new GenaricRepository<PartDefinition>(new ItrackContext());
         GenaricRepository<Style> _StyleRepository = new GenaricRepository<Style>(new ItrackContext());
         GenaricRepository<SketchDefinition> _EditSketchRepository = new GenaricRepository<SketchDefinition>(new ItrackContext());
 
@@ -102,8 +103,8 @@ namespace EFTesting.UI
 
                 //create expression 
                 ParameterExpression argParam = Expression.Parameter(typeof(SketchDefinition), "s");
-                Expression nameProperty = Expression.Property(argParam, "OpationName");
-                Expression namespaceProperty = Expression.Property(argParam, "OperationPoolID");
+                Expression nameProperty = Expression.Property(argParam, "SketchName");
+                Expression namespaceProperty = Expression.Property(argParam, "SketchName");
 
                 var val1 = Expression.Constant(txtSearchBox.Text);
                 var val2 = Expression.Constant(txtSearchBox.Text);
@@ -194,6 +195,48 @@ namespace EFTesting.UI
             }
 
         }
+
+
+
+
+        public void GetSketchItems(int ID)
+        {
+
+            try
+            {
+
+                var datasource = from item in GetPartByID(ID) select new { item.PartDefinitionID,item.PartName,item.ItemType,item.Remark };
+                grdParts.DataSource = datasource;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+
+        private List<PartDefinition> GetPartByID(int ID)
+        {
+            try
+            {
+
+                return _PartRepository.GetAll().Where(u => u.SketchDefinitionID == ID).ToList();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+
+            }
+
+        }
+
+
         #endregion
 
         #region Validation
@@ -248,8 +291,9 @@ namespace EFTesting.UI
 
         private void grdSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            _Sketch.SketchDefinitionID =Convert.ToInt16( gridView1.GetFocusedRowCellValue("SketchDefinitionID").ToString());
+            _Sketch.SketchDefinitionID =Convert.ToInt16(gridView1.GetFocusedRowCellValue("SketchDefinitionID").ToString());
             getSketchFeild(_Sketch.SketchDefinitionID);
+            GetSketchItems(_Sketch.SketchDefinitionID);
             grdSearch.Hide();
             txtSearchBox.Hide();
             btnClose.Hide();

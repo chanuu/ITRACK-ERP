@@ -74,7 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl1.HeaderLocation = DevExpress.XtraTab.TabHeaderLocation.Left;
-            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
+            this.xtraTabControl1.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Vertical;
             this.xtraTabControl1.Location = new System.Drawing.Point(12, 57);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
@@ -100,7 +100,7 @@
             this.xtraTabPage1.Controls.Add(this.txtGroupID);
             this.xtraTabPage1.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(752, 412);
+            this.xtraTabPage1.Size = new System.Drawing.Size(817, 412);
             this.xtraTabPage1.Text = "Group";
             // 
             // grdGroup
@@ -112,7 +112,7 @@
             this.grdGroup.Location = new System.Drawing.Point(22, 161);
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
-            this.grdGroup.Size = new System.Drawing.Size(688, 227);
+            this.grdGroup.Size = new System.Drawing.Size(753, 227);
             this.grdGroup.TabIndex = 6;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
