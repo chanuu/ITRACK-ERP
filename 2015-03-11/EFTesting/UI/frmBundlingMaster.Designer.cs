@@ -30,6 +30,8 @@
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.grdItemList = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label12 = new System.Windows.Forms.Label();
@@ -85,9 +87,6 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -138,7 +137,6 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.simpleButton7);
             this.xtraTabPage1.Controls.Add(this.label4);
             this.xtraTabPage1.Controls.Add(this.simpleButton3);
             this.xtraTabPage1.Controls.Add(this.grdItemList);
@@ -156,6 +154,25 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1133, 403);
             this.xtraTabPage1.Text = "Header";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(199, 13);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Ready To Genarate Tags/ Cutting Items";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton3.Location = new System.Drawing.Point(16, 366);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton3.TabIndex = 62;
+            this.simpleButton3.Text = "Genarate";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
             // grdItemList
             // 
@@ -712,35 +729,6 @@
             this.gridView3.GridControl = this.grdSearch;
             this.gridView3.Name = "gridView3";
             // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton3.Location = new System.Drawing.Point(16, 366);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton3.TabIndex = 62;
-            this.simpleButton3.Text = "Genarate";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(199, 13);
-            this.label4.TabIndex = 63;
-            this.label4.Text = "Ready To Genarate Tags/ Cutting Items";
-            // 
-            // simpleButton7
-            // 
-            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton7.Location = new System.Drawing.Point(97, 366);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton7.TabIndex = 64;
-            this.simpleButton7.Text = "Genarate";
-            this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click);
-            // 
             // frmBundlingMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -854,6 +842,5 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
     }
 }

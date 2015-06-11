@@ -84,6 +84,9 @@ namespace ITRACK.models
         public DbSet<BundleDetails> BundleDetails { get; set; }
 
 
+        public DbSet<OprationBarcodes> OprationBarcodes { get; set; }
+
+
         public DbSet<DividingPlanTemp> DividingPlanTemp { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -93,6 +93,8 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -215,6 +217,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.label23);
             this.xtraTabPage1.Controls.Add(this.label11);
             this.xtraTabPage1.Controls.Add(this.txtStyleNo);
             this.xtraTabPage1.Controls.Add(this.cmbStatus);
@@ -385,6 +388,7 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.AutoScroll = true;
+            this.xtraTabPage2.Controls.Add(this.label24);
             this.xtraTabPage2.Controls.Add(this.label22);
             this.xtraTabPage2.Controls.Add(this.txtfabricType);
             this.xtraTabPage2.Controls.Add(this.simpleButton6);
@@ -422,7 +426,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(588, 9);
+            this.label22.Location = new System.Drawing.Point(588, 20);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(63, 13);
             this.label22.TabIndex = 83;
@@ -431,7 +435,7 @@
             // txtfabricType
             // 
             this.txtfabricType.EditValue = "";
-            this.txtfabricType.Location = new System.Drawing.Point(590, 28);
+            this.txtfabricType.Location = new System.Drawing.Point(590, 39);
             this.txtfabricType.Name = "txtfabricType";
             this.txtfabricType.Properties.AccessibleDescription = "";
             this.txtfabricType.Properties.NullValuePrompt = "Please Enter Style No";
@@ -441,7 +445,7 @@
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(795, 114);
+            this.simpleButton6.Location = new System.Drawing.Point(795, 125);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(52, 23);
             this.simpleButton6.TabIndex = 82;
@@ -451,7 +455,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(333, 98);
+            this.label21.Location = new System.Drawing.Point(333, 109);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(71, 13);
             this.label21.TabIndex = 81;
@@ -460,7 +464,7 @@
             // txtmarkerWidth
             // 
             this.txtmarkerWidth.EditValue = "";
-            this.txtmarkerWidth.Location = new System.Drawing.Point(332, 117);
+            this.txtmarkerWidth.Location = new System.Drawing.Point(332, 128);
             this.txtmarkerWidth.Name = "txtmarkerWidth";
             this.txtmarkerWidth.Properties.AccessibleDescription = "";
             this.txtmarkerWidth.Properties.NullValuePrompt = "Please Enter Style No";
@@ -471,7 +475,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(75, 98);
+            this.label8.Location = new System.Drawing.Point(75, 109);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 13);
             this.label8.TabIndex = 79;
@@ -480,7 +484,7 @@
             // txtmarkerLenth
             // 
             this.txtmarkerLenth.EditValue = "";
-            this.txtmarkerLenth.Location = new System.Drawing.Point(74, 117);
+            this.txtmarkerLenth.Location = new System.Drawing.Point(74, 128);
             this.txtmarkerLenth.Name = "txtmarkerLenth";
             this.txtmarkerLenth.Properties.AccessibleDescription = "";
             this.txtmarkerLenth.Properties.NullValuePrompt = "Please Enter Style No";
@@ -491,7 +495,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 11);
+            this.label1.Location = new System.Drawing.Point(69, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 77;
@@ -500,7 +504,7 @@
             // txtlineNo
             // 
             this.txtlineNo.EditValue = "";
-            this.txtlineNo.Location = new System.Drawing.Point(71, 30);
+            this.txtlineNo.Location = new System.Drawing.Point(71, 41);
             this.txtlineNo.Name = "txtlineNo";
             this.txtlineNo.Properties.AccessibleDescription = "";
             this.txtlineNo.Properties.NullValuePrompt = "Please Enter Style No";
@@ -510,7 +514,7 @@
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(233, 150);
+            this.simpleButton4.Location = new System.Drawing.Point(233, 154);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 63;
@@ -519,7 +523,7 @@
             // 
             // btnEditItem
             // 
-            this.btnEditItem.Location = new System.Drawing.Point(152, 150);
+            this.btnEditItem.Location = new System.Drawing.Point(152, 154);
             this.btnEditItem.Name = "btnEditItem";
             this.btnEditItem.Size = new System.Drawing.Size(75, 23);
             this.btnEditItem.TabIndex = 62;
@@ -529,7 +533,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(850, 53);
+            this.label20.Location = new System.Drawing.Point(850, 64);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(89, 13);
             this.label20.TabIndex = 73;
@@ -538,7 +542,7 @@
             // txtnoOfplysLayed
             // 
             this.txtnoOfplysLayed.EditValue = "";
-            this.txtnoOfplysLayed.Location = new System.Drawing.Point(852, 72);
+            this.txtnoOfplysLayed.Location = new System.Drawing.Point(852, 83);
             this.txtnoOfplysLayed.Name = "txtnoOfplysLayed";
             this.txtnoOfplysLayed.Properties.AccessibleDescription = "";
             this.txtnoOfplysLayed.Properties.NullValuePrompt = "Please Enter Style No";
@@ -549,7 +553,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(592, 54);
+            this.label19.Location = new System.Drawing.Point(592, 65);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(80, 13);
             this.label19.TabIndex = 71;
@@ -558,7 +562,7 @@
             // txtnoOfplysPlan
             // 
             this.txtnoOfplysPlan.EditValue = "";
-            this.txtnoOfplysPlan.Location = new System.Drawing.Point(594, 73);
+            this.txtnoOfplysPlan.Location = new System.Drawing.Point(594, 84);
             this.txtnoOfplysPlan.Name = "txtnoOfplysPlan";
             this.txtnoOfplysPlan.Properties.AccessibleDescription = "";
             this.txtnoOfplysPlan.Properties.NullValuePrompt = "Please Enter Style No";
@@ -569,7 +573,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(333, 54);
+            this.label5.Location = new System.Drawing.Point(333, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 69;
@@ -578,7 +582,7 @@
             // txtnoOfLayers
             // 
             this.txtnoOfLayers.EditValue = "";
-            this.txtnoOfLayers.Location = new System.Drawing.Point(335, 73);
+            this.txtnoOfLayers.Location = new System.Drawing.Point(335, 84);
             this.txtnoOfLayers.Name = "txtnoOfLayers";
             this.txtnoOfLayers.Properties.AccessibleDescription = "";
             this.txtnoOfLayers.Properties.NullValuePrompt = "Please Enter Style No";
@@ -589,7 +593,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(852, 96);
+            this.label18.Location = new System.Drawing.Point(852, 107);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(79, 13);
             this.label18.TabIndex = 67;
@@ -598,7 +602,7 @@
             // txtnoOfItem
             // 
             this.txtnoOfItem.EditValue = "";
-            this.txtnoOfItem.Location = new System.Drawing.Point(854, 115);
+            this.txtnoOfItem.Location = new System.Drawing.Point(854, 126);
             this.txtnoOfItem.Name = "txtnoOfItem";
             this.txtnoOfItem.Properties.AccessibleDescription = "";
             this.txtnoOfItem.Properties.NullValuePrompt = "Please Enter Style No";
@@ -609,7 +613,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(70, 54);
+            this.label17.Location = new System.Drawing.Point(70, 65);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(40, 13);
             this.label17.TabIndex = 65;
@@ -618,7 +622,7 @@
             // txtLength
             // 
             this.txtLength.EditValue = "";
-            this.txtLength.Location = new System.Drawing.Point(72, 73);
+            this.txtLength.Location = new System.Drawing.Point(72, 84);
             this.txtLength.Name = "txtLength";
             this.txtLength.Properties.AccessibleDescription = "";
             this.txtLength.Properties.NullValuePrompt = "Please Enter Style No";
@@ -629,7 +633,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(589, 98);
+            this.label16.Location = new System.Drawing.Point(589, 109);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(26, 13);
             this.label16.TabIndex = 63;
@@ -638,7 +642,7 @@
             // txtSize
             // 
             this.txtSize.EditValue = "";
-            this.txtSize.Location = new System.Drawing.Point(591, 117);
+            this.txtSize.Location = new System.Drawing.Point(591, 128);
             this.txtSize.Name = "txtSize";
             this.txtSize.Properties.AccessibleDescription = "";
             this.txtSize.Properties.NullValuePrompt = "Please Enter Style No";
@@ -649,7 +653,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(850, 11);
+            this.label15.Location = new System.Drawing.Point(850, 22);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(63, 13);
             this.label15.TabIndex = 61;
@@ -658,7 +662,7 @@
             // txtColorCode
             // 
             this.txtColorCode.EditValue = "";
-            this.txtColorCode.Location = new System.Drawing.Point(852, 30);
+            this.txtColorCode.Location = new System.Drawing.Point(852, 41);
             this.txtColorCode.Name = "txtColorCode";
             this.txtColorCode.Properties.AccessibleDescription = "";
             this.txtColorCode.Properties.NullValuePrompt = "Please Enter Style No";
@@ -668,7 +672,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(71, 150);
+            this.simpleButton2.Location = new System.Drawing.Point(71, 154);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 61;
@@ -697,7 +701,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 11);
+            this.label3.Location = new System.Drawing.Point(331, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 15;
@@ -706,7 +710,7 @@
             // txtMarkerNo
             // 
             this.txtMarkerNo.EditValue = "";
-            this.txtMarkerNo.Location = new System.Drawing.Point(333, 30);
+            this.txtMarkerNo.Location = new System.Drawing.Point(333, 41);
             this.txtMarkerNo.Name = "txtMarkerNo";
             this.txtMarkerNo.Properties.AccessibleDescription = "";
             this.txtMarkerNo.Properties.NullValuePrompt = "Please Enter Style No";
@@ -814,7 +818,7 @@
             this.grdSearch.Location = new System.Drawing.Point(14, 44);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1250, 392);
+            this.grdSearch.Size = new System.Drawing.Size(1250, 463);
             this.grdSearch.TabIndex = 62;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -824,6 +828,24 @@
             // 
             this.gridView3.GridControl = this.grdSearch;
             this.gridView3.Name = "gridView3";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(80, 16);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(258, 13);
+            this.label23.TabIndex = 49;
+            this.label23.Text = "General Cut Ticket Infromation / Header Information";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(67, 3);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(167, 13);
+            this.label24.TabIndex = 85;
+            this.label24.Text = "Marker Details and Layer Details  ";
             // 
             // frmCuttingMaster
             // 
@@ -956,5 +978,7 @@
         private DevExpress.XtraEditors.TextEdit txtfabricType;
         private DevExpress.XtraGrid.GridControl grdItemList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
     }
 }

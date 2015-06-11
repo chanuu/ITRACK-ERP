@@ -480,3 +480,12 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-06-09\ITRACK.models\b
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-09\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-09\ITRACK.models\obj\Debug\ITRACK.models.dll
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-09\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-10\ITRACK.models\obj\Debug\ITRACK.models.pdb

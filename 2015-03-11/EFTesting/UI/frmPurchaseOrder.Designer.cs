@@ -74,6 +74,8 @@
             this.lblProgress = new System.Windows.Forms.Label();
             this.grdSearchPo = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -123,6 +125,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.label13);
             this.xtraTabPage1.Controls.Add(this.grdSearchStyle);
             this.xtraTabPage1.Controls.Add(this.chkPlanToWashinFct);
             this.xtraTabPage1.Controls.Add(this.txtEndDate);
@@ -152,10 +155,10 @@
             // grdSearchStyle
             // 
             this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearchStyle.Location = new System.Drawing.Point(175, 80);
+            this.grdSearchStyle.Location = new System.Drawing.Point(175, 77);
             this.grdSearchStyle.MainView = this.gridView1;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(950, 227);
+            this.grdSearchStyle.Size = new System.Drawing.Size(950, 268);
             this.grdSearchStyle.TabIndex = 35;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -168,7 +171,7 @@
             // 
             // chkPlanToWashinFct
             // 
-            this.chkPlanToWashinFct.Location = new System.Drawing.Point(737, 236);
+            this.chkPlanToWashinFct.Location = new System.Drawing.Point(737, 206);
             this.chkPlanToWashinFct.Name = "chkPlanToWashinFct";
             this.chkPlanToWashinFct.Properties.Caption = "Plan To Wahing Factory";
             this.chkPlanToWashinFct.Size = new System.Drawing.Size(176, 19);
@@ -177,7 +180,7 @@
             // txtEndDate
             // 
             this.txtEndDate.EditValue = null;
-            this.txtEndDate.Location = new System.Drawing.Point(737, 184);
+            this.txtEndDate.Location = new System.Drawing.Point(737, 167);
             this.txtEndDate.Name = "txtEndDate";
             this.txtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -191,7 +194,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(619, 190);
+            this.label12.Location = new System.Drawing.Point(619, 173);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 13);
             this.label12.TabIndex = 33;
@@ -200,7 +203,7 @@
             // txtStartDate
             // 
             this.txtStartDate.EditValue = null;
-            this.txtStartDate.Location = new System.Drawing.Point(177, 185);
+            this.txtStartDate.Location = new System.Drawing.Point(177, 168);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -214,7 +217,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(59, 191);
+            this.label11.Location = new System.Drawing.Point(59, 174);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 13);
             this.label11.TabIndex = 30;
@@ -223,7 +226,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(619, 146);
+            this.label10.Location = new System.Drawing.Point(619, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 13);
             this.label10.TabIndex = 29;
@@ -231,7 +234,7 @@
             // 
             // cmbDterms
             // 
-            this.cmbDterms.Location = new System.Drawing.Point(177, 143);
+            this.cmbDterms.Location = new System.Drawing.Point(177, 129);
             this.cmbDterms.Name = "cmbDterms";
             this.cmbDterms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -245,7 +248,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(619, 97);
+            this.label6.Location = new System.Drawing.Point(619, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 27;
@@ -254,7 +257,7 @@
             // txtSeason
             // 
             this.txtSeason.EditValue = "";
-            this.txtSeason.Location = new System.Drawing.Point(737, 94);
+            this.txtSeason.Location = new System.Drawing.Point(737, 88);
             this.txtSeason.Name = "txtSeason";
             this.txtSeason.Properties.AccessibleDescription = "";
             this.txtSeason.Properties.NullValuePrompt = "Please Enter Season";
@@ -265,7 +268,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 143);
+            this.label5.Location = new System.Drawing.Point(59, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 25;
@@ -274,7 +277,7 @@
             // txtOrderPrice
             // 
             this.txtOrderPrice.EditValue = "";
-            this.txtOrderPrice.Location = new System.Drawing.Point(737, 140);
+            this.txtOrderPrice.Location = new System.Drawing.Point(737, 126);
             this.txtOrderPrice.Name = "txtOrderPrice";
             this.txtOrderPrice.Properties.AccessibleDescription = "";
             this.txtOrderPrice.Properties.NullValuePrompt = "Please Enter Order Price";
@@ -285,7 +288,7 @@
             // txtRemark
             // 
             this.txtRemark.EditValue = "";
-            this.txtRemark.Location = new System.Drawing.Point(177, 240);
+            this.txtRemark.Location = new System.Drawing.Point(177, 210);
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Properties.NullValuePrompt = "Please Enter Remark ";
             this.txtRemark.Properties.NullValuePromptShowForEmptyValue = true;
@@ -296,7 +299,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 243);
+            this.label4.Location = new System.Drawing.Point(59, 213);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 18;
@@ -305,7 +308,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 101);
+            this.label3.Location = new System.Drawing.Point(59, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 17;
@@ -314,7 +317,7 @@
             // txtArticle
             // 
             this.txtArticle.EditValue = "";
-            this.txtArticle.Location = new System.Drawing.Point(177, 98);
+            this.txtArticle.Location = new System.Drawing.Point(177, 92);
             this.txtArticle.Name = "txtArticle";
             this.txtArticle.Properties.AccessibleDescription = "";
             this.txtArticle.Properties.NullValuePrompt = "Please Enter Article";
@@ -366,6 +369,7 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.label14);
             this.xtraTabPage2.Controls.Add(this.simpleButton2);
             this.xtraTabPage2.Controls.Add(this.simpleButton4);
             this.xtraTabPage2.Controls.Add(this.grdPoItems);
@@ -416,7 +420,7 @@
             // 
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1123, 370);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1181, 370);
             this.xtraTabPage3.Text = "Other";
             // 
             // btnDelete
@@ -584,7 +588,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(8, 68);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(1172, 375);
+            this.grdSearchPo.Size = new System.Drawing.Size(1172, 391);
             this.grdSearchPo.TabIndex = 45;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -594,6 +598,24 @@
             // 
             this.gridView2.GridControl = this.grdSearchPo;
             this.gridView2.Name = "gridView2";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(59, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(224, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "General PO Infromation / Header Information";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(47, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(206, 13);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Item Ratio Breakdown /By  Size and Color";
             // 
             // frmPurchaseOrder
             // 
@@ -640,6 +662,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPoNo.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
+            this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdPoItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
@@ -702,5 +725,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
     }
 }

@@ -38,5 +38,6 @@ namespace ITRACK.models
         public int BundleHeaderID  { get; set; }
 
 
+        public virtual ICollection<OprationBarcodes> OprationBarcodes { get; set; }
     }
 }

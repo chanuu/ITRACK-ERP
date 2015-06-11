@@ -68,6 +68,7 @@
     <Compile Include="ItrackContextInitializer.cs" />
     <Compile Include="NestedExpression.cs" />
     <Compile Include="OperationPool.cs" />
+    <Compile Include="OprationBarcodes.cs" />
     <Compile Include="PartDefinition.cs" />
     <Compile Include="PastEmployeement.cs" />
     <Compile Include="Promotion.cs" />

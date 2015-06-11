@@ -26,7 +26,9 @@ namespace EFTesting.UI
         CuttingItem _cuttingItem = new CuttingItem();
         #region CRUD
 
-    
+    /// <summary>
+    /// 
+    /// </summary>
         private void SearchCuttingHeader()
         {
 
@@ -78,7 +80,11 @@ namespace EFTesting.UI
 
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
         private List<CuttingHeader> GetCuttingByID(string ID)
         {
             try
@@ -96,6 +102,10 @@ namespace EFTesting.UI
             }
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
         void getCuttingFeild(string ID)
         {
             try
@@ -123,6 +133,11 @@ namespace EFTesting.UI
                 MessageBox.Show(ex.Message, "Error - B-0008", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ID"></param>
+        /// <returns></returns>
         private List<CuttingItem> GetCuttingItemByID(string ID)
         {
             try
@@ -177,7 +192,10 @@ namespace EFTesting.UI
             }
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="_headerId"></param>
         private void FeedCuttingItem(string _headerId)
         {
             try
@@ -197,6 +215,9 @@ namespace EFTesting.UI
 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void GenareteTags() {
             try {
                 AddBundleHeader();
@@ -220,8 +241,36 @@ namespace EFTesting.UI
             }
         }
 
+
+
+
+        private int GetBundleHeaderID() {
+            try {
+                GenaricRepository<BundleHeader> _BundleHeaderRepository = new GenaricRepository<BundleHeader>(new ItrackContext());
+                return  _BundleHeaderRepository.GetAll().ToList().Last().BundleHeaderID;
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+                return 0;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
         BundleHeader _BundleHeader = new BundleHeader();
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         BundleHeader AssignBundleHeader()
         {
             try
@@ -249,6 +298,36 @@ namespace EFTesting.UI
 
 
 
+        private void GenarateTags() {
+            try {
+                Cursor.Current = Cursors.WaitCursor;
+                _cuttingHeader.CuttingHeaderID = txtCuttingTicketNo.Text;
+                GenareteTags();
+                GenarateTags gen = new GenarateTags();
+                int bundlehader = GetBundleHeaderID();
+                string _lineNo =   gridView2.GetFocusedRowCellValue("LineNo").ToString();
+                string _StyleNo = txtStyleNo.Text; 
+                gen.GenrateBundleTags(150, 20, 25, bundlehader,_StyleNo,_lineNo);
+                FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
+                Cursor.Current = Cursors.Default;
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+
+        private bool GenarateOprationBarcode() {
+            try {
+
+
+                return true;
+            }
+            catch(Exception ex){
+                return false;
+            }
+        }
+
         #endregion
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
@@ -273,16 +352,20 @@ namespace EFTesting.UI
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-            _cuttingHeader.CuttingHeaderID = txtCuttingTicketNo.Text;
-            GenareteTags();
-            FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
+          //  GenarateTags();
+
+            GenarateTags gn = new GenarateTags();
+            Cursor.Current = Cursors.WaitCursor;
+            gn.genarateTestData();
+            Cursor.Current = Cursors.Default;
+            
         }
 
         private void simpleButton7_Click(object sender, EventArgs e)
         {
-            GenarateTags gen = new GenarateTags();
+            
        //   gen.genarateBundle(150, 20, 20);
-           gen.GenrateBundleTags(150, 20, 19);
+          
             
         }
     }

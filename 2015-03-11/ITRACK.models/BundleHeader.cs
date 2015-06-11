@@ -27,7 +27,7 @@ namespace ITRACK.models
         public int  CuttingItemID { get; set; }
 
 
-        public virtual ICollection<BundleDetails> BundleDetails { get; set; }
+        public virtual ICollection<OprationBarcodes> OprationBarcodes { get; set; }
         
 
 

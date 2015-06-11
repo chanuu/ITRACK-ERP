@@ -37,6 +37,7 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label11 = new System.Windows.Forms.Label();
             this.grdSearchBuyer = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.cmbStatus = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -174,6 +175,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.label11);
             this.xtraTabPage1.Controls.Add(this.grdSearchBuyer);
             this.xtraTabPage1.Controls.Add(this.cmbStatus);
             this.xtraTabPage1.Controls.Add(this.cmbGarmentType);
@@ -194,10 +196,19 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(1134, 401);
             this.xtraTabPage1.Text = "Header";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(234, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "General Style Infromation / Header Information";
+            // 
             // grdSearchBuyer
             // 
             this.grdSearchBuyer.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearchBuyer.Location = new System.Drawing.Point(177, 95);
+            this.grdSearchBuyer.Location = new System.Drawing.Point(168, 125);
             this.grdSearchBuyer.MainView = this.gridView1;
             this.grdSearchBuyer.Name = "grdSearchBuyer";
             this.grdSearchBuyer.Size = new System.Drawing.Size(741, 184);
@@ -213,7 +224,7 @@
             // 
             // cmbStatus
             // 
-            this.cmbStatus.Location = new System.Drawing.Point(629, 36);
+            this.cmbStatus.Location = new System.Drawing.Point(620, 66);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -227,7 +238,7 @@
             // 
             // cmbGarmentType
             // 
-            this.cmbGarmentType.Location = new System.Drawing.Point(177, 201);
+            this.cmbGarmentType.Location = new System.Drawing.Point(168, 231);
             this.cmbGarmentType.Name = "cmbGarmentType";
             this.cmbGarmentType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -242,7 +253,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(511, 39);
+            this.label10.Location = new System.Drawing.Point(502, 69);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 32;
@@ -251,7 +262,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(59, 204);
+            this.label6.Location = new System.Drawing.Point(50, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 31;
@@ -260,7 +271,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(59, 159);
+            this.label5.Location = new System.Drawing.Point(50, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 29;
@@ -269,7 +280,7 @@
             // txtSeason
             // 
             this.txtSeason.EditValue = "";
-            this.txtSeason.Location = new System.Drawing.Point(177, 156);
+            this.txtSeason.Location = new System.Drawing.Point(168, 186);
             this.txtSeason.Name = "txtSeason";
             this.txtSeason.Properties.AccessibleDescription = "";
             this.txtSeason.Properties.NullValuePrompt = "Please Enter Season";
@@ -280,7 +291,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 119);
+            this.label3.Location = new System.Drawing.Point(50, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 27;
@@ -289,7 +300,7 @@
             // txtArticle
             // 
             this.txtArticle.EditValue = "";
-            this.txtArticle.Location = new System.Drawing.Point(177, 116);
+            this.txtArticle.Location = new System.Drawing.Point(168, 146);
             this.txtArticle.Name = "txtArticle";
             this.txtArticle.Properties.AccessibleDescription = "";
             this.txtArticle.Properties.NullValuePrompt = "Please Enter Article";
@@ -300,7 +311,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(59, 76);
+            this.label2.Location = new System.Drawing.Point(50, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 25;
@@ -309,7 +320,7 @@
             // txtBuyerName
             // 
             this.txtBuyerName.EditValue = "";
-            this.txtBuyerName.Location = new System.Drawing.Point(177, 73);
+            this.txtBuyerName.Location = new System.Drawing.Point(168, 103);
             this.txtBuyerName.Name = "txtBuyerName";
             this.txtBuyerName.Properties.AccessibleDescription = "";
             this.txtBuyerName.Properties.NullValuePrompt = "Please Enter Buyer Name";
@@ -322,7 +333,7 @@
             // txtRemark
             // 
             this.txtRemark.EditValue = "";
-            this.txtRemark.Location = new System.Drawing.Point(629, 76);
+            this.txtRemark.Location = new System.Drawing.Point(620, 106);
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Properties.NullText = "Shipping Address";
             this.txtRemark.Properties.NullValuePrompt = "Shipping Address";
@@ -333,7 +344,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(511, 79);
+            this.label4.Location = new System.Drawing.Point(502, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 18;
@@ -342,7 +353,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 39);
+            this.label1.Location = new System.Drawing.Point(50, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 13;
@@ -351,7 +362,7 @@
             // txtStyleNo
             // 
             this.txtStyleNo.EditValue = "";
-            this.txtStyleNo.Location = new System.Drawing.Point(177, 36);
+            this.txtStyleNo.Location = new System.Drawing.Point(168, 66);
             this.txtStyleNo.Name = "txtStyleNo";
             this.txtStyleNo.Properties.AccessibleDescription = "";
             this.txtStyleNo.Properties.NullValuePrompt = "Please Enter Style No";
@@ -363,14 +374,14 @@
             // 
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1091, 401);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1134, 401);
             this.xtraTabPage2.Text = "PO";
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1091, 401);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1134, 401);
             this.xtraTabPage3.Text = "WIP";
             // 
             // label7
@@ -448,7 +459,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(12, 57);
             this.grdSearchStyle.MainView = this.gridView2;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 396);
+            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 402);
             this.grdSearchStyle.TabIndex = 38;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -544,5 +555,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl grdSearchStyle;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.Label label11;
     }
 }
