@@ -156,6 +156,8 @@ namespace EFTesting.UI
 
         }
 
+
+       
         // check if exist bundle header related to cutting item and remove it from to genarate grid
         List<CuttingItem> RemovedItem(List<CuttingItem> lst)
         {
@@ -171,7 +173,7 @@ namespace EFTesting.UI
 
                      if (_bhRepo.GetAll().ToList().Any(item => item.CuttingItemID == items.CuttingItemID) == true)
                      {
-                       
+                      
                      }
                      else {
                          lstItems.Add(items);
@@ -192,6 +194,47 @@ namespace EFTesting.UI
             }
         }
 
+
+
+
+        List<CuttingItem> PrintBundleItem(List<CuttingItem> lst)
+        {
+            try
+            {
+                List<CuttingItem> lstItemsPrint = new List<CuttingItem>();
+
+                int i = 0;
+
+                GenaricRepository<BundleHeader> _bhRepo = new GenaricRepository<BundleHeader>(new ItrackContext());
+                foreach (var items in lst)
+                {
+
+
+                    if (_bhRepo.GetAll().ToList().Any(item => item.CuttingItemID == items.CuttingItemID) == true)
+                    {
+                        lstItemsPrint.Add(items);
+                    }
+                    else
+                    {
+                      
+                    }
+
+                    i = i + 1;
+
+                }
+
+
+                return lstItemsPrint;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return null;
+
+            }
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -201,10 +244,17 @@ namespace EFTesting.UI
             try
             {
                Debug.WriteLine(RemovedItem(GetCuttingItemByID(_headerId)).Count);
+                
                 grdItemList.DataSource =RemovedItem(GetCuttingItemByID(_headerId));
+
+                grdBundleTicket.DataSource = PrintBundleItem(GetCuttingItemByID(_headerId));
                 gridView2.Columns["CuttingHeader"].Visible = false;
                 gridView2.Columns["CuttingHeaderID"].Visible = false;
                 gridView2.Columns["BundleHeader"].Visible = false;
+
+                gridView1.Columns["CuttingHeader"].Visible = false;
+                gridView1.Columns["CuttingHeaderID"].Visible = false;
+                gridView1.Columns["BundleHeader"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -244,7 +294,7 @@ namespace EFTesting.UI
 
 
 
-        private int GetBundleHeaderID() {
+        private Int64 GetBundleHeaderID() {
             try {
                 GenaricRepository<BundleHeader> _BundleHeaderRepository = new GenaricRepository<BundleHeader>(new ItrackContext());
                 return  _BundleHeaderRepository.GetAll().ToList().Last().BundleHeaderID;
@@ -304,12 +354,26 @@ namespace EFTesting.UI
                 _cuttingHeader.CuttingHeaderID = txtCuttingTicketNo.Text;
                 GenareteTags();
                 GenarateTags gen = new GenarateTags();
-                int bundlehader = GetBundleHeaderID();
+                Int64 bundlehader = GetBundleHeaderID();
                 string _lineNo =   gridView2.GetFocusedRowCellValue("LineNo").ToString();
-                string _StyleNo = txtStyleNo.Text; 
-                gen.GenrateBundleTags(150, 20, 25, bundlehader,_StyleNo,_lineNo);
+                string _StyleNo = txtStyleNo.Text;
+               
+                List<OprationBarcodes> lst = new List<OprationBarcodes>();
+                
+                gen.GenrateBundleTags(150, 20, 25, bundlehader,_StyleNo,_lineNo,lst);
+               
                 FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
+              
+                
+
+
+                //using sql bulk copy
+                SqlBulkCopyHelper _helper = new SqlBulkCopyHelper();
+                _helper.PerformBulkCopy(_helper.ConvertTagsToDatatable(lst));
+
+                Debug.WriteLine(lst.Count + "Count Of Record");
                 Cursor.Current = Cursors.Default;
+
             }
             catch(Exception ex){
                 Debug.WriteLine(ex.Message);
@@ -352,12 +416,13 @@ namespace EFTesting.UI
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-          //  GenarateTags();
+       
+            GenarateTags();
 
-            GenarateTags gn = new GenarateTags();
-            Cursor.Current = Cursors.WaitCursor;
-            gn.genarateTestData();
-            Cursor.Current = Cursors.Default;
+           // GenarateTags gn = new GenarateTags();
+           // Cursor.Current = Cursors.WaitCursor;
+            //gn.genarateTestData();
+           // Cursor.Current = Cursors.Default;
             
         }
 
@@ -367,6 +432,33 @@ namespace EFTesting.UI
        //   gen.genarateBundle(150, 20, 20);
           
             
+        }
+
+        private void simpleButton7_Click_1(object sender, EventArgs e)
+        {
+            frmPrintBarcode print = new frmPrintBarcode();
+            print.ShowDialog();
+        }
+
+        private void frmBundlingMaster_Load(object sender, EventArgs e)
+        {
+            grdSearch.Hide();
+            txtSearchBox.Hide();
+            btnClose.Hide();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            txtSearchBox.Show();
+            btnClose.Show();
+            btnClose.Show();
+        }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            GenaricRepository<OprationBarcodes> _OprationBarcodesRepository = new GenaricRepository<OprationBarcodes>(new ItrackContext());
+         var t  =  from item in _OprationBarcodesRepository.GetAll().ToList()  where item.BundleDetails.BundleHeader.CuttingItemID == 3 orderby item.OprationBarcodesID select item;
+        Debug.WriteLine( t.Count());
         }
     }
 }

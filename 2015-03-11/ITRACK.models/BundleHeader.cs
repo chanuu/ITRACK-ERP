@@ -8,7 +8,7 @@ namespace ITRACK.models
 {
   public  class BundleHeader
     {
-        public int BundleHeaderID { get; set; }
+        public Int64 BundleHeaderID { get; set; }
 
         public bool isBundleTagsGerated { get; set; }
 
@@ -27,7 +27,7 @@ namespace ITRACK.models
         public int  CuttingItemID { get; set; }
 
 
-        public virtual ICollection<OprationBarcodes> OprationBarcodes { get; set; }
+       
         
 
 

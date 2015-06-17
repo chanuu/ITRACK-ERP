@@ -206,6 +206,50 @@ namespace ITRACK.models
 
         }
 
+
+
+       public bool InsertLongOpration(TEntity entity,bool isLast)
+       {
+
+           try
+           {
+               DbSet.Add(entity);
+
+               if (isLast == true)
+               {
+                   if (_dbContext.SaveChanges() > 0)
+                   {
+
+                       return true;
+
+                   }
+
+
+                   else
+                   {
+
+                       return false;
+
+                   }
+               }
+               else {
+                   return false;
+               }
+              
+           }
+           catch (Exception ex)
+           {
+
+               Debug.WriteLine(ex.Message);
+               return false;
+           }
+
+
+       }
+
+
+      
+
         public bool Add(TEntity entity)
         {
 
@@ -234,6 +278,10 @@ namespace ITRACK.models
                  
 
         }
+
+
+
+
 
 
 

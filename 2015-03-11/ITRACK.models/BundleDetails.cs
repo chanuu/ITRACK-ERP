@@ -11,10 +11,10 @@ namespace ITRACK.models
         public int BundleDetailsID { get; set; }
 
         public string SerailNo { get; set; }
-       
-        public int NoOfItem { get; set; }
 
-        public int CutNo { get; set; }
+        public Int64 NoOfItem { get; set; }
+
+        public Int64 CutNo { get; set; }
 
         public bool IsPrintBundleSticker { get; set; }
 
@@ -35,7 +35,7 @@ namespace ITRACK.models
         public virtual BundleHeader BundleHeader { get; set; }
 
 
-        public int BundleHeaderID  { get; set; }
+        public Int64 BundleHeaderID { get; set; }
 
 
         public virtual ICollection<OprationBarcodes> OprationBarcodes { get; set; }
