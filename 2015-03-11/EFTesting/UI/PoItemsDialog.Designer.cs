@@ -42,6 +42,7 @@
             this.btnAdd = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearchPo = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPoNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColorCode.Properties)).BeginInit();
@@ -140,7 +141,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = global::EFTesting.Properties.Resources.update;
-            this.btnEdit.Location = new System.Drawing.Point(241, 183);
+            this.btnEdit.Location = new System.Drawing.Point(331, 183);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
             this.btnEdit.TabIndex = 27;
@@ -163,7 +164,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(149, 75);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(675, 205);
+            this.grdSearchPo.Size = new System.Drawing.Size(675, 215);
             this.grdSearchPo.TabIndex = 46;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -174,12 +175,23 @@
             this.gridView2.GridControl = this.grdSearchPo;
             this.gridView2.Name = "gridView2";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Image = global::EFTesting.Properties.Resources.save1;
+            this.simpleButton1.Location = new System.Drawing.Point(240, 183);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(85, 39);
+            this.simpleButton1.TabIndex = 47;
+            this.simpleButton1.Text = "Add/New";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // PoItemsDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 302);
             this.Controls.Add(this.grdSearchPo);
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label5);
@@ -225,5 +237,6 @@
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraGrid.GridControl grdSearchPo;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

@@ -55,10 +55,10 @@ namespace EFTesting.UI
                 GenaricRepository<DividingPlanHeader> _dHeaderRepo = new GenaricRepository<DividingPlanHeader>(new ItrackContext());
                 DividingPlanHeader dHeader = new DividingPlanHeader();
                 dHeader.LineNo = this.LineNo;
-                dHeader.ProductionPerHour =Convert.ToInt16( this.PPH);
-                dHeader.StyleID = this.StyleNo;
-                dHeader.TotalEmployee =Convert.ToInt16( this.TotalEmployee);
-                dHeader.Target =Convert.ToInt16( this.Target);
+                dHeader.ProductionPerHour =Convert.ToInt16( txtProductionPerHour.Text);
+                dHeader.StyleID = txtStyleNo.Text;
+                dHeader.TotalEmployee =Convert.ToInt16( txtTotalEmployee.Text);
+                dHeader.Target =Convert.ToInt16(txtTarget.Text);
                 
                 _dHeaderRepo.Add(dHeader);
 
@@ -98,7 +98,7 @@ namespace EFTesting.UI
                 }
             }
             catch(Exception ex){
-            
+                Debug.WriteLine(ex.Message);
             }
         }
 

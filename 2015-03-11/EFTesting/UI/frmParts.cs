@@ -63,7 +63,7 @@ namespace EFTesting.UI
         StyleOperation AssignStyleoperation() {
             try {
                 _StyleOperation.SMV = Convert.ToDouble(txtSMV.Text);
-                _StyleOperation.OperationPoolID = _Operation.OperationPoolID;
+             //   _StyleOperation.OperationPoolID = _Operation.OperationPoolID;
                 _StyleOperation.PartDefinitionID =Convert.ToString(_Part.PartDefinitionID);
                 return _StyleOperation;
             }
@@ -317,19 +317,19 @@ namespace EFTesting.UI
         {
             try
             {
-                var oprationList = from item in _StyleOperationRepository.GetAll().Where(u => u.PartDefinitionID == ID).ToList() select new { item.OperationPoolID,item.SMV,item.OperationPool.OpationName,item.OperationPool.SMVType};
+            //    var oprationList = from item in _StyleOperationRepository.GetAll().Where(u => u.PartDefinitionID == ID).ToList() select new { item.OperationPoolID,item.SMV,item.OperationPool.OpationName,item.OperationPool.SMVType};
                 
 
-                if (oprationList.Count() > 0)
-                {
+             //   if (oprationList.Count() > 0)
+              //  {
                   
 
-                    grdOpration.DataSource = oprationList;
-                }
-                else
-                {
-                    grdSearch.DataSource = null;
-                }
+              //      grdOpration.DataSource = oprationList;
+             //   }
+              ///  else
+            //    {
+               //     grdSearch.DataSource = null;
+              //  }
 
 
 
@@ -407,18 +407,20 @@ namespace EFTesting.UI
             try {
                 //var oprationList = from item in _StyleOperationRepository.GetAll().Where(u => u.OperationPoolID == ID && u => u.OperationPoolID == ID ).ToList() select new { item.OperationPoolID, item.SMV, item.OperationPool.OpationName, item.OperationPool.SMVType };
 
-                var oprationList = from item in _StyleOperationRepository.GetAll().AsEnumerable()
-                                   where
-                                       item.OperationPoolID == ID && item.PartDefinitionID == partID
-                                   select item;
+               // var oprationList = from item in _StyleOperationRepository.GetAll().AsEnumerable()
+                             //      where
+                                 //      item.OperationPoolID == ID && item.PartDefinitionID == partID
+                                 //  select item;
 
                 
-                if (oprationList.Count() > 0) {
-                    return true;
-                }
-                else {
-                    return false;
-                }
+              //  if (oprationList.Count() > 0) {
+                //    return true;
+              //  }
+              //  else {
+                 //   return false;
+              //  }
+
+                return true;
             }
             catch(Exception ex){
                 Debug.WriteLine(ex.Message);

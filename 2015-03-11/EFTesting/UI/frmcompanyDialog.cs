@@ -44,7 +44,7 @@ namespace EFTesting.UI
         void initlizedControlValues() {
             try {
                 if (Company.CompanyName != "") {
-                    txtCompanyID.Text = Convert.ToString(Company.CompanyID);
+               
                     txtCompanyName.Text = Company.CompanyName;
                     txtAddress.Text = Company.CompanyAddress;
                     txtFaxNo.Text = Company.FaxNo;
@@ -129,7 +129,7 @@ namespace EFTesting.UI
                _company.CompanyAddress = txtAddress.Text;
                _company.TeleNo = txtTeleNo.Text;
                _company.FaxNo = txtFaxNo.Text;
-               _company.CompanyID =Convert.ToInt16( txtCompanyID.Text);
+            
                if (isDefualtCompany.Checked == true)
                {
                    _company.isDefaultCompany = true;
@@ -151,6 +151,7 @@ namespace EFTesting.UI
 
             try {
                 _genaricrepositorycompany.Add(AssignCompany());
+                
             }
             catch(Exception ex){
                 MessageBox.Show(ex.Message, "Error - C-0010", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -194,6 +195,7 @@ namespace EFTesting.UI
         private void frmcompanyDialog_Load(object sender, EventArgs e)
         {
             //initlizedControlValues();
+            grdGroup.Hide();
            
         }
 
@@ -283,11 +285,6 @@ namespace EFTesting.UI
            
 
             if (!Validator.isPresent(txtGroupID, "Group ID"))
-            {
-                return false;
-            }
-
-            if (!Validator.isPresent(txtCompanyID, "Company ID"))
             {
                 return false;
             }

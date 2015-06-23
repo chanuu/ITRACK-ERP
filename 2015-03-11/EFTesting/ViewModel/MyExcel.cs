@@ -134,6 +134,7 @@ namespace MyTeamApp
             bar.Show();
             bar.Properties.Maximum = lastRow;
             bar.Properties.Step = 1;
+            oprationList.Clear();
             // EmpList.Clear();
             for (int index = 5; index <= lastRow; index++)
             {
@@ -450,6 +451,7 @@ namespace MyTeamApp
                 return true;
             }
             catch(Exception ex){
+                Debug.WriteLine(ex.Message);
                 return false;
             }
         } 

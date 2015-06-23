@@ -103,7 +103,7 @@ namespace EFTesting.UI
         {
             try
             {
-                _EditOperationRepository.Add(AssignOperation());
+                _EditOperationRepository.Edit(AssignOperation());
             }
             catch (Exception ex)
             {
@@ -223,7 +223,7 @@ namespace EFTesting.UI
                 grdSearch.Hide();
             
             }catch(Exception ex){
-            
+                Debug.WriteLine(ex.Message);
             }
         
         }
@@ -412,7 +412,7 @@ namespace EFTesting.UI
                 }
             }
             catch(Exception ex){
-            
+                Debug.WriteLine(ex.Message);
             }
         }
 
@@ -424,7 +424,7 @@ namespace EFTesting.UI
                 Debug.Write(lstTempOpration.Count);
             }
             catch(Exception ex){
-            
+                Debug.WriteLine(ex.Message);
             }
          
         }

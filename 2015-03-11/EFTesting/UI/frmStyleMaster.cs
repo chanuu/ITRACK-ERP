@@ -72,6 +72,8 @@ namespace EFTesting.UI
                 _Style.Status = cmbStatus.Text; 
                 _Style.BuyerID = _Buyer.BuyerID;
                 _Style.GarmantType = cmbGarmentType.Text;
+                _Style.FeedingRule = cmbFeedingRule.Text;
+                _Style.ForecastingRule = cmbForecastingRule.Text;
                 _Style.WorkflowID= 1 ;
                
 
@@ -188,6 +190,8 @@ namespace EFTesting.UI
                     txtRemark.Text = style.Remark;
                     _Company.CompanyID = style.CompanyID;
                     txtSeason.Text = style.Season;
+                    cmbFeedingRule.Text = style.FeedingRule;
+                    cmbForecastingRule.Text = style.ForecastingRule;
                     _Buyer = style.Buyer;
 
 
@@ -216,6 +220,98 @@ namespace EFTesting.UI
 
         }
         #endregion
+
+
+
+        #region FabricDetails 
+        FabricDetails fDetails = new FabricDetails();
+        FabricDetails AssignfDetails() {
+            try {
+
+                fDetails.FabricType = cmbFabricType.Text;
+                fDetails.FabricName = txtFabricName.Text;
+                fDetails.Color = txtFabricColor.Text;
+                fDetails.PlanedConsumtion =Convert.ToDouble( txtPlanedConsumtion.Text);
+                fDetails.Remark = txtfRemark.Text;
+                fDetails.StyleID = txtStyleNo.Text;
+                fDetails.FabricDetailsID = this.fDetailsID;
+                return fDetails;
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+        
+        }
+
+
+        bool AddFabricDetails() {
+            try {
+                GenaricRepository<FabricDetails> _FabricDetailsRepository = new GenaricRepository<FabricDetails>(new ItrackContext());
+                _FabricDetailsRepository.Add(AssignfDetails());
+                return true;
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
+
+
+        bool EditFabricDetails()
+        {
+            try
+            {
+                GenaricRepository<FabricDetails> _FabricDetailsRepository = new GenaricRepository<FabricDetails>(new ItrackContext());
+                _FabricDetailsRepository.Edit(AssignfDetails());
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
+
+        List<FabricDetails> lstFabric = new List<FabricDetails>();
+        List<FabricDetails> GetFabricList(string _styleNo) {
+            try {
+
+                GenaricRepository<FabricDetails> _FabricDetailsRepository = new GenaricRepository<FabricDetails>(new ItrackContext());
+                var list = from items in _FabricDetailsRepository.GetAll().Where(u => u.StyleID == _styleNo).ToList() select new { items.FabricDetailsID,items.FabricType,items.FabricName,items.Color,items.PlanedConsumtion,items.Remark};
+                grdFabricList.DataSource = list;
+
+                return lstFabric;
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+                return null;
+
+            }
+        
+        }
+
+        public int fDetailsID { get; set; }
+
+        void GetFabricDetailsField() {
+            try
+            {
+                cmbFabricType.Text = gridView3.GetFocusedRowCellValue("FabricType").ToString();
+                txtFabricName.Text = gridView3.GetFocusedRowCellValue("FabricName").ToString();
+                txtFabricColor.Text = gridView3.GetFocusedRowCellValue("Color").ToString();
+                txtPlanedConsumtion.Text = gridView3.GetFocusedRowCellValue("PlanedConsumtion").ToString();
+                txtfRemark.Text = gridView3.GetFocusedRowCellValue("Remark").ToString();
+                this.fDetailsID = Convert.ToInt16(gridView3.GetFocusedRowCellValue("FabricDetailsID").ToString());
+            }
+            catch (Exception ex) {
+                Debug.WriteLine(ex.Message);
+            }
+        
+        }
+
+        #endregion 
 
         #region events
         private void btnAdd_Click(object sender, EventArgs e)
@@ -262,6 +358,7 @@ namespace EFTesting.UI
             grdSearchStyle.Hide();
             txtSearchBox.Hide();
             btnClose.Hide();
+            
         }
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
@@ -288,6 +385,7 @@ namespace EFTesting.UI
             {
                 _Style.StyleID = gridView2.GetFocusedRowCellValue("StyleID").ToString();
                 getStyleFeild(_Style.StyleID);
+                GetFabricList(_Style.StyleID);
                 grdSearchStyle.Hide();
                 btnClose.Hide();
                 txtSearchBox.Hide();
@@ -301,6 +399,7 @@ namespace EFTesting.UI
         {
             txtSearchBox.Show();
             btnClose.Show();
+            txtSearchBox.Focus();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -355,10 +454,41 @@ namespace EFTesting.UI
             {
                 return false;
             }
+            if (!Validator.isPresent(cmbFeedingRule, "Feeding Rule"))
+            {
+                return false;
+            }
+
+
+            if (!Validator.isPresent(cmbForecastingRule, "Forecasting Rule"))
+            {
+                return false;
+            }
 
             return true;
         }
         #endregion
+
+        private void btnfAdd_Click(object sender, EventArgs e)
+        {
+            AddFabricDetails();
+            GetFabricList(txtStyleNo.Text);
+        }
+
+        private void btnfUpdate_Click(object sender, EventArgs e)
+        {
+            if (btnfUpdate.Text == "Edit")
+            {
+                GetFabricDetailsField();
+                btnfUpdate.Text = "Update";
+            }
+            else
+            {
+                btnfUpdate.Text = "Edit";
+                EditFabricDetails();
+                GetFabricList(txtStyleNo.Text);
+            }
+        }
 
 
     }

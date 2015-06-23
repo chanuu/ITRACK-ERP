@@ -30,6 +30,7 @@
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label13 = new System.Windows.Forms.Label();
             this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.chkPlanToWashinFct = new DevExpress.XtraEditors.CheckEdit();
@@ -52,6 +53,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPoNo = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.label14 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.grdPoItems = new DevExpress.XtraGrid.GridControl();
@@ -74,8 +76,6 @@
             this.lblProgress = new System.Windows.Forms.Label();
             this.grdSearchPo = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -151,6 +151,15 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(1181, 370);
             this.xtraTabPage1.Text = "Po Header";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(59, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(224, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "General PO Infromation / Header Information";
             // 
             // grdSearchStyle
             // 
@@ -378,6 +387,15 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(1181, 370);
             this.xtraTabPage2.Text = "Ratio";
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(47, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(206, 13);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Item Ratio Breakdown /By  Size and Color";
+            // 
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -402,11 +420,14 @@
             // 
             // grdPoItems
             // 
+            this.grdPoItems.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grdPoItems.Cursor = System.Windows.Forms.Cursors.Default;
             this.grdPoItems.Location = new System.Drawing.Point(47, 33);
             this.grdPoItems.MainView = this.gridView3;
             this.grdPoItems.Name = "grdPoItems";
-            this.grdPoItems.Size = new System.Drawing.Size(906, 276);
+            this.grdPoItems.Size = new System.Drawing.Size(1091, 276);
             this.grdPoItems.TabIndex = 36;
             this.grdPoItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -439,6 +460,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
             this.btnClose.TabIndex = 26;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtSearchBox
             // 
@@ -588,7 +610,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(8, 68);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(1172, 391);
+            this.grdSearchPo.Size = new System.Drawing.Size(1172, 34);
             this.grdSearchPo.TabIndex = 45;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -598,24 +620,6 @@
             // 
             this.gridView2.GridControl = this.grdSearchPo;
             this.gridView2.Name = "gridView2";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(59, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(224, 13);
-            this.label13.TabIndex = 37;
-            this.label13.Text = "General PO Infromation / Header Information";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(47, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(206, 13);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "Item Ratio Breakdown /By  Size and Color";
             // 
             // frmPurchaseOrder
             // 

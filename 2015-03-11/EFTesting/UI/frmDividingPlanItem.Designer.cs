@@ -41,17 +41,25 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbMachineType = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPartName = new DevExpress.XtraEditors.TextEdit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.grdOpList = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtOprationNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtoprationName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSmvType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMV.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMachineType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOpList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 45);
+            this.label2.Location = new System.Drawing.Point(30, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 36;
@@ -60,18 +68,20 @@
             // txtOprationNo
             // 
             this.txtOprationNo.EditValue = "";
-            this.txtOprationNo.Location = new System.Drawing.Point(148, 42);
+            this.txtOprationNo.Location = new System.Drawing.Point(148, 71);
             this.txtOprationNo.Name = "txtOprationNo";
             this.txtOprationNo.Properties.AccessibleDescription = "";
             this.txtOprationNo.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtOprationNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtOprationNo.Size = new System.Drawing.Size(251, 20);
             this.txtOprationNo.TabIndex = 35;
+            this.txtOprationNo.EditValueChanged += new System.EventHandler(this.txtOprationNo_EditValueChanged);
+            this.txtOprationNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOprationNo_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 81);
+            this.label1.Location = new System.Drawing.Point(30, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 13);
             this.label1.TabIndex = 38;
@@ -80,7 +90,7 @@
             // txtoprationName
             // 
             this.txtoprationName.EditValue = "";
-            this.txtoprationName.Location = new System.Drawing.Point(148, 78);
+            this.txtoprationName.Location = new System.Drawing.Point(148, 107);
             this.txtoprationName.Name = "txtoprationName";
             this.txtoprationName.Properties.AccessibleDescription = "";
             this.txtoprationName.Properties.NullValuePrompt = "Please Enter Style No";
@@ -91,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 118);
+            this.label3.Location = new System.Drawing.Point(30, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 40;
@@ -100,7 +110,7 @@
             // cmbSmvType
             // 
             this.cmbSmvType.EditValue = "";
-            this.cmbSmvType.Location = new System.Drawing.Point(148, 115);
+            this.cmbSmvType.Location = new System.Drawing.Point(148, 144);
             this.cmbSmvType.Name = "cmbSmvType";
             this.cmbSmvType.Properties.AccessibleDescription = "";
             this.cmbSmvType.Properties.NullValuePrompt = "Please Enter Style No";
@@ -111,7 +121,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = global::EFTesting.Properties.Resources.update;
-            this.btnEdit.Location = new System.Drawing.Point(330, 176);
+            this.btnEdit.Location = new System.Drawing.Point(330, 184);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
             this.btnEdit.TabIndex = 43;
@@ -121,7 +131,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnAdd.Location = new System.Drawing.Point(148, 176);
+            this.btnAdd.Location = new System.Drawing.Point(148, 184);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 42;
@@ -131,7 +141,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(446, 77);
+            this.label5.Location = new System.Drawing.Point(446, 106);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 47;
@@ -140,7 +150,7 @@
             // txtSMV
             // 
             this.txtSMV.EditValue = "";
-            this.txtSMV.Location = new System.Drawing.Point(564, 74);
+            this.txtSMV.Location = new System.Drawing.Point(564, 103);
             this.txtSMV.Name = "txtSMV";
             this.txtSMV.Properties.AccessibleDescription = "";
             this.txtSMV.Properties.NullValuePrompt = "Please Enter Style No";
@@ -151,7 +161,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(446, 41);
+            this.label6.Location = new System.Drawing.Point(446, 70);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 45;
@@ -160,7 +170,7 @@
             // cmbMachineType
             // 
             this.cmbMachineType.EditValue = "";
-            this.cmbMachineType.Location = new System.Drawing.Point(564, 38);
+            this.cmbMachineType.Location = new System.Drawing.Point(564, 67);
             this.cmbMachineType.Name = "cmbMachineType";
             this.cmbMachineType.Properties.AccessibleDescription = "";
             this.cmbMachineType.Properties.NullValuePrompt = "Please Enter Style No";
@@ -171,17 +181,68 @@
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.save1;
-            this.simpleButton1.Location = new System.Drawing.Point(239, 176);
+            this.simpleButton1.Location = new System.Drawing.Point(239, 184);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
             this.simpleButton1.TabIndex = 48;
             this.simpleButton1.Text = "Add/New";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(446, 143);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.TabIndex = 50;
+            this.label4.Text = "Part Name";
+            // 
+            // txtPartName
+            // 
+            this.txtPartName.EditValue = "";
+            this.txtPartName.Location = new System.Drawing.Point(564, 140);
+            this.txtPartName.Name = "txtPartName";
+            this.txtPartName.Properties.AccessibleDescription = "";
+            this.txtPartName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtPartName.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtPartName.Size = new System.Drawing.Size(251, 20);
+            this.txtPartName.TabIndex = 49;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(183, 13);
+            this.label8.TabIndex = 57;
+            this.label8.Text = "Add / Edit Operation To Dividing Plan";
+            // 
+            // grdOpList
+            // 
+            this.grdOpList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdOpList.Location = new System.Drawing.Point(148, 93);
+            this.grdOpList.MainView = this.gridView2;
+            this.grdOpList.Name = "grdOpList";
+            this.grdOpList.Size = new System.Drawing.Size(788, 231);
+            this.grdOpList.TabIndex = 58;
+            this.grdOpList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            this.grdOpList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdOpList_KeyDown);
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.grdOpList;
+            this.gridView2.Name = "gridView2";
             // 
             // frmDividingPlanItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 341);
+            this.ClientSize = new System.Drawing.Size(948, 352);
+            this.Controls.Add(this.grdOpList);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtPartName);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtSMV);
@@ -204,6 +265,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmbSmvType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMV.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbMachineType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdOpList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +288,10 @@
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.TextEdit cmbMachineType;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.TextEdit txtPartName;
+        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraGrid.GridControl grdOpList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }

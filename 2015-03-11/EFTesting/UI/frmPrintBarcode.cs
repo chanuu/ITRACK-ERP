@@ -20,11 +20,18 @@ namespace EFTesting.UI
             InitializeComponent();
         }
 
+        public int CutNo { get; set; }
+        public frmPrintBarcode(int _CutNo) {
+
+            this.CutNo = _CutNo;
+            InitializeComponent();
+        }
+
         private void frmPrintBarcode_Load(object sender, EventArgs e)
         {
             RptbundleTicket report = new RptbundleTicket();
             OprationBarcodeList list = new OprationBarcodeList();
-            report.SetDataSource(list.BarcodeList(5));
+            report.SetDataSource(list.BarcodeList(1));
 
             this.crystalReportViewer1.ReportSource = report;
         }

@@ -30,8 +30,6 @@
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
             this.label4 = new System.Windows.Forms.Label();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.grdItemList = new DevExpress.XtraGrid.GridControl();
@@ -47,7 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCuttingTicketNo = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.grdBundleTicket = new DevExpress.XtraGrid.GridControl();
@@ -72,7 +69,6 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -94,7 +90,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -116,9 +111,6 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.textEdit5);
-            this.xtraTabPage1.Controls.Add(this.simpleButton6);
-            this.xtraTabPage1.Controls.Add(this.simpleButton7);
             this.xtraTabPage1.Controls.Add(this.label4);
             this.xtraTabPage1.Controls.Add(this.simpleButton3);
             this.xtraTabPage1.Controls.Add(this.grdItemList);
@@ -136,26 +128,6 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1133, 403);
             this.xtraTabPage1.Text = "Genarate Bundle Ticket";
-            // 
-            // simpleButton6
-            // 
-            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton6.Location = new System.Drawing.Point(221, 366);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton6.TabIndex = 65;
-            this.simpleButton6.Text = "Genarate";
-            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
-            // 
-            // simpleButton7
-            // 
-            this.simpleButton7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton7.Location = new System.Drawing.Point(116, 366);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton7.TabIndex = 64;
-            this.simpleButton7.Text = "Genarate";
-            this.simpleButton7.Click += new System.EventHandler(this.simpleButton7_Click_1);
             // 
             // label4
             // 
@@ -210,7 +182,7 @@
             this.txtBundleSize.Location = new System.Drawing.Point(829, 49);
             this.txtBundleSize.Name = "txtBundleSize";
             this.txtBundleSize.Properties.AccessibleDescription = "";
-            this.txtBundleSize.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtBundleSize.Properties.NullValuePrompt = "Bundle Size";
             this.txtBundleSize.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBundleSize.Size = new System.Drawing.Size(195, 20);
             this.txtBundleSize.TabIndex = 49;
@@ -230,7 +202,7 @@
             this.txtStyleNo.Location = new System.Drawing.Point(221, 49);
             this.txtStyleNo.Name = "txtStyleNo";
             this.txtStyleNo.Properties.AccessibleDescription = "";
-            this.txtStyleNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtStyleNo.Properties.NullValuePrompt = "Style No";
             this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStyleNo.Size = new System.Drawing.Size(210, 20);
             this.txtStyleNo.TabIndex = 47;
@@ -250,7 +222,7 @@
             this.txtPlanQty.Location = new System.Drawing.Point(628, 49);
             this.txtPlanQty.Name = "txtPlanQty";
             this.txtPlanQty.Properties.AccessibleDescription = "";
-            this.txtPlanQty.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtPlanQty.Properties.NullValuePrompt = "Plan Qty";
             this.txtPlanQty.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPlanQty.Size = new System.Drawing.Size(195, 20);
             this.txtPlanQty.TabIndex = 41;
@@ -270,7 +242,7 @@
             this.txtOrderQty.Location = new System.Drawing.Point(437, 49);
             this.txtOrderQty.Name = "txtOrderQty";
             this.txtOrderQty.Properties.AccessibleDescription = "";
-            this.txtOrderQty.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtOrderQty.Properties.NullValuePrompt = "Order Qty";
             this.txtOrderQty.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtOrderQty.Size = new System.Drawing.Size(185, 20);
             this.txtOrderQty.TabIndex = 39;
@@ -290,7 +262,7 @@
             this.txtCuttingTicketNo.Location = new System.Drawing.Point(18, 49);
             this.txtCuttingTicketNo.Name = "txtCuttingTicketNo";
             this.txtCuttingTicketNo.Properties.AccessibleDescription = "";
-            this.txtCuttingTicketNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtCuttingTicketNo.Properties.NullValuePrompt = "Cutting Ticket No";
             this.txtCuttingTicketNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtCuttingTicketNo.Size = new System.Drawing.Size(197, 20);
             this.txtCuttingTicketNo.TabIndex = 33;
@@ -298,7 +270,6 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.AutoScroll = true;
-            this.xtraTabPage2.Controls.Add(this.simpleButton2);
             this.xtraTabPage2.Controls.Add(this.label1);
             this.xtraTabPage2.Controls.Add(this.simpleButton4);
             this.xtraTabPage2.Controls.Add(this.grdBundleTicket);
@@ -314,15 +285,6 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1133, 403);
             this.xtraTabPage2.Text = "Print Bundle";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton2.Location = new System.Drawing.Point(116, 369);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 76;
-            this.simpleButton2.Text = "Genarate";
             // 
             // label1
             // 
@@ -341,6 +303,7 @@
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 74;
             this.simpleButton4.Text = "Genarate";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // grdBundleTicket
             // 
@@ -376,7 +339,7 @@
             this.textEdit1.Location = new System.Drawing.Point(221, 52);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.AccessibleDescription = "";
-            this.textEdit1.Properties.NullValuePrompt = "Please Enter Style No";
+            this.textEdit1.Properties.NullValuePrompt = " Style No";
             this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit1.Size = new System.Drawing.Size(210, 20);
             this.textEdit1.TabIndex = 71;
@@ -396,7 +359,7 @@
             this.textEdit2.Location = new System.Drawing.Point(628, 52);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.AccessibleDescription = "";
-            this.textEdit2.Properties.NullValuePrompt = "Please Enter Style No";
+            this.textEdit2.Properties.NullValuePrompt = "Plan Qty";
             this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit2.Size = new System.Drawing.Size(195, 20);
             this.textEdit2.TabIndex = 69;
@@ -416,7 +379,7 @@
             this.textEdit3.Location = new System.Drawing.Point(437, 52);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.AccessibleDescription = "";
-            this.textEdit3.Properties.NullValuePrompt = "Please Enter Style No";
+            this.textEdit3.Properties.NullValuePrompt = "Order Qty";
             this.textEdit3.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit3.Size = new System.Drawing.Size(185, 20);
             this.textEdit3.TabIndex = 67;
@@ -436,7 +399,7 @@
             this.textEdit4.Location = new System.Drawing.Point(18, 52);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.AccessibleDescription = "";
-            this.textEdit4.Properties.NullValuePrompt = "Please Enter Style No";
+            this.textEdit4.Properties.NullValuePrompt = "Cutting Tickt No";
             this.textEdit4.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit4.Size = new System.Drawing.Size(197, 20);
             this.textEdit4.TabIndex = 65;
@@ -522,6 +485,7 @@
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnNew
             // 
@@ -538,7 +502,7 @@
             this.grdSearch.Location = new System.Drawing.Point(9, 50);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1164, 340);
+            this.grdSearch.Size = new System.Drawing.Size(1164, 378);
             this.grdSearch.TabIndex = 63;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -548,18 +512,6 @@
             // 
             this.gridView3.GridControl = this.grdSearch;
             this.gridView3.Name = "gridView3";
-            // 
-            // textEdit5
-            // 
-            this.textEdit5.EditValue = "";
-            this.textEdit5.Location = new System.Drawing.Point(319, 369);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.AccessibleDescription = "";
-            this.textEdit5.Properties.NullText = "Please Enter Buyer Name";
-            this.textEdit5.Properties.NullValuePrompt = "Please Enter Buyer Name";
-            this.textEdit5.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit5.Size = new System.Drawing.Size(285, 20);
-            this.textEdit5.TabIndex = 66;
             // 
             // frmBundlingMaster
             // 
@@ -602,7 +554,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -638,8 +589,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraGrid.GridControl grdBundleTicket;
@@ -652,7 +601,5 @@
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
     }
 }

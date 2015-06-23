@@ -12,9 +12,6 @@ namespace ITRACK.models
 
         public double SMV { get; set; }
 
-        public virtual OperationPool OperationPool { get; set; }
-
-        public string OperationPoolID { get; set; }
 
         public virtual PartDefinition PartDefinition { get; set; }
 

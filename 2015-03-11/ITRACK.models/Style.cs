@@ -19,10 +19,14 @@ namespace ITRACK.models
 
         public string GarmantType { get; set; }
 
-
         public string Status { get; set; }
 
         public string Remark { get; set; }
+
+        public string FeedingRule { get; set; }
+
+        public string ForecastingRule { get; set; }
+
         public Int32 CompanyID { get; set; }
 
         public virtual Company Company { get; set; }
@@ -40,6 +44,9 @@ namespace ITRACK.models
 
 
         public virtual ICollection<DividingPlanHeader> DividingPlanHeader { get; set; }
+
+
+        public virtual ICollection<FabricDetails> FabricDetails { get; set; }
 
         public virtual Workflow Workflow { get; set; }
 

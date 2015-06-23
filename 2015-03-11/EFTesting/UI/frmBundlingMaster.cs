@@ -350,29 +350,36 @@ namespace EFTesting.UI
 
         private void GenarateTags() {
             try {
-                Cursor.Current = Cursors.WaitCursor;
-                _cuttingHeader.CuttingHeaderID = txtCuttingTicketNo.Text;
-                GenareteTags();
-                GenarateTags gen = new GenarateTags();
-                Int64 bundlehader = GetBundleHeaderID();
-                string _lineNo =   gridView2.GetFocusedRowCellValue("LineNo").ToString();
-                string _StyleNo = txtStyleNo.Text;
+
+                if (gridView2.RowCount > 0) {
+                    Cursor.Current = Cursors.WaitCursor;
+                    _cuttingHeader.CuttingHeaderID = txtCuttingTicketNo.Text;
+                    GenareteTags();
+                    GenarateTags gen = new GenarateTags();
+                    Int64 bundlehader = GetBundleHeaderID();
+                    string _lineNo = gridView2.GetFocusedRowCellValue("LineNo").ToString();
+                    string _StyleNo = txtStyleNo.Text;
+                    int _noofItem = Convert.ToInt16(gridView2.GetFocusedRowCellValue("NoOfItem").ToString());
+                    int _noofLayer = Convert.ToInt16(gridView2.GetFocusedRowCellValue("NoOfLayer").ToString());
+                    int _bundleSize = Convert.ToInt16(txtBundleSize.Text);
+
+                    List<OprationBarcodes> lst = new List<OprationBarcodes>();
+
+                    gen.GenrateBundleTags(_noofLayer, _noofItem, _bundleSize, bundlehader, _StyleNo, _lineNo, lst);
+
+                    FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
+
+
+
+
+                    //using sql bulk copy
+                    SqlBulkCopyHelper _helper = new SqlBulkCopyHelper();
+                    _helper.PerformBulkCopy(_helper.ConvertTagsToDatatable(lst));
+
+                    Debug.WriteLine(lst.Count + "Count Of Record");
+                    Cursor.Current = Cursors.Default;
+                }
                
-                List<OprationBarcodes> lst = new List<OprationBarcodes>();
-                
-                gen.GenrateBundleTags(150, 20, 25, bundlehader,_StyleNo,_lineNo,lst);
-               
-                FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
-              
-                
-
-
-                //using sql bulk copy
-                SqlBulkCopyHelper _helper = new SqlBulkCopyHelper();
-                _helper.PerformBulkCopy(_helper.ConvertTagsToDatatable(lst));
-
-                Debug.WriteLine(lst.Count + "Count Of Record");
-                Cursor.Current = Cursors.Default;
 
             }
             catch(Exception ex){
@@ -388,6 +395,7 @@ namespace EFTesting.UI
                 return true;
             }
             catch(Exception ex){
+                Debug.WriteLine(ex.Message);
                 return false;
             }
         }
@@ -401,12 +409,12 @@ namespace EFTesting.UI
 
         private void grdSearch_KeyDown(object sender, KeyEventArgs e)
         {
-           _cuttingHeader.CuttingHeaderID = gridView3.GetFocusedRowCellValue("CuttingHeaderID").ToString();
+          _cuttingHeader.CuttingHeaderID = gridView3.GetFocusedRowCellValue("CuttingHeaderID").ToString();
           getCuttingFeild(_cuttingHeader.CuttingHeaderID);
           FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
-            grdSearch.Hide();
-            txtSearchBox.Hide();
-            btnClose.Hide();
+          grdSearch.Hide();
+          txtSearchBox.Hide();
+          btnClose.Hide();
         }
 
         private void simpleButton2_Click(object sender, EventArgs e)
@@ -416,8 +424,19 @@ namespace EFTesting.UI
 
         private void simpleButton3_Click(object sender, EventArgs e)
         {
-       
-            GenarateTags();
+
+            if (txtBundleSize.Text != "")
+            {
+                GenarateTags();
+
+            }
+            else
+            {
+                MessageBox.Show("Please Fill Bundle Size", "Error Entry", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBundleSize.Focus();
+            }
+
+            
 
            // GenarateTags gn = new GenarateTags();
            // Cursor.Current = Cursors.WaitCursor;
@@ -436,8 +455,7 @@ namespace EFTesting.UI
 
         private void simpleButton7_Click_1(object sender, EventArgs e)
         {
-            frmPrintBarcode print = new frmPrintBarcode();
-            print.ShowDialog();
+            
         }
 
         private void frmBundlingMaster_Load(object sender, EventArgs e)
@@ -457,8 +475,28 @@ namespace EFTesting.UI
         private void simpleButton6_Click(object sender, EventArgs e)
         {
             GenaricRepository<OprationBarcodes> _OprationBarcodesRepository = new GenaricRepository<OprationBarcodes>(new ItrackContext());
-         var t  =  from item in _OprationBarcodesRepository.GetAll().ToList()  where item.BundleDetails.BundleHeader.CuttingItemID == 3 orderby item.OprationBarcodesID select item;
+         var t  =  from item in _OprationBarcodesRepository.GetAll().ToList()  where item.BundleDetails.BundleHeader.CuttingItemID == 1 orderby item.OprationBarcodesID select item;
         Debug.WriteLine( t.Count());
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+
+            Cursor.Current = Cursors.WaitCursor;
+            int CutNo = Convert.ToInt16(gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
+            frmPrintBarcode print = new frmPrintBarcode(CutNo);
+            Cursor.Current = Cursors.Default;
+            print.ShowDialog();
+        }
+
+        private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

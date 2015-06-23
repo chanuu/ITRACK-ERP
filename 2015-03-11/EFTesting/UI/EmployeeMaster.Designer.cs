@@ -451,7 +451,7 @@
             this.xtraTabPage2.Controls.Add(this.txtEmail);
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(990, 436);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1071, 436);
             this.xtraTabPage2.Text = "Contact Details";
             this.xtraTabPage2.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage2_Paint);
             // 
@@ -581,7 +581,7 @@
             this.xtraTabPage3.Controls.Add(this.gridPromotion);
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(990, 436);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1071, 436);
             this.xtraTabPage3.Text = "Promotion";
             // 
             // simpleButton2
@@ -629,7 +629,7 @@
             this.xtraTabPage4.Controls.Add(this.gridAward);
             this.xtraTabPage4.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(990, 436);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1071, 436);
             this.xtraTabPage4.Text = "Awards";
             // 
             // simpleButton3
@@ -737,7 +737,7 @@
             this.grdSearch.Location = new System.Drawing.Point(26, 57);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1056, 422);
+            this.grdSearch.Size = new System.Drawing.Size(1056, 56);
             this.grdSearch.TabIndex = 22;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});

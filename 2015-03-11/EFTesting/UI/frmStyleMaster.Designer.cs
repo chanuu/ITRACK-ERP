@@ -37,9 +37,13 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.label11 = new System.Windows.Forms.Label();
             this.grdSearchBuyer = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cmbForecastingRule = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.cmbStatus = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbGarmentType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label10 = new System.Windows.Forms.Label();
@@ -54,6 +58,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtStyleNo = new DevExpress.XtraEditors.TextEdit();
+            this.cmbFeedingRule = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.grdFabricList = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnfUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.btnfAdd = new DevExpress.XtraEditors.SimpleButton();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtfRemark = new DevExpress.XtraEditors.MemoEdit();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtFabricColor = new DevExpress.XtraEditors.TextEdit();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtPlanedConsumtion = new DevExpress.XtraEditors.TextEdit();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtFabricName = new DevExpress.XtraEditors.TextEdit();
+            this.cmbFabricType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label15 = new System.Windows.Forms.Label();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.label7 = new System.Windows.Forms.Label();
@@ -70,6 +92,7 @@
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearchBuyer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbForecastingRule.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGarmentType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeason.Properties)).BeginInit();
@@ -77,6 +100,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBuyerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbFeedingRule.Properties)).BeginInit();
+            this.xtraTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdFabricList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtfRemark.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFabricColor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlanedConsumtion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFabricName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbFabricType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
@@ -170,13 +202,18 @@
             this.xtraTabControl1.TabIndex = 24;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
+            this.xtraTabPage4,
             this.xtraTabPage2,
             this.xtraTabPage3});
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.label11);
             this.xtraTabPage1.Controls.Add(this.grdSearchBuyer);
+            this.xtraTabPage1.Controls.Add(this.cmbForecastingRule);
+            this.xtraTabPage1.Controls.Add(this.label14);
+            this.xtraTabPage1.Controls.Add(this.label13);
+            this.xtraTabPage1.Controls.Add(this.label12);
+            this.xtraTabPage1.Controls.Add(this.label11);
             this.xtraTabPage1.Controls.Add(this.cmbStatus);
             this.xtraTabPage1.Controls.Add(this.cmbGarmentType);
             this.xtraTabPage1.Controls.Add(this.label10);
@@ -191,19 +228,11 @@
             this.xtraTabPage1.Controls.Add(this.label4);
             this.xtraTabPage1.Controls.Add(this.label1);
             this.xtraTabPage1.Controls.Add(this.txtStyleNo);
+            this.xtraTabPage1.Controls.Add(this.cmbFeedingRule);
             this.xtraTabPage1.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1134, 401);
             this.xtraTabPage1.Text = "Header";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(50, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(234, 13);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "General Style Infromation / Header Information";
             // 
             // grdSearchBuyer
             // 
@@ -211,7 +240,7 @@
             this.grdSearchBuyer.Location = new System.Drawing.Point(168, 125);
             this.grdSearchBuyer.MainView = this.gridView1;
             this.grdSearchBuyer.Name = "grdSearchBuyer";
-            this.grdSearchBuyer.Size = new System.Drawing.Size(741, 184);
+            this.grdSearchBuyer.Size = new System.Drawing.Size(741, 154);
             this.grdSearchBuyer.TabIndex = 35;
             this.grdSearchBuyer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -221,6 +250,56 @@
             // 
             this.gridView1.GridControl = this.grdSearchBuyer;
             this.gridView1.Name = "gridView1";
+            // 
+            // cmbForecastingRule
+            // 
+            this.cmbForecastingRule.Location = new System.Drawing.Point(620, 305);
+            this.cmbForecastingRule.Name = "cmbForecastingRule";
+            this.cmbForecastingRule.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbForecastingRule.Properties.Items.AddRange(new object[] {
+            "Enbled Alerts",
+            "Disble Allerts "});
+            this.cmbForecastingRule.Properties.NullValuePrompt = "Select Status";
+            this.cmbForecastingRule.Properties.NullValuePromptShowForEmptyValue = true;
+            this.cmbForecastingRule.Size = new System.Drawing.Size(199, 20);
+            this.cmbForecastingRule.TabIndex = 40;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(502, 308);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(81, 13);
+            this.label14.TabIndex = 41;
+            this.label14.Text = "Forcasting Rule";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(50, 312);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 13);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "feeding Rule";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(50, 282);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(171, 13);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Partial Delivery Options / Feed Po ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(50, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(234, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "General Style Infromation / Header Information";
             // 
             // cmbStatus
             // 
@@ -370,6 +449,202 @@
             this.txtStyleNo.Size = new System.Drawing.Size(251, 20);
             this.txtStyleNo.TabIndex = 1;
             // 
+            // cmbFeedingRule
+            // 
+            this.cmbFeedingRule.Location = new System.Drawing.Point(168, 309);
+            this.cmbFeedingRule.Name = "cmbFeedingRule";
+            this.cmbFeedingRule.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbFeedingRule.Properties.Items.AddRange(new object[] {
+            "By Delivery Date",
+            "FIFO",
+            "LIFO"});
+            this.cmbFeedingRule.Properties.NullValuePrompt = "Select Status";
+            this.cmbFeedingRule.Properties.NullValuePromptShowForEmptyValue = true;
+            this.cmbFeedingRule.Size = new System.Drawing.Size(199, 20);
+            this.cmbFeedingRule.TabIndex = 38;
+            // 
+            // xtraTabPage4
+            // 
+            this.xtraTabPage4.Controls.Add(this.grdFabricList);
+            this.xtraTabPage4.Controls.Add(this.btnfUpdate);
+            this.xtraTabPage4.Controls.Add(this.btnfAdd);
+            this.xtraTabPage4.Controls.Add(this.label21);
+            this.xtraTabPage4.Controls.Add(this.label20);
+            this.xtraTabPage4.Controls.Add(this.txtfRemark);
+            this.xtraTabPage4.Controls.Add(this.label19);
+            this.xtraTabPage4.Controls.Add(this.label18);
+            this.xtraTabPage4.Controls.Add(this.txtFabricColor);
+            this.xtraTabPage4.Controls.Add(this.label17);
+            this.xtraTabPage4.Controls.Add(this.txtPlanedConsumtion);
+            this.xtraTabPage4.Controls.Add(this.label16);
+            this.xtraTabPage4.Controls.Add(this.txtFabricName);
+            this.xtraTabPage4.Controls.Add(this.cmbFabricType);
+            this.xtraTabPage4.Controls.Add(this.label15);
+            this.xtraTabPage4.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(1134, 401);
+            this.xtraTabPage4.Text = "Fabric Details ";
+            // 
+            // grdFabricList
+            // 
+            this.grdFabricList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdFabricList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdFabricList.Location = new System.Drawing.Point(88, 266);
+            this.grdFabricList.MainView = this.gridView3;
+            this.grdFabricList.Name = "grdFabricList";
+            this.grdFabricList.Size = new System.Drawing.Size(1021, 122);
+            this.grdFabricList.TabIndex = 48;
+            this.grdFabricList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.GridControl = this.grdFabricList;
+            this.gridView3.Name = "gridView3";
+            // 
+            // btnfUpdate
+            // 
+            this.btnfUpdate.Image = global::EFTesting.Properties.Resources.update;
+            this.btnfUpdate.Location = new System.Drawing.Point(303, 186);
+            this.btnfUpdate.Name = "btnfUpdate";
+            this.btnfUpdate.Size = new System.Drawing.Size(85, 39);
+            this.btnfUpdate.TabIndex = 47;
+            this.btnfUpdate.Text = "Edit";
+            this.btnfUpdate.Click += new System.EventHandler(this.btnfUpdate_Click);
+            // 
+            // btnfAdd
+            // 
+            this.btnfAdd.Image = global::EFTesting.Properties.Resources.save1;
+            this.btnfAdd.Location = new System.Drawing.Point(211, 186);
+            this.btnfAdd.Name = "btnfAdd";
+            this.btnfAdd.Size = new System.Drawing.Size(85, 39);
+            this.btnfAdd.TabIndex = 46;
+            this.btnfAdd.Text = "Add";
+            this.btnfAdd.Click += new System.EventHandler(this.btnfAdd_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(85, 243);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(82, 13);
+            this.label21.TabIndex = 45;
+            this.label21.Text = "Style Fabric List";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(80, 29);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(231, 13);
+            this.label20.TabIndex = 44;
+            this.label20.Text = "Style Fabric Details / Planed Fabric Consumtion";
+            // 
+            // txtfRemark
+            // 
+            this.txtfRemark.Location = new System.Drawing.Point(211, 114);
+            this.txtfRemark.Name = "txtfRemark";
+            this.txtfRemark.Size = new System.Drawing.Size(577, 66);
+            this.txtfRemark.TabIndex = 43;
+            this.txtfRemark.UseOptimizedRendering = true;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(117, 116);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(46, 13);
+            this.label19.TabIndex = 42;
+            this.label19.Text = "Remark ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(84, 86);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(64, 13);
+            this.label18.TabIndex = 40;
+            this.label18.Text = "Fabric Color";
+            // 
+            // txtFabricColor
+            // 
+            this.txtFabricColor.EditValue = "";
+            this.txtFabricColor.Location = new System.Drawing.Point(211, 83);
+            this.txtFabricColor.Name = "txtFabricColor";
+            this.txtFabricColor.Properties.AccessibleDescription = "";
+            this.txtFabricColor.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtFabricColor.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtFabricColor.Size = new System.Drawing.Size(199, 20);
+            this.txtFabricColor.TabIndex = 39;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(462, 86);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(120, 13);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "Planed Consumption(m)";
+            // 
+            // txtPlanedConsumtion
+            // 
+            this.txtPlanedConsumtion.EditValue = "";
+            this.txtPlanedConsumtion.Location = new System.Drawing.Point(589, 83);
+            this.txtPlanedConsumtion.Name = "txtPlanedConsumtion";
+            this.txtPlanedConsumtion.Properties.AccessibleDescription = "";
+            this.txtPlanedConsumtion.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtPlanedConsumtion.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtPlanedConsumtion.Size = new System.Drawing.Size(199, 20);
+            this.txtPlanedConsumtion.TabIndex = 37;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(498, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(66, 13);
+            this.label16.TabIndex = 36;
+            this.label16.Text = "Fabric Name";
+            // 
+            // txtFabricName
+            // 
+            this.txtFabricName.EditValue = "";
+            this.txtFabricName.Location = new System.Drawing.Point(589, 54);
+            this.txtFabricName.Name = "txtFabricName";
+            this.txtFabricName.Properties.AccessibleDescription = "";
+            this.txtFabricName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtFabricName.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtFabricName.Size = new System.Drawing.Size(199, 20);
+            this.txtFabricName.TabIndex = 35;
+            // 
+            // cmbFabricType
+            // 
+            this.cmbFabricType.Location = new System.Drawing.Point(211, 54);
+            this.cmbFabricType.Name = "cmbFabricType";
+            this.cmbFabricType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbFabricType.Properties.Items.AddRange(new object[] {
+            "Body Fabric",
+            "Lining",
+            "Fusing",
+            "Other Fabric"});
+            this.cmbFabricType.Properties.NullValuePrompt = "Select Status";
+            this.cmbFabricType.Properties.NullValuePromptShowForEmptyValue = true;
+            this.cmbFabricType.Size = new System.Drawing.Size(199, 20);
+            this.cmbFabricType.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(85, 57);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 13);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Fabric Type ";
+            // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
@@ -459,7 +734,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(12, 57);
             this.grdSearchStyle.MainView = this.gridView2;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 402);
+            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 393);
             this.grdSearchStyle.TabIndex = 38;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -501,6 +776,7 @@
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearchBuyer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbForecastingRule.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGarmentType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeason.Properties)).EndInit();
@@ -508,6 +784,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBuyerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbFeedingRule.Properties)).EndInit();
+            this.xtraTabPage4.ResumeLayout(false);
+            this.xtraTabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdFabricList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtfRemark.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFabricColor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPlanedConsumtion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFabricName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbFabricType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
@@ -556,5 +842,27 @@
         private DevExpress.XtraGrid.GridControl grdSearchStyle;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private System.Windows.Forms.Label label11;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbFeedingRule;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbForecastingRule;
+        private System.Windows.Forms.Label label14;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private DevExpress.XtraEditors.TextEdit txtFabricColor;
+        private System.Windows.Forms.Label label17;
+        private DevExpress.XtraEditors.TextEdit txtPlanedConsumtion;
+        private System.Windows.Forms.Label label16;
+        private DevExpress.XtraEditors.TextEdit txtFabricName;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbFabricType;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label20;
+        private DevExpress.XtraEditors.MemoEdit txtfRemark;
+        private System.Windows.Forms.Label label21;
+        private DevExpress.XtraEditors.SimpleButton btnfUpdate;
+        private DevExpress.XtraEditors.SimpleButton btnfAdd;
+        private DevExpress.XtraGrid.GridControl grdFabricList;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
     }
 }

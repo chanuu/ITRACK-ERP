@@ -207,6 +207,7 @@ namespace EFTesting.UI
 
                 txtPoNo.Focus();
                 grdSearchStyle.Hide();
+                grdPoItems.DataSource = null;
             }
             catch(Exception ex){
 
@@ -442,6 +443,13 @@ namespace EFTesting.UI
         private void xtraTabControl1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            grdSearchPo.Hide();
+            txtSearchBox.Hide();
+            btnClose.Hide();
         }
     }
 }

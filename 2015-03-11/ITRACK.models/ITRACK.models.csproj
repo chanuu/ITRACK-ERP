@@ -62,6 +62,7 @@
     <Compile Include="DividingPlanTemp.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="ExpressionBuilder.cs" />
+    <Compile Include="FabricDetails.cs" />
     <Compile Include="GenaricRepository.cs" />
     <Compile Include="group.cs" />
     <Compile Include="IGenaricRepository.cs" />

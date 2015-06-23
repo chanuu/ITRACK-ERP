@@ -44,7 +44,6 @@
             this.txtGroupID = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.grdCompany = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -207,34 +206,23 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.simpleButton2);
-            this.xtraTabPage2.Controls.Add(this.simpleButton3);
             this.xtraTabPage2.Controls.Add(this.simpleButton4);
             this.xtraTabPage2.Controls.Add(this.grdCompany);
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(752, 412);
+            this.xtraTabPage2.Size = new System.Drawing.Size(817, 412);
             this.xtraTabPage2.Text = "Company";
             // 
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.simpleButton2.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton2.Location = new System.Drawing.Point(202, 310);
+            this.simpleButton2.Location = new System.Drawing.Point(116, 310);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(85, 39);
             this.simpleButton2.TabIndex = 14;
             this.simpleButton2.Text = "Edit";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton3.Image = global::EFTesting.Properties.Resources.save1;
-            this.simpleButton3.Location = new System.Drawing.Point(110, 310);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton3.TabIndex = 13;
-            this.simpleButton3.Text = "Add";
             // 
             // simpleButton4
             // 
@@ -270,7 +258,7 @@
             // 
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(752, 412);
+            this.xtraTabPage3.Size = new System.Drawing.Size(817, 412);
             this.xtraTabPage3.Text = "Department";
             // 
             // btnNew
@@ -369,7 +357,6 @@
         private DevExpress.XtraGrid.GridControl grdGroup;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraGrid.GridControl grdCompany;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;

@@ -70,9 +70,8 @@ namespace EFTesting.UI
         {
             try
             {
-
-                _PORepository.Add(AssignPoItems());
-                this.Close();
+                GenaricRepository<PurchaseOrderItems> _PoRepository = new GenaricRepository<PurchaseOrderItems>(new ItrackContext());
+                _PoRepository.Add(AssignPoItems());
               
             }
             catch (Exception ex)
@@ -151,7 +150,10 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
             AddPOItems();
+            this.Close();
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -163,6 +165,16 @@ namespace EFTesting.UI
         private void PoItemsDialog_FormClosing(object sender, FormClosingEventArgs e)
         {
             
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            AddPOItems();
+            txtSize.Text = "";
+            txtColorCode.Text = "";
+            txtLength.Text = "";
+            txtQuntity.Text = "";
+            txtSize.Focus();
         }
     }
 }

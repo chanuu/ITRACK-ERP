@@ -90,7 +90,7 @@ namespace ITRACK.models
         public DbSet<DividingPlanTemp> DividingPlanTemp { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+          modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
 
             //create one to one or one to zero replationsip in Employee - user Entity

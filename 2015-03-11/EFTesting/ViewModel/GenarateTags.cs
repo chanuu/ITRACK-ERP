@@ -251,6 +251,7 @@ namespace EFTesting.ViewModel
                return true;
            }
            catch(Exception ex){
+               Debug.WriteLine(ex.Message);
                return false;
            }
        }
@@ -282,8 +283,8 @@ namespace EFTesting.ViewModel
            
            }
            catch(Exception ex){
-           
-           
+
+               Debug.WriteLine(ex.Message);
            
            }
        

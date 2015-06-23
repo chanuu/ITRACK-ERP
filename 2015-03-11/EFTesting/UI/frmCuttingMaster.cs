@@ -14,6 +14,7 @@ using System.Linq.Expressions;
 using System.Data.OleDb;
 using Excel = Microsoft.Office.Interop.Excel;
 using MyTeamApp;
+using DevExpress.XtraEditors.Controls;
 
 
 namespace EFTesting.UI
@@ -34,7 +35,7 @@ namespace EFTesting.UI
         CuttingHeader _cuttingHeader = new CuttingHeader();
         CuttingItem _cuttingItem = new CuttingItem();
         BundleHeader _BundleHeader = new BundleHeader();
-
+        Style _Style = new Style();
 
         #endregion
 
@@ -90,6 +91,7 @@ namespace EFTesting.UI
              return _cuttingItem.CuttingItemID;
             }
             catch(Exception ex){
+                Debug.WriteLine(ex.Message);
                 return 0;
             }
         
@@ -357,7 +359,7 @@ namespace EFTesting.UI
             try {
 
                 GenaricRepository<CuttingItem> _CuttingItemrRepo = new GenaricRepository<CuttingItem>(new ItrackContext());
-                foreach (var item in GetCuttingItem(id)) {
+            
                    
                  /*
                     _cuttingItem.CuttingHeaderID = item.CuttingHeaderID;
@@ -377,11 +379,11 @@ namespace EFTesting.UI
                     */
 
                     _cuttingItem = AssignCuttingItem();
-                    _cuttingItem.CuttingItemID = _cuttingItem.CuttingItemID;
+                    _cuttingItem.CuttingItemID = this.CItem;
 
                     _CuttingItemrRepo.Edit(_cuttingItem);
 
-                }
+               
             }
             catch(Exception ex){
                 Debug.WriteLine(ex.Message);
@@ -403,6 +405,7 @@ namespace EFTesting.UI
             }
         }
 
+        public int CItem { get; set; }
         private void getCuttingItem() {
             try {
 
@@ -418,12 +421,30 @@ namespace EFTesting.UI
                 txtnoOfLayers.Text = gridView1.GetFocusedRowCellValue("NoOfLayer").ToString();
                 txtnoOfplysPlan.Text = gridView1.GetFocusedRowCellValue("NoOfPlysPlaned").ToString();
                 txtnoOfplysLayed.Text = gridView1.GetFocusedRowCellValue("NoOfPlysLayed").ToString();
-                _cuttingItem.CuttingItemID =Convert.ToInt16( gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
+                this.CItem =Convert.ToInt16( gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
                 _cuttingItem.CuttingHeaderID = txtCuttingTicketNo.Text;
             }
             catch(Exception ex) {
                 Debug.WriteLine(ex.Message);
             }
+        }
+
+
+
+
+        StyleVM _StyleVM = new StyleVM();
+
+        private void SearchStyle()
+        {
+            try
+            {
+                _StyleVM.SearchStyle2(grdSearchStyle, txtStyleNo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error - B-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         #endregion
@@ -461,9 +482,12 @@ namespace EFTesting.UI
                 _cuttingHeader.CuttingHeaderID = gridView3.GetFocusedRowCellValue("CuttingHeaderID").ToString();
                 getCuttingFeild(_cuttingHeader.CuttingHeaderID);
                 FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
+                FeedConmbo(txtSize);
+                FeedColorCombo(txtColorCode);
                 grdSearch.Hide();
                 txtSearchBox.Hide();
                 btnClose.Hide();
+                grdSearchStyle.Hide();
             }
         }
 
@@ -512,6 +536,8 @@ namespace EFTesting.UI
             grdSearch.Hide();
             txtSearchBox.Hide();
             btnClose.Hide();
+            grdSearchStyle.Hide();
+        
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -538,11 +564,116 @@ namespace EFTesting.UI
            
         }
 
+
+
+        void FeedConmbo(ComboBoxEdit combo)
+        {
+            try {
+               
+                ComboBoxItemCollection coll = combo.Properties.Items;
+
+                GenaricRepository<PurchaseOrderItems> _PoRepo = new GenaricRepository<PurchaseOrderItems>(new ItrackContext());
+                foreach (var items in _PoRepo.GetAll().Where(u => u.PurchaseOrderHeader.Style.StyleID == txtStyleNo.Text).Distinct())
+                {
+                    coll.Add(items.Size);
+
+                } 
+
+                            
+                
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        
+        }
+
+      void FeedColorCombo(ComboBoxEdit combo)
+        {
+            try {
+               
+                ComboBoxItemCollection coll = combo.Properties.Items;
+
+                GenaricRepository<PurchaseOrderItems> _PoRepo = new GenaricRepository<PurchaseOrderItems>(new ItrackContext());
+                foreach (var items in _PoRepo.GetAll().Where(u => u.PurchaseOrderHeader.Style.StyleID == txtStyleNo.Text).Distinct())
+                {
+                    coll.Add(items.Color);
+
+                } 
+
+                            
+                
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        
+        }
+
+      GenaricRepository<Style> _Stylerepository = new GenaricRepository<Style>(new ItrackContext());
+      private List<Style> GetStyleByID(string ID)
+      {
+          try
+          {
+              return _Stylerepository.GetAll().Where(u => u.StyleID == ID).ToList();
+
+
+          }
+          catch (Exception ex)
+          {
+              MessageBox.Show(ex.Message, "Error - C-0004", MessageBoxButtons.OK, MessageBoxIcon.Error);
+              return null;
+
+          }
+
+      }
+      void getStyleFeild(string ID)
+      {
+          try
+          {
+
+              foreach (var style in GetStyleByID(ID))
+              {
+                  txtStyleNo.Text = style.StyleID;
+              
+               
+
+
+              }
+          }
+          catch (Exception ex)
+          {
+              MessageBox.Show(ex.Message, "Error - C-0005", MessageBoxButtons.OK, MessageBoxIcon.Error);
+          }
+      }
+
+
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             _cuttingItem.CuttingItemID = Convert.ToInt16(gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
             Remove(_cuttingItem.CuttingItemID);
             FeedCuttingItem(txtCuttingTicketNo.Text);
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStyleNo_EditValueChanged(object sender, EventArgs e)
+        {
+            SearchStyle();
+        }
+
+        private void grdSearchStyle_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                _Style.StyleID = gridView2.GetFocusedRowCellValue("StyleID").ToString();
+                getStyleFeild(_Style.StyleID);
+                grdSearchStyle.Hide();
+              
+            }
         }
     }
 }

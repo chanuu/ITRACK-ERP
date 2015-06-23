@@ -171,8 +171,28 @@ namespace ITRACK.models
             }
            
         }
+
+        public bool Update(TEntity entity)
+        {
+
+
+            _dbContext.Entry(entity).State = EntityState.Modified;
+
+            if (_dbContext.SaveChanges() > 0)
+            {
+               
+                return true;
+
+            }
+            else
+            {
+               
+                return false;
+
+            }
+
+        }
   
-       
        
        
        public bool Insert(TEntity entity)
