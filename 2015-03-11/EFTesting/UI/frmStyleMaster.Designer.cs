@@ -240,7 +240,7 @@
             this.grdSearchBuyer.Location = new System.Drawing.Point(168, 125);
             this.grdSearchBuyer.MainView = this.gridView1;
             this.grdSearchBuyer.Name = "grdSearchBuyer";
-            this.grdSearchBuyer.Size = new System.Drawing.Size(741, 154);
+            this.grdSearchBuyer.Size = new System.Drawing.Size(741, 143);
             this.grdSearchBuyer.TabIndex = 35;
             this.grdSearchBuyer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -263,7 +263,7 @@
             this.cmbForecastingRule.Properties.NullValuePrompt = "Select Status";
             this.cmbForecastingRule.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbForecastingRule.Size = new System.Drawing.Size(199, 20);
-            this.cmbForecastingRule.TabIndex = 40;
+            this.cmbForecastingRule.TabIndex = 2;
             // 
             // label14
             // 
@@ -462,7 +462,7 @@
             this.cmbFeedingRule.Properties.NullValuePrompt = "Select Status";
             this.cmbFeedingRule.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbFeedingRule.Size = new System.Drawing.Size(199, 20);
-            this.cmbFeedingRule.TabIndex = 38;
+            this.cmbFeedingRule.TabIndex = 1;
             // 
             // xtraTabPage4
             // 
@@ -511,7 +511,7 @@
             this.btnfUpdate.Location = new System.Drawing.Point(303, 186);
             this.btnfUpdate.Name = "btnfUpdate";
             this.btnfUpdate.Size = new System.Drawing.Size(85, 39);
-            this.btnfUpdate.TabIndex = 47;
+            this.btnfUpdate.TabIndex = 7;
             this.btnfUpdate.Text = "Edit";
             this.btnfUpdate.Click += new System.EventHandler(this.btnfUpdate_Click);
             // 
@@ -521,7 +521,7 @@
             this.btnfAdd.Location = new System.Drawing.Point(211, 186);
             this.btnfAdd.Name = "btnfAdd";
             this.btnfAdd.Size = new System.Drawing.Size(85, 39);
-            this.btnfAdd.TabIndex = 46;
+            this.btnfAdd.TabIndex = 6;
             this.btnfAdd.Text = "Add";
             this.btnfAdd.Click += new System.EventHandler(this.btnfAdd_Click);
             // 
@@ -547,8 +547,9 @@
             // 
             this.txtfRemark.Location = new System.Drawing.Point(211, 114);
             this.txtfRemark.Name = "txtfRemark";
+            this.txtfRemark.Properties.NullValuePrompt = "Remark";
             this.txtfRemark.Size = new System.Drawing.Size(577, 66);
-            this.txtfRemark.TabIndex = 43;
+            this.txtfRemark.TabIndex = 5;
             this.txtfRemark.UseOptimizedRendering = true;
             // 
             // label19
@@ -575,10 +576,10 @@
             this.txtFabricColor.Location = new System.Drawing.Point(211, 83);
             this.txtFabricColor.Name = "txtFabricColor";
             this.txtFabricColor.Properties.AccessibleDescription = "";
-            this.txtFabricColor.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtFabricColor.Properties.NullValuePrompt = "Please Enter Fabric Color";
             this.txtFabricColor.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtFabricColor.Size = new System.Drawing.Size(199, 20);
-            this.txtFabricColor.TabIndex = 39;
+            this.txtFabricColor.TabIndex = 3;
             // 
             // label17
             // 
@@ -595,10 +596,10 @@
             this.txtPlanedConsumtion.Location = new System.Drawing.Point(589, 83);
             this.txtPlanedConsumtion.Name = "txtPlanedConsumtion";
             this.txtPlanedConsumtion.Properties.AccessibleDescription = "";
-            this.txtPlanedConsumtion.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtPlanedConsumtion.Properties.NullValuePrompt = "Please Enter Planned Consumption";
             this.txtPlanedConsumtion.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPlanedConsumtion.Size = new System.Drawing.Size(199, 20);
-            this.txtPlanedConsumtion.TabIndex = 37;
+            this.txtPlanedConsumtion.TabIndex = 4;
             // 
             // label16
             // 
@@ -615,10 +616,10 @@
             this.txtFabricName.Location = new System.Drawing.Point(589, 54);
             this.txtFabricName.Name = "txtFabricName";
             this.txtFabricName.Properties.AccessibleDescription = "";
-            this.txtFabricName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtFabricName.Properties.NullValuePrompt = "Please Enter Fabric Name";
             this.txtFabricName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtFabricName.Size = new System.Drawing.Size(199, 20);
-            this.txtFabricName.TabIndex = 35;
+            this.txtFabricName.TabIndex = 2;
             // 
             // cmbFabricType
             // 
@@ -631,10 +632,10 @@
             "Lining",
             "Fusing",
             "Other Fabric"});
-            this.cmbFabricType.Properties.NullValuePrompt = "Select Status";
+            this.cmbFabricType.Properties.NullValuePrompt = "Select Fabric Type";
             this.cmbFabricType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbFabricType.Size = new System.Drawing.Size(199, 20);
-            this.cmbFabricType.TabIndex = 33;
+            this.cmbFabricType.TabIndex = 1;
             // 
             // label15
             // 
@@ -734,7 +735,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(12, 57);
             this.grdSearchStyle.MainView = this.gridView2;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 390);
+            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 46);
             this.grdSearchStyle.TabIndex = 38;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

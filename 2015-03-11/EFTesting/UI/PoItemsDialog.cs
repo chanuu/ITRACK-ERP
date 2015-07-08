@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using EFTesting.ViewModel;
 using ITRACK.models;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -112,6 +113,49 @@ namespace EFTesting.UI
         }
         #endregion
 
+        #region Diclaration
+
+        Validator validate = new Validator();
+
+        #endregion
+
+        #region Validation
+
+        public bool isValidPoItem()
+        {
+            if (!validate.isPresent(txtPoNo, "Po Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtSize, "Size"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtColorCode, "Color Code"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtLength, "Length"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtQuntity, "Quntity"))
+            {
+                return false;
+            }
+
+            return true;
+
+
+        }
+
+
+        #endregion
+
 
 
         private void txtPoNo_EditValueChanged(object sender, EventArgs e)
@@ -150,10 +194,12 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (isValidPoItem() == true)
+            {
+                AddPOItems();
+                this.Close();
+            }
             
-            AddPOItems();
-            this.Close();
-
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

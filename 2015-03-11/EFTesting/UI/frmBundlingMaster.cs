@@ -12,6 +12,7 @@ using System.Linq.Expressions;
 using ITRACK.models;
 using System.Diagnostics;
 using EFTesting.ViewModel;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -444,6 +445,51 @@ namespace EFTesting.UI
 
 
         #endregion
+
+        #region Diclaration
+
+        Validator validator = new Validator();
+
+        #endregion
+
+        #region Valiadtion
+
+        public bool isValidBundlingMaster()
+        {
+
+            if (!validator.isPresent(txtCuttingTicketNo, "Cutting Ticket Number"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtStyleNo, "Style Number"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtOrderQty, "Order Qty"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtPlanQty, "Plan Qty"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtBundleSize, "Bundle Size"))
+            {
+                return false;
+            }
+
+            return true;
+
+
+        }
+
+
+        #endregion
+
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {

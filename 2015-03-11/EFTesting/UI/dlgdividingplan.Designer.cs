@@ -60,10 +60,10 @@
             this.txtStyleNo.Location = new System.Drawing.Point(472, 27);
             this.txtStyleNo.Name = "txtStyleNo";
             this.txtStyleNo.Properties.AccessibleDescription = "";
-            this.txtStyleNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtStyleNo.Properties.NullValuePrompt = "Please Enter Style Number";
             this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStyleNo.Size = new System.Drawing.Size(251, 20);
-            this.txtStyleNo.TabIndex = 61;
+            this.txtStyleNo.TabIndex = 2;
             // 
             // label11
             // 
@@ -80,10 +80,10 @@
             this.txtProductionPerHour.Location = new System.Drawing.Point(156, 53);
             this.txtProductionPerHour.Name = "txtProductionPerHour";
             this.txtProductionPerHour.Properties.AccessibleDescription = "";
-            this.txtProductionPerHour.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtProductionPerHour.Properties.NullValuePrompt = "Please Enter Production Per Hour";
             this.txtProductionPerHour.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtProductionPerHour.Size = new System.Drawing.Size(251, 20);
-            this.txtProductionPerHour.TabIndex = 59;
+            this.txtProductionPerHour.TabIndex = 4;
             // 
             // label9
             // 
@@ -100,10 +100,10 @@
             this.txtTarget.Location = new System.Drawing.Point(472, 57);
             this.txtTarget.Name = "txtTarget";
             this.txtTarget.Properties.AccessibleDescription = "";
-            this.txtTarget.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtTarget.Properties.NullValuePrompt = "Please Enter Target";
             this.txtTarget.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtTarget.Size = new System.Drawing.Size(251, 20);
-            this.txtTarget.TabIndex = 57;
+            this.txtTarget.TabIndex = 5;
             // 
             // label8
             // 
@@ -120,10 +120,10 @@
             this.txtTotalEmployee.Location = new System.Drawing.Point(824, 57);
             this.txtTotalEmployee.Name = "txtTotalEmployee";
             this.txtTotalEmployee.Properties.AccessibleDescription = "";
-            this.txtTotalEmployee.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtTotalEmployee.Properties.NullValuePrompt = "Please Enter Total Employees";
             this.txtTotalEmployee.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtTotalEmployee.Size = new System.Drawing.Size(251, 20);
-            this.txtTotalEmployee.TabIndex = 55;
+            this.txtTotalEmployee.TabIndex = 6;
             // 
             // label10
             // 
@@ -140,10 +140,10 @@
             this.txtLineNo.Location = new System.Drawing.Point(823, 27);
             this.txtLineNo.Name = "txtLineNo";
             this.txtLineNo.Properties.AccessibleDescription = "";
-            this.txtLineNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtLineNo.Properties.NullValuePrompt = "Please Enter Line Number";
             this.txtLineNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtLineNo.Size = new System.Drawing.Size(251, 20);
-            this.txtLineNo.TabIndex = 53;
+            this.txtLineNo.TabIndex = 3;
             // 
             // label6
             // 
@@ -169,10 +169,10 @@
             this.txtDividingPlanNo.Location = new System.Drawing.Point(156, 27);
             this.txtDividingPlanNo.Name = "txtDividingPlanNo";
             this.txtDividingPlanNo.Properties.AccessibleDescription = "";
-            this.txtDividingPlanNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtDividingPlanNo.Properties.NullValuePrompt = "Please Enter Dividing Plan Number";
             this.txtDividingPlanNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtDividingPlanNo.Size = new System.Drawing.Size(251, 20);
-            this.txtDividingPlanNo.TabIndex = 48;
+            this.txtDividingPlanNo.TabIndex = 1;
             // 
             // grdOperationList
             // 

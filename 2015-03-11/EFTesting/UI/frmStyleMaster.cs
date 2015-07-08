@@ -459,7 +459,6 @@ namespace EFTesting.UI
                 return false;
             }
 
-
             if (!Validator.isPresent(cmbForecastingRule, "Forecasting Rule"))
             {
                 return false;
@@ -467,12 +466,45 @@ namespace EFTesting.UI
 
             return true;
         }
+
+
+        public bool isValidFabricDetails()
+        {
+            if (!Validator.isPresent(cmbFabricType, "Fabric Type"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtFabricName, "Fabric Name"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtFabricColor, "Fabric Color"))
+            {
+                return false;
+            }
+
+            if (!Validator.isPresent(txtPlanedConsumtion, "Planed Consumption"))
+            {
+                return false;
+            }
+
+
+
+            return true;
+        }
         #endregion
 
         private void btnfAdd_Click(object sender, EventArgs e)
         {
-            AddFabricDetails();
-            GetFabricList(txtStyleNo.Text);
+            if (isValidFabricDetails() == true)
+            {
+                AddFabricDetails();
+                GetFabricList(txtStyleNo.Text);
+            }
+            
+            
         }
 
         private void btnfUpdate_Click(object sender, EventArgs e)

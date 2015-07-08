@@ -62,6 +62,8 @@
             // 
             this.txtPromotionRemarks.Location = new System.Drawing.Point(115, 132);
             this.txtPromotionRemarks.Name = "txtPromotionRemarks";
+            this.txtPromotionRemarks.Properties.NullValuePrompt = "Remark";
+            this.txtPromotionRemarks.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPromotionRemarks.Size = new System.Drawing.Size(226, 96);
             this.txtPromotionRemarks.TabIndex = 5;
             this.txtPromotionRemarks.UseOptimizedRendering = true;

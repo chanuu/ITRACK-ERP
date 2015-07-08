@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.Linq.Expressions;
 using MyTeamApp;
 using EFTesting.ViewModel;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -229,8 +230,63 @@ namespace EFTesting.UI
         }
         #endregion
 
+        #region Diclaration
+
+        Validator validate = new Validator();
+
+        #endregion
+
 
         #region Validation
+
+        public bool isValidOperation() 
+        {
+            if (!validate.isPresent(txtOperationCode, "Operation Code"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtPartName, "Part Name"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtOperationName, "Operation Name"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbSMVType, "SMV Type"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtSMV, "SMV"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmboprationRole, "Operation Role"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbOprationGrade, "Operation Grade"))
+            {
+                return false;
+            }
+
+
+
+
+
+
+
+            return true;
+        
+        
+        }
+
 
         #endregion
 
@@ -289,8 +345,12 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddOpration();
-            clear();
+            if (isValidOperation() == true)
+            {
+                AddOpration();
+                clear();
+            }
+           
         }
 
         private void btnNew_Click(object sender, EventArgs e)

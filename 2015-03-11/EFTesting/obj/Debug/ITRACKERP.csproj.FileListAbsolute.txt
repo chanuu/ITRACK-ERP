@@ -2225,3 +2225,22 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-07-08\EFTesting\obj\D
 D:\softwere development\Development\ITRACK ERP\Source\2015-07-08\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
 D:\softwere development\Development\ITRACK ERP\Source\2015-07-08\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
 D:\softwere development\Development\ITRACK ERP\Source\2015-07-08\EFTesting\obj\Debug\EFTesting.exe.licenses
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\Excel.dll
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\Excel.xml
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmProduction.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+C:\Users\HP\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources

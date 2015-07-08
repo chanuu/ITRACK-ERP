@@ -69,8 +69,9 @@
             // 
             this.txtTeleNo.Location = new System.Drawing.Point(468, 90);
             this.txtTeleNo.Name = "txtTeleNo";
+            this.txtTeleNo.Properties.NullValuePrompt = "Please Enter Telephone Number";
             this.txtTeleNo.Size = new System.Drawing.Size(226, 20);
-            this.txtTeleNo.TabIndex = 18;
+            this.txtTeleNo.TabIndex = 4;
             // 
             // label4
             // 
@@ -85,8 +86,9 @@
             // 
             this.txtCompanyName.Location = new System.Drawing.Point(123, 90);
             this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Properties.NullValuePrompt = "Please Enter Company Name";
             this.txtCompanyName.Size = new System.Drawing.Size(226, 20);
-            this.txtCompanyName.TabIndex = 16;
+            this.txtCompanyName.TabIndex = 3;
             // 
             // label3
             // 
@@ -101,8 +103,9 @@
             // 
             this.txtLocationCode.Location = new System.Drawing.Point(468, 54);
             this.txtLocationCode.Name = "txtLocationCode";
+            this.txtLocationCode.Properties.NullValuePrompt = "Please Enter Location Code";
             this.txtLocationCode.Size = new System.Drawing.Size(226, 20);
-            this.txtLocationCode.TabIndex = 14;
+            this.txtLocationCode.TabIndex = 2;
             // 
             // label1
             // 
@@ -139,13 +142,15 @@
             // 
             this.txtFaxNo.Location = new System.Drawing.Point(123, 124);
             this.txtFaxNo.Name = "txtFaxNo";
+            this.txtFaxNo.Properties.NullValuePrompt = "Please Enter Fax Number";
             this.txtFaxNo.Size = new System.Drawing.Size(226, 20);
-            this.txtFaxNo.TabIndex = 20;
+            this.txtFaxNo.TabIndex = 5;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(123, 160);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Properties.NullValuePrompt = "Please Enter Fax Number";
             this.txtAddress.Size = new System.Drawing.Size(571, 96);
             this.txtAddress.TabIndex = 22;
             this.txtAddress.UseOptimizedRendering = true;
@@ -185,7 +190,7 @@
             this.isDefualtCompany.Name = "isDefualtCompany";
             this.isDefualtCompany.Properties.Caption = "Set As Defualt Company";
             this.isDefualtCompany.Size = new System.Drawing.Size(163, 19);
-            this.isDefualtCompany.TabIndex = 26;
+            this.isDefualtCompany.TabIndex = 6;
             // 
             // grdGroup
             // 
@@ -196,7 +201,7 @@
             this.grdGroup.Location = new System.Drawing.Point(123, 78);
             this.grdGroup.MainView = this.gridView1;
             this.grdGroup.Name = "grdGroup";
-            this.grdGroup.Size = new System.Drawing.Size(742, 183);
+            this.grdGroup.Size = new System.Drawing.Size(742, 208);
             this.grdGroup.TabIndex = 3;
             this.grdGroup.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

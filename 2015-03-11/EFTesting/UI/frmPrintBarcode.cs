@@ -31,7 +31,7 @@ namespace EFTesting.UI
         {
             RptbundleTicket report = new RptbundleTicket();
             OprationBarcodeList list = new OprationBarcodeList();
-            report.SetDataSource(list.BarcodeList(18));
+            report.SetDataSource(list.BarcodeList(15));
 
             this.crystalReportViewer1.ReportSource = report;
         }

@@ -12,6 +12,7 @@ using ITRACK.models;
 using System.IO;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -28,6 +29,7 @@ namespace EFTesting.UI
         GenaricRepository<PartDefinition> _PartRepository = new GenaricRepository<PartDefinition>(new ItrackContext());
         GenaricRepository<Style> _StyleRepository = new GenaricRepository<Style>(new ItrackContext());
         GenaricRepository<SketchDefinition> _EditSketchRepository = new GenaricRepository<SketchDefinition>(new ItrackContext());
+        Validator validate = new Validator();
 
         #endregion
 
@@ -240,7 +242,26 @@ namespace EFTesting.UI
         #endregion
 
         #region Validation
- 
+
+        public bool isValidSketchMaster()
+        {
+            if (!validate.isPresent(txtStyleNo, "Style Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtSketchName, "Sketch Name"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbItemType, "Item Type"))
+            {
+                return false;
+            }
+
+            return true;
+        }
 
 
         #endregion
@@ -254,7 +275,11 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddSketch();
+            if (isValidSketchMaster() == true)
+            {
+                AddSketch();
+            }            
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

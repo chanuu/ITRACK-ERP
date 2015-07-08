@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using System.Diagnostics;
 using ITRACK.models;
 using System.IO;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -30,9 +31,10 @@ namespace EFTesting.UI
         public Employee Employee { get; set; }
 
 
-        #region Scaning Operations 
 
-        
+        #region Scaning Operations
+
+
 
         GenaricRepository<Employee> _EmployeeRepository = new GenaricRepository<Employee>(new ItrackContext());
 

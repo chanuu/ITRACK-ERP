@@ -12,6 +12,7 @@ using MyTeamApp;
 using ITRACK.models;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -81,7 +82,56 @@ namespace EFTesting.UI
 
         }
 
-        #region Analays Dividing Plan 
+        #region Diclaration
+
+        Validator validate = new Validator();
+
+        #endregion
+
+        #region Validation
+
+        public bool isValidDividingPlan()
+        {
+            if (!validate.isPresent(txtDividingPlanNo, "Dividing Plan Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtStyleNo, "Style Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtLineNo, "Line Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtProductionPerHour, "Production per Hour"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtTarget, "Target"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtTotalEmployee, "Total Employees"))
+            {
+                return false;
+            }
+
+
+            return true;
+
+        }
+
+
+        #endregion
+
+
+        #region Analays Dividing Plan
         List<DividingPlanTemp> lstDividingPlan = new List<DividingPlanTemp>();
         
         private async Task<bool> AnalysDevidingPlan()
@@ -334,7 +384,12 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddHeader();
+            if (isValidDividingPlan() == true) 
+            {
+                AddHeader();          
+            }
+            
+            
         }
 
         private void simpleButton4_Click(object sender, EventArgs e)

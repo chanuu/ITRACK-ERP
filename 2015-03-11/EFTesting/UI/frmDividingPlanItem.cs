@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -176,9 +177,65 @@ namespace EFTesting.UI
         }
 
         #endregion 
+
+        #region Diclaration
+
+        Validator validate = new Validator();
+
+        #endregion
+
+        #region Validation
+
+        public bool isValidDividingPlanItem()
+        {
+            if (!validate.isPresent(txtOprationNo, "Operation Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbMachineType, "Machine Type"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtoprationName, "Operation Name"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtSMV, "SMV"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbSmvType, "SMV Type"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtPartName, "Part Name"))
+            {
+                return false;
+            }
+
+            return true;
+
+
+        }
+
+
+
+        #endregion
+
+
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddItem();
+            if (isValidDividingPlanItem() == true)
+            {
+                 AddItem();
+            }
+                      
         }
 
         private void frmDividingPlanItem_Load(object sender, EventArgs e)

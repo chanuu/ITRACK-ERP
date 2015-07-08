@@ -134,6 +134,7 @@
             // 
             this.txtAddress.Location = new System.Drawing.Point(111, 106);
             this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Properties.NullValuePrompt = "Please Enter Company Address";
             this.txtAddress.Size = new System.Drawing.Size(226, 20);
             this.txtAddress.TabIndex = 5;
             // 
@@ -150,6 +151,7 @@
             // 
             this.txtFaxNo.Location = new System.Drawing.Point(456, 71);
             this.txtFaxNo.Name = "txtFaxNo";
+            this.txtFaxNo.Properties.NullValuePrompt = "Please Enter Fax Number";
             this.txtFaxNo.Size = new System.Drawing.Size(226, 20);
             this.txtFaxNo.TabIndex = 4;
             // 
@@ -166,6 +168,7 @@
             // 
             this.txtTeleNo.Location = new System.Drawing.Point(111, 71);
             this.txtTeleNo.Name = "txtTeleNo";
+            this.txtTeleNo.Properties.NullValuePrompt = "Please Enter Telephone Number";
             this.txtTeleNo.Size = new System.Drawing.Size(226, 20);
             this.txtTeleNo.TabIndex = 3;
             // 
@@ -182,6 +185,7 @@
             // 
             this.txtGroupName.Location = new System.Drawing.Point(456, 35);
             this.txtGroupName.Name = "txtGroupName";
+            this.txtGroupName.Properties.NullValuePrompt = "Please Enter Group Name";
             this.txtGroupName.Size = new System.Drawing.Size(226, 20);
             this.txtGroupName.TabIndex = 2;
             // 
@@ -196,10 +200,11 @@
             // 
             // txtGroupID
             // 
+            this.txtGroupID.EditValue = "";
             this.txtGroupID.Location = new System.Drawing.Point(111, 35);
             this.txtGroupID.Name = "txtGroupID";
             this.txtGroupID.Properties.AccessibleDescription = "";
-            this.txtGroupID.Properties.NullText = "Please Enter Group ID";
+            this.txtGroupID.Properties.NullValuePrompt = "Please Enter Group ID";
             this.txtGroupID.Size = new System.Drawing.Size(226, 20);
             this.txtGroupID.TabIndex = 1;
             // 
