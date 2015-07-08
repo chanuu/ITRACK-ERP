@@ -105,7 +105,7 @@
             this.txtEmployeeID.Location = new System.Drawing.Point(399, 83);
             this.txtEmployeeID.Name = "txtEmployeeID";
             this.txtEmployeeID.Properties.AccessibleDescription = "";
-            this.txtEmployeeID.Properties.NullValuePrompt = "Please Enter Employee ID";
+            this.txtEmployeeID.Properties.NullValuePrompt = "Employee ID";
             this.txtEmployeeID.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtEmployeeID.Size = new System.Drawing.Size(251, 20);
             this.txtEmployeeID.TabIndex = 46;

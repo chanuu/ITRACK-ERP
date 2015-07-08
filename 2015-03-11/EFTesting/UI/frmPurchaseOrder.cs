@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Diagnostics;
 using EFTesting.ViewModel;
+using ITRACK.Validator;
 namespace EFTesting.UI
 {
     public partial class frmPurchaseOrder : DevExpress.XtraEditors.XtraForm
@@ -322,11 +323,66 @@ namespace EFTesting.UI
 
         #endregion
 
+      #region Diclaration
+
+      Validator validate = new Validator();
+
+      #endregion
+
+      #region Validaton
+
+      public bool isValidPurchaseOrder()
+      {
+          if (!validate.isPresent(txtPoNo, "Po Number"))
+          {
+              return false;
+          }
+
+          if (!validate.isPresent(txtStyleNo, "Style Number"))
+          {
+              return false;
+          }
+
+          if (!validate.isPresent(txtArticle, "Article"))
+          {
+              return false;
+          }
+
+          if (!validate.isPresent(txtSeason, "Season"))
+          {
+              return false;
+          }
+
+          if (!validate.isPresent(cmbDterms, "Delivery Terms"))
+          {
+              return false;
+          }
+
+          if (!validate.isPresent(txtOrderPrice, "Order Price"))
+          {
+              return false;
+          }
+
+          if (!validate.isPresent(txtStartDate, "Start Date"))
+          {
+              return false;
+          }
+
+          if (!validate.isPresent(txtEndDate, "End Date"))
+          {
+              return false;
+          }
+
+          return true;
+
+      }
+
+      #endregion
 
 
 
 
-        private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
+      private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -374,7 +430,11 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddPO();
+            if (isValidPurchaseOrder() == true)
+            {
+                AddPO();
+            }
+            
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

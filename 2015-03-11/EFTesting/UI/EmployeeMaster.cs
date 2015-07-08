@@ -173,7 +173,8 @@ namespace EFTesting.UI
         {
             try
             {
-                _EmployeeRepository.Add(AssignEmployee());
+                GenaricRepository<Employee> _EmployeeRepo = new GenaricRepository<Employee>(new ItrackContext());
+                _EmployeeRepo.Add(AssignEmployee());
             }
             catch (Exception ex)
             {

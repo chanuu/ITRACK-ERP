@@ -185,7 +185,7 @@
             this.txtBundleSize.Properties.NullValuePrompt = "Bundle Size";
             this.txtBundleSize.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBundleSize.Size = new System.Drawing.Size(195, 20);
-            this.txtBundleSize.TabIndex = 49;
+            this.txtBundleSize.TabIndex = 5;
             // 
             // label11
             // 
@@ -205,7 +205,7 @@
             this.txtStyleNo.Properties.NullValuePrompt = "Style No";
             this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStyleNo.Size = new System.Drawing.Size(210, 20);
-            this.txtStyleNo.TabIndex = 47;
+            this.txtStyleNo.TabIndex = 2;
             // 
             // label7
             // 
@@ -225,7 +225,7 @@
             this.txtPlanQty.Properties.NullValuePrompt = "Plan Qty";
             this.txtPlanQty.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPlanQty.Size = new System.Drawing.Size(195, 20);
-            this.txtPlanQty.TabIndex = 41;
+            this.txtPlanQty.TabIndex = 4;
             // 
             // label10
             // 
@@ -245,7 +245,7 @@
             this.txtOrderQty.Properties.NullValuePrompt = "Order Qty";
             this.txtOrderQty.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtOrderQty.Size = new System.Drawing.Size(185, 20);
-            this.txtOrderQty.TabIndex = 39;
+            this.txtOrderQty.TabIndex = 3;
             // 
             // label2
             // 
@@ -265,7 +265,7 @@
             this.txtCuttingTicketNo.Properties.NullValuePrompt = "Cutting Ticket No";
             this.txtCuttingTicketNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtCuttingTicketNo.Size = new System.Drawing.Size(197, 20);
-            this.txtCuttingTicketNo.TabIndex = 33;
+            this.txtCuttingTicketNo.TabIndex = 1;
             // 
             // xtraTabPage2
             // 
@@ -342,7 +342,7 @@
             this.textEdit1.Properties.NullValuePrompt = " Style No";
             this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit1.Size = new System.Drawing.Size(210, 20);
-            this.textEdit1.TabIndex = 71;
+            this.textEdit1.TabIndex = 2;
             // 
             // label5
             // 
@@ -362,7 +362,7 @@
             this.textEdit2.Properties.NullValuePrompt = "Plan Qty";
             this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit2.Size = new System.Drawing.Size(195, 20);
-            this.textEdit2.TabIndex = 69;
+            this.textEdit2.TabIndex = 4;
             // 
             // label6
             // 
@@ -382,7 +382,7 @@
             this.textEdit3.Properties.NullValuePrompt = "Order Qty";
             this.textEdit3.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit3.Size = new System.Drawing.Size(185, 20);
-            this.textEdit3.TabIndex = 67;
+            this.textEdit3.TabIndex = 3;
             // 
             // label8
             // 
@@ -402,7 +402,7 @@
             this.textEdit4.Properties.NullValuePrompt = "Cutting Tickt No";
             this.textEdit4.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit4.Size = new System.Drawing.Size(197, 20);
-            this.textEdit4.TabIndex = 65;
+            this.textEdit4.TabIndex = 1;
             // 
             // xtraTabPage3
             // 
@@ -502,10 +502,11 @@
             this.grdSearch.Location = new System.Drawing.Point(9, 50);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1164, 378);
+            this.grdSearch.Size = new System.Drawing.Size(1164, 36);
             this.grdSearch.TabIndex = 63;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
+            this.grdSearch.Click += new System.EventHandler(this.grdSearch_Click);
             this.grdSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearch_KeyDown);
             // 
             // gridView3

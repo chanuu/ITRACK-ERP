@@ -22,7 +22,7 @@ namespace ITRACK.models
        {
 
            try {
-               string csDestination = @"Data Source=HP_G6\LOCALDB;Initial Catalog=ITRACKERP;Integrated Security=True";
+               string csDestination = @"Data Source=HP_G6\LOCALDB;Initial Catalog=ITRACKERPV;Integrated Security=True";
 
                using (SqlConnection destinationConnection = new SqlConnection(csDestination))
                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(destinationConnection))

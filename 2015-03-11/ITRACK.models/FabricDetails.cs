@@ -8,10 +8,12 @@ namespace ITRACK.models
 {
    public class FabricDetails
     {
+
+       // fabric details 
         public int FabricDetailsID { get; set; }
 
         public string  FabricType { get; set; }
-
+       // name 
         public string  FabricName { get; set; }
 
         public string  Color { get; set; }

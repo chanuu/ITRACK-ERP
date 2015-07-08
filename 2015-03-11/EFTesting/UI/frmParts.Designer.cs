@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPartName = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.SMVType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbSMVType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearchOperation = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -78,7 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SMVType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSMVType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearchOperation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpration)).BeginInit();
@@ -132,7 +132,7 @@
             this.grdSearchSketch.Location = new System.Drawing.Point(198, 115);
             this.grdSearchSketch.MainView = this.gridView4;
             this.grdSearchSketch.Name = "grdSearchSketch";
-            this.grdSearchSketch.Size = new System.Drawing.Size(831, 196);
+            this.grdSearchSketch.Size = new System.Drawing.Size(831, 188);
             this.grdSearchSketch.TabIndex = 45;
             this.grdSearchSketch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -158,10 +158,10 @@
             this.txtSketchName.Location = new System.Drawing.Point(198, 89);
             this.txtSketchName.Name = "txtSketchName";
             this.txtSketchName.Properties.AccessibleDescription = "";
-            this.txtSketchName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtSketchName.Properties.NullValuePrompt = "Please Enter Sketch Defination";
             this.txtSketchName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSketchName.Size = new System.Drawing.Size(251, 20);
-            this.txtSketchName.TabIndex = 39;
+            this.txtSketchName.TabIndex = 2;
             this.txtSketchName.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             this.txtSketchName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSketchName_KeyDown);
             // 
@@ -175,10 +175,10 @@
             "Pant",
             "Blouse",
             "Skirt"});
-            this.cmbItemType.Properties.NullValuePrompt = "Select Status";
+            this.cmbItemType.Properties.NullValuePrompt = "Please Select Item Type";
             this.cmbItemType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbItemType.Size = new System.Drawing.Size(212, 20);
-            this.cmbItemType.TabIndex = 38;
+            this.cmbItemType.TabIndex = 3;
             // 
             // label6
             // 
@@ -194,10 +194,9 @@
             this.txtRemark.EditValue = "";
             this.txtRemark.Location = new System.Drawing.Point(198, 175);
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Properties.NullText = "Shipping Address";
-            this.txtRemark.Properties.NullValuePrompt = "Shipping Address";
+            this.txtRemark.Properties.NullValuePrompt = "Remark";
             this.txtRemark.Size = new System.Drawing.Size(289, 96);
-            this.txtRemark.TabIndex = 35;
+            this.txtRemark.TabIndex = 4;
             this.txtRemark.UseOptimizedRendering = true;
             // 
             // label4
@@ -224,14 +223,14 @@
             this.txtPartName.Location = new System.Drawing.Point(198, 59);
             this.txtPartName.Name = "txtPartName";
             this.txtPartName.Properties.AccessibleDescription = "";
-            this.txtPartName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtPartName.Properties.NullValuePrompt = "Please Enter Part Name";
             this.txtPartName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPartName.Size = new System.Drawing.Size(251, 20);
-            this.txtPartName.TabIndex = 33;
+            this.txtPartName.TabIndex = 1;
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.SMVType);
+            this.xtraTabPage2.Controls.Add(this.cmbSMVType);
             this.xtraTabPage2.Controls.Add(this.simpleButton2);
             this.xtraTabPage2.Controls.Add(this.grdSearchOperation);
             this.xtraTabPage2.Controls.Add(this.label1);
@@ -245,14 +244,15 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(1124, 353);
             this.xtraTabPage2.Text = "Parts";
             // 
-            // SMVType
+            // cmbSMVType
             // 
-            this.SMVType.Location = new System.Drawing.Point(336, 59);
-            this.SMVType.Name = "SMVType";
-            this.SMVType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cmbSMVType.Location = new System.Drawing.Point(336, 59);
+            this.cmbSMVType.Name = "cmbSMVType";
+            this.cmbSMVType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SMVType.Size = new System.Drawing.Size(222, 20);
-            this.SMVType.TabIndex = 59;
+            this.cmbSMVType.Properties.NullValuePrompt = "SMV Type";
+            this.cmbSMVType.Size = new System.Drawing.Size(222, 20);
+            this.cmbSMVType.TabIndex = 2;
             // 
             // simpleButton2
             // 
@@ -320,10 +320,10 @@
             this.txtSMV.Location = new System.Drawing.Point(564, 60);
             this.txtSMV.Name = "txtSMV";
             this.txtSMV.Properties.AccessibleDescription = "";
-            this.txtSMV.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtSMV.Properties.NullValuePrompt = "SMV";
             this.txtSMV.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSMV.Size = new System.Drawing.Size(265, 20);
-            this.txtSMV.TabIndex = 16;
+            this.txtSMV.TabIndex = 3;
             // 
             // label3
             // 
@@ -340,10 +340,10 @@
             this.txtOperationName.Location = new System.Drawing.Point(78, 60);
             this.txtOperationName.Name = "txtOperationName";
             this.txtOperationName.Properties.AccessibleDescription = "";
-            this.txtOperationName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtOperationName.Properties.NullValuePrompt = "Operation Name";
             this.txtOperationName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtOperationName.Size = new System.Drawing.Size(251, 20);
-            this.txtOperationName.TabIndex = 14;
+            this.txtOperationName.TabIndex = 1;
             this.txtOperationName.EditValueChanged += new System.EventHandler(this.txtPartName_EditValueChanged);
             this.txtOperationName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPartName_KeyDown);
             // 
@@ -360,7 +360,7 @@
             this.btnDelete.Location = new System.Drawing.Point(287, 12);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
-            this.btnDelete.TabIndex = 29;
+            this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             // 
             // btnClose
@@ -369,7 +369,7 @@
             this.btnClose.Location = new System.Drawing.Point(764, 13);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
-            this.btnClose.TabIndex = 32;
+            this.btnClose.TabIndex = 10;
             // 
             // txtSearchBox
             // 
@@ -381,7 +381,7 @@
             this.txtSearchBox.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtSearchBox.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSearchBox.Size = new System.Drawing.Size(285, 20);
-            this.txtSearchBox.TabIndex = 31;
+            this.txtSearchBox.TabIndex = 9;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
@@ -391,7 +391,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(377, 12);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton1.TabIndex = 30;
+            this.simpleButton1.TabIndex = 8;
             this.simpleButton1.Text = "Search";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -401,7 +401,7 @@
             this.btnEdit.Location = new System.Drawing.Point(196, 12);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
-            this.btnEdit.TabIndex = 28;
+            this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Update";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -411,7 +411,7 @@
             this.btnAdd.Location = new System.Drawing.Point(104, 12);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
-            this.btnAdd.TabIndex = 27;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -546,7 +546,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SMVType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbSMVType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearchOperation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpration)).EndInit();
@@ -599,7 +599,7 @@
         private DevExpress.XtraGrid.GridControl grdSearchOperation;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.ComboBoxEdit SMVType;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbSMVType;
         private DevExpress.XtraGrid.GridControl grdSearch;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private System.Windows.Forms.Label label10;

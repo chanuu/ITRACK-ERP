@@ -65,6 +65,7 @@
             // 
             this.txtSize.Location = new System.Drawing.Point(494, 49);
             this.txtSize.Name = "txtSize";
+            this.txtSize.Properties.NullValuePrompt = "Please Enter Size";
             this.txtSize.Size = new System.Drawing.Size(226, 20);
             this.txtSize.TabIndex = 15;
             // 
@@ -83,7 +84,7 @@
             this.txtPoNo.Location = new System.Drawing.Point(149, 49);
             this.txtPoNo.Name = "txtPoNo";
             this.txtPoNo.Properties.AccessibleDescription = "";
-            this.txtPoNo.Properties.NullValuePrompt = "Please Enter Group ID";
+            this.txtPoNo.Properties.NullValuePrompt = "Please Enter Po Number";
             this.txtPoNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPoNo.Size = new System.Drawing.Size(226, 20);
             this.txtPoNo.TabIndex = 14;
@@ -103,6 +104,7 @@
             // 
             this.txtColorCode.Location = new System.Drawing.Point(149, 91);
             this.txtColorCode.Name = "txtColorCode";
+            this.txtColorCode.Properties.NullValuePrompt = "Please Enter Color Code";
             this.txtColorCode.Size = new System.Drawing.Size(226, 20);
             this.txtColorCode.TabIndex = 18;
             // 
@@ -119,6 +121,7 @@
             // 
             this.txtLength.Location = new System.Drawing.Point(494, 91);
             this.txtLength.Name = "txtLength";
+            this.txtLength.Properties.NullValuePrompt = "Please Enter Length";
             this.txtLength.Size = new System.Drawing.Size(226, 20);
             this.txtLength.TabIndex = 20;
             // 
@@ -135,6 +138,7 @@
             // 
             this.txtQuntity.Location = new System.Drawing.Point(149, 137);
             this.txtQuntity.Name = "txtQuntity";
+            this.txtQuntity.Properties.NullValuePrompt = "Please Enter Qty";
             this.txtQuntity.Size = new System.Drawing.Size(226, 20);
             this.txtQuntity.TabIndex = 22;
             // 
@@ -164,7 +168,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(149, 75);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(675, 215);
+            this.grdSearchPo.Size = new System.Drawing.Size(675, 161);
             this.grdSearchPo.TabIndex = 46;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

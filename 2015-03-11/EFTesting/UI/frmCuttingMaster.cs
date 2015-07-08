@@ -15,6 +15,7 @@ using System.Data.OleDb;
 using Excel = Microsoft.Office.Interop.Excel;
 using MyTeamApp;
 using DevExpress.XtraEditors.Controls;
+using ITRACK.Validator;
 
 
 namespace EFTesting.UI
@@ -75,6 +76,10 @@ namespace EFTesting.UI
                 _cuttingItem.MarkerWidth = Convert.ToDouble(txtmarkerWidth.Text);
                 _cuttingItem.LineNo = txtlineNo.Text;
                 _cuttingItem.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                _cuttingItem.isGenaratedTags = false;
+                _cuttingItem.GenaratedTime = "None";
+                _cuttingItem.isPrinted = false;
+                _cuttingItem.PrinteTime = "None";
                 return _cuttingItem;
             }
             catch(Exception ex){
@@ -107,7 +112,7 @@ namespace EFTesting.UI
 
                 GenaricRepository<CuttingItem> _CuttingItemRepository = new GenaricRepository<CuttingItem>(new ItrackContext());
 
-                var result = from item in _CuttingItemRepository.GetAll() where (item.MarkerNo == item.MarkerNo  && item.Size == _item.Size && item.Color == _item.Color && item.Length   == _item.Length && _item.Date == item.Date ) select item;
+                var result = from item in _CuttingItemRepository.GetAll() where (item.MarkerNo == item.MarkerNo  && item.Size == _item.Size && item.Color == _item.Color && item.Length   == _item.Length && _item.Date == item.Date && _item.MarkerNo == item.MarkerNo) select item;
                 if (result.Count() <= 0)
                 {
                     return true;
@@ -450,13 +455,16 @@ namespace EFTesting.UI
         #endregion
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddCuttingHeader();
+            if (isValidCuttingMaster() == true)
+            {
+                AddCuttingHeader();
+            }
+            
         }
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             SearchCuttingHeader();
-
 
         }
 
@@ -474,6 +482,120 @@ namespace EFTesting.UI
 
             }
         }
+
+        #region Diclaration
+
+        Validator validate = new Validator();
+
+        #endregion
+
+        #region Validation
+
+        public bool isValidCuttingMaster()
+        {
+
+            if (!validate.isPresent(txtCuttingTicketNo, "Cutting Ticket Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbItemType, "Item Type"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtStyleNo, "Style Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbStatus, "Status"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtOrderQty, "Order Qyt"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtPlanQty, "Plan Qty"))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool isValidMarker()
+        {
+            if (!validate.isPresent(txtlineNo, "Line Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtMarkerNo, "Marker Number"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtfabricType, "Fabric Type"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtColorCode, "Color Code"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtLength, "Length"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtnoOfLayers, "Number of Layer"))
+            {
+                return false;
+            }
+
+
+            if (!validate.isPresent(txtnoOfplysPlan, "No Of Plys Plan"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtnoOfplysLayed, "No Of Plys Layed"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtmarkerLenth, "Marker Length"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtmarkerWidth, "Marker Width"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtSize, "Size"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtnoOfItem, "Number of Item"))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        #endregion
+
+      
 
         private void grdSearch_KeyDown(object sender, KeyEventArgs e)
         {
@@ -493,9 +615,12 @@ namespace EFTesting.UI
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
+            if (isValidMarker() == true)
+            {
+
+                AddCuttingItem();
+            }
             
-            
-            AddCuttingItem();
            // AddBundleHeader();
             FeedCuttingItem(txtCuttingTicketNo.Text);
         }

@@ -180,7 +180,12 @@ public class  Validator
         }
     }
 
-   
+
+
+    internal bool isPresent()
+    {
+        throw new NotImplementedException();
+    }
 }
 }
     

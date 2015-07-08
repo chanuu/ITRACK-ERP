@@ -321,7 +321,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDateOfBirth.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDateOfBirth.Properties.NullValuePrompt = "Plese Select Date Of Birth";
+            this.txtDateOfBirth.Properties.NullValuePrompt = "Please Select Date Of Birth";
             this.txtDateOfBirth.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtDateOfBirth.Size = new System.Drawing.Size(251, 20);
             this.txtDateOfBirth.TabIndex = 3;

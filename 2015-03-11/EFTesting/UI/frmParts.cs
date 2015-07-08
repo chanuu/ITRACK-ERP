@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -436,10 +437,57 @@ namespace EFTesting.UI
 
         #endregion
 
-        #region Validation 
+        #region Diclaration
+
+        Validator validate = new Validator();
+
+        #endregion
+
+        #region Validation
+
+        public bool isValidHeader()
+        {
+            if (!validate.isPresent(txtPartName, "Part Name"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtSketchName, "Sketch Name"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbItemType, "Irem Type"))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool isValidPart()
+        {
+
+            if (!validate.isPresent(txtOperationName, "Operation Name"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(cmbSMVType, "Operation Type"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtSMV, "SMV"))
+            {
+                return false;
+            }
+
+            return true;
+        }
 
 
-        #endregion 
+        #endregion
         private void frmParts_Load(object sender, EventArgs e)
         {
             grdSearchOperation.Hide();
@@ -451,7 +499,12 @@ namespace EFTesting.UI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddPart();
+            if (isValidHeader() == true)
+            {
+                AddPart();
+            }
+            
+            
         }
 
         private void txtPartName_EditValueChanged(object sender, EventArgs e)
@@ -479,7 +532,7 @@ namespace EFTesting.UI
             {
                 _Operation.OperationPoolID = gridView1.GetFocusedRowCellValue("OperationPoolID").ToString();
                 txtOperationName.Text = gridView1.GetFocusedRowCellValue("OpationName").ToString();
-                SMVType.Text = gridView1.GetFocusedRowCellValue("SMVType").ToString();
+                cmbSMVType.Text = gridView1.GetFocusedRowCellValue("SMVType").ToString();
                 txtSMV.Text = gridView1.GetFocusedRowCellValue("SMV").ToString();
                grdSearchOperation.Hide();
             }
@@ -533,7 +586,11 @@ namespace EFTesting.UI
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            AddSyleOperation();
+            if (isValidPart() == true)
+            {
+                AddSyleOperation();
+            }
+                      
         }
 
         private void textEdit1_EditValueChanged(object sender, EventArgs e)

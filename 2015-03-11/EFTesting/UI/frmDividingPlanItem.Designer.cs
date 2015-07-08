@@ -71,10 +71,10 @@
             this.txtOprationNo.Location = new System.Drawing.Point(148, 71);
             this.txtOprationNo.Name = "txtOprationNo";
             this.txtOprationNo.Properties.AccessibleDescription = "";
-            this.txtOprationNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtOprationNo.Properties.NullValuePrompt = "Please Enter Operation Number";
             this.txtOprationNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtOprationNo.Size = new System.Drawing.Size(251, 20);
-            this.txtOprationNo.TabIndex = 35;
+            this.txtOprationNo.TabIndex = 1;
             this.txtOprationNo.EditValueChanged += new System.EventHandler(this.txtOprationNo_EditValueChanged);
             this.txtOprationNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtOprationNo_KeyDown);
             // 
@@ -93,10 +93,10 @@
             this.txtoprationName.Location = new System.Drawing.Point(148, 107);
             this.txtoprationName.Name = "txtoprationName";
             this.txtoprationName.Properties.AccessibleDescription = "";
-            this.txtoprationName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtoprationName.Properties.NullValuePrompt = "Please Enter Operation Name";
             this.txtoprationName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtoprationName.Size = new System.Drawing.Size(251, 20);
-            this.txtoprationName.TabIndex = 37;
+            this.txtoprationName.TabIndex = 3;
             // 
             // label3
             // 
@@ -113,10 +113,10 @@
             this.cmbSmvType.Location = new System.Drawing.Point(148, 144);
             this.cmbSmvType.Name = "cmbSmvType";
             this.cmbSmvType.Properties.AccessibleDescription = "";
-            this.cmbSmvType.Properties.NullValuePrompt = "Please Enter Style No";
+            this.cmbSmvType.Properties.NullValuePrompt = "Please Enter SMV Type";
             this.cmbSmvType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbSmvType.Size = new System.Drawing.Size(251, 20);
-            this.cmbSmvType.TabIndex = 39;
+            this.cmbSmvType.TabIndex = 5;
             // 
             // btnEdit
             // 
@@ -124,7 +124,7 @@
             this.btnEdit.Location = new System.Drawing.Point(330, 184);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
-            this.btnEdit.TabIndex = 43;
+            this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Update";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -134,7 +134,7 @@
             this.btnAdd.Location = new System.Drawing.Point(148, 184);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
-            this.btnAdd.TabIndex = 42;
+            this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -153,10 +153,10 @@
             this.txtSMV.Location = new System.Drawing.Point(564, 103);
             this.txtSMV.Name = "txtSMV";
             this.txtSMV.Properties.AccessibleDescription = "";
-            this.txtSMV.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtSMV.Properties.NullValuePrompt = "Please Enter SMV";
             this.txtSMV.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSMV.Size = new System.Drawing.Size(251, 20);
-            this.txtSMV.TabIndex = 46;
+            this.txtSMV.TabIndex = 4;
             // 
             // label6
             // 
@@ -173,10 +173,10 @@
             this.cmbMachineType.Location = new System.Drawing.Point(564, 67);
             this.cmbMachineType.Name = "cmbMachineType";
             this.cmbMachineType.Properties.AccessibleDescription = "";
-            this.cmbMachineType.Properties.NullValuePrompt = "Please Enter Style No";
+            this.cmbMachineType.Properties.NullValuePrompt = "Please Enter Machine Type";
             this.cmbMachineType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbMachineType.Size = new System.Drawing.Size(251, 20);
-            this.cmbMachineType.TabIndex = 44;
+            this.cmbMachineType.TabIndex = 2;
             // 
             // simpleButton1
             // 
@@ -184,7 +184,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(239, 184);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton1.TabIndex = 48;
+            this.simpleButton1.TabIndex = 8;
             this.simpleButton1.Text = "Add/New";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -203,10 +203,10 @@
             this.txtPartName.Location = new System.Drawing.Point(564, 140);
             this.txtPartName.Name = "txtPartName";
             this.txtPartName.Properties.AccessibleDescription = "";
-            this.txtPartName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtPartName.Properties.NullValuePrompt = "Please Enter Part Name";
             this.txtPartName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPartName.Size = new System.Drawing.Size(251, 20);
-            this.txtPartName.TabIndex = 49;
+            this.txtPartName.TabIndex = 6;
             // 
             // label8
             // 
@@ -223,7 +223,7 @@
             this.grdOpList.Location = new System.Drawing.Point(148, 93);
             this.grdOpList.MainView = this.gridView2;
             this.grdOpList.Name = "grdOpList";
-            this.grdOpList.Size = new System.Drawing.Size(788, 231);
+            this.grdOpList.Size = new System.Drawing.Size(788, 196);
             this.grdOpList.TabIndex = 58;
             this.grdOpList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

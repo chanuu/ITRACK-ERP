@@ -153,7 +153,6 @@
             this.txtEmail.Location = new System.Drawing.Point(177, 166);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.AccessibleDescription = "";
-            this.txtEmail.Properties.NullText = "Please Enter Fax No";
             this.txtEmail.Properties.NullValuePrompt = "Please Enter Fax No";
             this.txtEmail.Size = new System.Drawing.Size(251, 20);
             this.txtEmail.TabIndex = 4;
@@ -163,7 +162,6 @@
             this.txtAddress.EditValue = "";
             this.txtAddress.Location = new System.Drawing.Point(177, 212);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Properties.NullText = "Shipping Address";
             this.txtAddress.Properties.NullValuePrompt = "Shipping Address";
             this.txtAddress.Size = new System.Drawing.Size(289, 96);
             this.txtAddress.TabIndex = 5;
@@ -193,7 +191,6 @@
             this.txtFaxNo.Location = new System.Drawing.Point(177, 130);
             this.txtFaxNo.Name = "txtFaxNo";
             this.txtFaxNo.Properties.AccessibleDescription = "";
-            this.txtFaxNo.Properties.NullText = "Please Enter Fax No";
             this.txtFaxNo.Properties.NullValuePrompt = "Please Enter Fax No";
             this.txtFaxNo.Size = new System.Drawing.Size(251, 20);
             this.txtFaxNo.TabIndex = 3;
@@ -213,7 +210,6 @@
             this.txtTeleNo.Location = new System.Drawing.Point(177, 92);
             this.txtTeleNo.Name = "txtTeleNo";
             this.txtTeleNo.Properties.AccessibleDescription = "";
-            this.txtTeleNo.Properties.NullText = "Please Enter Tele No";
             this.txtTeleNo.Properties.NullValuePrompt = "Please Enter Tele No";
             this.txtTeleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtTeleNo.Size = new System.Drawing.Size(251, 20);
@@ -234,7 +230,6 @@
             this.txtBuyerName.Location = new System.Drawing.Point(177, 54);
             this.txtBuyerName.Name = "txtBuyerName";
             this.txtBuyerName.Properties.AccessibleDescription = "";
-            this.txtBuyerName.Properties.NullText = "Please Enter Buyer Name";
             this.txtBuyerName.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtBuyerName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBuyerName.Size = new System.Drawing.Size(251, 20);
@@ -275,7 +270,7 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 49);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(960, 323);
+            this.grdSearch.Size = new System.Drawing.Size(960, 334);
             this.grdSearch.TabIndex = 14;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

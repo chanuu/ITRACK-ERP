@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -17,5 +18,50 @@ namespace EFTesting.UI
         {
             InitializeComponent();
         }
+
+        #region Diclaration
+
+        Validator validate = new Validator();
+
+        #endregion
+
+        #region Validation
+
+        public bool isValidPromotion()
+        {
+            if (!validate.isPresent(txtPromotionID, "Promotion ID"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtDesignation, "Designation"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtFromDate, "From Date"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtToDate, "To Date"))
+            {
+                return false;
+            }
+
+
+            return true;
+
+
+
+
+        }
+
+
+        #endregion
+
+
     }
 }
+
+

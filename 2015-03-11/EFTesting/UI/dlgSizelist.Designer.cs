@@ -31,16 +31,16 @@
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtSMV = new DevExpress.XtraEditors.TextEdit();
+            this.txtSize = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtQty = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSMV.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // grdSearch
@@ -49,7 +49,7 @@
             this.grdSearch.Location = new System.Drawing.Point(26, 12);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(685, 266);
+            this.grdSearch.Size = new System.Drawing.Size(685, 262);
             this.grdSearch.TabIndex = 63;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -68,16 +68,16 @@
             this.label10.TabIndex = 65;
             this.label10.Text = "Size";
             // 
-            // txtSMV
+            // txtSize
             // 
-            this.txtSMV.EditValue = "";
-            this.txtSMV.Location = new System.Drawing.Point(26, 302);
-            this.txtSMV.Name = "txtSMV";
-            this.txtSMV.Properties.AccessibleDescription = "";
-            this.txtSMV.Properties.NullValuePrompt = "Please Enter Style No";
-            this.txtSMV.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtSMV.Size = new System.Drawing.Size(208, 20);
-            this.txtSMV.TabIndex = 64;
+            this.txtSize.EditValue = "";
+            this.txtSize.Location = new System.Drawing.Point(26, 302);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Properties.AccessibleDescription = "";
+            this.txtSize.Properties.NullValuePrompt = "Size";
+            this.txtSize.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtSize.Size = new System.Drawing.Size(208, 20);
+            this.txtSize.TabIndex = 1;
             // 
             // label1
             // 
@@ -88,16 +88,16 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "Qty";
             // 
-            // textEdit1
+            // txtQty
             // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(240, 302);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AccessibleDescription = "";
-            this.textEdit1.Properties.NullValuePrompt = "Please Enter Style No";
-            this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit1.Size = new System.Drawing.Size(208, 20);
-            this.textEdit1.TabIndex = 66;
+            this.txtQty.EditValue = "";
+            this.txtQty.Location = new System.Drawing.Point(240, 302);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.Properties.AccessibleDescription = "";
+            this.txtQty.Properties.NullValuePrompt = "Qty";
+            this.txtQty.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtQty.Size = new System.Drawing.Size(208, 20);
+            this.txtQty.TabIndex = 2;
             // 
             // simpleButton4
             // 
@@ -122,6 +122,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 68;
             this.simpleButton2.Text = "Add";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // dlgSizelist
             // 
@@ -132,16 +133,16 @@
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtQty);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtSMV);
+            this.Controls.Add(this.txtSize);
             this.Controls.Add(this.grdSearch);
             this.Name = "dlgSizelist";
             this.Text = "dlgSizelist";
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSMV.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,9 +153,9 @@
         private DevExpress.XtraGrid.GridControl grdSearch;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.TextEdit txtSMV;
+        private DevExpress.XtraEditors.TextEdit txtSize;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtQty;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;

@@ -1831,3 +1831,358 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\EFTesting\obj\D
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.exe.licenses
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\EFTesting\obj\Debug\EFTesting.UI.frmProduction.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\EFTesting.exe.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\EFTesting.exe
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\EFTesting.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\Excel.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\bin\Debug\Excel.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.Form1.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmProduction.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\EFTesting\obj\Debug\EFTesting.exe.licenses
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\EFTesting.exe.config
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.exe
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.pdb
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\EFTesting.exe
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\EFTesting.pdb
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\EntityFramework.dll
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\EntityFramework.SqlServer.dll
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\ITRACK.models.dll
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\ITRACK.models.pdb
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\EntityFramework.xml
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\EntityFramework.SqlServer.xml
+E:\I Track Backup\2015-07-06\EFTesting\bin\Debug\Excel.xml
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\ITRACKERP.csprojResolveAssemblyReference.cache
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.Form1.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.Properties.Resources.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.dlgdividingplan.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.dlgSizelist.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.EmployeeMaster.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmAward.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmBundlingMaster.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmBuyer.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmCompany.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmcompanyDialog.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmCuttingMaster.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlan.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmDividingPlanItem.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmMain.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmOparationScaning.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmOperation.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmParts.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmPrintBarcode.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmProduction.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmPurchaseOrder.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmSketchMaster.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmStyleMaster.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.frmPromotion.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.UI.PoItemsDialog.resources
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\ITRACKERP.csproj.GenerateResource.Cache
+E:\I Track Backup\2015-07-06\EFTesting\obj\Debug\EFTesting.exe.licenses
+C:\Users\nuwan.p\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\bin\Debug\EFTesting.exe.config
+C:\Users\nuwan.p\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.exe
+C:\Users\nuwan.p\Source\Repos\ITRACK-ERP\2015-03-11\EFTesting\obj\Debug\EFTesting.pdb

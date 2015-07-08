@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using ITRACK.models;
 using System.Diagnostics;
+using ITRACK.Validator;
 
 namespace EFTesting.UI
 {
@@ -102,6 +103,56 @@ namespace EFTesting.UI
             }
         }
 
+
+        #region Diclaration
+
+        Validator validator = new Validator();
+
+        #endregion
+
+
+        #region Validation
+
+        public bool isValidDividingplan()
+        {
+
+
+            if (!validator.isPresent(txtDividingPlanNo,"Dividing Plan Number"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtStyleNo,"Style Number"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtLineNo,"Line Number"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtProductionPerHour, "Production Per Hour"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtTarget, "Target"))
+            {
+                return false;
+            }
+
+            if (!validator.isPresent(txtTotalEmployee, "Total Employee"))
+            {
+                return false;
+            }
+
+
+            return true;
+        }
+
+        #endregion
+
         private void dlgdividingplan_Load(object sender, EventArgs e)
         {
             var selected = from item in lstDividing select new { item.DividingPlanTempID, item.OprationNo, item.OprationName, item.SMVType, item.MachineType, item.SMV, item.Selected };
@@ -130,8 +181,14 @@ namespace EFTesting.UI
 
         private void simpleButton2_Click(object sender, EventArgs e)
         {
-            saveOparation();
-            this.Close();
+            if (isValidDividingplan() == true)
+            {
+
+                saveOparation();
+                this.Close();
+            }
+            
+            
         }
     }
 }

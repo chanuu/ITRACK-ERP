@@ -37,6 +37,8 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label23 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtStyleNo = new DevExpress.XtraEditors.TextEdit();
@@ -95,12 +97,12 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanQty.Properties)).BeginInit();
@@ -129,8 +131,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -139,7 +139,7 @@
             this.btnDelete.Location = new System.Drawing.Point(299, 3);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
-            this.btnDelete.TabIndex = 36;
+            this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Delete";
             // 
             // btnClose
@@ -148,7 +148,7 @@
             this.btnClose.Location = new System.Drawing.Point(776, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
-            this.btnClose.TabIndex = 39;
+            this.btnClose.TabIndex = 13;
             // 
             // txtSearchBox
             // 
@@ -160,7 +160,7 @@
             this.txtSearchBox.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtSearchBox.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSearchBox.Size = new System.Drawing.Size(285, 20);
-            this.txtSearchBox.TabIndex = 38;
+            this.txtSearchBox.TabIndex = 12;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
@@ -170,7 +170,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(389, 3);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton1.TabIndex = 37;
+            this.simpleButton1.TabIndex = 11;
             this.simpleButton1.Text = "Search";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -180,7 +180,7 @@
             this.btnEdit.Location = new System.Drawing.Point(208, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
-            this.btnEdit.TabIndex = 35;
+            this.btnEdit.TabIndex = 9;
             this.btnEdit.Text = "Update";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -190,7 +190,7 @@
             this.btnAdd.Location = new System.Drawing.Point(116, 3);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
-            this.btnAdd.TabIndex = 34;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -200,7 +200,7 @@
             this.btnNew.Location = new System.Drawing.Point(25, 3);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(85, 39);
-            this.btnNew.TabIndex = 40;
+            this.btnNew.TabIndex = 14;
             this.btnNew.Text = "New";
             // 
             // xtraTabControl1
@@ -243,6 +243,23 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(1236, 446);
             this.xtraTabPage1.Text = "Header";
             // 
+            // grdSearchStyle
+            // 
+            this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdSearchStyle.Location = new System.Drawing.Point(198, 118);
+            this.grdSearchStyle.MainView = this.gridView2;
+            this.grdSearchStyle.Name = "grdSearchStyle";
+            this.grdSearchStyle.Size = new System.Drawing.Size(816, 250);
+            this.grdSearchStyle.TabIndex = 1;
+            this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            this.grdSearchStyle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearchStyle_KeyDown);
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.grdSearchStyle;
+            this.gridView2.Name = "gridView2";
+            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -270,7 +287,7 @@
             this.txtStyleNo.Properties.NullValuePrompt = " Style No";
             this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStyleNo.Size = new System.Drawing.Size(251, 20);
-            this.txtStyleNo.TabIndex = 47;
+            this.txtStyleNo.TabIndex = 3;
             this.txtStyleNo.EditValueChanged += new System.EventHandler(this.txtStyleNo_EditValueChanged);
             // 
             // cmbStatus
@@ -286,7 +303,7 @@
             this.cmbStatus.Properties.NullValuePrompt = "Select Status";
             this.cmbStatus.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbStatus.Size = new System.Drawing.Size(212, 20);
-            this.cmbStatus.TabIndex = 46;
+            this.cmbStatus.TabIndex = 4;
             // 
             // label9
             // 
@@ -315,7 +332,7 @@
             this.txtPlanQty.Properties.NullValuePrompt = "Plan Qty";
             this.txtPlanQty.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPlanQty.Size = new System.Drawing.Size(251, 20);
-            this.txtPlanQty.TabIndex = 41;
+            this.txtPlanQty.TabIndex = 6;
             // 
             // label10
             // 
@@ -335,7 +352,7 @@
             this.txtOrderQty.Properties.NullValuePrompt = "Order Qty";
             this.txtOrderQty.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtOrderQty.Size = new System.Drawing.Size(251, 20);
-            this.txtOrderQty.TabIndex = 39;
+            this.txtOrderQty.TabIndex = 5;
             // 
             // cmbItemType
             // 
@@ -350,7 +367,7 @@
             this.cmbItemType.Properties.NullValuePrompt = "Item Type";
             this.cmbItemType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbItemType.Size = new System.Drawing.Size(212, 20);
-            this.cmbItemType.TabIndex = 38;
+            this.cmbItemType.TabIndex = 2;
             // 
             // label6
             // 
@@ -366,7 +383,6 @@
             this.txtRemark.EditValue = "";
             this.txtRemark.Location = new System.Drawing.Point(685, 135);
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Properties.NullText = "Shipping Address";
             this.txtRemark.Properties.NullValuePrompt = "Remark";
             this.txtRemark.Size = new System.Drawing.Size(289, 96);
             this.txtRemark.TabIndex = 35;
@@ -399,7 +415,7 @@
             this.txtCuttingTicketNo.Properties.NullValuePrompt = "Cutting Ticket";
             this.txtCuttingTicketNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtCuttingTicketNo.Size = new System.Drawing.Size(251, 20);
-            this.txtCuttingTicketNo.TabIndex = 33;
+            this.txtCuttingTicketNo.TabIndex = 1;
             // 
             // xtraTabPage2
             // 
@@ -450,8 +466,9 @@
             "Lining",
             "Fusing",
             "Other Fabric"});
+            this.txtfabricType.Properties.NullValuePrompt = "Please Select Fabric Type";
             this.txtfabricType.Size = new System.Drawing.Size(251, 20);
-            this.txtfabricType.TabIndex = 88;
+            this.txtfabricType.TabIndex = 3;
             // 
             // txtColorCode
             // 
@@ -459,8 +476,9 @@
             this.txtColorCode.Name = "txtColorCode";
             this.txtColorCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtColorCode.Properties.NullValuePrompt = "Please Select Color Code";
             this.txtColorCode.Size = new System.Drawing.Size(251, 20);
-            this.txtColorCode.TabIndex = 87;
+            this.txtColorCode.TabIndex = 4;
             // 
             // txtSize
             // 
@@ -468,9 +486,10 @@
             this.txtSize.Name = "txtSize";
             this.txtSize.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSize.Properties.NullValuePrompt = "Please Select Size";
             this.txtSize.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtSize.Size = new System.Drawing.Size(195, 20);
-            this.txtSize.TabIndex = 86;
+            this.txtSize.TabIndex = 11;
             // 
             // label24
             // 
@@ -514,10 +533,10 @@
             this.txtmarkerWidth.Location = new System.Drawing.Point(332, 128);
             this.txtmarkerWidth.Name = "txtmarkerWidth";
             this.txtmarkerWidth.Properties.AccessibleDescription = "";
-            this.txtmarkerWidth.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtmarkerWidth.Properties.NullValuePrompt = "Please Enter Marker Width";
             this.txtmarkerWidth.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtmarkerWidth.Size = new System.Drawing.Size(251, 20);
-            this.txtmarkerWidth.TabIndex = 60;
+            this.txtmarkerWidth.TabIndex = 10;
             // 
             // label8
             // 
@@ -534,10 +553,10 @@
             this.txtmarkerLenth.Location = new System.Drawing.Point(74, 128);
             this.txtmarkerLenth.Name = "txtmarkerLenth";
             this.txtmarkerLenth.Properties.AccessibleDescription = "";
-            this.txtmarkerLenth.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtmarkerLenth.Properties.NullValuePrompt = "Please Enter Marker Length";
             this.txtmarkerLenth.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtmarkerLenth.Size = new System.Drawing.Size(251, 20);
-            this.txtmarkerLenth.TabIndex = 59;
+            this.txtmarkerLenth.TabIndex = 9;
             // 
             // label1
             // 
@@ -554,17 +573,17 @@
             this.txtlineNo.Location = new System.Drawing.Point(71, 41);
             this.txtlineNo.Name = "txtlineNo";
             this.txtlineNo.Properties.AccessibleDescription = "";
-            this.txtlineNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtlineNo.Properties.NullValuePrompt = "Please Enter Line Number";
             this.txtlineNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtlineNo.Size = new System.Drawing.Size(251, 20);
-            this.txtlineNo.TabIndex = 50;
+            this.txtlineNo.TabIndex = 1;
             // 
             // simpleButton4
             // 
             this.simpleButton4.Location = new System.Drawing.Point(233, 154);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton4.TabIndex = 63;
+            this.simpleButton4.TabIndex = 15;
             this.simpleButton4.Text = "Remove";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
@@ -573,7 +592,7 @@
             this.btnEditItem.Location = new System.Drawing.Point(152, 154);
             this.btnEditItem.Name = "btnEditItem";
             this.btnEditItem.Size = new System.Drawing.Size(75, 23);
-            this.btnEditItem.TabIndex = 62;
+            this.btnEditItem.TabIndex = 14;
             this.btnEditItem.Text = "Edit";
             this.btnEditItem.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
@@ -592,10 +611,10 @@
             this.txtnoOfplysLayed.Location = new System.Drawing.Point(852, 83);
             this.txtnoOfplysLayed.Name = "txtnoOfplysLayed";
             this.txtnoOfplysLayed.Properties.AccessibleDescription = "";
-            this.txtnoOfplysLayed.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtnoOfplysLayed.Properties.NullValuePrompt = "Please Enter Number of Plys Layed";
             this.txtnoOfplysLayed.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtnoOfplysLayed.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfplysLayed.TabIndex = 58;
+            this.txtnoOfplysLayed.TabIndex = 8;
             // 
             // label19
             // 
@@ -612,10 +631,10 @@
             this.txtnoOfplysPlan.Location = new System.Drawing.Point(594, 84);
             this.txtnoOfplysPlan.Name = "txtnoOfplysPlan";
             this.txtnoOfplysPlan.Properties.AccessibleDescription = "";
-            this.txtnoOfplysPlan.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtnoOfplysPlan.Properties.NullValuePrompt = "Please Enter Number of Plys";
             this.txtnoOfplysPlan.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtnoOfplysPlan.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfplysPlan.TabIndex = 57;
+            this.txtnoOfplysPlan.TabIndex = 7;
             // 
             // label5
             // 
@@ -632,10 +651,10 @@
             this.txtnoOfLayers.Location = new System.Drawing.Point(335, 84);
             this.txtnoOfLayers.Name = "txtnoOfLayers";
             this.txtnoOfLayers.Properties.AccessibleDescription = "";
-            this.txtnoOfLayers.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtnoOfLayers.Properties.NullValuePrompt = "Please Enter Number of Layer";
             this.txtnoOfLayers.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtnoOfLayers.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfLayers.TabIndex = 56;
+            this.txtnoOfLayers.TabIndex = 6;
             // 
             // label18
             // 
@@ -652,10 +671,10 @@
             this.txtnoOfItem.Location = new System.Drawing.Point(854, 126);
             this.txtnoOfItem.Name = "txtnoOfItem";
             this.txtnoOfItem.Properties.AccessibleDescription = "";
-            this.txtnoOfItem.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtnoOfItem.Properties.NullValuePrompt = "Please Enter No Of Garment";
             this.txtnoOfItem.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtnoOfItem.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfItem.TabIndex = 55;
+            this.txtnoOfItem.TabIndex = 12;
             // 
             // label17
             // 
@@ -672,10 +691,10 @@
             this.txtLength.Location = new System.Drawing.Point(72, 84);
             this.txtLength.Name = "txtLength";
             this.txtLength.Properties.AccessibleDescription = "";
-            this.txtLength.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtLength.Properties.NullValuePrompt = "Please EnterLength";
             this.txtLength.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtLength.Size = new System.Drawing.Size(251, 20);
-            this.txtLength.TabIndex = 54;
+            this.txtLength.TabIndex = 5;
             // 
             // label16
             // 
@@ -700,7 +719,7 @@
             this.simpleButton2.Location = new System.Drawing.Point(71, 154);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 61;
+            this.simpleButton2.TabIndex = 13;
             this.simpleButton2.Text = "Add";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
@@ -738,10 +757,10 @@
             this.txtMarkerNo.Location = new System.Drawing.Point(333, 41);
             this.txtMarkerNo.Name = "txtMarkerNo";
             this.txtMarkerNo.Properties.AccessibleDescription = "";
-            this.txtMarkerNo.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtMarkerNo.Properties.NullValuePrompt = "Please Enter Markr Number";
             this.txtMarkerNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtMarkerNo.Size = new System.Drawing.Size(251, 20);
-            this.txtMarkerNo.TabIndex = 51;
+            this.txtMarkerNo.TabIndex = 2;
             // 
             // xtraTabPage3
             // 
@@ -757,14 +776,14 @@
             this.txtFileName.Location = new System.Drawing.Point(258, 63);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.Size = new System.Drawing.Size(222, 21);
-            this.txtFileName.TabIndex = 60;
+            this.txtFileName.TabIndex = 1;
             // 
             // simpleButton5
             // 
             this.simpleButton5.Location = new System.Drawing.Point(511, 63);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton5.TabIndex = 59;
+            this.simpleButton5.TabIndex = 2;
             this.simpleButton5.Text = "Add";
             this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
@@ -843,7 +862,7 @@
             this.grdSearch.Location = new System.Drawing.Point(14, 44);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1250, 352);
+            this.grdSearch.Size = new System.Drawing.Size(1250, 49);
             this.grdSearch.TabIndex = 62;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -853,23 +872,6 @@
             // 
             this.gridView3.GridControl = this.grdSearch;
             this.gridView3.Name = "gridView3";
-            // 
-            // grdSearchStyle
-            // 
-            this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearchStyle.Location = new System.Drawing.Point(198, 118);
-            this.grdSearchStyle.MainView = this.gridView2;
-            this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(816, 259);
-            this.grdSearchStyle.TabIndex = 50;
-            this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            this.grdSearchStyle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearchStyle_KeyDown);
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.grdSearchStyle;
-            this.gridView2.Name = "gridView2";
             // 
             // frmCuttingMaster
             // 
@@ -900,6 +902,8 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanQty.Properties)).EndInit();
@@ -930,8 +934,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -159,7 +159,7 @@ namespace EFTesting.Reports
                                              oList.OprationName,
                                              oList.OprationType,
                                              barcode.OprationRole,
-                                             oList.Barcode ,
+                                              "*" + oList.Barcode + "*",
                                              "",
                                              oList.Barcode2,
                                              oList.OprationNo2,

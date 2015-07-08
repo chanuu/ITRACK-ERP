@@ -83,7 +83,7 @@
             this.btnDelete.Location = new System.Drawing.Point(293, 11);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 39);
-            this.btnDelete.TabIndex = 20;
+            this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             // 
             // btnClose
@@ -92,7 +92,7 @@
             this.btnClose.Location = new System.Drawing.Point(770, 12);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
-            this.btnClose.TabIndex = 23;
+            this.btnClose.TabIndex = 10;
             // 
             // txtSearchBox
             // 
@@ -104,7 +104,7 @@
             this.txtSearchBox.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtSearchBox.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSearchBox.Size = new System.Drawing.Size(285, 20);
-            this.txtSearchBox.TabIndex = 22;
+            this.txtSearchBox.TabIndex = 9;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
@@ -114,7 +114,7 @@
             this.simpleButton1.Location = new System.Drawing.Point(383, 11);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton1.TabIndex = 21;
+            this.simpleButton1.TabIndex = 8;
             this.simpleButton1.Text = "Search";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
@@ -124,7 +124,7 @@
             this.btnEdit.Location = new System.Drawing.Point(202, 11);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
-            this.btnEdit.TabIndex = 19;
+            this.btnEdit.TabIndex = 6;
             this.btnEdit.Text = "Update";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -134,7 +134,7 @@
             this.btnAdd.Location = new System.Drawing.Point(110, 11);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
-            this.btnAdd.TabIndex = 18;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -144,7 +144,7 @@
             this.btnNew.Location = new System.Drawing.Point(19, 11);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(85, 39);
-            this.btnNew.TabIndex = 24;
+            this.btnNew.TabIndex = 11;
             this.btnNew.Text = "New";
             // 
             // xtraTabControl1
@@ -198,7 +198,7 @@
             this.txtStyleNo.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStyleNo.Size = new System.Drawing.Size(251, 20);
-            this.txtStyleNo.TabIndex = 46;
+            this.txtStyleNo.TabIndex = 1;
             // 
             // imgprofile
             // 
@@ -217,10 +217,10 @@
             "Pant",
             "Blouse",
             "Skirt"});
-            this.cmbItemType.Properties.NullValuePrompt = "Select Status";
+            this.cmbItemType.Properties.NullValuePrompt = "Please Select Item Type";
             this.cmbItemType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbItemType.Size = new System.Drawing.Size(212, 20);
-            this.cmbItemType.TabIndex = 38;
+            this.cmbItemType.TabIndex = 3;
             // 
             // label6
             // 
@@ -236,10 +236,9 @@
             this.txtRemark.EditValue = "";
             this.txtRemark.Location = new System.Drawing.Point(466, 154);
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Properties.NullText = "Shipping Address";
-            this.txtRemark.Properties.NullValuePrompt = "Shipping Address";
+            this.txtRemark.Properties.NullValuePrompt = "Remark";
             this.txtRemark.Size = new System.Drawing.Size(289, 96);
-            this.txtRemark.TabIndex = 35;
+            this.txtRemark.TabIndex = 4;
             this.txtRemark.UseOptimizedRendering = true;
             // 
             // label4
@@ -266,10 +265,10 @@
             this.txtSketchName.Location = new System.Drawing.Point(466, 73);
             this.txtSketchName.Name = "txtSketchName";
             this.txtSketchName.Properties.AccessibleDescription = "";
-            this.txtSketchName.Properties.NullValuePrompt = "Please Enter Style No";
+            this.txtSketchName.Properties.NullValuePrompt = "Please Enter Sketch Name";
             this.txtSketchName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSketchName.Size = new System.Drawing.Size(251, 20);
-            this.txtSketchName.TabIndex = 33;
+            this.txtSketchName.TabIndex = 2;
             // 
             // xtraTabPage2
             // 
@@ -286,7 +285,7 @@
             this.grdParts.Location = new System.Drawing.Point(79, 35);
             this.grdParts.MainView = this.gridView2;
             this.grdParts.Name = "grdParts";
-            this.grdParts.Size = new System.Drawing.Size(1010, 310);
+            this.grdParts.Size = new System.Drawing.Size(1010, 287);
             this.grdParts.TabIndex = 39;
             this.grdParts.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -378,7 +377,7 @@
             this.grdSearch.Location = new System.Drawing.Point(19, 59);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1048, 340);
+            this.grdSearch.Size = new System.Drawing.Size(1048, 27);
             this.grdSearch.TabIndex = 44;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

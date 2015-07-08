@@ -36,6 +36,16 @@ namespace ITRACK.models
 
         public int NoOfPlysLayed { get; set; }
 
+
+        public bool isGenaratedTags { get; set; }
+
+        public string GenaratedTime { get; set; }
+
+        public bool isPrinted { get; set; }
+
+        public string PrinteTime { get; set; }
+
+
         public virtual CuttingHeader CuttingHeader { get; set; }
 
         public string CuttingHeaderID { get; set; }
