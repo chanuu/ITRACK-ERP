@@ -223,7 +223,7 @@
             this.grdOpList.Location = new System.Drawing.Point(148, 93);
             this.grdOpList.MainView = this.gridView2;
             this.grdOpList.Name = "grdOpList";
-            this.grdOpList.Size = new System.Drawing.Size(788, 231);
+            this.grdOpList.Size = new System.Drawing.Size(788, 85);
             this.grdOpList.TabIndex = 58;
             this.grdOpList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

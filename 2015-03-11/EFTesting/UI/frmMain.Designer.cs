@@ -67,6 +67,7 @@
             this.config = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.reports = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -231,9 +232,10 @@
             this.barButtonItem15,
             this.barButtonItem16,
             this.barButtonItem17,
-            this.barButtonItem18});
+            this.barButtonItem18,
+            this.barButtonItem19});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 16;
+            this.ribbonControl1.MaxItemId = 17;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.masters,
@@ -385,6 +387,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem16);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem18);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem19);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // config
@@ -405,6 +408,15 @@
             // 
             this.reports.Name = "reports";
             this.reports.Text = "Reports";
+            // 
+            // barButtonItem19
+            // 
+            this.barButtonItem19.Caption = "Production Info";
+            this.barButtonItem19.Glyph = global::EFTesting.Properties.Resources.Checklist_icon;
+            this.barButtonItem19.Id = 16;
+            this.barButtonItem19.Name = "barButtonItem19";
+            this.barButtonItem19.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
             // 
             // frmMain
             // 
@@ -468,5 +480,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;
         private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
     }
 }

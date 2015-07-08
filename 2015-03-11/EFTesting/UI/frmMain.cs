@@ -124,5 +124,12 @@ namespace EFTesting.UI
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
         }
+
+        private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UI.frmProduction objfrmMChild = new UI.frmProduction();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+        }
     }
 }

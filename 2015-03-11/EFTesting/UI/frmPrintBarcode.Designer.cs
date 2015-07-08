@@ -50,6 +50,7 @@
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "frmPrintBarcode";
             this.Text = "Print Barcode";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrintBarcode_Load);
             this.ResumeLayout(false);
 

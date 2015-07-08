@@ -75,6 +75,10 @@ namespace EFTesting.UI
                 _cuttingItem.MarkerWidth = Convert.ToDouble(txtmarkerWidth.Text);
                 _cuttingItem.LineNo = txtlineNo.Text;
                 _cuttingItem.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                _cuttingItem.isGenaratedTags = false;
+                _cuttingItem.GenaratedTime = "None";
+                _cuttingItem.isPrinted = false;
+                _cuttingItem.PrinteTime = "None";
                 return _cuttingItem;
             }
             catch(Exception ex){
@@ -107,7 +111,7 @@ namespace EFTesting.UI
 
                 GenaricRepository<CuttingItem> _CuttingItemRepository = new GenaricRepository<CuttingItem>(new ItrackContext());
 
-                var result = from item in _CuttingItemRepository.GetAll() where (item.MarkerNo == item.MarkerNo  && item.Size == _item.Size && item.Color == _item.Color && item.Length   == _item.Length && _item.Date == item.Date ) select item;
+                var result = from item in _CuttingItemRepository.GetAll() where (item.MarkerNo == item.MarkerNo  && item.Size == _item.Size && item.Color == _item.Color && item.Length   == _item.Length && _item.Date == item.Date && _item.MarkerNo == item.MarkerNo) select item;
                 if (result.Count() <= 0)
                 {
                     return true;
@@ -456,7 +460,6 @@ namespace EFTesting.UI
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             SearchCuttingHeader();
-
 
         }
 

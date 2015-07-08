@@ -37,6 +37,8 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label23 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.txtStyleNo = new DevExpress.XtraEditors.TextEdit();
@@ -95,12 +97,12 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanQty.Properties)).BeginInit();
@@ -129,8 +131,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -242,6 +242,23 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1236, 446);
             this.xtraTabPage1.Text = "Header";
+            // 
+            // grdSearchStyle
+            // 
+            this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdSearchStyle.Location = new System.Drawing.Point(198, 118);
+            this.grdSearchStyle.MainView = this.gridView2;
+            this.grdSearchStyle.Name = "grdSearchStyle";
+            this.grdSearchStyle.Size = new System.Drawing.Size(816, 259);
+            this.grdSearchStyle.TabIndex = 50;
+            this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
+            this.grdSearchStyle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearchStyle_KeyDown);
+            // 
+            // gridView2
+            // 
+            this.gridView2.GridControl = this.grdSearchStyle;
+            this.gridView2.Name = "gridView2";
             // 
             // label23
             // 
@@ -713,7 +730,7 @@
             this.grdItemList.Location = new System.Drawing.Point(3, 181);
             this.grdItemList.MainView = this.gridView1;
             this.grdItemList.Name = "grdItemList";
-            this.grdItemList.Size = new System.Drawing.Size(1208, 305);
+            this.grdItemList.Size = new System.Drawing.Size(1208, 262);
             this.grdItemList.TabIndex = 57;
             this.grdItemList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -843,7 +860,7 @@
             this.grdSearch.Location = new System.Drawing.Point(14, 44);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1250, 352);
+            this.grdSearch.Size = new System.Drawing.Size(1250, 77);
             this.grdSearch.TabIndex = 62;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -853,23 +870,6 @@
             // 
             this.gridView3.GridControl = this.grdSearch;
             this.gridView3.Name = "gridView3";
-            // 
-            // grdSearchStyle
-            // 
-            this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearchStyle.Location = new System.Drawing.Point(198, 118);
-            this.grdSearchStyle.MainView = this.gridView2;
-            this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(816, 259);
-            this.grdSearchStyle.TabIndex = 50;
-            this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            this.grdSearchStyle.KeyDown += new System.Windows.Forms.KeyEventHandler(this.grdSearchStyle_KeyDown);
-            // 
-            // gridView2
-            // 
-            this.gridView2.GridControl = this.grdSearchStyle;
-            this.gridView2.Name = "gridView2";
             // 
             // frmCuttingMaster
             // 
@@ -900,6 +900,8 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanQty.Properties)).EndInit();
@@ -930,8 +932,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

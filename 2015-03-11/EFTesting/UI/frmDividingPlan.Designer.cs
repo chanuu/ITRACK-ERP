@@ -37,6 +37,7 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label24 = new System.Windows.Forms.Label();
             this.txtStyleNo = new DevExpress.XtraEditors.TextEdit();
             this.label11 = new System.Windows.Forms.Label();
             this.txtProductionPerHour = new DevExpress.XtraEditors.TextEdit();
@@ -52,11 +53,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDividingPlanNo = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.grdOpration = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.label12 = new System.Windows.Forms.Label();
             this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.btnProcess = new DevExpress.XtraEditors.SimpleButton();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,14 +72,6 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -84,13 +84,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDividingPlanNo.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpration)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
@@ -201,6 +201,15 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(992, 472);
             this.xtraTabPage1.Text = "Header";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(79, 16);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(249, 13);
+            this.label24.TabIndex = 86;
+            this.label24.Text = "Dividing Plan Genaral Information / Header Details ";
             // 
             // txtStyleNo
             // 
@@ -358,6 +367,71 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(992, 472);
             this.xtraTabPage2.Text = "Oparation";
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(476, 430);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 13);
+            this.label5.TabIndex = 91;
+            this.label5.Text = "Approved At";
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit2.EditValue = "";
+            this.textEdit2.Location = new System.Drawing.Point(476, 407);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.AccessibleDescription = "";
+            this.textEdit2.Properties.NullText = "Please Enter Buyer Name";
+            this.textEdit2.Properties.NullValuePrompt = "Please Enter Buyer Name";
+            this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
+            this.textEdit2.Size = new System.Drawing.Size(181, 20);
+            this.textEdit2.TabIndex = 90;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(291, 430);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 89;
+            this.label3.Text = "Approve Code";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textEdit1.EditValue = "";
+            this.textEdit1.Location = new System.Drawing.Point(291, 407);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.AccessibleDescription = "";
+            this.textEdit1.Properties.NullText = "Please Enter Buyer Name";
+            this.textEdit1.Properties.NullValuePrompt = "Please Enter Buyer Name";
+            this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
+            this.textEdit1.Size = new System.Drawing.Size(181, 20);
+            this.textEdit1.TabIndex = 50;
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton3.Image = global::EFTesting.Properties.Resources.update;
+            this.simpleButton3.Location = new System.Drawing.Point(200, 402);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(85, 39);
+            this.simpleButton3.TabIndex = 88;
+            this.simpleButton3.Text = "Approve";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(11, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 13);
+            this.label1.TabIndex = 87;
+            this.label1.Text = "Oparation List of Dividing Plan ";
+            // 
             // simpleButton2
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -411,6 +485,15 @@
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(992, 472);
             this.xtraTabPage3.Text = "Import";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(133, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(176, 13);
+            this.label12.TabIndex = 88;
+            this.label12.Text = "Import Dividing Plan From Excel File";
             // 
             // progressPanel1
             // 
@@ -469,7 +552,7 @@
             this.grdSearch.Location = new System.Drawing.Point(29, 66);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1031, 482);
+            this.grdSearch.Size = new System.Drawing.Size(1031, 468);
             this.grdSearch.TabIndex = 49;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -479,89 +562,6 @@
             // 
             this.gridView1.GridControl = this.grdSearch;
             this.gridView1.Name = "gridView1";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(79, 16);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(249, 13);
-            this.label24.TabIndex = 86;
-            this.label24.Text = "Dividing Plan Genaral Information / Header Details ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 13);
-            this.label1.TabIndex = 87;
-            this.label1.Text = "Oparation List of Dividing Plan ";
-            // 
-            // simpleButton3
-            // 
-            this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.simpleButton3.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton3.Location = new System.Drawing.Point(200, 402);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(85, 39);
-            this.simpleButton3.TabIndex = 88;
-            this.simpleButton3.Text = "Approve";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(291, 407);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AccessibleDescription = "";
-            this.textEdit1.Properties.NullText = "Please Enter Buyer Name";
-            this.textEdit1.Properties.NullValuePrompt = "Please Enter Buyer Name";
-            this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit1.Size = new System.Drawing.Size(181, 20);
-            this.textEdit1.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(291, 430);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 89;
-            this.label3.Text = "Approve Code";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(476, 430);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 91;
-            this.label5.Text = "Approved At";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textEdit2.EditValue = "";
-            this.textEdit2.Location = new System.Drawing.Point(476, 407);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.AccessibleDescription = "";
-            this.textEdit2.Properties.NullText = "Please Enter Buyer Name";
-            this.textEdit2.Properties.NullValuePrompt = "Please Enter Buyer Name";
-            this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit2.Size = new System.Drawing.Size(181, 20);
-            this.textEdit2.TabIndex = 90;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(133, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(176, 13);
-            this.label12.TabIndex = 88;
-            this.label12.Text = "Import Dividing Plan From Excel File";
             // 
             // frmDividingPlan
             // 
@@ -596,14 +596,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDividingPlanNo.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpration)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

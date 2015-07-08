@@ -247,7 +247,11 @@ namespace EFTesting.UI
                 
                 grdItemList.DataSource =RemovedItem(GetCuttingItemByID(_headerId));
 
+             //   grdBundleTicket.DataSource = PrintBundleItem(GetCuttingItemByID(_headerId));
+                FeedPrintItemList(Convert.ToInt16(_headerId));
+
                 grdBundleTicket.DataSource = PrintBundleItem(GetCuttingItemByID(_headerId));
+
                 gridView2.Columns["CuttingHeader"].Visible = false;
                 gridView2.Columns["CuttingHeaderID"].Visible = false;
                 gridView2.Columns["BundleHeader"].Visible = false;
@@ -306,7 +310,20 @@ namespace EFTesting.UI
         }
 
 
-
+        void UpdateBundleStatus()
+        {
+            try
+            {
+                GenaricRepository<BundleHeader> _BundleHeaderRepository = new GenaricRepository<BundleHeader>(new ItrackContext());
+                BundleHeader _header = new BundleHeader();
+                _header = AssignBundleHeader();
+                _header.isCompleteGenarateTags = true;
+                _BundleHeaderRepository.Update(_header);
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        }
 
 
 
@@ -329,7 +346,7 @@ namespace EFTesting.UI
 
                 _BundleHeader.BundleTagGenaratedBy = "None";
                 _BundleHeader.BundleTagGenaratedTime = "None";
-                _BundleHeader.isBundleTagsGerated = false;
+                _BundleHeader.isBundleTagsGerated = true;
                 _BundleHeader.isOprationTagGenated = false;
                 _BundleHeader.OprationTagGenaratedTime = "None";
                 _BundleHeader.OprationTagGeratedBy = "None";
@@ -347,7 +364,7 @@ namespace EFTesting.UI
         }
 
 
-
+     
         private void GenarateTags() {
             try {
 
@@ -365,7 +382,7 @@ namespace EFTesting.UI
 
                     List<OprationBarcodes> lst = new List<OprationBarcodes>();
 
-                    gen.GenrateBundleTags(_noofLayer, _noofItem, _bundleSize, bundlehader, _StyleNo, _lineNo, lst);
+                    gen.GenrateBundleTags(_noofLayer, _noofItem/_noofLayer, _bundleSize, bundlehader, _StyleNo, _lineNo, lst);
 
                     FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
 
@@ -377,7 +394,12 @@ namespace EFTesting.UI
                     _helper.PerformBulkCopy(_helper.ConvertTagsToDatatable(lst));
 
                     Debug.WriteLine(lst.Count + "Count Of Record");
+                   
+                    //update Bundle Header Deta
+                    UpdateBundleStatus();
                     Cursor.Current = Cursors.Default;
+
+
                 }
                
 
@@ -387,6 +409,21 @@ namespace EFTesting.UI
             }
         }
 
+
+
+        private void FeedPrintItemList(int cutID) {
+            
+            GenaricRepository<BundleHeader> _bhRepo = new GenaricRepository<BundleHeader>(new ItrackContext());
+            
+            try {
+                var print = from item in _bhRepo.GetAll().ToList() where item.CuttingItemID == cutID select new { item.CuttingItem.MarkerNo, item.BundleHeaderID, item.isBundleTagsGerated, item.CuttingItem.Size, item.CuttingItem.NoOfLayer, item.CuttingItem.Date };
+                grdBundleTicket.DataSource = print;
+            }
+            catch(Exception ex){
+            
+            }
+        
+        }
 
         private bool GenarateOprationBarcode() {
             try {
@@ -399,6 +436,12 @@ namespace EFTesting.UI
                 return false;
             }
         }
+
+
+
+
+
+
 
         #endregion
 
@@ -488,13 +531,18 @@ namespace EFTesting.UI
         {
 
             Cursor.Current = Cursors.WaitCursor;
-            int CutNo = Convert.ToInt16(gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
-            frmPrintBarcode print = new frmPrintBarcode(CutNo);
+          //  int CutNo = Convert.ToInt16(gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
+            frmPrintBarcode print = new frmPrintBarcode(1);
             Cursor.Current = Cursors.Default;
             print.ShowDialog();
         }
 
         private void simpleButton2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grdSearch_Click(object sender, EventArgs e)
         {
 
         }

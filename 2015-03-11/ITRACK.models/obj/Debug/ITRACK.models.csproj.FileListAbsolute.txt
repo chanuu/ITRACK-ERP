@@ -564,3 +564,80 @@ D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\ITRACK.models\b
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\ITRACK.models\obj\Debug\ITRACK.models.dll
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\ITRACK.models\obj\Debug\ITRACK.models.pdb
 D:\softwere development\Development\ITRACK ERP\Source\2015-06-22\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-23\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-24\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-25\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-26\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-27\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-06-29\ITRACK.models\obj\Debug\ITRACK.models.csprojResolveAssemblyReference.cache
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\Current running Style\ITRACK.models\obj\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\bin\Debug\ITRACK.models.dll.config
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\bin\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\bin\Debug\ITRACK.models.pdb
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\bin\Debug\EntityFramework.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\bin\Debug\EntityFramework.SqlServer.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\bin\Debug\EntityFramework.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\bin\Debug\EntityFramework.SqlServer.xml
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\obj\Debug\ITRACK.models.dll
+D:\softwere development\Development\ITRACK ERP\Source\2015-07-06\ITRACK.models\obj\Debug\ITRACK.models.pdb
