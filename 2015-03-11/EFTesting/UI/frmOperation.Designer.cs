@@ -112,6 +112,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
             this.btnClose.TabIndex = 39;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtSearchBox
             // 
@@ -549,7 +550,7 @@
             this.grdSearch.Location = new System.Drawing.Point(22, 57);
             this.grdSearch.MainView = this.gridView2;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1118, 315);
+            this.grdSearch.Size = new System.Drawing.Size(1118, 436);
             this.grdSearch.TabIndex = 56;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

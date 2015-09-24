@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ITRACK.DBConfiguration;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Diagnostics;
@@ -25,9 +26,25 @@ namespace ITRACK.models
        /// 
        /// </summary>
        /// <param name="dbContext"></param>
-       public GenaricRepository(DbContext dbContext) {
+       /// 
 
+
+       private string GetConnection() {
+           try {
+               ConnectionDetails Con = new ConnectionDetails();
+               return Con.readConnection();
+           }
+           catch(Exception ex){
+               return "";
+           }
+          
+       }
+
+       public GenaricRepository(DbContext dbContext) {
+        
            _dbContext = dbContext;
+           _dbContext.Database.Connection.ConnectionString = GetConnection();
+           _dbContext.Configuration.AutoDetectChangesEnabled = false;
            DbSet = _dbContext.Set<TEntity>();
        }
        /// <summary>
@@ -48,6 +65,9 @@ namespace ITRACK.models
             return await DbSet.FindAsync(Id); 
         }
 
+
+       
+
         public async Task<TEntity> GetkeyByAsync(string Id)
         {
             return await DbSet.FindAsync(Id); 
@@ -67,6 +87,7 @@ namespace ITRACK.models
         public IQueryable<TEntity> SearchFor(Expression<Func<TEntity, bool>> predicate)
         {
             return DbSet.Where(predicate);
+            
         }
 
 
@@ -79,6 +100,9 @@ namespace ITRACK.models
             return DbSet;
         }
 
+        
+     
+        
 
         public async Task<List<TEntity>> GetAllData()
         {

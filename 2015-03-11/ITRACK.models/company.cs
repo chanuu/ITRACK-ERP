@@ -33,6 +33,8 @@ namespace ITRACK.models
         public virtual ICollection<Employee> Employee { get; set; }
 
         public virtual ICollection<OperationPool> OperationPool { get; set; }
+
+        public virtual ICollection<DayendHeader> DayendHeader { get; set; }
         public string GroupID { get; set; }
 
         

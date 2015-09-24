@@ -36,22 +36,22 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtTotalEmployee = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtLineNo = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtDividingPlanNo = new DevExpress.XtraEditors.TextEdit();
             this.grdOperationList = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtLineNo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtDividingPlanNo = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProductionPerHour.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarget.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalEmployee.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLineNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDividingPlanNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOperationList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLineNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDividingPlanNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtStyleNo
@@ -134,17 +134,6 @@
             this.label10.TabIndex = 54;
             this.label10.Text = "Line No";
             // 
-            // txtLineNo
-            // 
-            this.txtLineNo.EditValue = "";
-            this.txtLineNo.Location = new System.Drawing.Point(823, 27);
-            this.txtLineNo.Name = "txtLineNo";
-            this.txtLineNo.Properties.AccessibleDescription = "";
-            this.txtLineNo.Properties.NullValuePrompt = "Please Enter Line Number";
-            this.txtLineNo.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtLineNo.Size = new System.Drawing.Size(251, 20);
-            this.txtLineNo.TabIndex = 3;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -162,17 +151,6 @@
             this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 49;
             this.label2.Text = "Dividing Plan No";
-            // 
-            // txtDividingPlanNo
-            // 
-            this.txtDividingPlanNo.EditValue = "";
-            this.txtDividingPlanNo.Location = new System.Drawing.Point(156, 27);
-            this.txtDividingPlanNo.Name = "txtDividingPlanNo";
-            this.txtDividingPlanNo.Properties.AccessibleDescription = "";
-            this.txtDividingPlanNo.Properties.NullValuePrompt = "Please Enter Dividing Plan Number";
-            this.txtDividingPlanNo.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtDividingPlanNo.Size = new System.Drawing.Size(251, 20);
-            this.txtDividingPlanNo.TabIndex = 1;
             // 
             // grdOperationList
             // 
@@ -208,11 +186,40 @@
             this.simpleButton1.TabIndex = 68;
             this.simpleButton1.Text = "Close";
             // 
+            // txtLineNo
+            // 
+            this.txtLineNo.Location = new System.Drawing.Point(824, 27);
+            this.txtLineNo.Name = "txtLineNo";
+            this.txtLineNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtLineNo.Properties.Items.AddRange(new object[] {
+            "V-1",
+            "V-2",
+            "V-3",
+            "V-4",
+            "V-5",
+            "V-6",
+            "V-7",
+            "V-8",
+            "V-9",
+            "Hi-Tech"});
+            this.txtLineNo.Size = new System.Drawing.Size(251, 20);
+            this.txtLineNo.TabIndex = 70;
+            // 
+            // txtDividingPlanNo
+            // 
+            this.txtDividingPlanNo.Location = new System.Drawing.Point(156, 27);
+            this.txtDividingPlanNo.Name = "txtDividingPlanNo";
+            this.txtDividingPlanNo.Size = new System.Drawing.Size(251, 20);
+            this.txtDividingPlanNo.TabIndex = 71;
+            // 
             // dlgdividingplan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 535);
+            this.Controls.Add(this.txtDividingPlanNo);
+            this.Controls.Add(this.txtLineNo);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.grdOperationList);
@@ -224,10 +231,8 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtTotalEmployee);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtLineNo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtDividingPlanNo);
             this.Name = "dlgdividingplan";
             this.Text = "Dividing Plan";
             this.Load += new System.EventHandler(this.dlgdividingplan_Load);
@@ -235,10 +240,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtProductionPerHour.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTarget.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotalEmployee.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLineNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDividingPlanNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOperationList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLineNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDividingPlanNo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,13 +259,13 @@
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.TextEdit txtTotalEmployee;
         private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.TextEdit txtLineNo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit txtDividingPlanNo;
         private DevExpress.XtraGrid.GridControl grdOperationList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.ComboBoxEdit txtLineNo;
+        private DevExpress.XtraEditors.TextEdit txtDividingPlanNo;
     }
 }

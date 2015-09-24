@@ -12,6 +12,7 @@ using ITRACK.models;
 using EFTesting.Reports;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid;
+using System.Diagnostics;
 
 namespace EFTesting.UI
 {
@@ -24,6 +25,9 @@ namespace EFTesting.UI
 
         StyleVM _StyleVM = new StyleVM();
         GenaricRepository<Style> _Stylerepository = new GenaricRepository<Style>(new ItrackContext());
+
+        GenaricRepository<OprationBarcodes> _OperationBarcode = new GenaricRepository<OprationBarcodes>(new ItrackContext());
+       
         Style _Style = new Style();
 
         private void SearchStyle()
@@ -154,7 +158,49 @@ namespace EFTesting.UI
 
         }
 
+
+
+        #region DayEND
+
+        public void GetProductionDaySummary(DateTime dayendDate) {
+
+            try {
+                var itemList = from items in _OperationBarcode.GetAll().ToList()
+                               
+                               where items.OprationRole == "In" && items.isOparationComplete == true && items.OprationComplteAt.Day == dayendDate.Day && items.OprationComplteAt.Month == dayendDate.Month && items.OprationComplteAt.Year == dayendDate.Year
+                              
+                               group items by new { items.OprationComplteAt.Date, items.LineNo, items.StyleNo, items.BundleDetails.BundleHeader.CuttingItem.Color, items.BundleDetails.BundleHeader.CuttingItem.Size } into ItemG
+                               
+                               select new {ItemG.Key.Date,ItemG.Key.LineNo,ItemG.Key.StyleNo,ItemG.Key.Color,ItemG.Key.Size, Count = ItemG.Sum(c => c.BundleDetails.NoOfItem) };
+
+
+                foreach (var items in itemList) {
+
+                    Debug.WriteLine("Date :" + items.Date.Date + " Line No - " + items.LineNo + " Style No " + items.StyleNo + " Color -" + items.Color + " Size -" + items.Size + " In - " + items.Count);
+                
+                }
+            }
+            catch(Exception ex){
+
+                Debug.WriteLine(ex.Message);
+
+            
+            }
+        
+        }
+
+        #endregion 
+
+       
+
         private void btnDelete_Click(object sender, EventArgs e)
+        {
+          //  GetProductionDaySummary(DateTime.Now);
+           // clsProductionSummary p = new clsProductionSummary();
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
 
         }

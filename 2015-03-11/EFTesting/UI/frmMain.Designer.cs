@@ -62,12 +62,20 @@
             this.barButtonItem16 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDayend = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
             this.masters = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.config = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.reports = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -233,9 +241,12 @@
             this.barButtonItem16,
             this.barButtonItem17,
             this.barButtonItem18,
-            this.barButtonItem19});
+            this.barButtonItem19,
+            this.btnDayend,
+            this.barButtonItem21,
+            this.barButtonItem23});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 17;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.masters,
@@ -367,6 +378,42 @@
             this.barButtonItem18.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
             // 
+            // barButtonItem19
+            // 
+            this.barButtonItem19.Caption = "Production Info";
+            this.barButtonItem19.Glyph = global::EFTesting.Properties.Resources.Checklist_icon;
+            this.barButtonItem19.Id = 16;
+            this.barButtonItem19.Name = "barButtonItem19";
+            this.barButtonItem19.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
+            // 
+            // btnDayend
+            // 
+            this.btnDayend.Caption = "Day End";
+            this.btnDayend.Glyph = global::EFTesting.Properties.Resources.Checklist_icon;
+            this.btnDayend.Id = 17;
+            this.btnDayend.Name = "btnDayend";
+            this.btnDayend.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnDayend.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDayend_ItemClick);
+            // 
+            // barButtonItem21
+            // 
+            this.barButtonItem21.Caption = "Po Deliveries";
+            this.barButtonItem21.Glyph = global::EFTesting.Properties.Resources.barcode_folded_icon;
+            this.barButtonItem21.Id = 18;
+            this.barButtonItem21.Name = "barButtonItem21";
+            this.barButtonItem21.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem21.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem21_ItemClick);
+            // 
+            // barButtonItem23
+            // 
+            this.barButtonItem23.Caption = "Hourly Production";
+            this.barButtonItem23.Glyph = global::EFTesting.Properties.Resources._55281;
+            this.barButtonItem23.Id = 19;
+            this.barButtonItem23.Name = "barButtonItem23";
+            this.barButtonItem23.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick);
+            // 
             // masters
             // 
             this.masters.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -388,6 +435,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem18);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem19);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnDayend);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // config
@@ -406,17 +454,38 @@
             // 
             // reports
             // 
+            this.reports.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup5});
             this.reports.Name = "reports";
             this.reports.Text = "Reports";
             // 
-            // barButtonItem19
+            // ribbonPageGroup5
             // 
-            this.barButtonItem19.Caption = "Production Info";
-            this.barButtonItem19.Glyph = global::EFTesting.Properties.Resources.Checklist_icon;
-            this.barButtonItem19.Id = 16;
-            this.barButtonItem19.Name = "barButtonItem19";
-            this.barButtonItem19.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem21);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem23);
+            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
+            // 
+            // barButtonItem20
+            // 
+            this.barButtonItem20.Caption = "Production Info";
+            this.barButtonItem20.Glyph = global::EFTesting.Properties.Resources.Checklist_icon;
+            this.barButtonItem20.Id = 16;
+            this.barButtonItem20.Name = "barButtonItem20";
+            this.barButtonItem20.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem9);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem10);
+            this.ribbonPageGroup4.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            // 
+            // barButtonItem22
+            // 
+            this.barButtonItem22.Caption = "Po Deliveries";
+            this.barButtonItem22.Id = 18;
+            this.barButtonItem22.Name = "barButtonItem22";
+            this.barButtonItem22.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // frmMain
             // 
@@ -481,5 +550,13 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem17;
         private DevExpress.XtraBars.BarButtonItem barButtonItem18;
         private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+        private DevExpress.XtraBars.BarButtonItem btnDayend;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem20;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem21;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem23;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem22;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

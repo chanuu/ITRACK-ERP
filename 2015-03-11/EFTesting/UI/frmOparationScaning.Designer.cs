@@ -64,6 +64,9 @@
             this.lblTextDisplay = new System.Windows.Forms.Label();
             this.chkOnlineScaning = new DevExpress.XtraEditors.CheckEdit();
             this.chkOfflineScaning = new DevExpress.XtraEditors.CheckEdit();
+            this.textfileOpen = new System.Windows.Forms.OpenFileDialog();
+            this.txtDate = new System.Windows.Forms.DateTimePicker();
+            this.txtTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.imgprofile.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeName.Properties)).BeginInit();
@@ -400,6 +403,7 @@
             this.simpleButton4.Size = new System.Drawing.Size(162, 39);
             this.simpleButton4.TabIndex = 76;
             this.simpleButton4.Text = "Upload ";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // simpleButton1
             // 
@@ -409,6 +413,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(162, 39);
             this.simpleButton1.TabIndex = 77;
             this.simpleButton1.Text = "Process";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // lblTextDisplay
             // 
@@ -436,11 +441,33 @@
             this.chkOfflineScaning.Size = new System.Drawing.Size(102, 19);
             this.chkOfflineScaning.TabIndex = 80;
             // 
+            // textfileOpen
+            // 
+            this.textfileOpen.FileName = "openFileDialog1";
+            // 
+            // txtDate
+            // 
+            this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDate.Location = new System.Drawing.Point(503, 505);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(184, 21);
+            this.txtDate.TabIndex = 81;
+            // 
+            // txtTime
+            // 
+            this.txtTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.txtTime.Location = new System.Drawing.Point(701, 505);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(184, 21);
+            this.txtTime.TabIndex = 82;
+            // 
             // frmOparationScaning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 569);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.chkOfflineScaning);
             this.Controls.Add(this.chkOnlineScaning);
             this.Controls.Add(this.lblTextDisplay);
@@ -539,5 +566,8 @@
         private System.Windows.Forms.Label lblTextDisplay;
         private DevExpress.XtraEditors.CheckEdit chkOnlineScaning;
         private DevExpress.XtraEditors.CheckEdit chkOfflineScaning;
+        private System.Windows.Forms.OpenFileDialog textfileOpen;
+        private System.Windows.Forms.DateTimePicker txtDate;
+        private System.Windows.Forms.DateTimePicker txtTime;
     }
 }

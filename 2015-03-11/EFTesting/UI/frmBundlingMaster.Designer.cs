@@ -69,6 +69,7 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -302,7 +303,7 @@
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 74;
-            this.simpleButton4.Text = "Genarate";
+            this.simpleButton4.Text = "Print";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // grdBundleTicket
@@ -457,6 +458,7 @@
             this.txtSearchBox.Size = new System.Drawing.Size(285, 20);
             this.txtSearchBox.TabIndex = 47;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
+            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
             // simpleButton1
             // 
@@ -502,7 +504,7 @@
             this.grdSearch.Location = new System.Drawing.Point(9, 50);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1164, 36);
+            this.grdSearch.Size = new System.Drawing.Size(1164, 102);
             this.grdSearch.TabIndex = 63;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -530,6 +532,7 @@
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "frmBundlingMaster";
             this.Text = "Bundling Master";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmBundlingMaster_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
@@ -602,5 +605,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

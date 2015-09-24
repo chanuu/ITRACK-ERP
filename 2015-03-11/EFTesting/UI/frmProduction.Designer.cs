@@ -52,6 +52,7 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -283,6 +284,7 @@
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 50;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnNew
             // 
@@ -299,7 +301,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(12, 57);
             this.grdSearchStyle.MainView = this.gridView2;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(1000, 143);
+            this.grdSearchStyle.Size = new System.Drawing.Size(1000, 419);
             this.grdSearchStyle.TabIndex = 57;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -311,11 +313,21 @@
             this.gridView2.GridControl = this.grdSearchStyle;
             this.gridView2.Name = "gridView2";
             // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(855, 25);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(75, 13);
+            this.lblResult.TabIndex = 58;
+            this.lblResult.Text = "Garment Type";
+            // 
             // frmProduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 618);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.grdSearchStyle);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClose);
@@ -342,6 +354,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -371,5 +384,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl grdSearchStyle;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.Label lblResult;
     }
 }

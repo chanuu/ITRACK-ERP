@@ -11,6 +11,7 @@
     <AssemblyName>ITRACK.models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -20,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -55,8 +58,12 @@
     <Compile Include="Buyer.cs" />
     <Compile Include="clsTempOpration.cs" />
     <Compile Include="company.cs" />
+    <Compile Include="ConnectionDetails.cs" />
     <Compile Include="CuttingHeader.cs" />
     <Compile Include="CuttingItem.cs" />
+    <Compile Include="CuttingSummary.cs" />
+    <Compile Include="Dayend.cs" />
+    <Compile Include="DayendHeader.cs" />
     <Compile Include="DividingPlan.cs" />
     <Compile Include="DividingPlanItem.cs" />
     <Compile Include="DividingPlanTemp.cs" />
@@ -66,7 +73,18 @@
     <Compile Include="GenaricRepository.cs" />
     <Compile Include="group.cs" />
     <Compile Include="IGenaricRepository.cs" />
+    <Compile Include="IndividualProductionSummery.cs" />
     <Compile Include="ItrackContextInitializer.cs" />
+    <Compile Include="LayinDetails.cs" />
+    <Compile Include="Migrations\201508100342084_InitialCreate.cs" />
+    <Compile Include="Migrations\201508100342084_InitialCreate.Designer.cs">
+      <DependentUpon>201508100342084_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509070730568_Add-PoNo.cs" />
+    <Compile Include="Migrations\201509070730568_Add-PoNo.Designer.cs">
+      <DependentUpon>201509070730568_Add-PoNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NestedExpression.cs" />
     <Compile Include="OperationPool.cs" />
     <Compile Include="OprationBarcodes.cs" />
@@ -90,6 +108,56 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201508100342084_InitialCreate.resx">
+      <DependentUpon>201508100342084_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509070730568_Add-PoNo.resx">
+      <DependentUpon>201509070730568_Add-PoNo.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-document-edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-contact-folded-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode-folded-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-contact-folded-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checklist-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clipboard-Plan-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder-Accept-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-folded-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\share-folded-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VideoBlend-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

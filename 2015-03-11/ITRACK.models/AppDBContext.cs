@@ -16,7 +16,7 @@ namespace ITRACK.models
             : base("AppDbContext")
         {
             //Create database always, even If exists
-            Database.SetInitializer<ItrackContext>(new ItrackContextInitializer());
+          //  Database.SetInitializer<ItrackContext>(new ItrackContextInitializer());
         }
 
       
@@ -85,6 +85,18 @@ namespace ITRACK.models
 
 
         public DbSet<OprationBarcodes> OprationBarcodes { get; set; }
+
+        public DbSet<DayendHeader> DayendHeader { get; set; }
+
+        public DbSet<Dayend> Dayend { get; set; }
+
+        public DbSet<IndividualProductionSummery> IndividualProductionSummery { get; set; }
+
+        public DbSet<LayinDetails> LayinDetails { get; set; }
+
+
+
+
 
 
         public DbSet<DividingPlanTemp> DividingPlanTemp { get; set; }

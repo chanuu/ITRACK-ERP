@@ -72,6 +72,7 @@
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -105,15 +106,16 @@
             // btnClose
             // 
             this.btnClose.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnClose.Location = new System.Drawing.Point(780, 25);
+            this.btnClose.Location = new System.Drawing.Point(871, 25);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
             this.btnClose.TabIndex = 13;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtSearchBox
             // 
             this.txtSearchBox.EditValue = "";
-            this.txtSearchBox.Location = new System.Drawing.Point(489, 35);
+            this.txtSearchBox.Location = new System.Drawing.Point(580, 35);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Properties.AccessibleDescription = "";
             this.txtSearchBox.Properties.NullText = "Please Enter Buyer Name";
@@ -127,7 +129,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton1.Location = new System.Drawing.Point(393, 24);
+            this.simpleButton1.Location = new System.Drawing.Point(484, 24);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
             this.simpleButton1.TabIndex = 11;
@@ -551,7 +553,7 @@
             this.grdSearch.Location = new System.Drawing.Point(29, 66);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1031, 393);
+            this.grdSearch.Size = new System.Drawing.Size(1031, 373);
             this.grdSearch.TabIndex = 49;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -562,11 +564,22 @@
             this.gridView1.GridControl = this.grdSearch;
             this.gridView1.Name = "gridView1";
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Image = global::EFTesting.Properties.Resources.update;
+            this.btnPrint.Location = new System.Drawing.Point(394, 24);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(85, 39);
+            this.btnPrint.TabIndex = 50;
+            this.btnPrint.Text = "Print";
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // frmDividingPlan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 568);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.grdSearch);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.btnDelete);
@@ -653,5 +666,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.SimpleButton btnPrint;
     }
 }

@@ -223,7 +223,7 @@
             this.grdOpList.Location = new System.Drawing.Point(148, 93);
             this.grdOpList.MainView = this.gridView2;
             this.grdOpList.Name = "grdOpList";
-            this.grdOpList.Size = new System.Drawing.Size(788, 196);
+            this.grdOpList.Size = new System.Drawing.Size(788, 261);
             this.grdOpList.TabIndex = 58;
             this.grdOpList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 352);
+            this.ClientSize = new System.Drawing.Size(948, 390);
             this.Controls.Add(this.grdOpList);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
