@@ -20,10 +20,10 @@ namespace EFTesting.ViewModel
        BundleDetails _bandleDetails = new BundleDetails();
        OprationBarcodes _barcode = new OprationBarcodes();
 
-       public bool genarateBundle(int _noOfLayer,int _noOfItem,int _bundleSize,string _styleNo) {
+       public bool genarateBundle(int _noOfLayer,int _noOfItem,int _bundleSize) {
            try {
 
-               LastBundleNo = GetLastBundleNo(_styleNo);
+               LastBundleNo = GetLastBundleNo();
                NoOfBundle = _noOfLayer / _bundleSize;
 
                Remain = _noOfLayer -  NoOfBundle * _bundleSize;
@@ -97,7 +97,6 @@ namespace EFTesting.ViewModel
                _bandle.BundleStickerPrintedBy = "None";
                _bandle.BundleStickerPrintedTime = "None";
                _bandle.BundleTagPrintedBy = "None";
-             
 
 
                _BundleDetails.Insert(_bandle);
@@ -133,11 +132,11 @@ namespace EFTesting.ViewModel
        /// 
        /// </summary>
        /// <returns></returns>
-       private int GetLastBundleNo(string _styleNo) {
+       private int GetLastBundleNo() {
            try {
 
                GenaricRepository<BundleDetails> _BundleDetails = new GenaricRepository<BundleDetails>(new ItrackContext());
-               return Convert.ToInt16(_BundleDetails.GetAll().Where(y => y.BundleHeader.CuttingItem.CuttingHeader.StyleID== _styleNo  ).OrderBy(x=>x.BundleDetailsID).ToList().Last().SerailNo);
+               return Convert.ToInt16(_BundleDetails.GetAll().ToList().Last().SerailNo);
            }
            catch(Exception ex){
                Debug.WriteLine(ex.Message);
@@ -165,20 +164,8 @@ namespace EFTesting.ViewModel
        }
 
 
+       
 
-       private string GetOprationRole(string _OprationNo) {
-           try {
-               GenaricRepository<OperationPool> _oprationRepo = new GenaricRepository<OperationPool>(new ItrackContext());
-               Debug.WriteLine(_oprationRepo.GetAll().ToList().Where(x => x.OperationPoolID == _OprationNo).Last().OprationRole);
-               return  _oprationRepo.GetAll().ToList().Where(x => x.OperationPoolID == _OprationNo).Last().OprationRole;
-
- 
-           }
-           catch(Exception ex){
-               Debug.WriteLine(ex.Message);
-               return "";
-           }
-       }
       
 
        /// <summary>
@@ -218,17 +205,14 @@ namespace EFTesting.ViewModel
                        int currentTagNo = 0;
                        bool needSave = false;
 
-                       foreach (var item in _DividingPlanItemRepo.GetAll().Where(x => x.DividingPlanHeaderID == dividingheaderID).OrderBy(x => x.PartName).ToList())
+                       foreach (var item in _DividingPlanItemRepo.GetAll().OrderBy(x=>x.PartName).ToList())
                        {
 
                            GenaricRepository<OprationBarcodes> _OprationTagsRepo = new GenaricRepository<OprationBarcodes>(new ItrackContext());
 
-                           _barcode.OprationBarcodesID = LastTagNo.ToString().PadLeft(6, '0');
+                           _barcode.OprationBarcodesID = LastTagNo.ToString().PadLeft(14, '0');
                            _barcode.OprationNO = item.OprationNo;
-                        //   _barcode.OprationRole =  GetOprationRole(_barcode.OprationNO);
-
-                           _barcode.OprationRole = "None";
-                           
+                           _barcode.OprationRole = "";
                            _barcode.OprationGrade = "A";
                            _barcode.PartName = item.PartName;
                            _barcode.OparationName = item.OprationName;
@@ -236,12 +220,8 @@ namespace EFTesting.ViewModel
                            _barcode.isOparationComplete = false;
                            _barcode.OprationComplteAt = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                            _barcode.BundleDetailsID = _bundleDetails.BundleDetailsID;
-                           _barcode.StyleNo = _style;
-                           _barcode.LineNo = _LineNo;
-                           _barcode.OperationPoolID = item.OprationNo;
-                           _barcode.WorkstationNo = item.WorkstationNo;
 
-                           barList.Add( new OprationBarcodes(_barcode.OprationBarcodesID,_barcode.LineNo,_barcode.StyleNo, _barcode.OprationNO, _barcode.OparationName, _barcode.OprationGrade, _barcode.OprationRole, _barcode.PartName, _barcode.isOparationComplete, _barcode.OprationComplteAt, _barcode.EmployeeID, _barcode.BundleDetailsID,_barcode.OperationPoolID,"0", item.WorkstationNo));
+                           barList.Add( new OprationBarcodes(_barcode.OprationBarcodesID, _barcode.OprationNO, _barcode.OparationName, _barcode.OprationGrade, _barcode.OprationRole, _barcode.PartName, _barcode.isOparationComplete, _barcode.OprationComplteAt, _barcode.EmployeeID, _barcode.BundleDetailsID));
                         //   barList.Add(_barcode);
 
 
@@ -329,11 +309,11 @@ namespace EFTesting.ViewModel
        /// <param name="_bundleSize"></param>
        /// <param name="_bandleHeader"></param>
        /// <returns></returns>
-       public bool GenrateBundleTags(int _noOfLayer, int _noOfItem, int _bundleSize,Int64 _bandleHeader,string _styneNo,string _lineNo,List<OprationBarcodes> list,string _styleNo)
+       public bool GenrateBundleTags(int _noOfLayer, int _noOfItem, int _bundleSize,Int64 _bandleHeader,string _styneNo,string _lineNo,List<OprationBarcodes> list)
        {
            try {
 
-               LastBundleNo = GetLastBundleNo(_styleNo);
+               LastBundleNo = GetLastBundleNo();
                LastCutNo = GetLastCutNo();
                NoOfBundle = _noOfLayer / _bundleSize;
 
@@ -370,7 +350,6 @@ namespace EFTesting.ViewModel
                       // Debug.WriteLine("Bundle No :" + LastBundleNo.ToString().PadLeft(10, '0') + "    No Of Item :" + _bundleSize + "  Cut No :" + i);
                        _bandleDetails.CutNo = LastCutNo;
                        _bandleDetails.SerailNo = LastBundleNo.ToString().PadLeft(10, '0');
-                       _bandleDetails.BundleNo = Convert.ToInt32(LastBundleNo);
                        _bandleDetails.NoOfItem = _bundleSize;
 
                        // add Bundle Details 
@@ -391,7 +370,6 @@ namespace EFTesting.ViewModel
                     //   Debug.WriteLine("Bundle No :" + LastBundleNo.ToString().PadLeft(10, '0') + "    No Of Item :" + Remain + "  Cut No :" + i);
                        _bandleDetails.CutNo = LastCutNo;
                        _bandleDetails.SerailNo = LastBundleNo.ToString().PadLeft(10, '0');
-                       _bandleDetails.BundleNo =Convert.ToInt32(LastBundleNo);
                        _bandleDetails.NoOfItem = Remain;
                       // add bundle details of small bundle 
                        addBundleDetails(_bandleDetails, _bandleHeader);

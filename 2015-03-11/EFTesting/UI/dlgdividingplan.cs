@@ -55,12 +55,12 @@ namespace EFTesting.UI
 
                 GenaricRepository<DividingPlanHeader> _dHeaderRepo = new GenaricRepository<DividingPlanHeader>(new ItrackContext());
                 DividingPlanHeader dHeader = new DividingPlanHeader();
-                dHeader.LineNo = txtLineNo.Text;
+                dHeader.LineNo = this.LineNo;
                 dHeader.ProductionPerHour =Convert.ToInt16( txtProductionPerHour.Text);
                 dHeader.StyleID = txtStyleNo.Text;
                 dHeader.TotalEmployee =Convert.ToInt16( txtTotalEmployee.Text);
                 dHeader.Target =Convert.ToInt16(txtTarget.Text);
-
+                
                 _dHeaderRepo.Add(dHeader);
 
                 dHeader.DividingPlanheaderID = _dHeaderRepo.GetAll().ToList().Last().DividingPlanheaderID;

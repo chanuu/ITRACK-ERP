@@ -206,7 +206,6 @@ namespace MyTeamApp
                 catch(Exception ex){
                     t.SMV = 0;
                     t.SMVType = _SMVtype;
-                    Debug.WriteLine(ex.Message);
                 }
                  
                    // D ebug.WriteLine(opration);
@@ -226,7 +225,6 @@ namespace MyTeamApp
                      catch(Exception ex){
                          t.SMV = 0;
                          t.SMVType = _SMVtype;
-                         Debug.WriteLine(ex.Message);
                      }
                 
                    // D ebug.WriteLine(opration);
@@ -412,7 +410,6 @@ namespace MyTeamApp
                         {
                             temp.SMV = "0";
                             temp.SMVType = temp.SMVType;
-                            Debug.WriteLine(ex.Message);
                         }
 
                         // D ebug.WriteLine(opration);
@@ -435,7 +432,6 @@ namespace MyTeamApp
                         {
                             temp.SMV = "0";
                             temp.SMVType = temp.SMVType;
-                            Debug.WriteLine(ex.Message);
                         }
 
                         // D ebug.WriteLine(opration);

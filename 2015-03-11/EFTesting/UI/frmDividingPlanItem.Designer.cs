@@ -211,9 +211,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 25);
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(30, 38);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(183, 13);
+            this.label8.Size = new System.Drawing.Size(213, 13);
             this.label8.TabIndex = 57;
             this.label8.Text = "Add / Edit Operation To Dividing Plan";
             // 
@@ -223,7 +224,7 @@
             this.grdOpList.Location = new System.Drawing.Point(148, 93);
             this.grdOpList.MainView = this.gridView2;
             this.grdOpList.Name = "grdOpList";
-            this.grdOpList.Size = new System.Drawing.Size(788, 261);
+            this.grdOpList.Size = new System.Drawing.Size(788, 196);
             this.grdOpList.TabIndex = 58;
             this.grdOpList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -238,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 390);
+            this.ClientSize = new System.Drawing.Size(948, 352);
             this.Controls.Add(this.grdOpList);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);

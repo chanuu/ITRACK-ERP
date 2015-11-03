@@ -37,19 +37,14 @@ namespace EFTesting.UI
 
         public string  DividingPlanHeaderID { get; set; }
 
-        public string PartName { get; set; }
 
-       
-
-        int _dividingPanID;
         public frmDividingPlanItem(int _divdinPlanHeader) {
 
             this.DividingPlanID = _divdinPlanHeader;
-            _dividingPanID = _divdinPlanHeader;
             InitializeComponent();
         }
 
-        public frmDividingPlanItem(int _dPlanId,string _oprationNo, string _oprationName,string _smvType,string _machineType,double _smv,string _dHeaderID,string _partName) {
+        public frmDividingPlanItem(int _dPlanId,string _oprationNo, string _oprationName,string _smvType,string _machineType,double _smv,string _dHeaderID) {
             this.DividingPlanID = _dPlanId;
             this.OprationNo = _oprationNo;
             this.OprationName = _oprationName;
@@ -57,7 +52,6 @@ namespace EFTesting.UI
             this.MachineType = _machineType;
             this.SMV = _smv;
             this.DividingPlanHeaderID = _dHeaderID;
-            this.PartName = _partName;
            
             InitializeComponent();
         }
@@ -73,14 +67,7 @@ namespace EFTesting.UI
         {
             try {
                  DividingPlanItem _item = new DividingPlanItem();
-                 if (_item.DividingPlanHeaderID != 0)
-                 {
-                     _item.DividingPlanHeaderID = Convert.ToInt16(this.DividingPlanHeaderID);
-                 }
-                 else {
-                     _item.DividingPlanHeaderID = _dividingPanID;
-                 }
-                 
+                _item.DividingPlanHeaderID =Convert.ToInt16(this.DividingPlanHeaderID);
                 _item.DividingPlanItemID = this.DividingPlanID;
                 _item.OprationNo = txtOprationNo.Text;
                 _item.OprationName = txtoprationName.Text;
@@ -107,7 +94,6 @@ namespace EFTesting.UI
                 return true;
             }
             catch(Exception ex){
-                Debug.WriteLine(ex.Message);
                 return false;
             }
         }
@@ -259,7 +245,6 @@ namespace EFTesting.UI
             cmbMachineType.Text = this.MachineType;
             cmbSmvType.Text = this.SMVType;
             txtSMV.Text =Convert.ToString(this.SMV);
-            txtPartName.Text = this.PartName;
            
             grdOpList.Hide();
             
@@ -355,30 +340,9 @@ namespace EFTesting.UI
             }
         }
 
-
-        void clear() {
-            try {
-                txtoprationName.Text = "";
-                txtPartName.Text = "";
-                txtSMV.Text = "";
-                txtPartName.Text = "";
-                cmbMachineType.Text ="";
-                cmbSmvType.Text = "";
-                txtOprationNo.Focus();
-
-            }
-            catch(Exception ex){
-            
-            }
-        
-        }
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            if (isValidDividingPlanItem() == true)
-            {
-                AddItem();
-                clear();
-            }
+
         }
     }
 }

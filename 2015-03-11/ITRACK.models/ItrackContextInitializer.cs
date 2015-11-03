@@ -16,16 +16,7 @@ namespace ITRACK.models
                 new Group { GroupName ="Vougue Tex",Address="address",TeleNo="077426888" ,FaxNo="011252325",GroupID="VT" }
               
             };
-
-
-            var workflow = new List<Workflow>
-            {
-                new Workflow { WorkflowID =1,WorkflowName ="None",Remark = ""}
-              
-            };
-            workflow.ForEach(s => context.Workflow.Add(s));
-
-
+            group.ForEach(s => context.Group.Add(s));
             context.SaveChanges();
         }
     }

@@ -197,8 +197,6 @@ namespace EFTesting.UI
             if (isValidPoItem() == true)
             {
                 AddPOItems();
-                frmPurchaseOrder PO_ = new frmPurchaseOrder(txtPoNo.Text);
-                PO_.RefreshGrid();
                 this.Close();
             }
             
@@ -207,8 +205,7 @@ namespace EFTesting.UI
         private void btnEdit_Click(object sender, EventArgs e)
         {
             EditPOItems();
-            frmPurchaseOrder PO_ = new frmPurchaseOrder(txtPoNo.Text);
-            PO_.RefreshGrid();
+            POUI.RefreshGrid();
         }
 
         private void PoItemsDialog_FormClosing(object sender, FormClosingEventArgs e)

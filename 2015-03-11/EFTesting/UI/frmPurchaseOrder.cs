@@ -21,13 +21,6 @@ namespace EFTesting.UI
             InitializeComponent();
         }
 
-        public string PoNo { get; set; }
-        public frmPurchaseOrder(string poNo)
-        {
-            this.PoNo = poNo;
-            InitializeComponent();
-        }
-
         #region Initialization
 
         GenaricRepository<Company> _CompanyRepository = new GenaricRepository<Company>(new ItrackContext());
@@ -322,12 +315,8 @@ namespace EFTesting.UI
       public void RefreshGrid() {
 
 
-          var datasource = from item in GetPoItemsByIDRefesh(this.PoNo) select new { item.PurchaseOrderHeaderID, item.Color, item.Size, item.Length, item.Quantity };
-           
+          var datasource = from item in GetPoItemsByIDRefesh(txtPoNo.Text) select new { item.PurchaseOrderHeaderID, item.Color, item.Size, item.Length, item.Quantity };
             grdPoItems.DataSource = datasource;
-            grdPoItems.Refresh();
-            grdPoItems.RefreshDataSource();
-
         
         }
 

@@ -205,6 +205,7 @@ namespace EFTesting.UI
 
 
                 //create expression 
+                splashScreenManager1.ShowWaitForm();
                 ParameterExpression argParam = Expression.Parameter(typeof(Employee), "s");
                 Expression nameProperty = Expression.Property(argParam, "EmployeeID");
                 Expression namespaceProperty = Expression.Property(argParam, "FullName");
@@ -237,7 +238,7 @@ namespace EFTesting.UI
                 }
 
 
-
+                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
@@ -347,51 +348,6 @@ namespace EFTesting.UI
 
         }
 
-
-
-        private void GetPromotion(string Id)
-        {
-            try
-            {
-              GenaricRepository<Promotion> _PromotionRepository = new GenaricRepository<Promotion>(new ItrackContext());
-              var selected =   _PromotionRepository.GetAll().Where(x => x.EmployeeID == Id).ToList();
-
-              grdPromotion.DataSource = from item in selected select new { item.PromotionID,  item.FromDesignation, item.ToDesignation, item.PromotedDate, item.JobDescription, item.Remark };
-              gridView1.Columns["PromotionID"].Visible = false;
-            }
-            catch(Exception ex){
-            
-            }
-        }
-
-        Promotion Promotion = new Promotion();
-        private void GetPromotionDetails (string _empId){
-            try
-            {
-              int Id =  Convert.ToInt16(gridView1.GetFocusedRowCellValue("PromotionID").ToString());
-                GenaricRepository<Promotion> _PromotionRepository = new GenaricRepository<Promotion>(new ItrackContext());
-
-               var result =   _PromotionRepository.GetAll().Where(x => x.EmployeeID == _empId).ToList();
-
-               foreach (var item in result.Where(x => x.PromotionID == Id))
-               {
-                    
-                    Promotion.EmployeeID = item.EmployeeID;
-                    Promotion.PromotionID = item.PromotionID;
-                    Promotion.FromDesignation = item.FromDesignation;
-                    Promotion.ToDesignation = item.ToDesignation;
-                    Promotion.JobDescription = item.JobDescription;
-                    Promotion.Remark = item.Remark;
-                    Promotion.PromotedDate = item.PromotedDate;
-                }
-               
-            }
-            catch(Exception ex){
-                Debug.WriteLine(ex.Message);
-            }
-        
-        }
-
         #endregion
 
 
@@ -451,7 +407,7 @@ namespace EFTesting.UI
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            frmPromotion promotion = new frmPromotion(txtEmployeeID.Text);
+            frmPromotion promotion = new frmPromotion();
             promotion.ShowDialog();
         }
 
@@ -487,7 +443,6 @@ namespace EFTesting.UI
         {
             _Employee.EmployeeID = gridView3.GetFocusedRowCellValue("EmployeeID").ToString();
             getEmployeeFeild(_Employee.EmployeeID);
-            GetPromotion(_Employee.EmployeeID);
             grdSearch.Hide();
             txtSearchBox.Hide();
             btnClose.Hide();
@@ -519,13 +474,6 @@ namespace EFTesting.UI
         {
             Clear();
             txtEmployeeID.Focus();
-        }
-
-        private void simpleButton2_Click(object sender, EventArgs e)
-        {
-            GetPromotionDetails(txtEmployeeID.Text);
-            frmPromotion promotion = new frmPromotion(Promotion,this);
-            promotion.ShowDialog();
         }
 
        

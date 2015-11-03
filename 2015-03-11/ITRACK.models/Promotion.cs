@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,18 +8,14 @@ namespace ITRACK.models
 {
   public  class Promotion
     {
+        public int PromotionID { get; set; }
 
-      [Key]
-       public int PromotionID { get; set; }
+        public string Designation { get; set; }
 
-        public string FromDesignation { get; set; }
+        public DateTime fromDate { get; set; }
 
-        public string ToDesignation { get; set; }
+        public DateTime ToDate { get; set; }
 
-        public DateTime PromotedDate { get; set; }
-
-
-        public string JobDescription { get; set; }
 
         public string Remark { get; set; }
 

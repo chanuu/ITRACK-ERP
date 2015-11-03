@@ -333,6 +333,16 @@ namespace EFTesting.UI
 
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
 
     }
 }

@@ -139,9 +139,7 @@ namespace EFTesting.UI
 
         private void SearchStyle() {
             try {
-                splashScreenManager1.ShowWaitForm();
                 _StyleVM.SearchStyle(grdSearchStyle, txtSearchBox, btnClose);
-                splashScreenManager1.CloseWaitForm();
             }
             catch(Exception ex){
                 MessageBox.Show(ex.Message, "Error - B-0002", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -153,9 +151,7 @@ namespace EFTesting.UI
         {
             try
             {
-                splashScreenManager1.ShowWaitForm();
                 _Stylerepository.Add(AssignStyle());
-                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
@@ -169,10 +165,8 @@ namespace EFTesting.UI
 
             try
             {
-                splashScreenManager1.ShowWaitForm();
                 GenaricRepository<Style> _genaricrepositoryStylenew = new GenaricRepository<Style>(new ItrackContext());
                 await _genaricrepositoryStylenew.EditAsync(AssignStyle());
-                splashScreenManager1.CloseWaitForm();
             }
             catch (Exception ex)
             {
@@ -367,9 +361,6 @@ namespace EFTesting.UI
             
         }
 
-
-     
-
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             SearchStyle();
@@ -392,7 +383,6 @@ namespace EFTesting.UI
         {
             if (e.KeyData == Keys.Enter)
             {
-                splashScreenManager1.ShowWaitForm();
                 _Style.StyleID = gridView2.GetFocusedRowCellValue("StyleID").ToString();
                 getStyleFeild(_Style.StyleID);
                 GetFabricList(_Style.StyleID);
@@ -400,7 +390,6 @@ namespace EFTesting.UI
                 btnClose.Hide();
                 txtSearchBox.Hide();
                 grdSearchBuyer.Hide();
-                splashScreenManager1.CloseWaitForm();
             }
 
 
