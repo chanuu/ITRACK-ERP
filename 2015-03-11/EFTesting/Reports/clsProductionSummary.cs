@@ -227,7 +227,7 @@ namespace EFTesting.Reports
                await Task.Run(() =>
                {
                  //
-                   GetProductionDaySummary(DateTime.Now);
+                 //  GetProductionDaySummary(DateTime.Now);
                    
 
                    AddIndividualProductionSummary(_now);

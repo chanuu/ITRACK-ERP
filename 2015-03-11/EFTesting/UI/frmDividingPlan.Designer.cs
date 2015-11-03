@@ -53,6 +53,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtDividingPlanNo = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
             this.label5 = new System.Windows.Forms.Label();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
@@ -354,6 +355,7 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.simpleButton6);
             this.xtraTabPage2.Controls.Add(this.label5);
             this.xtraTabPage2.Controls.Add(this.textEdit2);
             this.xtraTabPage2.Controls.Add(this.label3);
@@ -368,11 +370,22 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(992, 472);
             this.xtraTabPage2.Text = "Oparation";
             // 
+            // simpleButton6
+            // 
+            this.simpleButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.simpleButton6.Image = global::EFTesting.Properties.Resources.save;
+            this.simpleButton6.Location = new System.Drawing.Point(108, 402);
+            this.simpleButton6.Name = "simpleButton6";
+            this.simpleButton6.Size = new System.Drawing.Size(85, 39);
+            this.simpleButton6.TabIndex = 92;
+            this.simpleButton6.Text = "List";
+            this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
+            // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(476, 430);
+            this.label5.Location = new System.Drawing.Point(566, 430);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 91;
@@ -382,7 +395,7 @@
             // 
             this.textEdit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textEdit2.EditValue = "";
-            this.textEdit2.Location = new System.Drawing.Point(476, 407);
+            this.textEdit2.Location = new System.Drawing.Point(566, 407);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.AccessibleDescription = "";
             this.textEdit2.Properties.NullText = "Please Enter Buyer Name";
@@ -395,7 +408,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(291, 430);
+            this.label3.Location = new System.Drawing.Point(381, 430);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 89;
@@ -405,7 +418,7 @@
             // 
             this.textEdit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(291, 407);
+            this.textEdit1.Location = new System.Drawing.Point(381, 407);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.AccessibleDescription = "";
             this.textEdit1.Properties.NullText = "Please Enter Buyer Name";
@@ -418,7 +431,7 @@
             // 
             this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.simpleButton3.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton3.Location = new System.Drawing.Point(200, 402);
+            this.simpleButton3.Location = new System.Drawing.Point(290, 402);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(85, 39);
             this.simpleButton3.TabIndex = 88;
@@ -437,7 +450,7 @@
             // 
             this.simpleButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.simpleButton2.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton2.Location = new System.Drawing.Point(109, 402);
+            this.simpleButton2.Location = new System.Drawing.Point(199, 402);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(85, 39);
             this.simpleButton2.TabIndex = 41;
@@ -553,7 +566,7 @@
             this.grdSearch.Location = new System.Drawing.Point(29, 66);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1031, 373);
+            this.grdSearch.Size = new System.Drawing.Size(1031, 421);
             this.grdSearch.TabIndex = 49;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -667,5 +680,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label12;
         private DevExpress.XtraEditors.SimpleButton btnPrint;
+        private DevExpress.XtraEditors.SimpleButton simpleButton6;
     }
 }

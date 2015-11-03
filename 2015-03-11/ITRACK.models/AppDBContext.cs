@@ -12,11 +12,14 @@ namespace ITRACK.models
 
     {
 
+        
         public ItrackContext()
             : base("AppDbContext")
         {
             //Create database always, even If exists
           //  Database.SetInitializer<ItrackContext>(new ItrackContextInitializer());
+            Configuration.AutoDetectChangesEnabled = false;
+          
         }
 
       

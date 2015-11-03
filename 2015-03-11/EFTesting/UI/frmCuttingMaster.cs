@@ -567,8 +567,9 @@ namespace EFTesting.UI
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             SearchCuttingHeader();
-
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -966,8 +967,8 @@ namespace EFTesting.UI
       private List<CutReport> GetList() {
           GenaricRepository<CuttingItem> _CuttingItemRepo = new GenaricRepository<CuttingItem>(new ItrackContext());
           List<CutReport> lst = new List<CutReport>();
-          foreach (var item in _CuttingItemRepo.GetAll().ToList()) {
-              lst.Add(new CutReport { Date= item.Date,LineNo = item.LineNo,Color=item.Color,Size=item.Size,Pcs=item.NoOfItem});
+          foreach (var item in _CuttingItemRepo.GetAll().ToList().Where(x=>x.CuttingHeader.StyleID==txtStyleNo.Text)) {
+              lst.Add(new CutReport {StyleNo=item.CuttingHeader.StyleID, Date= item.Date,LineNo = item.LineNo,Color=item.Color,Size=item.Size,Pcs=item.NoOfItem});
           }
           return lst;
       }

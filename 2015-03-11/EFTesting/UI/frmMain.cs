@@ -24,6 +24,8 @@ namespace EFTesting.UI
         {
             DevExpress.UserSkins.TouchSkins.Register();
             DevExpress.UserSkins.BonusSkins.Register();
+            
+            ribbonControl1.Minimized = true;
 
             
         }
@@ -176,6 +178,30 @@ namespace EFTesting.UI
         {
             frmHourlyProductionDialog dialog = new frmHourlyProductionDialog();
             dialog.ShowDialog();
+        }
+
+        private void barButtonItem27_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmHourlyProductionOut dialog = new frmHourlyProductionOut();
+            dialog.ShowDialog();
+        }
+
+        private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            UI.frmScaningTimeScadual objfrmMChild = new UI.frmScaningTimeScadual();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+            splashScreenManager1.CloseWaitForm();
+        }
+
+        private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            UI.frmOfflineScaning objfrmMChild = new UI.frmOfflineScaning();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+            splashScreenManager1.CloseWaitForm();
         }
     }
 }

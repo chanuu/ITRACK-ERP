@@ -66,6 +66,8 @@
             this.btnDayend = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem23 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
             this.masters = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.config = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -76,6 +78,11 @@
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem22 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem24 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem25 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem26 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
@@ -244,9 +251,12 @@
             this.barButtonItem19,
             this.btnDayend,
             this.barButtonItem21,
-            this.barButtonItem23});
+            this.barButtonItem23,
+            this.barButtonItem27,
+            this.barButtonItem28,
+            this.barButtonItem30});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 20;
+            this.ribbonControl1.MaxItemId = 23;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.masters,
@@ -414,6 +424,22 @@
             this.barButtonItem23.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem23.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem23_ItemClick);
             // 
+            // barButtonItem27
+            // 
+            this.barButtonItem27.Caption = "barButtonItem27";
+            this.barButtonItem27.Id = 20;
+            this.barButtonItem27.Name = "barButtonItem27";
+            this.barButtonItem27.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem27_ItemClick);
+            // 
+            // barButtonItem28
+            // 
+            this.barButtonItem28.Caption = "Scaning Time Setup";
+            this.barButtonItem28.Glyph = global::EFTesting.Properties.Resources.Checklist_icon;
+            this.barButtonItem28.Id = 21;
+            this.barButtonItem28.Name = "barButtonItem28";
+            this.barButtonItem28.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem28.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem28_ItemClick);
+            // 
             // masters
             // 
             this.masters.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -434,6 +460,7 @@
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem16);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem17);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem18);
+            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem30);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem19);
             this.ribbonPageGroup2.ItemLinks.Add(this.btnDayend);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
@@ -450,6 +477,7 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem9);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem10);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem11);
+            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem28);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             // 
             // reports
@@ -463,6 +491,7 @@
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem21);
             this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem23);
+            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem27);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // barButtonItem20
@@ -486,6 +515,47 @@
             this.barButtonItem22.Id = 18;
             this.barButtonItem22.Name = "barButtonItem22";
             this.barButtonItem22.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem24
+            // 
+            this.barButtonItem24.Caption = "Hourly Production";
+            this.barButtonItem24.Glyph = global::EFTesting.Properties.Resources._55281;
+            this.barButtonItem24.Id = 19;
+            this.barButtonItem24.Name = "barButtonItem24";
+            this.barButtonItem24.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem25
+            // 
+            this.barButtonItem25.Caption = "Hourly Production";
+            this.barButtonItem25.Glyph = global::EFTesting.Properties.Resources._55281;
+            this.barButtonItem25.Id = 19;
+            this.barButtonItem25.Name = "barButtonItem25";
+            this.barButtonItem25.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem26
+            // 
+            this.barButtonItem26.Caption = "Hourly Production";
+            this.barButtonItem26.Glyph = global::EFTesting.Properties.Resources._55281;
+            this.barButtonItem26.Id = 19;
+            this.barButtonItem26.Name = "barButtonItem26";
+            this.barButtonItem26.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem29
+            // 
+            this.barButtonItem29.Caption = "Scan Opration";
+            this.barButtonItem29.Glyph = global::EFTesting.Properties.Resources.barcode_folded_icon;
+            this.barButtonItem29.Id = 15;
+            this.barButtonItem29.Name = "barButtonItem29";
+            this.barButtonItem29.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem30
+            // 
+            this.barButtonItem30.Caption = "Off Line Scan";
+            this.barButtonItem30.Glyph = global::EFTesting.Properties.Resources.Clipboard_Plan_icon;
+            this.barButtonItem30.Id = 22;
+            this.barButtonItem30.Name = "barButtonItem30";
+            this.barButtonItem30.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
             // 
             // frmMain
             // 
@@ -557,6 +627,13 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem23;
         private DevExpress.XtraBars.BarButtonItem barButtonItem22;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem27;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem24;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem25;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem26;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem28;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem30;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem29;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

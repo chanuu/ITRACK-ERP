@@ -27,6 +27,9 @@ namespace EFTesting.UI
         CuttingItem _cuttingItem = new CuttingItem();
         #region CRUD
 
+
+       
+
     /// <summary>
     /// 
     /// </summary>
@@ -54,7 +57,7 @@ namespace EFTesting.UI
                 // get expresttion to labda objet 
                 var lambda1 = Expression.Lambda<Func<CuttingHeader, bool>>(andExp, argParam);
                 // pass object to query 
-                GenaricRepository<CuttingHeader> _SearchHeaderRepository = new GenaricRepository<CuttingHeader>(new ItrackContext());
+               GenaricRepository<CuttingHeader> _SearchHeaderRepository = new GenaricRepository<CuttingHeader>(new ItrackContext());
                 var selected = from item in _SearchHeaderRepository.SearchFor(lambda1).ToList() select new { item.CuttingHeaderID, item.StyleID, item.OrderQuantity, item.Date, item.Remark };
 
                 //check is record exist in selected item
@@ -159,24 +162,32 @@ namespace EFTesting.UI
         }
 
 
-        private List<BundleHeader> GetBundleHeaderDetails()
+        private void GetBundleHeaderDetails()
         {
             try
             {
                 GenaricRepository<BundleHeader> _BundleHeader = new GenaricRepository<BundleHeader>(new ItrackContext());
-                grdBundleTicket.DataSource = _BundleHeader.GetAll().Where(x => x.isBundleTagsGerated == true).ToList();
+                
+
+                var selected = from items in _BundleHeader.GetAll().ToList()
+                               where items.isBundleTagsGerated == true && items.CuttingItem.CuttingHeaderID ==txtCuttingTicketNo.Text
+
+                               select items;
+
+              //  grdBundleTicket.DataSource = _BundleHeader.GetAll().Where(x => x.isBundleTagsGerated == true).ToList();
+                grdBundleTicket.DataSource = selected;
                 gridView1.Columns["isOprationTagGenated"].Visible = false;
                 gridView1.Columns["OprationTagGenaratedTime"].Visible = false;
                 gridView1.Columns["CuttingItem"].Visible = false;
 
-                return _BundleHeader.GetAll().Where(x => x.isBundleTagsGerated == true).ToList();
+              //  return _BundleHeader.GetAll().Where(x => x.isBundleTagsGerated == true).ToList();
 
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error - B-0006", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
+               // return null;
 
             }
 
@@ -271,8 +282,9 @@ namespace EFTesting.UI
             {
              //  Debug.WriteLine(RemovedItem(GetCuttingItemByID(_headerId)).Count);
                 
-                grdItemList.DataSource =RemovedItem(GetCuttingItemByID(_headerId));
+           grdItemList.DataSource =RemovedItem(GetCuttingItemByID(_headerId));
 
+              
              //   grdBundleTicket.DataSource = PrintBundleItem(GetCuttingItemByID(_headerId));
              //   FeedPrintItemList(Convert.ToInt16(_headerId));
 
@@ -347,6 +359,7 @@ namespace EFTesting.UI
                 _header.isCompleteGenarateTags = true;
                 _header.BundleTagGenaratedBy = "Admin";
                 _header.BundleTagGenaratedTime =Convert.ToString( DateTime.Now);
+                _header.GenaratedDate = DateTime.Now;
                 _header.CuttingItemID = BundleHID;
                 _BundleHeaderRepository.Update(_header);
             }
@@ -386,6 +399,7 @@ namespace EFTesting.UI
                 _BundleHeader.isCompleteGenarateTags = true;
                 _BundleHeader.BundleTagGenaratedBy = "Admin";
                 _BundleHeader.BundleTagGenaratedTime = Convert.ToString(DateTime.Now);
+                _BundleHeader.GenaratedDate = DateTime.Now;
 
 
                 BundleHID = _BundleHeader.CuttingItemID;
@@ -425,9 +439,9 @@ namespace EFTesting.UI
                     //genarate opration tags 
                     gen.GenrateBundleTags(_noofLayer, _noofItem/_noofLayer, _bundleSize, bundlehader, _StyleNo, _lineNo, lst,txtStyleNo.Text);
                     //Feed Cutting Items 
-                  FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
+                    FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
 
-                 GetBundleHeaderDetails();
+                    GetBundleHeaderDetails();
 
 
                     //using sql bulk copy
@@ -459,7 +473,7 @@ namespace EFTesting.UI
             GenaricRepository<BundleHeader> _bhRepo = new GenaricRepository<BundleHeader>(new ItrackContext());
             
             try {
-                var print = from item in _bhRepo.GetAll().ToList() where item.CuttingItemID == cutID select new { item.CuttingItemID, item.CuttingItem.MarkerNo, item.BundleHeaderID, item.CuttingItem.Size, item.CuttingItem.NoOfLayer, item.CuttingItem.Date, item.BundleTagGenaratedTime };
+                var print = from item in _bhRepo.GetAll().ToList() where item.CuttingItemID == cutID select new { item.CuttingItemID,item.CuttingItem.CuttingHeader.StyleID, item.CuttingItem.MarkerNo, item.BundleHeaderID, item.CuttingItem.Size, item.CuttingItem.NoOfLayer, item.CuttingItem.Date };
                 grdBundleTicket.DataSource = print;
             }
             catch(Exception ex){
@@ -533,10 +547,13 @@ namespace EFTesting.UI
         #endregion
 
 
+     
+
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
-            
-            SearchCuttingHeader();
+          
+          SearchCuttingHeader();
+          
         }
 
         private void grdSearch_KeyDown(object sender, KeyEventArgs e)
@@ -544,7 +561,9 @@ namespace EFTesting.UI
            splashScreenManager1.ShowWaitForm();
           _cuttingHeader.CuttingHeaderID = gridView3.GetFocusedRowCellValue("CuttingHeaderID").ToString();
           getCuttingFeild(_cuttingHeader.CuttingHeaderID);
+        
           FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
+         
           GetBundleHeaderDetails();
           grdSearch.Hide();
           txtSearchBox.Hide();
@@ -605,6 +624,7 @@ namespace EFTesting.UI
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             txtSearchBox.Show();
+            txtSearchBox.Focus();
             btnClose.Show();
             btnClose.Show();
         }
@@ -623,17 +643,22 @@ namespace EFTesting.UI
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
+            try {
+                frmBundlePrintoption _option = new frmBundlePrintoption();
+                _option.ShowDialog();
+                splashScreenManager1.ShowWaitForm();
+                int CutNo = Convert.ToInt16(gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
+                //  frmPrintBarcode print = new frmPrintBarcode(_barcode);
+                frmBundlePrintoption p = new frmBundlePrintoption();
+                Cursor.Current = Cursors.Default;
+                p.ShowDialog();
+                splashScreenManager1.CloseWaitForm();
+            }
+            catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }
 
-
-            frmBundlePrintoption _option = new frmBundlePrintoption();
-            _option.ShowDialog();
-            splashScreenManager1.ShowWaitForm();
-            int CutNo = Convert.ToInt16(gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
-          //  frmPrintBarcode print = new frmPrintBarcode(_barcode);
-            frmBundlePrintoption p = new frmBundlePrintoption();
-            Cursor.Current = Cursors.Default;
-            p.ShowDialog();
-            splashScreenManager1.CloseWaitForm();
+           
         }
 
         private void simpleButton2_Click_1(object sender, EventArgs e)

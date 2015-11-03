@@ -218,7 +218,7 @@ namespace EFTesting.ViewModel
                        int currentTagNo = 0;
                        bool needSave = false;
 
-                       foreach (var item in _DividingPlanItemRepo.GetAll().OrderBy(x=>x.PartName).ToList())
+                       foreach (var item in _DividingPlanItemRepo.GetAll().Where(x => x.DividingPlanHeaderID == dividingheaderID).OrderBy(x => x.PartName).ToList())
                        {
 
                            GenaricRepository<OprationBarcodes> _OprationTagsRepo = new GenaricRepository<OprationBarcodes>(new ItrackContext());
@@ -239,8 +239,9 @@ namespace EFTesting.ViewModel
                            _barcode.StyleNo = _style;
                            _barcode.LineNo = _LineNo;
                            _barcode.OperationPoolID = item.OprationNo;
+                           _barcode.WorkstationNo = item.WorkstationNo;
 
-                           barList.Add( new OprationBarcodes(_barcode.OprationBarcodesID,_barcode.LineNo,_barcode.StyleNo, _barcode.OprationNO, _barcode.OparationName, _barcode.OprationGrade, _barcode.OprationRole, _barcode.PartName, _barcode.isOparationComplete, _barcode.OprationComplteAt, _barcode.EmployeeID, _barcode.BundleDetailsID,_barcode.OperationPoolID));
+                           barList.Add( new OprationBarcodes(_barcode.OprationBarcodesID,_barcode.LineNo,_barcode.StyleNo, _barcode.OprationNO, _barcode.OparationName, _barcode.OprationGrade, _barcode.OprationRole, _barcode.PartName, _barcode.isOparationComplete, _barcode.OprationComplteAt, _barcode.EmployeeID, _barcode.BundleDetailsID,_barcode.OperationPoolID,"0", item.WorkstationNo));
                         //   barList.Add(_barcode);
 
 

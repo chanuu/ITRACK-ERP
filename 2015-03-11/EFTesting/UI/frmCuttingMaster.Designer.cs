@@ -120,6 +120,7 @@
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -712,7 +713,7 @@
             this.grdItemList.Location = new System.Drawing.Point(7, 115);
             this.grdItemList.MainView = this.gridView1;
             this.grdItemList.Name = "grdItemList";
-            this.grdItemList.Size = new System.Drawing.Size(1302, 260);
+            this.grdItemList.Size = new System.Drawing.Size(1183, 311);
             this.grdItemList.TabIndex = 57;
             this.grdItemList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -1124,7 +1125,7 @@
             this.grdSearch.Location = new System.Drawing.Point(14, 44);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1250, 371);
+            this.grdSearch.Size = new System.Drawing.Size(1250, 410);
             this.grdSearch.TabIndex = 62;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -1316,5 +1317,6 @@
         private System.Windows.Forms.Label label19;
         private DevExpress.XtraEditors.TextEdit txtPoNo;
         private DevExpress.XtraEditors.ComboBoxEdit txtlineNo;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

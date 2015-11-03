@@ -39,6 +39,8 @@ namespace EFTesting.UI
 
         public string PartName { get; set; }
 
+       
+
         int _dividingPanID;
         public frmDividingPlanItem(int _divdinPlanHeader) {
 

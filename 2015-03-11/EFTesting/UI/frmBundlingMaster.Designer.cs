@@ -49,14 +49,6 @@
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.grdBundleTicket = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
@@ -83,10 +75,6 @@
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdBundleTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
@@ -274,14 +262,6 @@
             this.xtraTabPage2.Controls.Add(this.label1);
             this.xtraTabPage2.Controls.Add(this.simpleButton4);
             this.xtraTabPage2.Controls.Add(this.grdBundleTicket);
-            this.xtraTabPage2.Controls.Add(this.label3);
-            this.xtraTabPage2.Controls.Add(this.textEdit1);
-            this.xtraTabPage2.Controls.Add(this.label5);
-            this.xtraTabPage2.Controls.Add(this.textEdit2);
-            this.xtraTabPage2.Controls.Add(this.label6);
-            this.xtraTabPage2.Controls.Add(this.textEdit3);
-            this.xtraTabPage2.Controls.Add(this.label8);
-            this.xtraTabPage2.Controls.Add(this.textEdit4);
             this.xtraTabPage2.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1133, 403);
@@ -312,10 +292,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdBundleTicket.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdBundleTicket.Location = new System.Drawing.Point(16, 75);
+            this.grdBundleTicket.Location = new System.Drawing.Point(16, 39);
             this.grdBundleTicket.MainView = this.gridView1;
             this.grdBundleTicket.Name = "grdBundleTicket";
-            this.grdBundleTicket.Size = new System.Drawing.Size(1102, 288);
+            this.grdBundleTicket.Size = new System.Drawing.Size(1102, 324);
             this.grdBundleTicket.TabIndex = 73;
             this.grdBundleTicket.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -324,86 +304,6 @@
             // 
             this.gridView1.GridControl = this.grdBundleTicket;
             this.gridView1.Name = "gridView1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(218, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "Style No";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.EditValue = "";
-            this.textEdit1.Location = new System.Drawing.Point(221, 52);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AccessibleDescription = "";
-            this.textEdit1.Properties.NullValuePrompt = " Style No";
-            this.textEdit1.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit1.Size = new System.Drawing.Size(210, 20);
-            this.textEdit1.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(625, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
-            this.label5.TabIndex = 70;
-            this.label5.Text = "Plane Qty";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.EditValue = "";
-            this.textEdit2.Location = new System.Drawing.Point(628, 52);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.AccessibleDescription = "";
-            this.textEdit2.Properties.NullValuePrompt = "Plan Qty";
-            this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit2.Size = new System.Drawing.Size(195, 20);
-            this.textEdit2.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(441, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "Order Qty";
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.EditValue = "";
-            this.textEdit3.Location = new System.Drawing.Point(437, 52);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.AccessibleDescription = "";
-            this.textEdit3.Properties.NullValuePrompt = "Order Qty";
-            this.textEdit3.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit3.Size = new System.Drawing.Size(185, 20);
-            this.textEdit3.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(15, 36);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 13);
-            this.label8.TabIndex = 66;
-            this.label8.Text = "Cutting Ticket No";
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.EditValue = "";
-            this.textEdit4.Location = new System.Drawing.Point(18, 52);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.AccessibleDescription = "";
-            this.textEdit4.Properties.NullValuePrompt = "Cutting Tickt No";
-            this.textEdit4.Properties.NullValuePromptShowForEmptyValue = true;
-            this.textEdit4.Size = new System.Drawing.Size(197, 20);
-            this.textEdit4.TabIndex = 1;
             // 
             // xtraTabPage3
             // 
@@ -504,7 +404,7 @@
             this.grdSearch.Location = new System.Drawing.Point(9, 50);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1164, 102);
+            this.grdSearch.Size = new System.Drawing.Size(1164, 378);
             this.grdSearch.TabIndex = 63;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -549,10 +449,6 @@
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdBundleTicket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
@@ -597,14 +493,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraGrid.GridControl grdBundleTicket;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

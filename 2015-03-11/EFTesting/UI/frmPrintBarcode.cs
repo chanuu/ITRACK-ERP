@@ -41,11 +41,21 @@ namespace EFTesting.UI
                 sBundleTicket report = new sBundleTicket();
                 rptBarcodeList s = new rptBarcodeList();
                 OprationBarcodeList list = new OprationBarcodeList();
-                report.SetDataSource(list.StickerBarcodeList(pBarocde.Options, pBarocde.CutNo, pBarocde.From, pBarocde.To));
-                this.crystalReportViewer1.ReportSource = report;
+
+               //report.SetDataSource(list.StickerBarcodeList(pBarocde.Options, pBarocde.CutNo, pBarocde.From, pBarocde.To));
+
+               //this.crystalReportViewer1.ReportSource = report;
+
+                BarcodeLabel lbl = new BarcodeLabel();
+                lbl.DataSource = list.StickerBarcodeList(pBarocde.Options, pBarocde.CutNo, pBarocde.From, pBarocde.To);
+                ReportPrintTool tool = new ReportPrintTool(lbl);
+                tool.ShowPreview();
+
+
                 splashScreenManager1.CloseWaitForm();
             }catch(Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 Debug.WriteLine(ex.Message);
             }
            

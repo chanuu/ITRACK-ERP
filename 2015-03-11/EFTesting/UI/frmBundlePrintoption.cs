@@ -8,6 +8,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using EFTesting.Reports.Report;
+using EFTesting.Reports;
+using DevExpress.XtraReports.UI;
+using DevExpress.Office.Utils;
 
 namespace EFTesting.UI
 {
@@ -49,13 +53,43 @@ namespace EFTesting.UI
                 _barcode.To = Convert.ToInt32(txtTo.Text);
             }
             splashScreenManager1.CloseWaitForm();
-          
-            frmPrintBarcode p = new frmPrintBarcode(_barcode);
-            p.ShowDialog();
-           
 
-            
+
+            PrintBarcode(_barcode);
         
+
+        }
+
+
+         void PrintBarcode(frmPrintBarcode _barcode) {
+            try 
+            {
+                InitializeComponent();
+                splashScreenManager1.ShowWaitForm();
+                
+                sBundleTicket report = new sBundleTicket();
+                rptBarcodeList s = new rptBarcodeList();
+                OprationBarcodeList list = new OprationBarcodeList();
+
+               //report.SetDataSource(list.StickerBarcodeList(pBarocde.Options, pBarocde.CutNo, pBarocde.From, pBarocde.To));
+
+               //this.crystalReportViewer1.ReportSource = report;
+
+                BarcodeLabel lbl = new BarcodeLabel();
+                lbl.DataSource = list.StickerBarcodeList(_barcode.Options, _barcode.CutNo, _barcode.From, _barcode.To);
+                ReportPrintTool tool = new ReportPrintTool(lbl);
+                tool.ShowPreview();
+
+
+                splashScreenManager1.CloseWaitForm();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                Debug.WriteLine(ex.Message);
+            }
+           
+          
+          
         }
         private void chkCutIdRange_CheckedChanged(object sender, EventArgs e)
         {

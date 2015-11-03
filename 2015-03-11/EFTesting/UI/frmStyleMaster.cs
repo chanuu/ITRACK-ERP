@@ -367,6 +367,9 @@ namespace EFTesting.UI
             
         }
 
+
+     
+
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             SearchStyle();

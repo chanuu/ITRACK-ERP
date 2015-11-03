@@ -60,11 +60,13 @@
     <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Excel">
       <HintPath>C:\Users\HP\Desktop\Excel\Excel.dll</HintPath>
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\BarcodeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BarcodeLabel.Designer.cs">
+      <DependentUpon>BarcodeLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\clsProductionSummary.cs" />
     <Compile Include="Reports\Dataset\BundleTicket.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -272,11 +280,23 @@
     <Compile Include="UI\frmHourlyProductionDialog.Designer.cs">
       <DependentUpon>frmHourlyProductionDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmHourlyProductionOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmHourlyProductionOut.Designer.cs">
+      <DependentUpon>frmHourlyProductionOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmOfflineScaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmOfflineScaning.Designer.cs">
+      <DependentUpon>frmOfflineScaning.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmOparationScaning.cs">
       <SubType>Form</SubType>
@@ -320,6 +340,12 @@
     <Compile Include="UI\frmPurchaseOrder.Designer.cs">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmScaningTimeScadual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmScaningTimeScadual.Designer.cs">
+      <DependentUpon>frmScaningTimeScadual.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmSketchMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -337,6 +363,12 @@
     </Compile>
     <Compile Include="UI\frmPromotion.Designer.cs">
       <DependentUpon>frmPromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Opration List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Opration List.Designer.cs">
+      <DependentUpon>Opration List.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\PoItemsDialog.cs">
       <SubType>Form</SubType>
@@ -363,6 +395,7 @@
     <Compile Include="ViewModel\HourlyProduction.cs" />
     <Compile Include="ViewModel\ImportExcelHelper.cs" />
     <Compile Include="ViewModel\MyExcel.cs" />
+    <Compile Include="ViewModel\OperationListSelection.cs" />
     <Compile Include="ViewModel\PoDeliveries.cs" />
     <Compile Include="ViewModel\PurchaseHeaderVM.cs" />
     <Compile Include="ViewModel\TextFileReadingHelper.cs" />
@@ -380,6 +413,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\BarcodeLabel.resx">
+      <DependentUpon>BarcodeLabel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\HourlyProduction.resx">
       <DependentUpon>HourlyProduction.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,8 +496,14 @@
     <EmbeddedResource Include="UI\frmHourlyProductionDialog.resx">
       <DependentUpon>frmHourlyProductionDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmHourlyProductionOut.resx">
+      <DependentUpon>frmHourlyProductionOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmOfflineScaning.resx">
+      <DependentUpon>frmOfflineScaning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmOparationScaning.resx">
       <DependentUpon>frmOparationScaning.cs</DependentUpon>
@@ -484,6 +526,9 @@
     <EmbeddedResource Include="UI\frmPurchaseOrder.resx">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmScaningTimeScadual.resx">
+      <DependentUpon>frmScaningTimeScadual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmSketchMaster.resx">
       <DependentUpon>frmSketchMaster.cs</DependentUpon>
     </EmbeddedResource>
@@ -492,6 +537,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPromotion.resx">
       <DependentUpon>frmPromotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Opration List.resx">
+      <DependentUpon>Opration List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PoItemsDialog.resx">
       <DependentUpon>PoItemsDialog.cs</DependentUpon>
@@ -503,6 +551,7 @@
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EFTesting.Reports.OprationBarcodeList.datasource" />
     <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport.datasource" />
     <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport1.datasource" />
     <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport2.datasource" />
@@ -525,7 +574,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ITRACK.models\ITRACK.models.csproj">

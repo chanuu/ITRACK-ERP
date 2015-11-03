@@ -45,6 +45,7 @@ namespace ITRACK.models
            _dbContext = dbContext;
            _dbContext.Database.Connection.ConnectionString = GetConnection();
            _dbContext.Configuration.AutoDetectChangesEnabled = false;
+           
            DbSet = _dbContext.Set<TEntity>();
        }
        /// <summary>

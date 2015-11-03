@@ -25,6 +25,9 @@ namespace EFTesting.UI
 
 
         List<HourlyProductionList> lstPro = new List<HourlyProductionList>();
+
+      
+
         private List<HourlyProductionList> GetReportData(DateTime _fromDate, DateTime _toDate)
         {
 
@@ -123,6 +126,8 @@ namespace EFTesting.UI
                 rptHProduction report = new rptHProduction();
                 report.DataSource = GetReportData(Convert.ToDateTime(txtFromDate.Text), Convert.ToDateTime(txttoDate.Text));
                 report.Landscape = true;
+                report.PrintingSystem.Document.AutoFitToPagesWidth = 1;
+                
                 ReportPrintTool tool = new ReportPrintTool(report);
 
                 tool.ShowPreview();

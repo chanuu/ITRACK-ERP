@@ -498,6 +498,12 @@ namespace EFTesting.UI
             grdSearch.Hide();
         }
 
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            Opration_List list = new Opration_List(Convert.ToInt16(txtDividingPlanNo.Text));
+            list.ShowDialog();
+        }
+
 
     }
 }

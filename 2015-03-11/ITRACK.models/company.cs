@@ -25,8 +25,6 @@ namespace ITRACK.models
         public virtual Group Group { get; set; }
         public virtual ICollection<Buyer> Buyer { get; set; }
 
-   
-
         public virtual ICollection<Style> Style { get; set; }
 
         public virtual ICollection<Werehouse> Werehouse { get; set; }
@@ -35,6 +33,11 @@ namespace ITRACK.models
         public virtual ICollection<OperationPool> OperationPool { get; set; }
 
         public virtual ICollection<DayendHeader> DayendHeader { get; set; }
+
+
+        public virtual ICollection<ScaningTimeSchadual> ScaningTimeSchadual { get; set; }
+
+        public virtual ICollection<IndividualProductionDetails> IndividualProductionDetails { get; set; }
         public string GroupID { get; set; }
 
         

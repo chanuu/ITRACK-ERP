@@ -167,7 +167,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(175, 77);
             this.grdSearchStyle.MainView = this.gridView1;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(950, 238);
+            this.grdSearchStyle.Size = new System.Drawing.Size(908, 238);
             this.grdSearchStyle.TabIndex = 35;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -610,7 +610,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(8, 68);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(1172, 404);
+            this.grdSearchPo.Size = new System.Drawing.Size(1172, 69);
             this.grdSearchPo.TabIndex = 45;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
