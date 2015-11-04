@@ -13,6 +13,8 @@ using ITRACK.models;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using ITRACK.Validator;
+using EFTesting.Reports;
+using DevExpress.XtraReports.UI;
 
 namespace EFTesting.UI
 {
@@ -80,6 +82,18 @@ namespace EFTesting.UI
 
             }
 
+        }
+
+
+        private List<DividingPlanItem> GetDividingPlanByID(int Id) {
+            try {
+                return _DividingItemRepository.GetAll().ToList().Where(x => x.DividingPlanHeaderID == Id).ToList();
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+        
         }
 
         #region Diclaration
@@ -210,12 +224,6 @@ namespace EFTesting.UI
             E.InitializeDevidingPlan();
             DoDividingPlanReading();
 
-           
-        
-            
-
-            
-
 
         }
 
@@ -327,6 +335,7 @@ namespace EFTesting.UI
                 return _DividingHeaderRepository.GetAll().Where(u => u.DividingPlanheaderID == ID).ToList();
 
 
+
             }
             catch (Exception ex)
             {
@@ -380,6 +389,21 @@ namespace EFTesting.UI
         }
 
 
+        private void PrintDividingPlan(int ID) {
+            try {
+                rptDividingPlan report = new rptDividingPlan();
+                report.DataSource = GetDividingPlanByID(ID);
+       
+               ReportPrintTool tool = new ReportPrintTool(report);
+              tool.ShowPreview();
+            
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        }
+
+
         #endregion 
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -394,7 +418,8 @@ namespace EFTesting.UI
 
         private void simpleButton4_Click(object sender, EventArgs e)
         {
-            frmDividingPlanItem item = new frmDividingPlanItem(Convert.ToInt16(this.DividingPlanNo));
+            
+            frmDividingPlanItem item = new frmDividingPlanItem(Convert.ToInt16(txtDividingPlanNo.Text));
             item.ShowDialog();
         }
 
@@ -446,9 +471,37 @@ namespace EFTesting.UI
             _item.SMVType = gridView2.GetFocusedRowCellValue("SMVType").ToString();
             _item.MachineType= gridView2.GetFocusedRowCellValue("MachineType").ToString();
             _item.SMV = Convert.ToDouble(gridView2.GetFocusedRowCellValue("SMV").ToString());
+            _item.PartName = gridView2.GetFocusedRowCellValue("PartName").ToString();
 
-            frmDividingPlanItem dItem = new frmDividingPlanItem(_item.DividingPlanItemID, _item.OprationNo, _item.OprationName, _item.SMVType, _item.MachineType, _item.SMV,Convert.ToString(_header.DividingPlanheaderID));
+            frmDividingPlanItem dItem = new frmDividingPlanItem(_item.DividingPlanItemID, _item.OprationNo, _item.OprationName, _item.SMVType, _item.MachineType, _item.SMV, Convert.ToString(_header.DividingPlanheaderID), _item.PartName);
             dItem.ShowDialog();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (txtDividingPlanNo.Text != "")
+            {
+                PrintDividingPlan(Convert.ToInt16(txtDividingPlanNo.Text));
+            }
+            else {
+
+                MessageBox.Show("Please Select Dividing Plan First !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+            }
+           
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            btnClose.Hide();
+            txtSearchBox.Hide();
+            grdSearch.Hide();
+        }
+
+        private void simpleButton6_Click(object sender, EventArgs e)
+        {
+            Opration_List list = new Opration_List(Convert.ToInt16(txtDividingPlanNo.Text));
+            list.ShowDialog();
         }
 
 
