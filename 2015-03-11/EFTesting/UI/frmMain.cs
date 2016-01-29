@@ -182,7 +182,7 @@ namespace EFTesting.UI
 
         private void barButtonItem27_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmHourlyProductionOut dialog = new frmHourlyProductionOut();
+            frmIndividualProductionDialog dialog = new frmIndividualProductionDialog();
             dialog.ShowDialog();
         }
 
@@ -202,6 +202,19 @@ namespace EFTesting.UI
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
             splashScreenManager1.CloseWaitForm();
+        }
+
+        private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            dailyProductionDialog dialog = new dailyProductionDialog();
+            dialog.ShowDialog();
+
+        }
+
+        private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            dlgBundleSelect dialog = new dlgBundleSelect();
+            dialog.ShowDialog();
         }
     }
 }

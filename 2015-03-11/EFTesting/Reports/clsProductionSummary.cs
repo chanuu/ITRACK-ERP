@@ -226,12 +226,11 @@ namespace EFTesting.Reports
                pnl.Show();
                await Task.Run(() =>
                {
-                 //
-                 //  GetProductionDaySummary(DateTime.Now);
+                 
                    
 
-                   AddIndividualProductionSummary(_now);
-                //   AddCuttingSummary(DateTime.Now);
+                //   AddIndividualProductionSummary(_now,txt);
+               
                });
 
                lbl.Text = "Sucecessfuly Completed !";
@@ -245,43 +244,126 @@ namespace EFTesting.Reports
        }
 
 
+       public static async Task<bool> FinalizedProductionStatus( DateTime _now,string _HourNo,string _in,string _out)
+       {
+           try
+           {
+
+             
+               await Task.Run(() =>
+               {
+
+                   AddIndividualProductionSummary(_now, _HourNo, _in, _out);
+
+               });
+
+               
+               
+               return true;
+           }
+           catch (Exception ex)
+           {
+               Debug.WriteLine(ex.Message);
+               return false;
+           }
+       }
+
 #region Individual Production Summary
 
-       public static async Task<bool> AddIndividualProductionSummary(DateTime dayendDate)
+       public static async Task<bool> AddIndividualProductionSummary(DateTime dayendDate, string _HourNo,string In,string _Out)
        {
            try {
 
                GenaricRepository<OprationBarcodes> _OperationBarcode = new GenaricRepository<OprationBarcodes>(new ItrackContext());
                GenaricRepository<IndividualProductionSummery> _IndivialProudctionRepo = new GenaricRepository<IndividualProductionSummery>(new ItrackContext());
-              
-               IndividualProductionSummery _individualProductionSummary = new IndividualProductionSummery();
+
+               IndividualProductionDetails _individualProductionSummary = new IndividualProductionDetails();
 
                var itemList = from items in _OperationBarcode.GetAll().ToList()
 
-                              where  items.isOparationComplete == true && items.OprationComplteAt.Day == dayendDate.Day && items.OprationComplteAt.Month == dayendDate.Month && items.OprationComplteAt.Year == dayendDate.Year
+                              where  items.isOparationComplete == true && items.OprationComplteAt.Day == dayendDate.Day && items.OprationComplteAt.Month == dayendDate.Month && items.OprationComplteAt.Year == dayendDate.Year && items.HourNo ==_HourNo
 
-                              group items by new { items.OprationComplteAt.Date, items.LineNo, items.EmployeeID,items.OprationNO, items.OparationName } into ItemG
+                              group items by new {items.BundleDetails.BundleHeader.CuttingItem.CuttingHeader.StyleID, items.OprationComplteAt.Date, items.LineNo, items.EmployeeID,items.WorkstationNo,items.OprationNO, items.OparationName,items.HourNo } into ItemG
 
-                              select new { ItemG.Key.Date, ItemG.Key.LineNo, ItemG.Key.EmployeeID,ItemG.Key.OprationNO,  ItemG.Key.OparationName,TotalItem = ItemG.Sum(c => c.BundleDetails.NoOfItem), SMV = ItemG.Sum(c => c.OperationPool.SMV*c.BundleDetails.NoOfItem) };
+                              select new {ItemG.Key.StyleID, ItemG.Key.Date, ItemG.Key.LineNo, ItemG.Key.EmployeeID,ItemG.Key.WorkstationNo,ItemG.Key.OprationNO, ItemG.Key.HourNo, ItemG.Key.OparationName,TotalItem = ItemG.Sum(c => c.BundleDetails.NoOfItem), SMV = ItemG.Sum(c => c.OperationPool.SMV*c.BundleDetails.NoOfItem) };
 
+               GenaricRepository<Company> _CompanyRepository = new GenaricRepository<Company>(new ItrackContext());
+
+               foreach (var item in _CompanyRepository.GetAll().Where(x => x.isDefaultCompany == true))
+               {
+                   _individualProductionSummary.CompanyID = item.CompanyID;
+
+               }
 
 
                foreach (var summary in itemList)
                {
 
                    Debug.WriteLine("Employee Name -"  +summary.EmployeeID +" opration Name"+ summary.OparationName +" No Of Item - " + summary.TotalItem + " Total SAH - " + summary.SMV/60);
-                   GenaricRepository<IndividualProductionSummery> _IndivialRepo = new GenaricRepository<IndividualProductionSummery>(new ItrackContext());
+                   GenaricRepository<IndividualProductionDetails> _IndivialRepo = new GenaricRepository<IndividualProductionDetails>(new ItrackContext());
               
-                   _individualProductionSummary.EmployeeID = summary.EmployeeID;
-                   
-                   _individualProductionSummary.OprationNo = summary.OprationNO;
+                  _individualProductionSummary.EmployeeID = summary.EmployeeID;
+                   _individualProductionSummary.Date = summary.Date;
+                   _individualProductionSummary.SMV = summary.SMV/summary.TotalItem;
+                   _individualProductionSummary.OperationNo = summary.OprationNO;
+                   _individualProductionSummary.OperationName = summary.OparationName;
                    _individualProductionSummary.Pcs =Convert.ToInt16( summary.TotalItem);
-                   _individualProductionSummary.EarnSAH =Convert.ToDouble( (summary.SMV / 60).ToString("G7", CultureInfo.InvariantCulture));
-                   _individualProductionSummary.Effiency = summary.SMV;
-                   _individualProductionSummary.DayendHeaderID =  Convert.ToString(dayendDate.Year + dayendDate.Month + dayendDate.Day);
-                   _individualProductionSummary.IndividualProductionSummeryID = _individualProductionSummary.DayendHeaderID + summary.EmployeeID;
-                 _IndivialRepo.Insert(_individualProductionSummary);
- 
+                   _individualProductionSummary.SAH = Convert.ToDouble((_individualProductionSummary.SMV * summary.TotalItem / 60).ToString("G7", CultureInfo.InvariantCulture));
+                   _individualProductionSummary.SAH =Convert.ToDouble( String.Format("{0:0.00}", _individualProductionSummary.SAH));
+                   _individualProductionSummary.Efficiency = _individualProductionSummary.SAH / 1 * 100;
+                   _individualProductionSummary.Efficiency = Convert.ToDouble(String.Format("{0:0.00}", _individualProductionSummary.Efficiency));
+                   _individualProductionSummary.HourNo =Convert.ToInt16( _HourNo);
+                   _individualProductionSummary.WorkstationNo = summary.WorkstationNo;
+                   _individualProductionSummary.StyleNo = summary.StyleID;
+                  
+
+                   if (summary.EmployeeID != null)
+                   {
+                       _IndivialRepo.Insert(_individualProductionSummary);
+                   }
+
+
+
+                 
+
+
+               }
+
+               int i = 9;
+               //-------------------------------------------------------------------------------------------------------------------------------------------
+               //---------------------------------------------------------------------------------------------------------------------------------------------
+
+               var SizeList = from items in _OperationBarcode.GetAll().ToList()
+
+                              where items.isOparationComplete == true && items.OprationComplteAt.Day == dayendDate.Day && items.OprationComplteAt.Month == dayendDate.Month && items.OprationComplteAt.Year == dayendDate.Year && items.HourNo == _HourNo && (items.OprationNO == In || items.OprationNO == _Out)
+
+                              group items by new { items.OprationComplteAt.Date, items.StyleNo, items.LineNo, items.BundleDetails.BundleHeader.CuttingItem.PoNo, items.HourNo, items.OprationNO, items.OprationRole, items.BundleDetails.BundleHeader.CuttingItem.Color, items.BundleDetails.BundleHeader.CuttingItem.Size } into ItemG
+
+                              select new { ItemG.Key.Date, ItemG.Key.StyleNo, ItemG.Key.LineNo, ItemG.Key.PoNo, ItemG.Key.HourNo, ItemG.Key.OprationNO, ItemG.Key.OprationRole, ItemG.Key.Color, ItemG.Key.Size, TotalItem = ItemG.Sum(c => c.BundleDetails.NoOfItem), SMV = ItemG.Sum(c => c.OperationPool.SMV * c.BundleDetails.NoOfItem) };
+
+
+
+
+               DailyProduction _production =new DailyProduction();
+
+               foreach (var sizeItem in SizeList)
+               {
+                   GenaricRepository<DailyProduction> _Indivial = new GenaricRepository<DailyProduction>(new ItrackContext());
+                   _production.PoNo = sizeItem.PoNo;
+                   _production.Date = sizeItem.Date;
+                   _production.HourNo = Convert.ToInt16(sizeItem.HourNo);
+                   _production.LineNo = sizeItem.LineNo;
+                   _production.Color = sizeItem.Color;
+                   _production.Size = sizeItem.Size;
+                   _production.Type = sizeItem.OprationRole;
+                   _production.Qty = Convert.ToInt16(sizeItem.TotalItem);
+                   _production.StyleID = sizeItem.StyleNo;
+
+                   _Indivial.Insert(_production);
+
+
+                  
+                       
 
 
                }

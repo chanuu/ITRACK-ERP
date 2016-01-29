@@ -83,12 +83,13 @@ namespace ITRACK.models
            table.Columns.Add("OperationPoolID", typeof(string));
            table.Columns.Add("HourNo", typeof(string));
            table.Columns.Add("WorkstationNo", typeof(int));
+           table.Columns.Add("OpNo", typeof(int));
           
            foreach (var item in data)
            {
                
                Debug.WriteLine(item.OprationBarcodesID);
-              table.Rows.Add(item.OprationBarcodesID, item.LineNo,item.StyleNo,item.OprationNO, item.OparationName, item.OprationGrade,item.OprationRole,item.PartName,item.isOparationComplete,item.OprationComplteAt,item.EmployeeID,item.BundleDetailsID,item.OperationPoolID,item.HourNo,item.WorkstationNo);
+              table.Rows.Add(item.OprationBarcodesID, item.LineNo,item.StyleNo,item.OprationNO, item.OparationName, item.OprationGrade,item.OprationRole,item.PartName,item.isOparationComplete,item.OprationComplteAt,item.EmployeeID,item.BundleDetailsID,item.OperationPoolID,item.HourNo,item.WorkstationNo,item.OpNo);
          
            } 
            return table;

@@ -293,13 +293,13 @@ namespace EFTesting.Reports
                       oList.BundleNo = Convert.ToString(barcode.BundleDetails.BundleNo);
                       oList.PartName = barcode.PartName;
                       oList.NoOfPts = Convert.ToString(barcode.BundleDetails.NoOfItem);
-                      oList.OprationNo = barcode.OprationNO;
+                      oList.OprationNo = Convert.ToString(barcode.OpNo);
                       oList.OprationName = barcode.OparationName;
-                      oList.OprationType = barcode.OprationGrade;
+                      oList.OprationType = barcode.BundleDetails.BundleHeader.CuttingItem.MarkerNo;
                       oList.OpRole = barcode.OprationRole;
                       oList.Barcode = barcode.OprationBarcodesID;
                       oList.Barcode2 = "";
-                      oList.OprationNo2 = barcode.OprationNO;
+                      oList.OprationNo2 = Convert.ToString(barcode.OpNo);
                       oList.OprationName2 = barcode.OparationName;
                       lstBarcodes.Add(new OprationBarcodeList(
                       oList.CutTicketNo,
@@ -340,13 +340,13 @@ namespace EFTesting.Reports
                       oList.BundleNo = Convert.ToString(barcode.BundleDetails.BundleNo);
                       oList.PartName = barcode.PartName;
                       oList.NoOfPts = Convert.ToString(barcode.BundleDetails.NoOfItem);
-                      oList.OprationNo = barcode.OprationNO;
+                      oList.OprationNo =Convert.ToString( barcode.OpNo);
                       oList.OprationName = barcode.OparationName;
                       oList.OprationType = barcode.OprationGrade;
                       oList.OpRole = barcode.OprationRole;
                       oList.Barcode = barcode.OprationBarcodesID;
                       oList.Barcode2 = "";
-                      oList.OprationNo2 = barcode.OprationNO;
+                      oList.OprationNo2 = Convert.ToString(barcode.OpNo); 
                       oList.OprationName2 = barcode.OparationName;
                       lstBarcodes.Add(new OprationBarcodeList(
                       oList.CutTicketNo,

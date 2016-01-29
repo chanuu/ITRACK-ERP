@@ -48,6 +48,8 @@ namespace ITRACK.models
 
         public virtual ICollection<FabricDetails> FabricDetails { get; set; }
 
+        public virtual ICollection<DailyProduction> DailyProduction { get; set; }
+
       //  public virtual ICollection<FabricDetails> FabricDetails { get; set; }
 
         public virtual Workflow Workflow { get; set; }

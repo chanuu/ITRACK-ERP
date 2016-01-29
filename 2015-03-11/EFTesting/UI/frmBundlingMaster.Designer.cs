@@ -50,7 +50,7 @@
             this.grdBundleTicket = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.txtSNo = new System.Windows.Forms.TextBox();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
@@ -62,6 +62,8 @@
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
+            this.grdBundleListPrinted = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -79,6 +81,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBundleListPrinted)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // xtraTabControl1
@@ -307,27 +311,29 @@
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Controls.Add(this.txtFileName);
+            this.xtraTabPage3.Controls.Add(this.grdBundleListPrinted);
+            this.xtraTabPage3.Controls.Add(this.txtSNo);
             this.xtraTabPage3.Controls.Add(this.simpleButton5);
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1133, 403);
             this.xtraTabPage3.Text = "F/Consumption";
             // 
-            // txtFileName
+            // txtSNo
             // 
-            this.txtFileName.Location = new System.Drawing.Point(258, 63);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(222, 21);
-            this.txtFileName.TabIndex = 60;
+            this.txtSNo.Location = new System.Drawing.Point(16, 65);
+            this.txtSNo.Name = "txtSNo";
+            this.txtSNo.Size = new System.Drawing.Size(222, 21);
+            this.txtSNo.TabIndex = 60;
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(511, 63);
+            this.simpleButton5.Location = new System.Drawing.Point(269, 65);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
             this.simpleButton5.TabIndex = 59;
             this.simpleButton5.Text = "Add";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
             // 
             // btnDelete
             // 
@@ -404,7 +410,7 @@
             this.grdSearch.Location = new System.Drawing.Point(9, 50);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1164, 378);
+            this.grdSearch.Size = new System.Drawing.Size(1164, 61);
             this.grdSearch.TabIndex = 63;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -415,6 +421,25 @@
             // 
             this.gridView3.GridControl = this.grdSearch;
             this.gridView3.Name = "gridView3";
+            // 
+            // grdBundleListPrinted
+            // 
+            this.grdBundleListPrinted.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdBundleListPrinted.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdBundleListPrinted.Location = new System.Drawing.Point(16, 92);
+            this.grdBundleListPrinted.MainView = this.gridView4;
+            this.grdBundleListPrinted.Name = "grdBundleListPrinted";
+            this.grdBundleListPrinted.Size = new System.Drawing.Size(1102, 324);
+            this.grdBundleListPrinted.TabIndex = 74;
+            this.grdBundleListPrinted.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.grdBundleListPrinted;
+            this.gridView4.Name = "gridView4";
             // 
             // frmBundlingMaster
             // 
@@ -454,6 +479,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdBundleListPrinted)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -472,7 +499,7 @@
         private DevExpress.XtraEditors.TextEdit txtCuttingTicketNo;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
-        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.TextBox txtSNo;
         private DevExpress.XtraEditors.SimpleButton simpleButton5;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
         private DevExpress.XtraEditors.SimpleButton btnClose;
@@ -494,5 +521,7 @@
         private DevExpress.XtraGrid.GridControl grdBundleTicket;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        private DevExpress.XtraGrid.GridControl grdBundleListPrinted;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
     }
 }

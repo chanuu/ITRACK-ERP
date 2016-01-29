@@ -67,9 +67,9 @@ namespace EFTesting.UI
                 InitializeComponent();
                 splashScreenManager1.ShowWaitForm();
                 
-                sBundleTicket report = new sBundleTicket();
-                rptBarcodeList s = new rptBarcodeList();
-                OprationBarcodeList list = new OprationBarcodeList();
+                //sBundleTicket report = new sBundleTicket();
+                //rptBarcodeList s = new rptBarcodeList();
+               OprationBarcodeList list = new OprationBarcodeList();
 
                //report.SetDataSource(list.StickerBarcodeList(pBarocde.Options, pBarocde.CutNo, pBarocde.From, pBarocde.To));
 

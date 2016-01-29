@@ -92,7 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompanyVM.cs" />
-    <Compile Include="ConnectionSettings\ConnectionDetails.cs" />
+    <Compile Include="Reports\ConnectionSettings\ConnectionDetails.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +108,7 @@
       <DependentUpon>BarcodeLabel.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\clsProductionSummary.cs" />
+    <Compile Include="Reports\dailyProductionByHour.cs" />
     <Compile Include="Reports\Dataset\BundleTicket.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,11 +123,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsetCutReport.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\HourlyIndividualProduction.cs" />
     <Compile Include="Reports\HourlyProduction.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\HourlyProduction.Designer.cs">
       <DependentUpon>HourlyProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\HourlyProductionByOperation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\HourlyProductionByOperation.Designer.cs">
+      <DependentUpon>HourlyProductionByOperation.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MatirialDetails.cs">
       <SubType>Component</SubType>
@@ -195,7 +203,31 @@
     <Compile Include="Reports\rptTICKET.Designer.cs">
       <DependentUpon>rptTICKET.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\rptDailiyProByHour.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDailiyProByHour.Designer.cs">
+      <DependentUpon>rptDailiyProByHour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BundleWiseProduction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BundleWiseProduction.Designer.cs">
+      <DependentUpon>BundleWiseProduction.cs</DependentUpon>
+    </Compile>
     <Compile Include="StyleVM.cs" />
+    <Compile Include="UI\dailyProductionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\dailyProductionDialog.Designer.cs">
+      <DependentUpon>dailyProductionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\dlgBundleSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\dlgBundleSelect.Designer.cs">
+      <DependentUpon>dlgBundleSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\dlgdividingplan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +317,12 @@
     </Compile>
     <Compile Include="UI\frmHourlyProductionOut.Designer.cs">
       <DependentUpon>frmHourlyProductionOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmIndividualProductionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmIndividualProductionDialog.Designer.cs">
+      <DependentUpon>frmIndividualProductionDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmMain.cs">
       <SubType>Form</SubType>
@@ -382,6 +420,12 @@
     <Compile Include="UI\SplashScreen1.Designer.cs">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\User Accounts\frmLoging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\User Accounts\frmLoging.Designer.cs">
+      <DependentUpon>frmLoging.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,6 +463,9 @@
     <EmbeddedResource Include="Reports\HourlyProduction.resx">
       <DependentUpon>HourlyProduction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HourlyProductionByOperation.resx">
+      <DependentUpon>HourlyProductionByOperation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MatirialDetails.resx">
       <DependentUpon>MatirialDetails.cs</DependentUpon>
     </EmbeddedResource>
@@ -439,6 +486,9 @@
     <EmbeddedResource Include="Reports\rptCuttingDetails.resx">
       <DependentUpon>rptCuttingDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDailiyProByHour.resx">
+      <DependentUpon>rptDailiyProByHour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptDayend.resx">
       <DependentUpon>rptDayend.cs</DependentUpon>
     </EmbeddedResource>
@@ -453,6 +503,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptTICKET.resx">
       <DependentUpon>rptTICKET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BundleWiseProduction.resx">
+      <DependentUpon>BundleWiseProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\dailyProductionDialog.resx">
+      <DependentUpon>dailyProductionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\dlgBundleSelect.resx">
+      <DependentUpon>dlgBundleSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\dlgdividingplan.resx">
       <DependentUpon>dlgdividingplan.cs</DependentUpon>
@@ -498,6 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmHourlyProductionOut.resx">
       <DependentUpon>frmHourlyProductionOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmIndividualProductionDialog.resx">
+      <DependentUpon>frmIndividualProductionDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -547,10 +609,16 @@
     <EmbeddedResource Include="UI\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\User Accounts\frmLoging.resx">
+      <DependentUpon>frmLoging.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EFTesting.Reports.dailyProductionByHour.datasource" />
+    <None Include="Properties\DataSources\EFTesting.Reports.HourlyIndividualProduction.datasource" />
+    <None Include="Properties\DataSources\EFTesting.Reports.HourlyProductionByOperation.datasource" />
     <None Include="Properties\DataSources\EFTesting.Reports.OprationBarcodeList.datasource" />
     <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport.datasource" />
     <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport1.datasource" />
@@ -563,6 +631,7 @@
     <None Include="Properties\DataSources\ITRACK.models.DividingPlanHeader.datasource" />
     <None Include="Properties\DataSources\ITRACK.models.DividingPlanItem.datasource" />
     <None Include="Properties\DataSources\ITRACK.models.LayinDetails.datasource" />
+    <None Include="Properties\DataSources\ITRACK.models.OprationBarcodes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

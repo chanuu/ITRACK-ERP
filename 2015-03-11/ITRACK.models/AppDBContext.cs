@@ -98,7 +98,9 @@ namespace ITRACK.models
         public DbSet<LayinDetails> LayinDetails { get; set; }
 
 
+        public DbSet<DailyProduction> DailyProduction { get; set; }
 
+        public DbSet<IndividualProductionDetails> IndividualProductionDetails { get; set; }
 
 
 

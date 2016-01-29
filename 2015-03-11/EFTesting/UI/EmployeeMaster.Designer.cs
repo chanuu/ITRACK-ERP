@@ -56,6 +56,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmployeeID = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.memoAddress = new DevExpress.XtraEditors.MemoEdit();
             this.label16 = new System.Windows.Forms.Label();
@@ -93,7 +94,6 @@
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.label21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -459,6 +459,15 @@
             this.xtraTabPage2.Text = "Contact Details";
             this.xtraTabPage2.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage2_Paint);
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(46, 219);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(116, 13);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Education Qualification";
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -754,7 +763,7 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 53);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1119, 20);
+            this.grdSearch.Size = new System.Drawing.Size(1119, 375);
             this.grdSearch.TabIndex = 22;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -833,15 +842,6 @@
             this.textEdit5.Properties.NullValuePromptShowForEmptyValue = true;
             this.textEdit5.Size = new System.Drawing.Size(188, 20);
             this.textEdit5.TabIndex = 38;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(46, 219);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(116, 13);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "Education Qualification";
             // 
             // EmployeeMaster
             // 

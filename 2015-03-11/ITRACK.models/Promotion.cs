@@ -11,7 +11,7 @@ namespace ITRACK.models
     {
 
       [Key]
-       public int PromotionID { get; set; }
+      public int PromotionID { get; set; }
 
         public string FromDesignation { get; set; }
 

@@ -240,8 +240,9 @@ namespace EFTesting.ViewModel
                            _barcode.LineNo = _LineNo;
                            _barcode.OperationPoolID = item.OprationNo;
                            _barcode.WorkstationNo = item.WorkstationNo;
+                           _barcode.OpNo = item.OpNo;
 
-                           barList.Add( new OprationBarcodes(_barcode.OprationBarcodesID,_barcode.LineNo,_barcode.StyleNo, _barcode.OprationNO, _barcode.OparationName, _barcode.OprationGrade, _barcode.OprationRole, _barcode.PartName, _barcode.isOparationComplete, _barcode.OprationComplteAt, _barcode.EmployeeID, _barcode.BundleDetailsID,_barcode.OperationPoolID,"0", item.WorkstationNo));
+                           barList.Add( new OprationBarcodes(_barcode.OprationBarcodesID,_barcode.LineNo,_barcode.StyleNo, _barcode.OprationNO, _barcode.OparationName, _barcode.OprationGrade, _barcode.OprationRole, _barcode.PartName, _barcode.isOparationComplete, _barcode.OprationComplteAt, _barcode.EmployeeID, _barcode.BundleDetailsID,_barcode.OperationPoolID,"0", item.WorkstationNo,item.OpNo));
                         //   barList.Add(_barcode);
 
 

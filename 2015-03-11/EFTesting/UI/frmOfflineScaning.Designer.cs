@@ -43,18 +43,28 @@
             this.textfileOpen = new System.Windows.Forms.OpenFileDialog();
             this.label3 = new System.Windows.Forms.Label();
             this.txtLocation = new DevExpress.XtraEditors.TextEdit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtStyleNo = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtHourNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLog.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtScanTime.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLocation.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.save;
-            this.simpleButton1.Location = new System.Drawing.Point(224, 125);
+            this.simpleButton1.Location = new System.Drawing.Point(217, 148);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(162, 39);
             this.simpleButton1.TabIndex = 79;
@@ -64,7 +74,7 @@
             // simpleButton4
             // 
             this.simpleButton4.Image = global::EFTesting.Properties.Resources.save;
-            this.simpleButton4.Location = new System.Drawing.Point(56, 125);
+            this.simpleButton4.Location = new System.Drawing.Point(49, 148);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(162, 39);
             this.simpleButton4.TabIndex = 78;
@@ -74,7 +84,7 @@
             // txtDate
             // 
             this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtDate.Location = new System.Drawing.Point(159, 72);
+            this.txtDate.Location = new System.Drawing.Point(159, 59);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(248, 21);
             this.txtDate.TabIndex = 82;
@@ -82,7 +92,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 78);
+            this.label6.Location = new System.Drawing.Point(54, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 83;
@@ -91,7 +101,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(433, 74);
+            this.label12.Location = new System.Drawing.Point(433, 61);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 13);
             this.label12.TabIndex = 85;
@@ -100,7 +110,7 @@
             // txtHourNo
             // 
             this.txtHourNo.EditValue = "";
-            this.txtHourNo.Location = new System.Drawing.Point(537, 71);
+            this.txtHourNo.Location = new System.Drawing.Point(537, 58);
             this.txtHourNo.Name = "txtHourNo";
             this.txtHourNo.Properties.AccessibleDescription = "";
             this.txtHourNo.Properties.NullValuePrompt = "Opration No";
@@ -113,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 35);
+            this.label1.Location = new System.Drawing.Point(55, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 13);
             this.label1.TabIndex = 86;
@@ -124,18 +134,18 @@
             this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLog.Location = new System.Drawing.Point(49, 170);
+            this.txtLog.Location = new System.Drawing.Point(49, 214);
             this.txtLog.Name = "txtLog";
             this.txtLog.Properties.Appearance.ForeColor = System.Drawing.Color.LimeGreen;
             this.txtLog.Properties.Appearance.Options.UseForeColor = true;
-            this.txtLog.Size = new System.Drawing.Size(887, 326);
+            this.txtLog.Size = new System.Drawing.Size(887, 282);
             this.txtLog.TabIndex = 87;
             this.txtLog.UseOptimizedRendering = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 101);
+            this.label2.Location = new System.Drawing.Point(57, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 13);
             this.label2.TabIndex = 89;
@@ -144,7 +154,7 @@
             // txtScanTime
             // 
             this.txtScanTime.EditValue = "";
-            this.txtScanTime.Location = new System.Drawing.Point(159, 98);
+            this.txtScanTime.Location = new System.Drawing.Point(159, 85);
             this.txtScanTime.Name = "txtScanTime";
             this.txtScanTime.Properties.AccessibleDescription = "";
             this.txtScanTime.Properties.NullValuePrompt = "Opration No";
@@ -156,10 +166,10 @@
             // grdSearch
             // 
             this.grdSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearch.Location = new System.Drawing.Point(159, 97);
+            this.grdSearch.Location = new System.Drawing.Point(159, 193);
             this.grdSearch.MainView = this.gridView4;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(629, 21);
+            this.grdSearch.Size = new System.Drawing.Size(777, 399);
             this.grdSearch.TabIndex = 90;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView4});
@@ -177,7 +187,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(434, 101);
+            this.label3.Location = new System.Drawing.Point(434, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 91;
@@ -186,7 +196,7 @@
             // txtLocation
             // 
             this.txtLocation.EditValue = "";
-            this.txtLocation.Location = new System.Drawing.Point(537, 98);
+            this.txtLocation.Location = new System.Drawing.Point(537, 85);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.Properties.AccessibleDescription = "";
             this.txtLocation.Properties.NullValuePrompt = "Opration No";
@@ -194,11 +204,73 @@
             this.txtLocation.Size = new System.Drawing.Size(251, 20);
             this.txtLocation.TabIndex = 92;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(57, 119);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 93;
+            this.label4.Text = "Style NO";
+            // 
+            // txtStyleNo
+            // 
+            this.txtStyleNo.EditValue = "";
+            this.txtStyleNo.Location = new System.Drawing.Point(159, 116);
+            this.txtStyleNo.Name = "txtStyleNo";
+            this.txtStyleNo.Properties.AccessibleDescription = "";
+            this.txtStyleNo.Properties.NullValuePrompt = "Opration No";
+            this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtStyleNo.Size = new System.Drawing.Size(251, 20);
+            this.txtStyleNo.TabIndex = 94;
+            this.txtStyleNo.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.EditValue = "";
+            this.textEdit2.Location = new System.Drawing.Point(537, 116);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.AccessibleDescription = "";
+            this.textEdit2.Properties.NullValuePrompt = "Opration No";
+            this.textEdit2.Properties.NullValuePromptShowForEmptyValue = true;
+            this.textEdit2.Size = new System.Drawing.Size(251, 20);
+            this.textEdit2.TabIndex = 96;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(435, 119);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(42, 13);
+            this.label5.TabIndex = 95;
+            this.label5.Text = "Line No";
+            // 
+            // grdSearchStyle
+            // 
+            this.grdSearchStyle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdSearchStyle.Location = new System.Drawing.Point(49, 193);
+            this.grdSearchStyle.MainView = this.gridView1;
+            this.grdSearchStyle.Name = "grdSearchStyle";
+            this.grdSearchStyle.Size = new System.Drawing.Size(887, 180);
+            this.grdSearchStyle.TabIndex = 97;
+            this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.grdSearchStyle;
+            this.gridView1.Name = "gridView1";
+            // 
             // frmOfflineScaning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 508);
+            this.Controls.Add(this.grdSearchStyle);
+            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtStyleNo);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.grdSearch);
             this.Controls.Add(this.txtLocation);
             this.Controls.Add(this.label3);
@@ -222,6 +294,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLocation.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStyleNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +320,11 @@
         private System.Windows.Forms.OpenFileDialog textfileOpen;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit txtLocation;
+        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.TextEdit txtStyleNo;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraGrid.GridControl grdSearchStyle;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

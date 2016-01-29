@@ -39,6 +39,10 @@ namespace EFTesting.UI
 
         public string PartName { get; set; }
 
+
+        public int ONo { get; set; }
+
+        public int WNo { get; set; }
        
 
         int _dividingPanID;
@@ -49,7 +53,7 @@ namespace EFTesting.UI
             InitializeComponent();
         }
 
-        public frmDividingPlanItem(int _dPlanId,string _oprationNo, string _oprationName,string _smvType,string _machineType,double _smv,string _dHeaderID,string _partName) {
+        public frmDividingPlanItem(int _dPlanId,string _oprationNo, string _oprationName,string _smvType,string _machineType,double _smv,string _dHeaderID,string _partName,int _oNo,int _wNo) {
             this.DividingPlanID = _dPlanId;
             this.OprationNo = _oprationNo;
             this.OprationName = _oprationName;
@@ -57,8 +61,11 @@ namespace EFTesting.UI
             this.MachineType = _machineType;
             this.SMV = _smv;
             this.DividingPlanHeaderID = _dHeaderID;
+            _dividingPanID =Convert.ToInt16(this.DividingPlanHeaderID);
+
             this.PartName = _partName;
-           
+            this.ONo = _oNo;
+            this.WNo = _wNo;
             InitializeComponent();
         }
 
@@ -88,6 +95,8 @@ namespace EFTesting.UI
                 _item.SMVType = cmbSmvType.Text;
                 _item.SMV =Convert.ToDouble( txtSMV.Text);
                 _item.PartName = txtPartName.Text;
+                _item.WorkstationNo =Convert.ToInt16( txtWno.Text);
+                _item.OpNo =Convert.ToInt16( txtOpNo.Text);
              
 
                 return _item;
@@ -252,6 +261,7 @@ namespace EFTesting.UI
                       
         }
 
+        int oNo = 0;
         private void frmDividingPlanItem_Load(object sender, EventArgs e)
         {
             txtOprationNo.Text = this.OprationNo;
@@ -260,6 +270,10 @@ namespace EFTesting.UI
             cmbSmvType.Text = this.SMVType;
             txtSMV.Text =Convert.ToString(this.SMV);
             txtPartName.Text = this.PartName;
+            txtOpNo.Text = Convert.ToString(this.ONo);
+            txtWno.Text = Convert.ToString(this.WNo);
+          
+
            
             grdOpList.Hide();
             

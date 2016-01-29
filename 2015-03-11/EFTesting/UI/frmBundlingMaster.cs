@@ -684,5 +684,29 @@ namespace EFTesting.UI
 
             }
         }
+
+
+
+        void FeedBundleDetails(string _styleID) {
+
+            try {
+                GenaricRepository<BundleDetails> _bhRepo = new GenaricRepository<BundleDetails>(new ItrackContext());
+
+
+
+                var print = from item in _bhRepo.GetAll().ToList() where item.BundleHeader.CuttingItem.CuttingHeader.StyleID == _styleID select new { item.BundleNo,item.NoOfItem,item.BundleHeader.CuttingItem.Size,item.BundleHeader.CuttingItem.NoOfLayer};
+                grdBundleListPrinted.DataSource = print;
+            }
+            catch(Exception ex){
+
+            
+            }
+        
+        }
+
+        private void simpleButton5_Click(object sender, EventArgs e)
+        {
+            FeedBundleDetails(txtSNo.Text);
+        }
     }
 }

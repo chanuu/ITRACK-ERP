@@ -49,11 +49,16 @@ namespace ITRACK.models
        public int WorkstationNo { get; set; }
 
 
+       public int OpNo { get; set; }
+
+
+
+
      
 
        public OprationBarcodes() { }
 
-       public OprationBarcodes (string _OprationBarcodesID,string _LineNo,string _StyleNo, string _OprationNO, string _OparationName, string _OprationGrade, string _OprationRole, string _PartName, bool _isOparationComplete,DateTime _OprationComplteAt,string _EmployeeID, int _BundleDetailsID,string _oprationPoolID,string _hourNo,int _workstationNo){
+       public OprationBarcodes (string _OprationBarcodesID,string _LineNo,string _StyleNo, string _OprationNO, string _OparationName, string _OprationGrade, string _OprationRole, string _PartName, bool _isOparationComplete,DateTime _OprationComplteAt,string _EmployeeID, int _BundleDetailsID,string _oprationPoolID,string _hourNo,int _workstationNo,int _OpNo){
            this.OprationBarcodesID = _OprationBarcodesID;
            this.LineNo = _LineNo;
            this.StyleNo = _StyleNo;
@@ -69,6 +74,7 @@ namespace ITRACK.models
            this.OperationPoolID = _oprationPoolID;
            this.WorkstationNo = _workstationNo;
            this.HourNo = _hourNo;
+           this.OpNo = _OpNo;
            
 
    }
